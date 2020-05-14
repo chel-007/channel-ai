@@ -50,6 +50,28 @@
 }}
 body {
 font-family:'Lato';
-font-size: 20px;
+font-size: 18px;
 }
 
+.footer-style {
+	background-color: #222F34;
+	padding: 17px;
+}
+.copyright {
+	background-color: #23271F;
+	color: #5C6365;
+}
+.site-n-privacy {
+	color: white;
+}
+div:hover > .site-n-privacy {
+	color: white;
+	text-decoration: none;
+}
+.signup-footer {
+	color: white;
+	background-color: #23271F;
+	border: 2px white solid;
+	margin: 5px;
+	font-size: 12px;
+}
