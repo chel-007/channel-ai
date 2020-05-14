@@ -1,8 +1,12 @@
-- name: Home
+- name: HOME
   link: /
-- name: About
-  link: /about.html
-- name: Blog
+- name: BLOG
   link: /blog.html
-- name: Staff
+- name: RESOURCES
+  link: /resources.html
+- name: ABOUT
+  link: /about.html
+- name: AI APIs
+  link: /apis.html
+- name: STAFF
   link: /staff.html
