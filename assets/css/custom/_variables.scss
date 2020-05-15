@@ -75,3 +75,42 @@ div:hover > .site-n-privacy {
 	margin: 5px;
 	font-size: 12px;
 }
+/* Homepage CSS */
+.homepage {
+	padding-top: 7%;
+	text-align: center;
+}
+.intro-home {
+  text-align: center;
+ font-family: Rubik, sans-serif;
+  font-size: 45px;
+}
+.social-icons {
+  display: inline-block;
+  padding: 0.9rem;
+  font: normal normal normal normal 55px/1 FontAwesome;
+}
+.learn-create-consult {
+  list-style-type: none;
+  text-align: center;
+}
+.chevron {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 9px 15px 9px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  border-radius: 50%;
+}
+.cards-foot{
+  background-color: #24BCF9;
+}
+.cards-foot a{
+  color: black;
+  font-size: 17px;
+  font-family: Rubik;
+}
