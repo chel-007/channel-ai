@@ -76,15 +76,18 @@ div:hover > .site-n-privacy {
 	font-size: 12px;
 }
 /* Homepage CSS */
-.homepage {
-	padding-top: 7%;
-	text-align: center;
-}
 .intro-home {
   text-align: center;
  font-family: Rubik, sans-serif;
-  font-size: 45px;
+/*  font-size: 45px; */
 }
+/* @media (max-width: 990px) {
+  .navbar-custom {
+    min-height: 46px;
+    box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.4),
+    -5px 0px 10px 3px rgba(0, 0, 0, 0.6);
+  } 
+} */
 .social-icons {
   display: inline-block;
   padding: 0.9rem;
@@ -92,6 +95,11 @@ div:hover > .site-n-privacy {
 }
 .learn-create-consult {
   list-style-type: none;
+  margin: 0px 5px 0px -28px;
+/*   text-align: center; */
+}
+.homepage {
+  padding-top: 7%;
   text-align: center;
 }
 .chevron {
