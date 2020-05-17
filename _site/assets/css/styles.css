@@ -19,7 +19,7 @@
 
 @media (max-width: 950px) { .navbar-custom ul li div:hover > a { border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
 
-body { font-family: 'Lato'; font-size: 17px; }
+body { font-family: Rubik; font-size: 19px; }
 
 .footer-style { background-color: #222F34; padding: 17px; }
 
@@ -63,6 +63,8 @@ div:hover > .site-n-privacy { color: white; text-decoration: none; }
 .blog-container { padding-top: 9%; }
 
 .blog-post-header { font-weight: 800; color: black; font-family: Rubik; }
+
+@media (max-width: 750px) { .blog-post-header { font-size: 30px; } }
 
 h3:hover > .blog-post-header { color: black; text-decoration: none; }
 
@@ -2143,7 +2145,7 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 @media (max-width: 950px) { .navbar-custom ul li div:hover > a { border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
 
-body { font-family: 'Lato'; font-size: 17px; }
+body { font-family: Rubik; font-size: 19px; }
 
 .footer-style { background-color: #222F34; padding: 17px; }
 
@@ -2187,6 +2189,8 @@ div:hover > .site-n-privacy { color: white; text-decoration: none; }
 .blog-container { padding-top: 9%; }
 
 .blog-post-header { font-weight: 800; color: black; font-family: Rubik; }
+
+@media (max-width: 750px) { .blog-post-header { font-size: 30px; } }
 
 h3:hover > .blog-post-header { color: black; text-decoration: none; }
 
