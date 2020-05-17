@@ -1,12 +1,12 @@
 - name: HOME
   link: /
 - name: BLOG
-  link: /blog.html
+  link: /blog/
 - name: RESOURCES
-  link: /resources.html
+  link: /resources/
 - name: AI APIs
-  link: /apis.html
+  link: /apis/
 - name: STAFF
-  link: /staff.html
+  link: /staff/
 - name: ABOUT
-  link: /about.html
+  link: /about/

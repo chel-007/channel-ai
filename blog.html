@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blog - ChelOverboard
+title: Blog - ChannelAI.com
 description: My ChannelAi Blog. All Ai news as we can cover
 ---
 
@@ -16,10 +16,13 @@ description: My ChannelAi Blog. All Ai news as we can cover
        <div class="col-md-8 col-sm-12">
        <a href="{{ post.url }}">
        <img src="{{ post.img-src }}" class="img-fluid" alt="Responsive image"></a>
-      <h3><a href="{{ post.url }}"  class="blog-post-header">{{ post.title }}</a></h3>{{ post.date }}<p style="clear: both"></p>
+      <h3><a href="{{ post.url }}"  class="blog-post-header">{{ post.title }}</a></h3>{{ post.date | date: "%b %-d, %Y" }}<p style="clear: both"></p>
       {{ post.excerpt }}
        </div>
        <!-- End of column -->
+<!-- date_to_string: "ordinal", "US"
+ -->
+
      </div>
      <!-- End od Row -->
     </div>
