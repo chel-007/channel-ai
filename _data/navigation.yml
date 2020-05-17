@@ -4,9 +4,9 @@
   link: /blog.html
 - name: RESOURCES
   link: /resources.html
-- name: ABOUT
-  link: /about.html
 - name: AI APIs
   link: /apis.html
 - name: STAFF
   link: /staff.html
+- name: ABOUT
+  link: /about.html

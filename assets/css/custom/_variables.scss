@@ -9,7 +9,7 @@
 .navbar-custom div ul a {
     color: black;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
     font-family: Montserrat, sans-serif;
 }
 @media (max-width: 990px) {
@@ -50,7 +50,7 @@
 }}
 body {
 font-family:'Lato';
-font-size: 18px;
+font-size: 17px;
 }
 
 .footer-style {
@@ -122,3 +122,25 @@ div:hover > .site-n-privacy {
   font-size: 17px;
   font-family: Rubik;
 }
+
+/* Resources Page's CSS */
+.resources-page {
+  padding-top: 10%;
+}
+.resources-header {
+  font-size: 30px;
+  font-weight: 650;
+}
+.resources-body {
+  font-size: 19px;
+  line-height: 35px;
+}
+.resources-body li {
+  color: rgba(45,142,249,1);
+  font-weight: 500;
+}
+.resources-list {
+  font-size: 27px;
+  font-weight:600;
+}
+/* End Of Resources Page's CSS */

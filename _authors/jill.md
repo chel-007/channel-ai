@@ -1,6 +1,6 @@
 ---
-short_name: jill
-name: Jill Smith
-position: Chief Editor
+short_name: Chel
+name: Chelsea Ash
+position: Machine Learner
 ---
-Jill is an avid fruit grower based in the south of France.
+Chel is currently a student of Machine Learning Specialization Courses and plans to do anything possible to become a near-expert in the field in a not soo long while xD.Also a Lone-writer on Channel-AI ,,Ted is just a figure head author generated from Jekyll.SPOILER! He likes friut a lot

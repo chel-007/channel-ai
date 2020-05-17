@@ -4,4 +4,5 @@ title: About
 ---
 # About page
 
-This page tells you a little bit about me.
+This page tells you a little bit about me.<br>
+My name is Chelsea and I'm the creator of Channel-AI site.I created it mainly to understand AI and sub fields as much as i can and not just scrap through. Because ive learned that teaching or writing about something fixes it deeper in your mind. Machine Learning and AI is a field that needs a very high concentration and understanding.Im hoping taking on this project should help me get immersed in it. Also as a second reason, to gain some exposure and show what i can do.

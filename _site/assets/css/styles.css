@@ -1,7 +1,7 @@
 /*! Bootstrap v4.0.0 (https://getbootstrap.com) Copyright 2011-2018 The Bootstrap Authors Copyright 2011-2018 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */
 .navbar-custom { background-color: #24BCF9; width: 100%; min-height: 8vh; margin: 0 auto; box-shadow: inset 0px 0px 40px 0px rgba(0, 0, 0, 0.4), -5px 3px 20px 3px rgba(0, 0, 0, 0.7); }
 
-.navbar-custom div ul a { color: black; font-weight: 600; font-size: 16px; font-family: Montserrat, sans-serif; }
+.navbar-custom div ul a { color: black; font-weight: 600; font-size: 15px; font-family: Montserrat, sans-serif; }
 
 @media (max-width: 990px) { .navbar-custom { min-height: 46px; box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.4), -5px 0px 10px 3px rgba(0, 0, 0, 0.6); } }
 
@@ -19,7 +19,7 @@
 
 @media (max-width: 950px) { .navbar-custom ul li div:hover > a { border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
 
-body { font-family: 'Lato'; font-size: 18px; }
+body { font-family: 'Lato'; font-size: 17px; }
 
 .footer-style { background-color: #222F34; padding: 17px; }
 
@@ -47,6 +47,18 @@ div:hover > .site-n-privacy { color: white; text-decoration: none; }
 
 .cards-foot a { color: black; font-size: 17px; font-family: Rubik; }
 
+/* Resources Page's CSS */
+.resources-page { padding-top: 10%; }
+
+.resources-header { font-size: 30px; font-weight: 650; }
+
+.resources-body { font-size: 19px; line-height: 35px; }
+
+.resources-body li { color: #2d8ef9; font-weight: 500; }
+
+.resources-list { font-size: 27px; font-weight: 600; }
+
+/* End Of Resources Page's CSS */
 :root { --blue: #007bff; --indigo: #6610f2; --purple: #6f42c1; --pink: #e83e8c; --red: #dc3545; --orange: #fd7e14; --yellow: #ffc107; --green: #28a745; --teal: #20c997; --cyan: #17a2b8; --white: #fff; --gray: #6c757d; --gray-dark: #343a40; --primary: #007bff; --secondary: #6c757d; --success: #28a745; --info: #17a2b8; --warning: #ffc107; --danger: #dc3545; --light: #f8f9fa; --dark: #343a40; --breakpoint-xs: 0; --breakpoint-sm: 576px; --breakpoint-md: 768px; --breakpoint-lg: 992px; --breakpoint-xl: 1200px; --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -2106,7 +2118,7 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 .navbar-custom { background-color: #24BCF9; width: 100%; min-height: 8vh; margin: 0 auto; box-shadow: inset 0px 0px 40px 0px rgba(0, 0, 0, 0.4), -5px 3px 20px 3px rgba(0, 0, 0, 0.7); }
 
-.navbar-custom div ul a { color: black; font-weight: 600; font-size: 16px; font-family: Montserrat, sans-serif; }
+.navbar-custom div ul a { color: black; font-weight: 600; font-size: 15px; font-family: Montserrat, sans-serif; }
 
 @media (max-width: 990px) { .navbar-custom { min-height: 46px; box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.4), -5px 0px 10px 3px rgba(0, 0, 0, 0.6); } }
 
@@ -2124,7 +2136,7 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 @media (max-width: 950px) { .navbar-custom ul li div:hover > a { border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
 
-body { font-family: 'Lato'; font-size: 18px; }
+body { font-family: 'Lato'; font-size: 17px; }
 
 .footer-style { background-color: #222F34; padding: 17px; }
 
@@ -2151,5 +2163,18 @@ div:hover > .site-n-privacy { color: white; text-decoration: none; }
 .cards-foot { background-color: #24BCF9; }
 
 .cards-foot a { color: black; font-size: 17px; font-family: Rubik; }
+
+/* Resources Page's CSS */
+.resources-page { padding-top: 10%; }
+
+.resources-header { font-size: 30px; font-weight: 650; }
+
+.resources-body { font-size: 19px; line-height: 35px; }
+
+.resources-body li { color: #2d8ef9; font-weight: 500; }
+
+.resources-list { font-size: 27px; font-weight: 600; }
+
+/* End Of Resources Page's CSS */
 
 /*# sourceMappingURL=styles.css.map */
