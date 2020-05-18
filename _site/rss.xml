@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
+<rss version="2.0">
+  <channel>
+    <title>Channel Artificial Intelligence Today!</title>
+    <link>https://channelai.netlify.app</link>
+    <description />
+    <item>
+      <guid>https://channelai.netlify.app</guid>
+      <title>Channel Artificial Intelligence Today!</title>
+      <link>https://channelai.netlify.app</link>
+      <description />
+      <pubDate>Mon, 18 May 2020 09:46:00 Z</pubDate>
+    </item>
+    <item>
+      <guid>https://channelai.netlify.app/</guid>
+      <title>Channel Artificial Intelligence Today!</title>
+      <link>https://channelai.netlify.app/</link>
+      <description />
+      <pubDate>Mon, 18 May 2020 09:46:00 Z</pubDate>
+    </item>
+    <item>
+      <guid>https://channelai.netlify.app/resources/</guid>
+      <title>ChannelAI.com - Resources</title>
+      <link>https://channelai.netlify.app/resources/</link>
+      <description />
+      <pubDate>Mon, 18 May 2020 09:46:00 Z</pubDate>
+    </item>
+    <item>
+      <guid>https://channelai.netlify.app/about/</guid>
+      <title>About page</title>
+      <link>https://channelai.netlify.app/about/</link>
+      <description />
+      <pubDate>Mon, 18 May 2020 09:46:00 Z</pubDate>
+    </item>
+    <item>
+      <guid>https://channelai.netlify.app/privacy</guid>
+      <title>OK</title>
+      <link>https://channelai.netlify.app/privacy</link>
+      <description />
+      <pubDate>Mon, 18 May 2020 09:46:00 Z</pubDate>
+    </item>
+    <item>
+      <guid>https://channelai.netlify.app/blog/</guid>
+      <title>ChannelAI.com - Blog</title>
+      <link>https://channelai.netlify.app/blog/</link>
+      <description>My ChannelAi Blog. All Ai news as we can cover</description>
+      <pubDate>Mon, 18 May 2020 09:46:00 Z</pubDate>
+    </item>
+    <item>
+      <guid>https://channelai.netlify.app/staff/</guid>
+      <title>Staff</title>
+      <link>https://channelai.netlify.app/staff/</link>
+      <description>Meet the staff who puts in a lot of effort to bring you daily Ai news and resources.</description>
+      <pubDate>Mon, 18 May 2020 09:46:00 Z</pubDate>
+    </item>
+    <item>
+      <guid>https://channelai.netlify.app/kiwifruit/</guid>
+      <title>FIRST MACHINE LEARNING POST</title>
+      <link>https://channelai.netlify.app/kiwifruit/</link>
+      <description>First Machine Learning Post .. Outlining all the terms and concepts of ML, Where they are applied, and how to apply them for your own systems.</description>
+      <pubDate>Mon, 18 May 2020 09:46:00 Z</pubDate>
+    </item>
+    <item>
+      <guid>https://channelai.netlify.app/apples/</guid>
+      <title>UNDERSTANDING LEARNING CURVES FOR THE TRAINING AND VALIDATION SETS</title>
+      <link>https://channelai.netlify.app/apples/</link>
+      <description>After successfully training a model, we all want it to be as perfect as possible. The way we do this is in Machine Learning is minimizing the error loss on our dataset. But theres a catch, what if we end up overfitting our training set and our learned algorithm fails to generalize on new data. Learn how to balance Learning curves with the Validation set</description>
+      <pubDate>Mon, 18 May 2020 09:46:00 Z</pubDate>
+    </item>
+    <item>
+      <guid>https://channelai.netlify.app/authors/ted/</guid>
+      <title>Ted Doe</title>
+      <link>https://channelai.netlify.app/authors/ted/</link>
+      <description>Ted has been eating fruit since he was baby.</description>
+      <pubDate>Mon, 18 May 2020 09:46:00 Z</pubDate>
+    </item>
+    <item>
+      <guid>https://channelai.netlify.app/bananas/</guid>
+      <title>HOW TO BUILD A SUCCESSFUL MACHINE LEARNING SYSTEM IN MINIMAL TIME</title>
+      <link>https://channelai.netlify.app/bananas/</link>
+      <description>When building Machine Learning systems , a Data Engineer has to iterate between a number of compulsory to optional processes. How they do this determines the resources(time) that is consumed in training the model. Should you focus more on collecting lots of data for your system or are there more important things?</description>
+      <pubDate>Mon, 18 May 2020 09:46:00 Z</pubDate>
+    </item>
+    <item>
+      <guid>https://channelai.netlify.app/authors/jill/</guid>
+      <title>Chelsea Ash</title>
+      <link>https://channelai.netlify.app/authors/jill/</link>
+      <description>Chel is currently a student of Machine Learning Specialization Courses and plans to do anything possible to become a near-expert in the field in a not soo long while xD.Also a Lone-writer on Channel-AI ,,Ted is just a figure head author generated from Jekyll.SPOILER! He likes friut a lot</description>
+      <pubDate>Mon, 18 May 2020 09:46:00 Z</pubDate>
+    </item>
+  </channel>
+</rss>
+<!--<guid value="69324347-bdf9-4278-b13c-aba865fd84b2" />-->
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
