@@ -37,7 +37,7 @@
 <loc>http://localhost:4000/staff/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/privacy.html</loc>
+<loc>https://channelai.netlify.app/privacy.html</loc>
 <lastmod>2020-05-17T23:56:29+01:00</lastmod>
 </url>
 </urlset>
