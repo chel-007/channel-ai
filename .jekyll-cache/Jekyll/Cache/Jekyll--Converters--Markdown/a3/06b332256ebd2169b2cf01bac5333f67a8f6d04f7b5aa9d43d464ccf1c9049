@@ -1,0 +1,2 @@
+I"k<p>After successfully training a model, we all want it to be as perfect as possible. The way we do this is in Machine Learning is minimizing the error loss on our dataset. But theres a catch, what if we end up overfitting our training set and our learned algorithm fails to generalize on new data. Learn how to balance Learning curves with the Validation set</p>
+:ET
