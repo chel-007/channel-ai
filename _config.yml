@@ -22,6 +22,8 @@ defaults:
 sass:
   sass_dir: assets/css
 
+url: "https://channelai.netlify.app"
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
