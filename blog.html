@@ -1,13 +1,13 @@
 ---
 layout: default
-title:  ChannelAI.com - Blog
+title: Blog - Understanding AI & ML | Become a Data Engineer - ChannelAI
 description: My ChannelAi Blog. All Ai news as we can cover
 ---
 
 <ul style="list-style-type: none; padding-left: 0;">
   {% for post in site.posts %}
     <li>
-    	<!--  Main Container    -->
+      <!--  Main Container    -->
     <div class="container blog-container">
       
 <!--   Beginning of Row   -->
@@ -15,7 +15,7 @@ description: My ChannelAi Blog. All Ai news as we can cover
 <!--      Column   -->
        <div class="col-md-8 col-sm-12">
        <a href="{{ post.url }}">
-       <img src="{{ post.img-src }}" class="img-fluid" alt="Responsive image"></a>
+       <img src="{{ post.img-src }}" class="img-fluid" alt="{{ post.img-alt }}"></a>
       <h3><a href="{{ post.url }}"  class="blog-post-header">{{ post.title }}</a></h3>{{ post.date | date: "%b %-d, %Y" }}<p style="clear: both"></p>
       {{ post.excerpt }}
        </div>

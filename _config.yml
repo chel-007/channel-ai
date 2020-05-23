@@ -24,6 +24,23 @@ sass:
 
 url: "https://channelai.netlify.app"
 
+gems: [jekyll-paginate-v2]
+pagination:
+  enabled: false
+  debug: false
+  collection: 'posts'
+  per_page: 2
+  paginate_path: "/blog/page:num"
+  #permalink: '/bolg/page/:num/' # Pages are index.html inside this folder (default)
+  #permalink: '/page/:num.html' # Pages are simple html files 
+  #permalink: '/page:num' # Pages are html files, linked jekyll extensionless permalink style.
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  category: 'posts'
+
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap

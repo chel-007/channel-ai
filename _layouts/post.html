@@ -8,7 +8,7 @@ layout: default
      <div class="row">
 <!--      Column   -->
       <div class="col-md-8 col-sm-12">
-       <h1 class="post-header">{{ page.title }}</h1>
+       <h1 class="post-header">{{ page.title | camellize }}</h1>
 
 		<p>
 			{{ page.date | date: "%b %-d, %Y" }}
