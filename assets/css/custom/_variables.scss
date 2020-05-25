@@ -163,7 +163,15 @@ h3:hover > .blog-post-header {
   font-size: 30px;
   font-weight: 700;
 }
-
+.blog-headers {
+  text-align: center;
+  color: #24BCF9;
+  font-weight: 600;
+  font-family: cursive;
+}
+.blog-lists {
+  padding: 0px;
+}
 .codes {
   background-color: rgba(195,195,195,0.8);
   border-radius: 10px;
