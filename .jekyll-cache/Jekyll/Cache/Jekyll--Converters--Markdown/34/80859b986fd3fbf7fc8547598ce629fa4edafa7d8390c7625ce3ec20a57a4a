@@ -1,4 +1,4 @@
-I"�2<p>So now that you know a little bit about Machine Learning. It becomes natural for you to understand how you can use it to build models that are capable of making decisions at minimal level. The way we achieve this is the use of Machine Learning Algorithms that were developed several years back by experts in the field.</p>
+I"B<p>So now that you know a little bit about Machine Learning. It becomes natural for you to understand how you can use it to build models that are capable of making decisions at minimal level. The way we achieve this is the use of Machine Learning Algorithms that were developed several years back by experts in the field.</p>
 
 <p>The way these algoritm are capable of learning from real-world data to be able to make predictions is mostly because the mathematical computations on which they are built support or are proven to learn or map data to specific labels through probability and with experience.</p>
 
@@ -60,32 +60,106 @@ When we begin to do the math of it, i would explain i details what these terms m
 
 It contains 19 house features plus the price and the id columns, along with 21613 observations. It's a great dataset for evaluating simple regression models.</code></pre>
 
-<p>You can download this dataset from OpenML <em><a class="blog-links" href="https://www.openml.org/d/42092">here</a></em>. As stated it is a multi-varaint dataset or simply, it has multiple features in total 19, and 21613 training examples. For this tutorial, we would be using 5 features and 100 training examples.To implement for a uni-variant model, you can follow the whole process but instead load just one feature into the x variable. You would learn about it all soon.</p>
+<p>You can download this dataset from OpenML <em><a class="blog-links" href="https://www.openml.org/d/42092">here</a></em>. As stated it is a multi-varaint dataset or simply, it has multiple features in total 19, and 21613 training examples. For this tutorial, we would be using 3 features and 100 training examples.To implement for a uni-variant model, you can follow the whole process but instead load just one feature into the x variable. You would learn about it all soon.</p>
 
 <p>FEATURES</p>
 
-<p>The 5 features we would be giving our variable x are <strong>number of bedrooms</strong>, <strong>no of bathrooms</strong>, <strong>sqft of living area</strong>, <strong>floors</strong> and <strong>year built</strong>. There a a lot more features but the reason i chose those 5 is because they seem like the factors that play the largest role of influence on the price a customer would like to pay for a house. Also including similar features like <strong>sqft of basement , sqft of upperlevels</strong> and so on would end up making the features redundant (repetitive or duplicating). Take a look at the full features in our dataset.</p>
+<p>The 3 features we would be giving our variable x are <strong>number of bedrooms</strong>, <strong>sqft of living area</strong> and <strong>year built</strong>. There a a lot more features but the reason i chose those 3 is because they seem like the factors that play the largest role of influence on the price a customer would like to pay for a house. Also including similar features like <strong>sqft of basement , sqft of upperlevels</strong> and so on would end up making the features redundant (repetitive or duplicating). Take a look at the full features in our dataset.</p>
 
 <p><img class="img-fluid" src="../assets\images\Blog\Blog-img\lr-feature-list.png" /></p>
 
 <p>To set off,we would be using the list as a guide to know the order of the steps it takes to build our model.You can always refer back to this, as a reminder of what steps you should be implementing at what time.</p>
 
 <ol>
-  <li>Plot the data</li>
   <li>Feature Normalization</li>
+  <li>Plot the Data</li>
   <li>Compute for the Cost Function</li>
   <li>Gradient Descent</li>
 </ol>
 
 <p>There is a step included that we have not yet covered, let’s do that now.</p>
 
-<p>Feature Normalization is a way to neutralize the wide range of values we might have in our dataset. It simply reduces how far apart how data is in their real values in numbers. For example, in  our house_sales dataset we can observe that the difference between the year_built and no_of_bedrooms features is so wide apart and can cause irregularities for our model to learn accurately in lesser time. The way to combat this is simply to normalize our data. In Machine Learning this is referred to as “Feature Normalization”. Now let’s begin with the first step on the list.</p>
+<p>Feature Normalization is a way to neutralize the wide range of values we might have in our dataset. It simply reduces how far apart how data is in their real values in numbers. For example, in  our house_sales dataset we can observe that the difference between the year_built and no_of_bedrooms features is so wide apart and can cause irregularities for our model to learn accurately in lesser time. The way to combat this is simply to normalize our data. In Machine Learning this is referred to as “Feature Normalization”.</p>
 
-<p>Plotting data is a good way to understand our data, it can be done at different steps when implementing ML algorithm, apart from the purpose of visualization, it also helps us for debugging just by looking at the curves and shapes our data takes.You would learn more about this in future lessons. To plot the data onto a graph, we use a set of built-in functions from MATLAB (same applies in Octave). Whenever i use some new built-in function in our code I would give a brief explanation of what it does, for this reson, anyline starting with a “%” signifies an explanation of the code on the next line. The “%” sign is the official way used to write comments in Matlab.</p>
+<p>Plotting data is a good way to understand our data, it can be done at different steps when implementing ML algorithm, apart from the purpose of visualization, it also helps us for debugging just by looking at the curves and shapes our data takes.You would learn more about this in future lessons. To plot the data onto a graph, we use a set of built-in functions from MATLAB (same applies in Octave). Whenever i use some new built-in function in our code I would give a brief explanation of what it does, for this reason, anyline starting with a “%” signifies an explanation of the code on the next line. The “%” sign is the official way used to write comments in Matlab.</p>
+
+<p>Now let’s begin with the first step on the list, which is loading our data into MATLAB Environment normalizing our features so when plotting we can have a better idea of our data.</p>
 
 <pre><code class="matlab">
-% Load Data into Matlab Workspace
+% Load Data
 data = load('dataset_');
-a = data(:, 4,5,6,8,15);
+% Load into X , row 1-100 and columns 4 , 6 &amp; 15
+X = data(1:100, [4,6,15])
+% Load into y, row 1-100 column 3 (price)
+y = data(1:100, 3)
+% Denotes the number of training examples , length (100)
+m = length(y)
+% Call the pre-defined func "featureNormalization"
+% It takes one value X and computes three values, (X_normalized, mean of X , range of X)
+[X, mu, sigma] = featureNormalize(X)
+% Plot the dataset using the normalized X
+plot(X,y,'r*')
+% Print out first 10 examples from the dataset
+fprintf(' x = [%.0f %.0f %.0f], y = %.0f \n', [X(1:10,:) y(1:10,:)]');
 </code></pre>
+
+<h4>FeatureNormalization.m</h4>
+<pre><code class="matlab">
+Xfunction [X_norm, mu, sigma] = featureNormalize(X) 
+%   FEATURENORMALIZE(X) returns a normalized version of X where the mean value of each feature is 0 and the standard deviation is 1. 
+% This is often a good preprocessing step to do when working with learning algorithms.
+
+% You need to set these values correctly
+X_norm = X;
+mu = zeros(1, size(X, 2));
+sigma = zeros(1, size(X, 2));
+
+% First, for each feature dimension, compute the mean of the 
+% feature and subtract it from the dataset,storing the mean value in mu. 
+% Next compute the standard deviation of each feature and divide each feature by it's standard deviation, storing the standard deviation in sigma. 
+% Note that X is a matrix where each column is a feature and each row is an example. 
+% You need to perform the normalization separately for each feature. 
+% Hint: You might find the 'mean' and 'std' functions useful.
+mu = mean(X);
+sigma = std(X);
+X_norm = (X - mu)./sigma;
+
+
+end
+</code></pre>
+
+<p>To make you understand better what feature normalization does, Below are two images showing the plot when the features of X are normalized against when they are not.</p>
+
+<h3>RAW DATASET(UN-NORMALIZED)</h3>
+<p style="clear: both;"></p>
+<p><br /></p>
+
+<p><img class="img-fluid" src="../assets\images\Blog\Blog-img\un-normalized.png" /></p>
+
+<h3>FEATURE NORMALIZED</h3>
+<p style="clear: both;"></p>
+<p><br /></p>
+
+<p><img class="img-fluid" src="../assets\images\Blog\Blog-img\normalized.png" /></p>
+
+<p>As you can see,, in the un-normalized plot of our data, we have some of our points directly on the y axis. This is because the range between our dataset is to wide causing some of the smaller values of X to take their places as close as possible to the line. Normalizing our data sets them all in the same range.</p>
+
+<p>Now we have completed the first step, X an y now holds the values we want them to. These values are what we use to train the model for future house_price predictions. The next step on the list is Compute the cost func. Cost function tries to calculate the value of ‘theta’ that gives the lowest cost/error when it predicts the values that y’s should be. Let’s write the code for it</p>
+
+<pre><code class="matlab">
+% Add intercept term to X
+X = [ones(m, 1) X];
+function J = computeCost(X, y, theta)
+% J = computeCost(X, y, theta) computes the cost of using theta as the parameter for linear regression to fit the data points in X and y
+% Initialize some useful values
+m = length(y); % number of training examples
+% You need to return the following variables correctly 
+J = 0;
+% Compute the cost of a particular choice of theta
+J = (1/(2*m))*(sum(((X*theta)-y).^2));
+
+end
+</code></pre>
+
+<p>So for the above code, we can see that J is given the value of the cost. The formula above is what is used to compute for cost func in Linear regression. We are constantly multipliying parameters theta and X and subtracting it from our prices y, this helps us to finally calculate the overall cost which we can use in GradientDescent alogrithm to correct. The alogrithm used to compute the costFunction is called “squared error term” , as we are squaring the error of <strong>((X * theta)-y)</strong></p>
 :ET
