@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-08T19:40:31+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Introduction to Linear Regression - Creating a Simple Learning Predictor</title><link href="http://localhost:4000/linear-regression-simplified/" rel="alternate" type="text/html" title="Introduction to Linear Regression - Creating a Simple Learning Predictor" /><published>2020-05-31T00:00:00+01:00</published><updated>2020-05-31T00:00:00+01:00</updated><id>http://localhost:4000/linear%20regression%20simplified</id><content type="html" xml:base="http://localhost:4000/linear-regression-simplified/">&lt;p&gt;So now that you know a little bit about Machine Learning. It becomes natural for you to understand how you can use it to build models that are capable of making decisions at minimal level. The way we achieve this is the use of Machine Learning Algorithms that were developed several years back by experts in the field.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-14T22:54:39+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Introduction to Linear Regression - Creating a Simple Learning Predictor</title><link href="http://localhost:4000/linear-regression-simplified/" rel="alternate" type="text/html" title="Introduction to Linear Regression - Creating a Simple Learning Predictor" /><published>2020-05-31T00:00:00+01:00</published><updated>2020-05-31T00:00:00+01:00</updated><id>http://localhost:4000/linear%20regression%20simplified</id><content type="html" xml:base="http://localhost:4000/linear-regression-simplified/">&lt;p&gt;So now that you know a little bit about Machine Learning. It becomes natural for you to understand how you can use it to build models that are capable of making decisions at minimal level. The way we achieve this is the use of Machine Learning Algorithms that were developed several years back by experts in the field.&lt;/p&gt;
 
 &lt;p&gt;The way these algoritm are capable of learning from real-world data to be able to make predictions is mostly because the mathematical computations on which they are built support or are proven to learn or map data to specific labels through probability and with experience.&lt;/p&gt;
 
@@ -84,7 +84,7 @@ It contains 19 house features plus the price and the id columns, along with 2161
 &lt;p&gt;Plotting data is a good way to understand our data, it can be done at different steps when implementing ML algorithm, apart from the purpose of visualization, it also helps us for debugging just by looking at the curves and shapes our data takes.You would learn more about this in future lessons. To plot the data onto a graph, we use a set of built-in functions from MATLAB (same applies in Octave). Whenever i use some new built-in function in our code I would give a brief explanation of what it does, for this reason, anyline starting with a “%” signifies an explanation of the code on the next line. The “%” sign is the official way used to write comments in Matlab.&lt;/p&gt;
 
 &lt;p&gt;Now let’s begin with the first step on the list, which is loading our data into MATLAB Environment normalizing our features so when plotting we can have a better idea of our data.&lt;/p&gt;
-
+&lt;h4&gt;Load the Data into Environment&lt;/h4&gt;
 &lt;pre&gt;&lt;code class=&quot;matlab&quot;&gt;
 % Load Data
 data = load('dataset_');
@@ -145,9 +145,9 @@ end
 &lt;p&gt;As you can see,, in the un-normalized plot of our data, we have some of our points directly on the y axis. This is because the range between our dataset is to wide causing some of the smaller values of X to take their places as close as possible to the line. Normalizing our data sets them all in the same range.&lt;/p&gt;
 
 &lt;p&gt;Now we have completed the first step, X an y now holds the values we want them to. These values are what we use to train the model for future house_price predictions. The next step on the list is Compute the cost func. Cost function tries to calculate the value of ‘theta’ that gives the lowest cost/error when it predicts the values that y’s should be. Let’s write the code for it&lt;/p&gt;
-
+&lt;h4&gt;Compute Cost Function&lt;/h4&gt;
 &lt;pre&gt;&lt;code class=&quot;matlab&quot;&gt;
-% Add intercept term to X
+% Add intercept(bias) term to X
 X = [ones(m, 1) X];
 function J = computeCost(X, y, theta)
 % J = computeCost(X, y, theta) computes the cost of using theta as the parameter for linear regression to fit the data points in X and y
@@ -161,7 +161,43 @@ J = (1/(2*m))*(sum(((X*theta)-y).^2));
 end
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;So for the above code, we can see that J is given the value of the cost. The formula above is what is used to compute for cost func in Linear regression. We are constantly multipliying parameters theta and X and subtracting it from our prices y, this helps us to finally calculate the overall cost which we can use in GradientDescent alogrithm to correct. The alogrithm used to compute the costFunction is called “squared error term” , as we are squaring the error of &lt;strong&gt;((X * theta)-y)&lt;/strong&gt;&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">So now that you know a little bit about Machine Learning. It becomes natural for you to understand how you can use it to build models that are capable of making decisions at minimal level. The way we achieve this is the use of Machine Learning Algorithms that were developed several years back by experts in the field.</summary></entry><entry><title type="html">Introduction to Machine Learning Simplified Version</title><link href="http://localhost:4000/introduction-to-machine-learning/" rel="alternate" type="text/html" title="Introduction to Machine Learning Simplified Version" /><published>2020-05-17T00:00:00+01:00</published><updated>2020-05-17T00:00:00+01:00</updated><id>http://localhost:4000/introduction%20to%20machine%20learning</id><content type="html" xml:base="http://localhost:4000/introduction-to-machine-learning/">&lt;p&gt;As someone just starting out in Machine Learning and related fields. I created this blog in other to share my ideas to like-minded individuals out then, I wanted to be able to talk about Machine Leaning in a Simplified way. When I just started out, trying to wrap my head around Artificial Intelligence and Machine Learning, i tried a lot of different sources finding the best way to understand it.&lt;/p&gt;
+&lt;p&gt;So for the above code, we can see that J is given the value of the cost. The formula above is what is used to compute for cost func in Linear regression. We are constantly multipliying parameters theta and X and subtracting it from our prices y, this helps us to finally calculate the overall cost which we can use in GradientDescent alogrithm to correct. The alogrithm used to compute the costFunction is called “squared error term” , as we are squaring the error of &lt;strong&gt;((X * theta)-y)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Now for the Gradient Descent Algorithm. Here, in simple terms we are using the error term computed to learn a better value for our parameters theta. To make you understand better, in gradient descent we are trying to minimize the cost J, for us to do that we need to find the best fit to the data that gives the lowest error i.e, the distance from the points our x’s are located on our data plot is small. Gradient Descent minimizes our cost function on every iteration(loop) of the algorithm, it does this by finding the derivative of J with respect to our parameters and updates J based on this. Finding the derivative simply means, how much does theta affect the cost and minimizing it to attain a global minimum(a point where theta does not change significantly anymore). Now let’s look at the code for Gradient Descent.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Learning Rate Alpha&lt;/strong&gt; is an hyperparameter in Machine Learning that controls the amount of step taken by gradient descent takes in one iteration of learning parameters theta&lt;/p&gt;
+&lt;h4&gt;Compute Gradient Descent&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;matlab&quot;&gt;
+function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)
+%theta = gradientDescentMulti(x, y, theta, alpha, num_iters) updates theta by taking num_iters gradient steps with learning rate alpha
+m = length(y);
+% the index of the number of iterations
+J_history = zeros(num_iters, 1);
+%looping over the total num of iterations
+for iter = 1:num_iters
+% calculating the error
+error = (X * theta) - y;
+% updating theta
+theta = theta - ((alpha/m) * X'*error);
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;From the above code, after gradient descent completes , we should have 3 Theta values, becasue we used only three features of X from our dataset. Having more features would mean more theta parameters since theta is the learned parameter that enables us to make predictions on new data having three features in our case.&lt;/p&gt;
+
+&lt;p&gt;That’s all for Linear Regression, we now have our trained model capable of making predictions. In the below and final code we now make a prediction with new unseen data of X of what the price of a house(y) should be or a very close estimate.&lt;/p&gt;
+
+&lt;h4&gt;Predict on New Data&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;matlab&quot;&gt;
+% Estimate the price of a 1650 sq-ft, 3 br house
+X = [1650,3];
+% Feature Normalize the data
+featureNormalize(X);
+X = ones(:1,X)
+% Final prediction price
+price = [X].* theta; % Enter your price formula here
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That brings us to the end of this tutorial, we implemented Linear Regression, perhaps the simplest Machine Leraning Algorithm there is, and i would recommend going through it a few times to you know,  improve your intuition on how the code works and also familarize yourself with the code involved. For the code, it’s always possible to copy it down somewhere, refer to it a few times because at first, it wouldn’t stick straightaway but after using it a few times it becomes natural to your senses, I know that because I’ve been in the same sitution. During my first few weeks learning Machine Learning by Andrew, it was overwhelming for me, i got a good understanding of the concepts, intuition but the code was quite strange and hard for me to grasp, but honestly now my eyes passes through the details whenever I’m working with Linear Regression Algo, and I know that would be the same for you.&lt;/p&gt;
+
+&lt;p&gt;In the next article i release , I would give an Introduction to Logistic Regression and you would see how to build a classification model using the Algorithm. Thanks for reading , I hope i’ve been able to uncover and actually simplify Linear Regression Algorithm for you, and with these steps you can go ahead learning the other types we have and you know implementing the ideas and code we looked at. As always, there are nimble steps to take towards finding the right platform, tools, or communities. I would love to read any comments you have about this article or other areas of ML, please feel free to leave a comment below.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">So now that you know a little bit about Machine Learning. It becomes natural for you to understand how you can use it to build models that are capable of making decisions at minimal level. The way we achieve this is the use of Machine Learning Algorithms that were developed several years back by experts in the field.</summary></entry><entry><title type="html">Introduction to Machine Learning Simplified Version</title><link href="http://localhost:4000/introduction-to-machine-learning/" rel="alternate" type="text/html" title="Introduction to Machine Learning Simplified Version" /><published>2020-05-17T00:00:00+01:00</published><updated>2020-05-17T00:00:00+01:00</updated><id>http://localhost:4000/introduction%20to%20machine%20learning</id><content type="html" xml:base="http://localhost:4000/introduction-to-machine-learning/">&lt;p&gt;As someone just starting out in Machine Learning and related fields. I created this blog in other to share my ideas to like-minded individuals out then, I wanted to be able to talk about Machine Leaning in a Simplified way. When I just started out, trying to wrap my head around Artificial Intelligence and Machine Learning, i tried a lot of different sources finding the best way to understand it.&lt;/p&gt;
 
 &lt;p&gt;I was so much interested in Artificial Intelligence in full, wanting to understand how robots worked because in short, it was fascinating to think about. I soon enough found out that to make some very meaningful progress I had to start with Machine-Learnign and i did just that. Enough with the Introduction, I’m going to give a basic and simplified introduction to Machine-Learning (often abbreviated as ML) for complete beginners who want to start their journey in this Field of Study.&lt;/p&gt;
 

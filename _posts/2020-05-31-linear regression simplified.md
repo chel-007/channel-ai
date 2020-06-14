@@ -80,7 +80,7 @@ Feature Normalization is a way to neutralize the wide range of values we might h
 Plotting data is a good way to understand our data, it can be done at different steps when implementing ML algorithm, apart from the purpose of visualization, it also helps us for debugging just by looking at the curves and shapes our data takes.You would learn more about this in future lessons. To plot the data onto a graph, we use a set of built-in functions from MATLAB (same applies in Octave). Whenever i use some new built-in function in our code I would give a brief explanation of what it does, for this reason, anyline starting with a "%" signifies an explanation of the code on the next line. The "%" sign is the official way used to write comments in Matlab.
 
 Now let's begin with the first step on the list, which is loading our data into MATLAB Environment normalizing our features so when plotting we can have a better idea of our data.
-
+<h4>Load the Data into Environment</h4>
 <pre><code class="matlab">
 % Load Data
 data = load('dataset_');
@@ -138,9 +138,9 @@ To make you understand better what feature normalization does, Below are two ima
 As you can see,, in the un-normalized plot of our data, we have some of our points directly on the y axis. This is because the range between our dataset is to wide causing some of the smaller values of X to take their places as close as possible to the line. Normalizing our data sets them all in the same range.
 
 Now we have completed the first step, X an y now holds the values we want them to. These values are what we use to train the model for future house_price predictions. The next step on the list is Compute the cost func. Cost function tries to calculate the value of 'theta' that gives the lowest cost/error when it predicts the values that y's should be. Let's write the code for it
-
+<h4>Compute Cost Function</h4>
 <pre><code class="matlab">
-% Add intercept term to X
+% Add intercept(bias) term to X
 X = [ones(m, 1) X];
 function J = computeCost(X, y, theta)
 % J = computeCost(X, y, theta) computes the cost of using theta as the parameter for linear regression to fit the data points in X and y
@@ -156,8 +156,38 @@ end
 
 So for the above code, we can see that J is given the value of the cost. The formula above is what is used to compute for cost func in Linear regression. We are constantly multipliying parameters theta and X and subtracting it from our prices y, this helps us to finally calculate the overall cost which we can use in GradientDescent alogrithm to correct. The alogrithm used to compute the costFunction is called "squared error term" , as we are squaring the error of <strong>((X * theta)-y)</strong>
 
+Now for the Gradient Descent Algorithm. Here, in simple terms we are using the error term computed to learn a better value for our parameters theta. To make you understand better, in gradient descent we are trying to minimize the cost J, for us to do that we need to find the best fit to the data that gives the lowest error i.e, the distance from the points our x's are located on our data plot is small. Gradient Descent minimizes our cost function on every iteration(loop) of the algorithm, it does this by finding the derivative of J with respect to our parameters and updates J based on this. Finding the derivative simply means, how much does theta affect the cost and minimizing it to attain a global minimum(a point where theta does not change significantly anymore). Now let's look at the code for Gradient Descent.
 
+<strong>Learning Rate Alpha</strong> is an hyperparameter in Machine Learning that controls the amount of step taken by gradient descent takes in one iteration of learning parameters theta
+<h4>Compute Gradient Descent</h4>
+<pre><code class="matlab">
+function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)
+%theta = gradientDescentMulti(x, y, theta, alpha, num_iters) updates theta by taking num_iters gradient steps with learning rate alpha
+m = length(y);
+% the index of the number of iterations
+J_history = zeros(num_iters, 1);
+%looping over the total num of iterations
+for iter = 1:num_iters
+% calculating the error
+error = (X * theta) - y;
+% updating theta
+theta = theta - ((alpha/m) * X'*error);
+end
+</code></pre>
+From the above code, after gradient descent completes , we should have 3 Theta values, becasue we used only three features of X from our dataset. Having more features would mean more theta parameters since theta is the learned parameter that enables us to make predictions on new data having three features in our case.
 
+That's all for Linear Regression, we now have our trained model capable of making predictions. In the below and final code we now make a prediction with new unseen data of X of what the price of a house(y) should be or a very close estimate.
+
+<h4>Predict on New Data</h4>
+<pre><code class="matlab">
+% Estimate the price of a 1650 sq-ft, 3 br house
+X = [1650,3];
+% Feature Normalize the data
+featureNormalize(X);
+X = ones(:1,X)
+% Final prediction price
+price = [X].* theta; % Enter your price formula here
+</code></pre>
 That brings us to the end of this tutorial, we implemented Linear Regression, perhaps the simplest Machine Leraning Algorithm there is, and i would recommend going through it a few times to you know,  improve your intuition on how the code works and also familarize yourself with the code involved. For the code, it's always possible to copy it down somewhere, refer to it a few times because at first, it wouldn't stick straightaway but after using it a few times it becomes natural to your senses, I know that because I've been in the same sitution. During my first few weeks learning Machine Learning by Andrew, it was overwhelming for me, i got a good understanding of the concepts, intuition but the code was quite strange and hard for me to grasp, but honestly now my eyes passes through the details whenever I'm working with Linear Regression Algo, and I know that would be the same for you. 
 
 In the next article i release , I would give an Introduction to Logistic Regression and you would see how to build a classification model using the Algorithm. Thanks for reading , I hope i've been able to uncover and actually simplify Linear Regression Algorithm for you, and with these steps you can go ahead learning the other types we have and you know implementing the ideas and code we looked at. As always, there are nimble steps to take towards finding the right platform, tools, or communities. I would love to read any comments you have about this article or other areas of ML, please feel free to leave a comment below.
