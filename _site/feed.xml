@@ -1,4 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-16T14:14:58+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Introduction to Linear Regression - Creating a Simple Learning Predictor</title><link href="http://localhost:4000/linear-regression-simplified/" rel="alternate" type="text/html" title="Introduction to Linear Regression - Creating a Simple Learning Predictor" /><published>2020-05-31T00:00:00+01:00</published><updated>2020-05-31T00:00:00+01:00</updated><id>http://localhost:4000/linear%20regression%20simplified</id><content type="html" xml:base="http://localhost:4000/linear-regression-simplified/">&lt;p&gt;So now that you know a little bit about Machine Learning. It becomes natural for you to understand how you can use it to build models that are capable of making decisions at minimal level. The way we achieve this is the use of Machine Learning Algorithms that were developed several years back by experts in the field.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-17T00:32:26+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Vectorization - How to Vectorize ML Algorithms with MATLAB</title><link href="http://localhost:4000/vectorization-in-machine-learning-with-matlab/" rel="alternate" type="text/html" title="Vectorization - How to Vectorize ML Algorithms with MATLAB" /><published>2020-06-16T00:00:00+01:00</published><updated>2020-06-16T00:00:00+01:00</updated><id>http://localhost:4000/vectorization%20in%20machine%20learning%20with%20matlab</id><content type="html" xml:base="http://localhost:4000/vectorization-in-machine-learning-with-matlab/">&lt;p&gt;In my previous post, I gave a simplified introduction to Machine Learning for beginners. It therefore brings the need for me to write a post on “Vectorization”. You might be hearing it for the first time or you have possibly come across it sometime. Either one of those, I can tell you that it isn’t a difficult subject, in fact in the field of Machine Learning I found it much easier than a normal iterative code (for &amp;amp; while loop). Now lets begin, by the end of this post I want you to understand what vectorization is, it’s application and how to use it in your ML Implementation.&lt;/p&gt;
+
+&lt;p&gt;The title of this post actually says “Vectorization in ML with MATLAB”, so you can tell I would be teaching you how to vectorize your code with MATLAB as the programming language, but you should know that almost all language codes can be vectorized. Now let’s look at a simplified definition of vectorization.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Vectorization&lt;/em&gt;&lt;/strong&gt; is a method of writing codes that makes them run much faster. It applies operators to “multiple” operands without the use of loops, these operands are usually a matrices or vectors.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;A more official defination, cited from &lt;a href=&quot;&quot;&gt;&lt;/a&gt;.&lt;/b&gt;Vectorization is the process of converting an algorithm from operating on a single value at a time to operating on a set of values (vector) at once.. In a vectorized calculation, all elements of the vector (array) can be added in one calculation step.&lt;/p&gt;
+
+&lt;p&gt;Now let’s look into a basic explanation for it. You want to perform calculations on some numbers or in our case, Data, you have to write a piece of code to do the computation for you. In Machine Learning, 80% of the code we are writing is an iterative function, looping over a fixed number of training examples or sort. For example, in Linear Regression, to build a model or predictor we have to compute the cost function and gradient descent over all our training data, and to do this we more than likely need to use loops, that’s where vectorization comes in. Let’s look at what makes vectorization possible in Machine Learning. We would be touching mainly on Matrix and Vectors in this post.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Matrices&lt;/em&gt;&lt;/strong&gt; are in simple form two-dimensional arrays. That is, They are made up of numbers in a 2D shape or size.&lt;/p&gt;
+
+&lt;p&gt;An &lt;a href=&quot;&quot;&gt;Array&lt;/a&gt; on the other hand is a set of numbers arranged in list format, as such, a Matrix can be called an array but not the other way round, simply because a Matrix although being in 2D shape is still a list of numbers in “rows” and “columns”. Let’s take an example so you can understand better.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;matlab&quot;&gt;
+Example 1:
+
+Array = [2,3,4,6,7,8] %list of num in square brackets
+
+Matrix =[2,3,4;6,7,8] % 2x3 Matrix with 2 rows and 3 columns
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Looking at the above example,&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;You can write matrices by separating rows with semicolon(;)&lt;/li&gt;
+  &lt;li&gt;By adding a semicolon, we define a new row and also columns&lt;/li&gt;
+  &lt;li&gt;Not adding a semicolon makes it an array&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note: We have higher dimensions of Matrices in 3D, 4D etc,, you wouldn’t need to understand it for implementing Machine learning &lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Vectors&lt;/em&gt;&lt;/strong&gt; are one-dimensional arrays. They are similar to matrix with the exception that they have only 1 dimension which is either a row or column.&lt;/p&gt;
+
+&lt;h4&gt;Getting Familiar with Dimensions in Matrix&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&quot;matlab&quot;&gt;
+
+mat_1 = [4,6;7,8] % A 2x2 matrix (2 rows and 2 columns)
+
+mat_2 = [1,2,3;4,5,6] % A 2x3 matrix (2 rows and 3 columns)
+
+mat_3 = [1,2,5,6;3,4,7,8] % A 2x4 matrix (2 rows and 4 columns)
+
+mat_4 = [1,2;3,4;5,6] % A 3x2 matrix (3 rows and 2 columns)
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;p&gt;Check out the visualiztion of the Matrices above in the image below. This would give you a better sense of how they are formed or structure.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/matrix_formation.png&quot; class=&quot;img-fluid&quot; alt=&quot;ChannelAI Homepage: Artificial Intelligence&quot; width=&quot;100%&quot; height=&quot;60vh&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vectorization in Machine Learning is done or carried out when we want to perform calculations on Matrix-Matrix or matrix-Vectors. Most of our data in Ml is stored and read in rows and colums. Below are some example of operations with matrix and Vectors.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;matlab&quot;&gt;
+Example 2:
+
+vect_1 = [1;2;3;6;7;8] % A column vector with 6 values
+
+mat_1 = [1,3,5;8,7,6] % A 2x3 Matrix
+
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4&gt;REASONS FOR VECTORIZING CODE&lt;/h4&gt;
+&lt;ul style=&quot;padding: 5;&quot;&gt;
+	&lt;li&gt;Appearance: Vectorized mathematical code appears more like the maths we are used to from high-school, making the code easier to understand.&lt;/li&gt;
+	&lt;li&gt;Less Error Prone: Without loops, vectorized code is often shorter. Fewer lines of code mean fewer opportunities to introduce programming errors.&lt;/li&gt;
+	&lt;li&gt;Performance: Vectorized code often runs much faster than the corresponding code conatining loops&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now that we have gone over a few reasons for using vectorized codes, I would like to show you code that outlines the difference in using loops vs vectorization for writing codes. This alone would show you the main idea of vectorization. Although you should know that as model size increases, so does the technique for carrying out vectorization. It gets more advanced but to tell the truth, it’s nothing you can’t handle, as long as you are doing Machine Learning, the concept remains the same as the example below. Let’s write code.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;matlab&quot;&gt;
+Example 4:
+
+This code computes the sine of 1001 values ranging from 0 to 10:
+Using Loops:
+
+i = 0;
+for t = 0:.01:10
+	i = i + 1;
+	y(i) = sin(t);
+end	
+
+Using Vectorization:
+
+t = 0:.01:10;
+y = sin(t);
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So there you have it, a few example codes and reasons, more than sufficient why it is advised to vectorize code when Implementing ML. Now that you’ve learnt the basics of Matrix, vectors and code vectorization you can now ahead and use this concept in your work. For reference, all the code for my last post in Linear regression were vectorized, so you can start learning from there how this works in ML and if you want a deeper understanding, check out this course by Vanderblit University on Coursera: &lt;a href=&quot;&quot;&gt;Introduction to Programming with MATLAB&lt;/a&gt;. It covers almost all you need to use Matlab to advanced level. I suggest you enroll if you want to use Matlab as your main programming lang for Machine Learning. Thanks for reading along, I do hope you learnt a thing or two about Vectorization. Even if u feel like you didn’t get much, don’t worry about it, all you need is some practice and you should understand it fully in a short while. If you have any questions related or closely related to our topic, I would very much like to hear it, simply leave a comment below.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">In my previous post, I gave a simplified introduction to Machine Learning for beginners. It therefore brings the need for me to write a post on “Vectorization”. You might be hearing it for the first time or you have possibly come across it sometime. Either one of those, I can tell you that it isn’t a difficult subject, in fact in the field of Machine Learning I found it much easier than a normal iterative code (for &amp;amp; while loop). Now lets begin, by the end of this post I want you to understand what vectorization is, it’s application and how to use it in your ML Implementation.</summary></entry><entry><title type="html">Introduction to Linear Regression - Creating a Simple Learning Predictor</title><link href="http://localhost:4000/linear-regression-simplified/" rel="alternate" type="text/html" title="Introduction to Linear Regression - Creating a Simple Learning Predictor" /><published>2020-05-31T00:00:00+01:00</published><updated>2020-05-31T00:00:00+01:00</updated><id>http://localhost:4000/linear%20regression%20simplified</id><content type="html" xml:base="http://localhost:4000/linear-regression-simplified/">&lt;p&gt;So now that you know a little bit about Machine Learning. It becomes natural for you to understand how you can use it to build models that are capable of making decisions at minimal level. The way we achieve this is the use of Machine Learning Algorithms that were developed several years back by experts in the field.&lt;/p&gt;
 
 &lt;p&gt;The way these algoritm are capable of learning from real-world data to be able to make predictions is mostly because the mathematical computations on which they are built support or are proven to learn or map data to specific labels through probability and with experience.&lt;/p&gt;
 

@@ -1,0 +1,12 @@
+---
+layout: post
+author: Chel
+title: Vectorization - How to vectorize ML Algorithms with MATLAB
+img-src: ../assets\images\Blog\coming-soon.jpg
+---
+
+In my previous post, I gave a simplified introduction to Machine Learning for beginners. It therefore brings the need for me to write a post on "Vectorization". You might be hearing it for the first time or you have possibly come across sometime. Either one of those, I can tell you that it isn't difficult subject, in fact in the field of Machine Learning i found it much easier than a normal iterative code (for & while loop). Now lets begin, by the end of this post I want you to understand what vectorization is, it's application and how to use it in your ML journey.
+
+The title of this post actually says "Vectorization in ML with MATLAB", so you can tell I would be teaching you how to vectorize you code in a MATLAB Environment, but you should know that almost all programming languages codes can be vectorized. Now let's look at a simplified definition of vectorization.
+
+strong
