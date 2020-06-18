@@ -2,7 +2,9 @@
 layout: post
 author: Chel
 title: Introduction to Linear Regression - Creating a Simple Learning Predictor
-img-src: ../assets\images\Blog\coming-soon.jpg
+seo: Simplified Linear Regression Machine Learning Algorithms Linear regression models predictor
+description: Linear Regression is a Machine Learning algorithm that is used for predictions of "continuous /non-classified data".You have some datasets in continuous values(because we are doing LinearRegrssion) and you want to go about training a model to the point that it achieves a preferred level of accuracy
+img-src: ../assets\images\Blog\linear-regression-simplified-png.png
 ---
 
 So now that you know a little bit about Machine Learning. It becomes natural for you to understand how you can use it to build models that are capable of making decisions at minimal level. The way we achieve this is the use of Machine Learning Algorithms that were developed several years back by experts in the field.
@@ -11,7 +13,7 @@ The way these algoritm are capable of learning from real-world data to be able t
 
 In this article, you would be introduced to one of the simplest and popular ML Algorithm called <strong>Linear Regression</strong>. It is recommended that you read our tutorial on <em><a class="blog-links" href="">Vectorization with Matlab</a></em> if you haven't already as we would be using vectorization to implement our LR model for faster and easier bug debugging.
 
-Linear Regression is a ML algorithm that is used for predictions of "continuous /non-classified data". To better understand it, let's use a very popular example. Say, you want to predict the prices of particular houses,height of students in a class, weight and so on. This examples define continuous data, that is, they stand alone and are not grouped into classes. This is in contrast to a second learning algorithm called Logistic Regression which we would be looking at in the next post. Before we proceed to the implementation of Linear Regression, i want to give a general idea or intuition about what an ML model is trying to achieve and how it works.
+Linear Regression is a Machine Learning algorithm that is used for predictions of "continuous /non-classified data". To better understand it, let's use a very popular example. Say, you want to predict the prices of particular houses,height of students in a class, weight and so on. This examples define continuous data, that is, they stand alone and are not grouped into classes. This is in contrast to a second learning algorithm called Logistic Regression which we would be looking at in the next post. Before we proceed to the implementation of Linear Regression, i want to give a general idea or intuition about what an ML model is trying to achieve and how it works.
 
 I learnt Linear Regression from the Stanford University <em><a class="blog-links" href="">Machine Learning course on Coursera</a></em> taught by Professor Andrew Ng. I feel like i could not have gotten a better understanding if i had learnt it elsewhere, Andrew always wanted to give the students an intuition about any new algorithm we were taking on and i loved it. It made me understand exactly how that algo was different from the previous one even before we started learning the maths behind it. I should say, that's one of the best course or teaching i have ever received. Now i have this understanding of the different algoritms that even if i were to forget the correct code to implement them i still have a very good grasp of what they are doing and i think that's very important.
 
