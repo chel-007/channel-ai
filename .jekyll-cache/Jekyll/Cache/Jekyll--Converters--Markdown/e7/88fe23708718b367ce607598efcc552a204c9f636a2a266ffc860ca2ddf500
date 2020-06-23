@@ -1,0 +1,33 @@
+I"�<p>Generative Adversarial Networks, or GANs for short, are a type of neural network used for machine learning, computer vision, and other forms of artificial intelligence. Generative modeling is an unsupervised learning task in machine learning in which regularities and patterns of input data are discovered and learned so that a model can be used to generate and output new examples that can plausibly be taken from the original data set.</p>
+
+<p>A generative adversarial network, GAN for short, consists of two main structure that makes up the whole basis of its operation. They are called the <b>Generator</b> and <b>Discriminator</b>. These two nodes/models are built into a single system that forms the whole GAN. Let’s look at a simple illustration of what they are both trying to achieve</p>
+
+<p>A simple GAN can be said to be made up of two dataset, one of them is called the true or real-world dataset, the other can be called the fake dataset. The Generator is the node that gives out fake data while the discriminator gives as input X, the real data. This two inputs are passed into the model, and at an iteration or training, the discriminator would have to discern if each image(data) that comes its way is from the real or fake dataset. At the start of training, the discriminator succesfully guesses right, on this process, the generator has to change its weights(during training) inorder to reduce the cost/error made and once again pushes a new improved set of data to the discriminator for inspection. This is what happens at training periods, on each epochs until a desired level of accuracy is achieved. The overall system and purpose of GANs is to obatin a level of cost that the discriminator starts to guess datas from the generator as “real ones”.</p>
+
+<p>While the discriminator tries to discern the difference between what the real an the fake database is, the generator tries to create a plausible example of the same data set by updating its weights/parameters. The Generator models are designed to deceive the discrimination model, by trying  to generate plausible examples that fits among the real dataset. Our hope is that the two networks, when they face each other, will get better and better until the end result is a generator network that produces realistic outputs.</p>
+
+<p>For example, a GAN trained on photographs can create a new photograph that appears to human observers at least superficially authentic and has many realistic characteristics. A popular real-world application of GAN; GANs have been used to produce new celebrities who are not real people. Using a training kit, the technique learns to create images of real-life celebrities, real-face celebrities and non-real face celebrities.</p>
+
+<p>We take a look at Generative Adversarial Networks (GANs), a new class of neural networks with a wide range of applications in computer science. GANS learns to model input distributions by forming two competing and cooperating networks known as generators and discriminators (also known as critics). We propose to use two neural networks to generate and refine new data: a generator and a discriminator. [Sources: 7, 8]</p>
+
+<p>For example, a GAN (generator network) can start with a matrix of noise pixels and try to change them in what an image classifier would call a “cat.” Instead of taking raw data, the generator can trace back to the original input data (e.g. a photo of a cat) and then try to generate output from which the input of the data would be mapped. The new data is not bound to a single data set, but is created from a set of data points (i.e. an array of images or a set of data sets). [Sources: 0, 7]</p>
+
+<p>Generative enemy networks were first developed in 2014 and are most commonly used to create images of people and objects (I. Goodfellow). Generators try to produce realistic images, and discriminators try to see the difference between what the generators generate and what the competing neural networks are working on. Generative opposing networks (GANs) work in the same way as a discrimination network, but with different parameters. [Sources: 0]</p>
+
+<p>Back in 2014, Ian Goodfellow suggested the idea of two neural networks competing or working together. For some networks, parallel training means an improvement in skills, for others it is a question of perspective. [Sources: 0, 3]</p>
+
+<p>One neural network tries to generate realistic data, the other network tries to distinguish what the generator network generates. The discrimination network updates its parameters to ensure that the fake data is selected from the real data. Note: GANs can be used to model data distributions, but nowadays they are mainly used for images). The generator networks use the discriminators as a loss function and update their parameters after generating data that appears more realistic. [Sources: 3]</p>
+
+<p>The generator algorithm tricks the evaluator by generating a data distribution that seems to come from the true data distributions, but is actually just a fake. [Sources: 2]</p>
+
+<p>While the discriminator is a convolutional neural network, the generator is designed as a deconventional neural network. The generator network processes the data in such a way that the artificial constructs are recognized by the evaluator, but not the real data distributions, such as the actual data distribution. [Sources: 2]</p>
+
+<p>A GAN is a recently developed machine learning framework that proposes creative realistic representations of the real data distribution of images and other data. As mentioned above, an organ can be used to create images that are superficially authentic to human observers. [Sources: 2, 4]</p>
+
+<p>The opposing structure can consist of two competing deep neuron networks, each of which has its own set of neurons, and a number of different types of opponents. [Sources: 4]</p>
+
+<p>In this blog post, we will explore how this research is related to the development of generative enemy networks (GANs) for deep neural networks and how they work. In a Gan-based strategy, a discriminatory network uses a series of pixels, each corresponding to one of its two opponents, to match pixels corresponding to an isotropic Young Modulus (HS) bound by an upper HS. In the meantime, the generative network, equipped with the knowledge of these connections, is able to fast - advance through the network and generate thousands of new configurations to achieve the desired properties (e.g. the upper limit of the isotropy of Young’s modules). [Sources: 4, 6]</p>
+
+<p>Sources:</p>
+
+:ET
