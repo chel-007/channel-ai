@@ -1,9 +1,58 @@
 ---
 layout: post
 author: Chel
-
+title: Introduction to Generative Models and GANs - What are GANs?
+seo: Generative models GANs Generative Adversarial Networks deep learning branches computer vision with GANs
+description: Using generative models, we first learn the distribution of the training set and then generate some new observations or data points using the learned distribution with some differences.
 img-src: ../assets\images\Blog\coming-soon.jpg
 ---
+<h3>Overview</h3>
+* Generative Models and GANs - This article will give a simplified intoduction to GANs that you can fully grasp without prior knowledge of the basics
+* This article will explain briefly the structure of GANs, what they achieve and how they are trained
+* Some Intruiging-real world applications of GANs awaits you-- Let's begin!
+
+
+
+
+
+
+<h3>Introduction</h3>
+
+I first heard about GANs not quite long ago, as it is, I'm relatively a new-comer to the field. I came across it first while scrolling a filtered results for Computer Vision on Analytics Vidyha website. The title of the article was actually what made me click it "Generative Models: The Magic of Computer Vision". I started reading this article and I was nothing short of amazed-completely, you know, I never knew something like what I read and saw was possible at this time, but well, it actually isn't even <em>that</em> new. If you are somewhat just hearing it for the first time, try and be amazed by this.
+
+Can you guess where the below collection of images came from:
+
+<img class="img-fluid" src="../assets\images\Blog\Blog-img\Gans2.jpg">
+
+How about these ones:
+
+<img class="img-fluid" src="../assets\images\Blog\Blog-img\Gans3.jpg">
+
+Well, all of the object and faces you see in these images have been generated single-handedly by a computer-vision model called Generative Adversarial Networks (GANs)!. Awesome right? There's so much more to see.
+
+Being someone with a growing interest in Computer Vision and Virtual Reality, I loved it so much. In short, my mind started racing through the wonderful possibilities of GANs in Virtual Reality, of course, all those would take a lot of work in reserach but who knew we would have GANs performing at this level in just 2020. 
+
+With this article, I hope to give you a simple Introduction to GANs with all the necessary and important aspects of it, that you can go on with to explore ideas in branches of your interest. We would also look at some of their applications and how GANs come to give such exciting results that spells creativity.
+
+
+
+
+<h2>Table of Contents</h2> 
+
+
+<ol>
+  <li>What are Generative Models</li>
+  <li>Structure of Generative Models</li>
+  <li>Types of Generative Models</li>
+  <li>Applications of Generative Models</li>
+  <li>Getting Started with GANs - Projects & Opensource</li>
+</ol>
+
+
+
+
+<h3>What are Generative Models</h3>
+
 Generative Adversarial Networks, or GANs for short, are a type of neural network used for machine learning, computer vision, and other forms of artificial intelligence. Generative modeling is an unsupervised learning task in machine learning in which regularities and patterns of input data are discovered and learned so that a model can be used to generate and output new examples that can plausibly be taken from the original data set.
 
 A generative adversarial network, GAN for short, consists of two main structure that makes up the whole basis of its operation. They are called the <b>Generator</b> and <b>Discriminator</b>. These two nodes/models are built into a single system that forms the whole GAN. Let's look at a simple illustration of what they are both trying to achieve
