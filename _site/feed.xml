@@ -1,4 +1,297 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-23T19:20:55+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Introduction to Generative Models and GANs - What are GANs?</title><link href="http://localhost:4000/introduction-to-generative-adversarial-netowrks/" rel="alternate" type="text/html" title="Introduction to Generative Models and GANs - What are GANs?" /><published>2020-06-22T00:00:00+01:00</published><updated>2020-06-22T00:00:00+01:00</updated><id>http://localhost:4000/introduction%20to%20generative%20adversarial%20netowrks</id><content type="html" xml:base="http://localhost:4000/introduction-to-generative-adversarial-netowrks/">&lt;h3&gt;Overview&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-30T01:40:47+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">How to Build an Image Classification API in Tensorflow</title><link href="http://localhost:4000/image-classification-api-in-tensorflow/" rel="alternate" type="text/html" title="How to Build an Image Classification API in Tensorflow" /><published>2020-06-28T00:00:00+01:00</published><updated>2020-06-28T00:00:00+01:00</updated><id>http://localhost:4000/image%20classification%20api%20in%20tensorflow</id><content type="html" xml:base="http://localhost:4000/image-classification-api-in-tensorflow/">&lt;p&gt;In this tutorial, you would learn how to build an Image Classification Model using Tensorflow on Google Colab. Not just that, you would also be given an introduction to Image Classification and how it differs from other Computer Vision tasks, and lastly you would implement your trained model into a basic web application through the use of an API call. To start off, here is the overview of all what we would be touching on.&lt;/p&gt;
+
+&lt;h3&gt;Overview&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Image Classification In Computer Vision&lt;/li&gt;
+  &lt;li&gt;Applications of Image Classification in World Industry&lt;/li&gt;
+  &lt;li&gt;Steps to Build an Image Classification Model&lt;/li&gt;
+  &lt;li&gt;Building the Model with Tensorflow (Keras)&lt;/li&gt;
+  &lt;li&gt;Implementing your Model in a Web-application&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now that you have an idea of the steps taking us through this tutorial, Let’s begin with it.&lt;/p&gt;
+
+&lt;h3&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;Starting off in Machine Learning can be Overwhelming, I say this because I’m currently in the process of experiencing the start off altogether. There are so many fields, opinions, doubts that can go through your mind on the process of choosing a path to follow. Sometimes, actually Most times, It’s really cool to look at the big guys in the field that exude so much confidence showing that they know what they want. Also, there are lots of resources and articles around promising ways that would become a revelation to newcomers and map out the correct path for them. I just read some of those, and I’m more affected than when I was using my mind at a space to think for myself. My mood becomes let’s say negative. But I can’t be like that for long. I simply told myself I’m gonna learn them all by “doing”. It’s a big deal, perhaps the hardest part but with time it becomes a natural thing for you. That’s the way of life. Long story short, I decided to start implementing projects that I could add to my github, LinkedIn and blog.&lt;/p&gt;
+
+&lt;p&gt;This tutorial is mainly for people starting off in “Computer Vision”, those that want to “know” and “do” Computer Vision. What I want you to understand is this: &lt;b&gt;“It’s all in the process. Those little steps sums into the big advancement”&lt;/b&gt;.. Well, at least I told myself that. OpenCV can wait, I’m gonna learn all the small steps involved but I’m gonna learn them very fast. I have the ability to, and I hope with the series of upcoming posts, you too can follow along and master the baby steps in Computer Vision(CV). Let’s get into more concrete writings.&lt;/p&gt;
+
+&lt;h3&gt;Image Classification In Computer Vision&lt;/h3&gt;
+
+&lt;p&gt;The term Image Classification refers to a task in CV that involves the process of assigning classes to an entire image or picture. It is sometimes referred to as Image recognition, which is a broader term that refers to various tasks that involves classifying the content of images.&lt;/p&gt;
+
+&lt;p&gt;The task of helping computers to see, and make a sense or add meaning to what they see is a very hard one. Mainly because it does not just involve one but a series of steps are involved owning to the fact that real-world data or scenerio is unpredictable. Therefore, this is no longer a common task of pre-programmed rules giving accurate results. For computers to see, at basic level, they have to understand single still images befor processing advanced high fps videos of which is our general goal as ML engineers and researchers.&lt;/p&gt;
+
+&lt;p&gt;We come now to the problem of helping computers see. In accord, I decided to start of with the simplest problem and I think that should be Image Classification. In this problem&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;We take a dataset that consists of a set of items in images and their corresponding labels&lt;/li&gt;
+  &lt;li&gt;We train a model using the dataset so it can make predictions on new images correctly assigning them to the right class&lt;/li&gt;
+  &lt;li&gt;If it sees an image not among the class it was trained on, it would give it the label of the output with the highest probability&lt;/li&gt;
+  &lt;li&gt;This tells us that if we want a model to recognize a thousand different items accurately, we would train it with a dataset outlining those items and their respective label. But ofcourse, this is not an effecient way of tackling the problem. We have millions of items in the world, not to talk of species of animals..xD&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As simple a task as Image Classification is it has some very impressive applications that has been very beneficial to diiferent industries. Let’s look at some Applications:&lt;/p&gt;
+
+&lt;h3&gt;Applications of Image Classification in World Industry&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;In Manufacturing: A system built with a classifcation model can help speed up production process by efficiently reporting bad/damaged items before they are packaged for distribution. By classifying items as bad or good after being trained with a lot of data in the respect of it’s use-case. The main benefit of this is that, it does this considerably faster than human workers and workforce is also reduced resulting in the decrease in “cost of production”, which in a way can lead to cheaper products.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In Medical: An image classifiction model trained with a lot of medical X-ray records depicting a patient eith a disease vs one without can be used to accurately diagnose the health condition of new patients. This can significantly reduce the time spent by medical practitioners conducting several tests before giving results, therby giving them more time to focus on other matters.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In Computer Vision: Image classification is a very important application in CV fields. At a basic level, it makes up the structure of an Object detection system which involves “localizing objects in an imapge by drawing a bounding box around them while also assigning objects to their correct class”. Image classification is used as the basis of many advanced CV applications, a good example is an autonomous vehicle. Image classification and Object detection is the main components making up the system though at advanced level. A self-driving car has to recognize objects it should not hit like pedestrains and road signs, it also has to localize them to undestand their path. This is a clear example of video/moving object detection.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In Agriculture: Models built on Image classification has a tremendous impact in the agricultural sector. They can be applied to numerous problems and can give very accurate results that significantly improves the conditions ans returns of farming. A popular example is an app built in Tensorflow that is used to identify early on, cassave crops with high probability of disease infection. This can help farmers increse yield / decrese loss by being aware of the health of their crops in advance.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are so many other applications of Image classification not mentioned. What I like best about ML models is that they make we humans more productive anywhere which they are applied. And that is why we keep researching ways to make them easier to build, cost effective and being able to be used for more complicated problems.&lt;/p&gt;
+
+&lt;p&gt;Now I just gave some applications, another fun applications is integrating them in web and mobile applications for a number of services partaining to businesses. Today , you would build a classification model and use it as the backend of a web app. Now let’s look at the steps to build this model:&lt;/p&gt;
+
+&lt;p&gt;In this tutorial, I’m using the Tensorflow ML framework and Keras backend. You dont need to install Tensorflow if you dont have it, we would be writing all the code in Google Colab, you can follow this link to open colab and create a new file … &lt;a href=&quot;&quot;&gt;Open Google Colab&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Steps to build an Image Classification Model&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Import Keras and load Cifar10 Dataset&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Understanding our Dataset &amp;amp; Image (shape)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Data Pre-processing&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Image Processing&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Understanding the Stucture of Model&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Building and Training a ConvNet for Image Classification&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;if you are a total beginner and don’t understand some the terms used Like ConvNet, Image Processing and so on, I recommend taking this course by deeplearning.ai on Tensorflow. Or you can contact we directly giving me and I can recommend some resources that should help you get started.&lt;/p&gt;
+
+&lt;p&gt;We want to start by importing Kera which would be what we use to build our model. Cifar10 is a dataset consisting of 10 different items and their corresponding label. We are gonna use this to train a model.&lt;/p&gt;
+
+&lt;p&gt;My aim is to build a web application that uses the complete trained model as a back-end through an API endpoint. This web app would perform object recognition on images when a user uploads a given image and it would then using probability, pass as results the most likely class the object in that image belongs to. As expected, this would only work on 10 different classes of images from real-world examples making the user very limited in the amount of images he can classify( not that he doesn’t know the class of that image). In the next tutorial we can try out thsi same problem but on a larger dataset mainly Cifar100 i.e with 100 class of things. Let’s start writing some code!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use the following lines below to import keras along with cifar10&lt;/li&gt;
+  &lt;li&gt;Store the data in the respective arrays to be used for training&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After those simple steps are completed, we can use the print function to see the shape of our training images&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;
+
+from keras.datasets import cifar10
+(x_train, y_train), (x_test, y_test) = cifar10.load_data()
+print('x_train shape:', x_train.shape)
+print('y_train shape:', y_train.shape)
+print('no_of_x_train:', len(x_train))
+
+Output: 
+x_train shape: (50000, 32, 32, 3)
+y_train shape: (50000, 1)
+no_of_x_train: 50000S
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;By running that piece of code,, we get the following output above. The shape of x_train printed out is (50000, 32, 32, 3). In simple words, the shape of our array tells us that our x_train consists of:&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;50000 images (training data)&lt;/li&gt;
+	&lt;li&gt;32 pixels in height (images)&lt;/li&gt;
+	&lt;li&gt;32 pixels in width&lt;/li&gt;
+	&lt;li&gt;3 pixels in depth (RGB values of image)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For our label training data y, we get the shape output as (50000, 1). This tells us we have 50000 label data in our training set with just one value&lt;/p&gt;
+
+&lt;p&gt;That is the shape of our training data but keras stacks them in a 4D format, for easier processing when building our model. Now let’s try to see a full example of an image and label to better understand the logic. The code below helps us to that.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;
+print(x_train[0])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The output looks like the image below:
+&lt;img src=&quot;/assets/images/Blog/Blog-img/Computer_visualization_of_image_in_numbers.png&quot; class=&quot;img-fluid&quot; alt=&quot;Computer visualization of Image in Numbers&quot; width=&quot;100%&quot; height=&quot;60vh&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Trying to visualize the image this way doesn’t help us a lot, although that’s how it is interpreted for the computer. The Red, green, and blue values in our 3 byte image are just a bunch of numbers that the computer can use to calculate the intensity of r,g,b at a pixel point. We can use the matplotlib package for a finer, data plot. Let’s import the package in the next lines of code&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/b&gt; imshow is a function that maps the numbered pixel values of x_train[0] like we saw previously, into the actual image it represents.We also print out the label, that is, the class this image belongs to of the 10 classes we have. Classes begin from index 0.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;
+import matplotlib.pyplot as plt
+img = plt.imshow(x_train[1])
+
+print('The label is:', y_train[1])
+
+Output:
+The label is: [9]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The label showing as nine means that the second image in our training set (following index: 0 is first_img, 1 is second_img ) has a label/class of 9(truck) i.e the very last of the classes. With this we still do not know the class in words representing this image. The below image shows the conversion of numbers to the word class. Change the value of the printed x’s and labels in your colab environment, and visualize the different classes that gets printed out.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/number_to_word_class_cifar10.png&quot; class=&quot;img-fluid&quot; alt=&quot;Numbers_to_words_class_representation_ImageClassification_in tensorflow&quot; width=&quot;100%&quot; height=&quot;30vh&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;Data Pre-processing&lt;/h3&gt;
+
+&lt;p&gt;In this step we want to preprocess our data because our labels as class number are not very helpful. We can hot-encode our label so that the model returns 1 for matched class and 0 for the rest unmatched classes(i.e 9,since there would always be one matched class). For a simple binary-logistic predictor, we would not need to perform this pre processing step mainly because our classes are just two. Class 0 and class 1. 
+For example, building a model that predicts if a student is given admission(1) or not given(0) by training on past data X(scores on tests) and y(admission decision). In this case, we have only two possible classes and can continue without the need for data procesing.&lt;/p&gt;
+
+&lt;p&gt;We can call our current problem a multi-variant/multi-label logistic problem. Using traditional Machine Learning method of mapping x’s to their labels, we would have to build a classifyer for all our 10 classes and optimize each of them separately,i.e 10 seperate theta parameter. But thankfully, we are using a framework that abstracts much of the work for us.&lt;/p&gt;
+
+&lt;p&gt;This processing step is called one-hot encoding. It involves converting the labels into a set of 10 numbers where each number represents if the image belongs to that class or not. So if an image belongs to the first class, the first number of this set will be a 1 and all other numbers in this set will be a 0. The conversion table would look like:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/one-hot-encoding-imageclassification.png&quot; class=&quot;img-fluid&quot; alt=&quot;one-hot-encoding-imageclassification&quot; width=&quot;100%&quot; height=&quot;30vh&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now here we have been talking about one-hot encoding for a while, let’s write code for it in a few lines:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;
+import keras
+y_train_one_hot = keras.utils.to_categorical(y_train, 10)
+y_test_one_hot = keras.utils.to_categorical(y_test, 10)
+
+print('The one hot label is:', y_train_one_hot[1])
+
+Output: 
+The one hot label is: [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the above code, the line &lt;b&gt;y_train_one_hot = keras.utils.to_categorical(y_train, 10)&lt;/b&gt; means that we want to take the array conatining the number labels of y_train and convert it to one-hot setting y_train_one_hot. The numeber 10 is a required paarmeter, it specifies the number of classes there are.&lt;/p&gt;
+
+&lt;p&gt;We printed out the label of our second image(index 1/truck/label 9) and got the one-hot setting as above.&lt;/p&gt;
+
+&lt;h3&gt;Processing Images(x)&lt;/h3&gt;
+&lt;p&gt;To process our images , what we do is reduce the pixels values between 0 and 1 which would aid in training our neural network. The pixel values of x ranges between 0 - 255, to reduce them we can divide b 255. We first covert the datatype to float32 which is a datatype that can store decimal values. Let’s write code for this.&lt;/p&gt;
+
+&lt;p&gt;We process our images before training mainly for our convolutions to easily find features to use for training therby reducing training period&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;
+x_train = x_train.astype('float32')
+x_test = x_test.astype('float32')
+
+x_train = x_train / 255
+x_test = x_test / 255
+
+x_train[0]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When we print our output,, like previously we get a bunch of numbers except that this time around they all fall in the range of 0 and 1. The process of reducing our image pixels in this way is called &lt;b&gt;&lt;em&gt;&lt;a href=&quot;https://channelai.netlify.app/introduction-to-machine-learning.md&quot;&gt;Normalization&lt;/a&gt;&lt;/em&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/normalized_form_of_cifar10_xtrain_after_image_processing.png&quot; class=&quot;img-fluid&quot; alt=&quot;normalized_form_of_cifar10_xtrain_after_image-processing &quot; width=&quot;100%&quot; height=&quot;30vh&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This processing step makes our neural network to train faster and achieve better accuracy. Note: This processing is also carried out on the test set since when evaluating we want the same range of values as those used when training.&lt;/p&gt;
+
+&lt;h3&gt;Understanding the Stucture of Model&lt;/h3&gt;
+
+&lt;p&gt;We finally arrive at the most productive step, to train our model. This step just involves setting up a structure or architecture we want our model to have. We would add layers to our model in these sequence:&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;Add Conv2D layer with zero-padding: This is a layer that would isolate the features in our images so that we can gather more information in less pixels. It actually ends up reducing the size of the pixels. The zero-padding works to produce the same output width and height as that of the input, what this means literally is that; we aren't losing any information by using zero-padding also called same-padding. The kind of padding used would either try to highlight the horizontal or vertical aspect(lines) of the image. Padding is also called a filter or kernel&lt;/li&gt;&lt;br /&gt;
+	&lt;li&gt;Add MaxPolling layer with stride: This layer basically works to shrink the pixel height and weight while still retaining relevant information. The stride enables the information retention by passing to the output the largest number in a box.In simpler terms, what stride does is it looks at the image in bits according to it's height and width specified and outputs the largest number among all numbers in that particular box. It is passed across the whole image, the size of the stride determines the quantity or perhaps quality of features that is passed to the output after MaxPooling is carried out.&lt;/li&gt;&lt;br /&gt;
+	&lt;li&gt;Relu activation function: We use the relu activation in all layers except for the last layer which is a softmax. Relu (Rectified Linear Unit) is an activation that outputs the value of input X if x &amp;gt; 0 and outputs 0 if x &amp;lt; 0.&lt;/li&gt;&lt;br /&gt;
+	&lt;li&gt;Softmax: Our last layer Softmax simply transforms the output of the previous layer into probability distributions. So we are able to match image classification based on the probability given by the model of each classes. And therefore, our model picks the class with the highest probability as the correct item detected in an image.&lt;/li&gt;&lt;br /&gt;
+	&lt;li&gt;Sequential: Keras imports Sequential which is a library that holds all the types of layers we can use to build our model:
+	&lt;ul style=&quot;list-style-type: disc;&quot;&gt;
+		&lt;li&gt;Dense is the layer that combines all our parameters into a single dense package&lt;/li&gt;
+		&lt;li&gt;Flatten outputs our image shape into one long vector&lt;/li&gt;
+		&lt;li&gt;Dropout prevents overfitting in the layers&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Building the Model with Tensorflow (Keras)&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D
+
+model = Sequential()
+model.add(Conv2D(64, (3, 3), activation='relu', input_shape=(32, 32, 3))),
+model.add(Conv2D(32, (3, 3), activation='relu'))
+model.add(MaxPooling2D(2, 2)),
+model.add(Dropout(0.25))
+
+model.add(Conv2D(64, (3, 3), activation='relu')),
+model.add(Conv2D(64, (3, 3), activation='relu')),
+      #model.add(Conv2D(64, (3, 3), activation='relu', padding='same'))
+model.add(MaxPooling2D(2, 2)),
+model.add(Dropout(0.25))
+
+model.add(Flatten()),
+model.add(Dense(1024, activation='relu')),
+model.add(Dropout(0.5))
+model.add(Dense(10, activation='softmax'))
+
+
+
+model.summary()
+
+model.compile(loss='categorical_crossentropy',
+              optimizer='adam',
+              metrics=['accuracy'])
+hist = model.fit(x_train, y_train_one_hot, 
+           batch_size=32, epochs=15, 
+           validation_split=0.2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After training , I got an accuracy of 79% on my training set and 75% on my validation set. It’s quite noticeable that the usage of dropouts after layers helped in minimizing overfitting. I’m almost underfitted but I can not make that claim as I got quite a good accuracy on my validation set. U should try tweaking different values to fully understand this and see if you can improve the accuracy of your model. Some hyper-parameters that you should consider when tuning includes: epochs, number of ConvNets(add more with higher depths), dropouts.&lt;/p&gt;
+
+&lt;p&gt;Before using this model to make some predictions, let’s plot some learning curves that would help us understand how well our model trained. this step should help us understand overfitting, underfitting, unsteady training and so on. This can help us to decide steps to take that can help improve the model.&lt;/p&gt;
+
+&lt;h4&gt;Plot showing Model Loss during Training&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/model_loss_plot_learning_curve.png&quot; class=&quot;img-fluid&quot; alt=&quot;model_loss_plot_learning_curve&quot; width=&quot;100%&quot; height=&quot;30vh&quot; /&gt;
+…..&lt;/p&gt;
+&lt;p style=&quot;padding-top: 5%&quot;&gt;&lt;/p&gt;
+&lt;h4&gt;Plot showing Model Accuracy during Training&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/model_accuracy_plot_learning_curve.png&quot; class=&quot;img-fluid&quot; alt=&quot;model_accuracy_plot_learning_curve&quot; width=&quot;100%&quot; height=&quot;30vh&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From the above plots we see that, we had a steady training without overfitting our model.
+Now for the last step, we want to evaluate our model using the test set and also make predictions using entirely new images. You can do this by getting images that fall into any one of the classes as we have in our dataset. The code below would enable you to choose multiple files from your storage for prediction.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;
+model.evaluate(x_test, y_test_one_hot)[1]
+model.save('chel_cifar10_model_OR.h5')
+
+import numpy as np
+from skimage import data, color, feature, transform
+from skimage.transform import resize
+from google.colab import files
+from keras.preprocessing import image
+
+uploaded = files.upload()
+for fn in uploaded.keys():
+
+path = '/content/' + fn
+img = image.load_img(path, target_size=(32, 32))
+x = image.img_to_array(img)
+x = np.expand_dims(x, axis=0)
+
+#images = np.vstack([x])
+probabilities = model.predict(images, batch_size=10)
+print(probabilities[0])
+
+number_to_class = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
+index = np.argsort(probabilities[0,:])
+print(&quot;Most likely class:&quot;, number_to_class[index[9]], &quot;-- Probability:&quot;, probabilities[0,index[9]])
+print(&quot;Second most likely class:&quot;, number_to_class[index[8]], &quot;-- Probability:&quot;, probabilities[0,index[8]])
+print(&quot;Third most likely class:&quot;, number_to_class[index[7]], &quot;-- Probability:&quot;, probabilities[0,index[7]])
+print(&quot;Fourth most likely class:&quot;, number_to_class[index[6]], &quot;-- Probability:&quot;, probabilities[0,index[6]])
+print(&quot;Fifth most likely class:&quot;, number_to_class[index[5]], &quot;-- Probability:&quot;, probabilities[0,index[5]])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The above code evaluates our model using test set, saves the trained model in a .h5 format and also we are able to upload files for prediction by the files library from google colab. Then we finally converted the output numbers into words_class as it’s easier to understand that way. Tha last bit of code enables us to do that.&lt;/p&gt;
+
+&lt;p&gt;Test out different images to see how well the model you built classifies them. Now that we have saved our trained model, we can go ahead to build this inside a Simple web application.&lt;/p&gt;
+
+&lt;p&gt;In the part 2 of this article, let’s look at how to create an API from our model and implement that into a web-app. &lt;a href=&quot;&quot;&gt;Next Article: Building APIs from Machine Learning Models&lt;/a&gt;&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">In this tutorial, you would learn how to build an Image Classification Model using Tensorflow on Google Colab. Not just that, you would also be given an introduction to Image Classification and how it differs from other Computer Vision tasks, and lastly you would implement your trained model into a basic web application through the use of an API call. To start off, here is the overview of all what we would be touching on.</summary></entry><entry><title type="html">Introduction to Generative Models and GANs - What are GANs?</title><link href="http://localhost:4000/introduction-to-generative-adversarial-netowrks/" rel="alternate" type="text/html" title="Introduction to Generative Models and GANs - What are GANs?" /><published>2020-06-22T00:00:00+01:00</published><updated>2020-06-22T00:00:00+01:00</updated><id>http://localhost:4000/introduction%20to%20generative%20adversarial%20netowrks</id><content type="html" xml:base="http://localhost:4000/introduction-to-generative-adversarial-netowrks/">&lt;h3&gt;Overview&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Generative Models and GANs - This article will give a simplified intoduction to GANs that you can fully grasp without prior knowledge of the basics&lt;/li&gt;
   &lt;li&gt;This article will explain briefly the structure of GANs, what they achieve and how they are trained&lt;/li&gt;
@@ -35,37 +328,50 @@
 
 &lt;h3&gt;What are Generative Models&lt;/h3&gt;
 
+&lt;p&gt;“&lt;em&gt;Generative Adversarial networks is the most interesting idea in the last 10 years in Machine Learning&lt;/em&gt;”- &lt;b&gt;Yann Le Cun&lt;/b&gt;&lt;/p&gt;
+
 &lt;p&gt;Generative Adversarial Networks, or GANs for short, are a type of neural network used for machine learning, computer vision, and other forms of artificial intelligence. Generative modeling is an unsupervised learning task in machine learning in which regularities and patterns of input data are discovered and learned so that a model can be used to generate and output new examples that can plausibly be taken from the original data set.&lt;/p&gt;
 
-&lt;p&gt;A generative adversarial network, GAN for short, consists of two main structure that makes up the whole basis of its operation. They are called the &lt;b&gt;Generator&lt;/b&gt; and &lt;b&gt;Discriminator&lt;/b&gt;. These two nodes/models are built into a single system that forms the whole GAN. Let’s look at a simple illustration of what they are both trying to achieve&lt;/p&gt;
+&lt;p&gt;Generative Adversarial nets were recently introduced (In the past 7 years or so) as a novel way to train a generative model, i.e create a model that is able to generate data. They consists of two ‘adversarial’ networks: a generative model G that captures the data distribution and a distributive model D that estimates the probability that a sample came from the training data rather than from G.&lt;/p&gt;
 
-&lt;p&gt;A simple GAN can be said to be made up of two dataset, one of them is called the true or real-world dataset, the other can be called the fake dataset. The Generator is the node that gives out fake data while the discriminator gives as input X, the real data. This two inputs are passed into the model, and at an iteration or training, the discriminator would have to discern if each image(data) that comes its way is from the real or fake dataset. At the start of training, the discriminator succesfully guesses right, on this process, the generator has to change its weights(during training) inorder to reduce the cost/error made and once again pushes a new improved set of data to the discriminator for inspection. This is what happens at training periods, on each epochs until a desired level of accuracy is achieved. The overall system and purpose of GANs is to obatin a level of cost that the discriminator starts to guess datas from the generator as “real ones”.&lt;/p&gt;
+&lt;p&gt;A generative adversarial network, GAN for short, consists of two main structure that makes up the whole basis of its operation. They are called the &lt;b&gt;Generator&lt;/b&gt; and &lt;b&gt;Discriminator&lt;/b&gt;. These two neural networks are pitted against each other in a zero-sum game, whereby the first network, the generator, is tasked with fooling the second network.&lt;/p&gt;
 
-&lt;p&gt;While the discriminator tries to discern the difference between what the real an the fake database is, the generator tries to create a plausible example of the same data set by updating its weights/parameters. The Generator models are designed to deceive the discrimination model, by trying  to generate plausible examples that fits among the real dataset. Our hope is that the two networks, when they face each other, will get better and better until the end result is a generator network that produces realistic outputs.&lt;/p&gt;
+&lt;p&gt;A simple GAN can be said to be made up of two dataset, one of them is called the true or real-world dataset, the other can be called the fake dataset. The Generator is the model that distributes fake data into the system while the discriminator gives as input X, the real data. This two inputs are passed into the model, and every iteration/epochs, the discriminator would have to discern if each image sample comes from the real or fake dataset. At the start of training, the discriminator almost always spots the fake data, whereby, the generator model has to change its weights(during training) inorder to reduce the cost/error made and once again pushes a new improved set of data to the discriminator for inspection. This is what happens at training periods, on each epochs until a desired level of accuracy is achieved. The overall system and purpose of GANs is to obatin a level of cost that the discriminator starts to guess datas from the generator as “real ones”.&lt;/p&gt;
+
+&lt;p&gt;While the discriminator tries to distinguish between the real and fake sets of data , the generator attepts to create a plausible example of the same data set by updating its weights/parameters. The Generator models are designed to deceive the discrimination model, by trying  to generate plausible examples that fits among the real dataset. Our hope is that the two networks, when they face each other, will get better and better until the end result is a generator network that produces photorealistic outputs.&lt;/p&gt;
+
+&lt;p&gt;The fake samples are generated by some randon noise from looking at the real data, they are passed on to the discriminator whose input is both fake samples as well as samples from our real data set. The discriminator than makes a binary decision about whether the image supplied, z, is a real image D(z)= 1, or a fake image, D(z)=0.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;../assets\images\Blog\Blog-img\D&amp;amp;G_Gans.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For example, a GAN trained on photographs can create a new photograph that appears to human observers at least superficially authentic and has many realistic characteristics. A popular real-world application of GAN; GANs have been used to produce new celebrities who are not real people. Using a training kit, the technique learns to create images of real-life celebrities, real-face celebrities and non-real face celebrities.&lt;/p&gt;
 
-&lt;p&gt;We take a look at Generative Adversarial Networks (GANs), a new class of neural networks with a wide range of applications in computer science. GANS learns to model input distributions by forming two competing and cooperating networks known as generators and discriminators (also known as critics). We propose to use two neural networks to generate and refine new data: a generator and a discriminator. [Sources: 7, 8]&lt;/p&gt;
+&lt;p&gt;So a GAN (generator network) can start with a matrix of noise pixels and try to change them in what an image classifier would call a “cat.” Instead of taking raw data, the generator can trace back to the original input data (e.g. a photo of a cat) and then try to generate output from which the input of the data would be mapped. The new data is not bound to a single data set, but is created from a set of data points (i.e. an array of images or a set of data sets).&lt;/p&gt;
 
-&lt;p&gt;For example, a GAN (generator network) can start with a matrix of noise pixels and try to change them in what an image classifier would call a “cat.” Instead of taking raw data, the generator can trace back to the original input data (e.g. a photo of a cat) and then try to generate output from which the input of the data would be mapped. The new data is not bound to a single data set, but is created from a set of data points (i.e. an array of images or a set of data sets).&lt;/p&gt;
+&lt;p&gt;Back in 2014, Ian Goodfellow suggested the idea of two neural networks competing or working together. For some networks, parallel training means an improvement in skills, for others it is a question of perspective.&lt;/p&gt;
 
-&lt;p&gt;Generative enemy networks were first developed in 2014 and are most commonly used to create images of people and objects (I. Goodfellow). Generators try to produce realistic images, and discriminators try to see the difference between what the generators generate and what the competing neural networks are working on. Generative opposing networks (GANs) work in the same way as a discrimination network, but with different parameters.&lt;/p&gt;
+&lt;p&gt;One neural network tries to generate realistic data, the other network tries to distinguish what the generator network generates. The discrimination network updates its parameters to ensure that the fake data is selected from the real data. Note: GANs can be used to model data distributions, but nowadays they are mainly used for images). The generator networks use the discriminators as a loss function and update their parameters after generating data that appears more realistic.&lt;/p&gt;
 
-&lt;p&gt;Back in 2014, Ian Goodfellow suggested the idea of two neural networks competing or working together. For some networks, parallel training means an improvement in skills, for others it is a question of perspective. [Sources: 0, 3]&lt;/p&gt;
+&lt;p&gt;GAN is a recently developed machine learning framework that proposes creative realistic representations of the real data distribution of images and other data. As mentioned above, a sample image can be used to create images that are superficially authentic to human observers by mapping sets of feature noise from the input to an output with close relation&lt;/p&gt;
 
-&lt;p&gt;One neural network tries to generate realistic data, the other network tries to distinguish what the generator network generates. The discrimination network updates its parameters to ensure that the fake data is selected from the real data. Note: GANs can be used to model data distributions, but nowadays they are mainly used for images). The generator networks use the discriminators as a loss function and update their parameters after generating data that appears more realistic. [Sources: 3]&lt;/p&gt;
-
-&lt;p&gt;The generator algorithm tricks the evaluator by generating a data distribution that seems to come from the true data distributions, but is actually just a fake. [Sources: 2]&lt;/p&gt;
-
-&lt;p&gt;While the discriminator is a convolutional neural network, the generator is designed as a deconventional neural network. The generator network processes the data in such a way that the artificial constructs are recognized by the evaluator, but not the real data distributions, such as the actual data distribution. [Sources: 2]&lt;/p&gt;
-
-&lt;p&gt;A GAN is a recently developed machine learning framework that proposes creative realistic representations of the real data distribution of images and other data. As mentioned above, an organ can be used to create images that are superficially authentic to human observers. [Sources: 2, 4]&lt;/p&gt;
-
-&lt;p&gt;The opposing structure can consist of two competing deep neuron networks, each of which has its own set of neurons, and a number of different types of opponents. [Sources: 4]&lt;/p&gt;
-
-&lt;p&gt;In this blog post, we will explore how this research is related to the development of generative enemy networks (GANs) for deep neural networks and how they work. In a Gan-based strategy, a discriminatory network uses a series of pixels, each corresponding to one of its two opponents, to match pixels corresponding to an isotropic Young Modulus (HS) bound by an upper HS. In the meantime, the generative network, equipped with the knowledge of these connections, is able to fast - advance through the network and generate thousands of new configurations to achieve the desired properties (e.g. the upper limit of the isotropy of Young’s modules). [Sources: 4, 6]&lt;/p&gt;
-
-&lt;p&gt;Sources:&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Overview Generative Models and GANs - This article will give a simplified intoduction to GANs that you can fully grasp without prior knowledge of the basics This article will explain briefly the structure of GANs, what they achieve and how they are trained Some Intruiging-real world applications of GANs awaits you– Let’s begin!</summary></entry><entry><title type="html">Vectorization - How to Vectorize ML Algorithms with MATLAB</title><link href="http://localhost:4000/vectorization-in-machine-learning-with-matlab/" rel="alternate" type="text/html" title="Vectorization - How to Vectorize ML Algorithms with MATLAB" /><published>2020-06-16T00:00:00+01:00</published><updated>2020-06-16T00:00:00+01:00</updated><id>http://localhost:4000/vectorization%20in%20machine%20learning%20with%20matlab</id><content type="html" xml:base="http://localhost:4000/vectorization-in-machine-learning-with-matlab/">&lt;p&gt;In my previous post, I gave a simplified introduction to Machine Learning for beginners. It therefore brings the need for me to write a post on “Vectorization”. You might be hearing it for the first time or you have possibly come across it sometime. Either one of those, I can tell you that it isn’t a difficult subject, in fact in the field of Machine Learning I found it much easier than a normal iterative code (for &amp;amp; while loop). Now lets begin, by the end of this post I want you to understand what vectorization is, it’s application and how to use it in your ML Implementation.&lt;/p&gt;
+&lt;p&gt;Cited works from:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://towardsdatascience.com/comprehensive-introduction-to-turing-learning-and-gans-part-2-fd8e4a70775&quot;&gt;towardsdatascience(medium)&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/&quot;&gt;MachineLearning Mastery&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://deepai.org/machine-learning-glossary-and-terms/conditional-adversarial-network&quot;&gt;Deepai.org&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Generative_adversarial_network&quot;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://bdtechtalks.com/2018/05/28/generative-adversarial-networks-artificial-intelligence-ian-goodfellow/&quot;&gt;BDtechtalks&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Chel</name></author><summary type="html">Overview Generative Models and GANs - This article will give a simplified intoduction to GANs that you can fully grasp without prior knowledge of the basics This article will explain briefly the structure of GANs, what they achieve and how they are trained Some Intruiging-real world applications of GANs awaits you– Let’s begin!</summary></entry><entry><title type="html">Vectorization - How to Vectorize ML Algorithms with MATLAB</title><link href="http://localhost:4000/vectorization-in-machine-learning-with-matlab/" rel="alternate" type="text/html" title="Vectorization - How to Vectorize ML Algorithms with MATLAB" /><published>2020-06-16T00:00:00+01:00</published><updated>2020-06-16T00:00:00+01:00</updated><id>http://localhost:4000/vectorization%20in%20machine%20learning%20with%20matlab</id><content type="html" xml:base="http://localhost:4000/vectorization-in-machine-learning-with-matlab/">&lt;p&gt;In my previous post, I gave a simplified introduction to Machine Learning for beginners. It therefore brings the need for me to write a post on “Vectorization”. You might be hearing it for the first time or you have possibly come across it sometime. Either one of those, I can tell you that it isn’t a difficult subject, in fact in the field of Machine Learning I found it much easier than a normal iterative code (for &amp;amp; while loop). Now lets begin, by the end of this post I want you to understand what vectorization is, it’s application and how to use it in your ML Implementation.&lt;/p&gt;
 
 &lt;p&gt;The title of this post actually says “Vectorization in ML with MATLAB”, so you can tell I would be teaching you how to vectorize your code with MATLAB as the programming language, but you should know that almost all language codes can be vectorized. Now let’s look at a simplified definition of vectorization.&lt;/p&gt;
 
