@@ -7,7 +7,7 @@ description: Learn how to build an Image Classification Model, Export as an API 
 img-src: ../assets\images\Blog\vectorization-with-matlab.png
 ---
 
-In this tutorial, you would learn how to build an Image Classification Model using Tensorflow on Google Colab. Not just that, you would also be given an introduction to Image Classification and how it differs from other Computer Vision tasks, and lastly you would implement your trained model into a basic web application through the use of an API call. To start off, here is the overview of all what we would be touching on.
+In this tutorial, you would learn how to build an Image Classification Model using Tensorflow on Google Colab. This tutorial is the first among three set. They go from buiding an Image Classifier to Improving accuracy in your model and finally Serving it for production through an API url Endpoint. To start off, here is the overview of all what we would be touching on.
 
 <h3>Overview</h3>
 * Image Classification In Computer Vision
@@ -16,11 +16,15 @@ In this tutorial, you would learn how to build an Image Classification Model usi
 * Building the Model with Tensorflow (Keras)
 * Implementing your Model in a Web-application
 
+Next: <a href="">Improving your Tensorflow Model with Dropouts and Batch Normalization</a>
+
+Finally: <a href="">Building an Image Classification API with TFX and GCP </a>
+
 Now that you have an idea of the steps taking us through this tutorial, Let's begin with it.
 
 <h3>Introduction</h3>
 
-Starting off in Machine Learning can be Overwhelming, I say this because I'm currently in the process of experiencing the start off altogether. There are so many fields, opinions, doubts that can go through your mind on the process of choosing a path to follow. Sometimes, actually Most times, It's really cool to look at the big guys in the field that exude so much confidence showing that they know what they want. Also, there are lots of resources and articles around promising ways that would become a revelation to newcomers and map out the correct path for them. I just read some of those, and I'm more affected than when I was using my mind at a space to think for myself. My mood becomes let's say negative. But I can't be like that for long. I simply told myself I'm gonna learn them all by "doing". It's a big deal, perhaps the hardest part but with time it becomes a natural thing for you. That's the way of life. Long story short, I decided to start implementing projects that I could add to my github, LinkedIn and blog. 
+Starting off in Machine Learning can be Overwhelming, I say this because I'm currently in the process of experiencing the start off altogether. There are so many fields, opinions, doubts that can go through your mind on the process of choosing a path to follow. Sometimes, actually most times, It's really cool to look at the big guys in the field that exude so much confidence showing that they know what they want. Also, there are lots of resources and articles around promising ways that would become a revelation to newcomers and map out the correct path for them. I just read some of those, and I'm more affected than when I was using my mind at a space to think for myself. My mood becomes let's say negative. But I can't be like that for long. I simply told myself I'm gonna learn them all by "doing". It's a big deal, perhaps the hardest part but with time it becomes a natural thing for you. That's the way of life. Long story short, I decided to start implementing projects that I could add to my github, LinkedIn and blog. 
 
 This tutorial is mainly for people starting off in "Computer Vision", those that want to "know" and "do" Computer Vision. What I want you to understand is this: <b>"It's all in the process. Those little steps sums into the big advancement"</b>.. Well, at least I told myself that. OpenCV can wait, I'm gonna learn all the small steps involved but I'm gonna learn them very fast. I have the ability to, and I hope with the series of upcoming posts, you too can follow along and master the baby steps in Computer Vision(CV). Let's get into more concrete writings.
 
@@ -28,11 +32,11 @@ This tutorial is mainly for people starting off in "Computer Vision", those that
 
 The term Image Classification refers to a task in CV that involves the process of assigning classes to an entire image or picture. It is sometimes referred to as Image recognition, which is a broader term that refers to various tasks that involves classifying the content of images.
 
-The task of helping computers to see, and make a sense or add meaning to what they see is a very hard one. Mainly because it does not just involve one but a series of steps are involved owning to the fact that real-world data or scenerio is unpredictable. Therefore, this is no longer a common task of pre-programmed rules giving accurate results. For computers to see, at basic level, they have to understand single still images befor processing advanced high fps videos of which is our general goal as ML engineers and researchers.
+The task of helping computers to see, and make a sense or add meaning to what they see is a very hard task. Mainly because it does not just involve one but a series of steps are involved owning to the fact that real-world data or scenerio is unpredictable. Therefore, this is no longer a common task of pre-programmed rules giving accurate results. For computers to see, at basic level, they have to understand single still images before processing advanced high fps videos of which is our general goal as ML engineers and researchers.
 
 We come now to the problem of helping computers see. In accord, I decided to start of with the simplest problem and I think that should be Image Classification. In this problem
 * We take a dataset that consists of a set of items in images and their corresponding labels
-* We train a model using the dataset so it can make predictions on new images correctly assigning them to the right class
+* We train a model using the dataset so it can make predictions on new images by correctly assigning them to the right class
 * If it sees an image not among the class it was trained on, it would give it the label of the output with the highest probability
 * This tells us that if we want a model to recognize a thousand different items accurately, we would train it with a dataset outlining those items and their respective label. But ofcourse, this is not an effecient way of tackling the problem. We have millions of items in the world, not to talk of species of animals..xD
 
@@ -41,11 +45,11 @@ As simple a task as Image Classification is it has some very impressive applicat
 
 <h3>Applications of Image Classification in World Industry</h3>
 
-* In Manufacturing: A system built with a classifcation model can help speed up production process by efficiently reporting bad/damaged items before they are packaged for distribution. By classifying items as bad or good after being trained with a lot of data in the respect of it's use-case. The main benefit of this is that, it does this considerably faster than human workers and workforce is also reduced resulting in the decrease in "cost of production", which in a way can lead to cheaper products.
+* In Manufacturing: A system built with a classification model can help speed up production process by efficiently reporting bad/damaged items before they are packaged for distribution. By classifying items as bad or good after being trained with a lot of data in the respect of it's use-case. The main benefit of this is that, it does this considerably faster than human workers and workforce is also reduced resulting in the decrease in "cost of production", which in a way can lead to cheaper products.
 
-* In Medical: An image classifiction model trained with a lot of medical X-ray records depicting a patient eith a disease vs one without can be used to accurately diagnose the health condition of new patients. This can significantly reduce the time spent by medical practitioners conducting several tests before giving results, therby giving them more time to focus on other matters.
+* In Medical: An image classifiction system trained with a lot of medical X-ray records depicting a patient eith a disease vs one without can be used to accurately diagnose the health condition of new patients. This can significantly reduce the time spent by medical practitioners conducting several tests before giving results, therby giving them more time to focus on other matters.
 
-* In Computer Vision: Image classification is a very important application in CV fields. At a basic level, it makes up the structure of an Object detection system which involves "localizing objects in an imapge by drawing a bounding box around them while also assigning objects to their correct class". Image classification is used as the basis of many advanced CV applications, a good example is an autonomous vehicle. Image classification and Object detection is the main components making up the system though at advanced level. A self-driving car has to recognize objects it should not hit like pedestrains and road signs, it also has to localize them to undestand their path. This is a clear example of video/moving object detection.
+* In Computer Vision: Image classification is a very important application in CV fields. At a basic level, it makes up the structure of an Object detection system which involves "localizing objects in an image by drawing a bounding box around them while also assigning objects to their correct class". Image classification is used as the basis of many advanced CV applications, a good example is an autonomous vehicle. Image classification and Object detection is the main components making up the system though at advanced level. A self-driving car has to recognize objects it should not hit like pedestrains and road signs, it also has to localize them to undestand their path. This is a clear example of video/moving object detection.
 
 * In Agriculture: Models built on Image classification has a tremendous impact in the agricultural sector. They can be applied to numerous problems and can give very accurate results that significantly improves the conditions ans returns of farming. A popular example is an app built in Tensorflow that is used to identify early on, cassave crops with high probability of disease infection. This can help farmers increse yield / decrese loss by being aware of the health of their crops in advance. 
 
@@ -279,8 +283,10 @@ print("Fourth most likely class:", number_to_class[index[6]], "-- Probability:",
 print("Fifth most likely class:", number_to_class[index[5]], "-- Probability:", probabilities[0,index[5]])
 </code></pre>
 
-The above code evaluates our model using test set, saves the trained model in a .h5 format and also we are able to upload files for prediction by the files library from google colab. Then we finally converted the output numbers into words_class as it's easier to understand that way. Tha last bit of code enables us to do that.
+The above code evaluates our model using test set, saves the trained model in a .h5 format and also we are able to upload files for prediction by the files library from keras. Then we converted the output numbers into words_class as it's easier to understand that way. The last bit of code enables us to do that.
 
-Test out different images to see how well the model you built classifies them. Now that we have saved our trained model, we can go ahead to build this inside a Simple web application.
+After training the model and evaluating on the test set (x_test), I got an accuracy of 75%. This means that, our classifier would classify correctly only 75% of new unseen images we feed it.
 
-In the part 2 of this article, let's look at how to create an API from our model and implement that into a web-app. <a href="">Next Article: Building APIs from Machine Learning Models</a> 
+Test out different images to see how well the model you built classifies them. 
+
+In the part 2 of this article, let's look at how to Improve significantly our built model's accuracy by Introducing some new concepts that would prevent over-fitting and slow down convergence. <a href="">Next Article: Improving your Tensorflow Model with Dropouts and Batch Normalization</a> 
