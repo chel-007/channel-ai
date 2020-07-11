@@ -2,7 +2,7 @@
 layout: post
 author: Chel
 title : Introduction to Machine Learning Simplified Version
-img-src: ../assets\images\Blog\Introduction-to-ml2.png
+img-src: ../assets\images\Blog\Introduction-to-ml2
 img-alt: machine learning for beginners
 description: Machine Learning is a sub-field of Artificial Intelligence. It is the concept that defines the different methods in which a Machine (preferably referred to as model) can learn from real world data and have the ability to make accurate predictions.
 seo: MachineLearning ML Technologies

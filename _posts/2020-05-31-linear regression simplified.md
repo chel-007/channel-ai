@@ -4,7 +4,7 @@ author: Chel
 title: Introduction to Linear Regression - Creating a Simple Learning Predictor
 seo: Simplified Linear Regression Machine Learning Algorithms Linear regression models predictor
 description: Linear Regression is a Machine Learning algorithm that is used for predictions of "continuous /non-classified data".You have some datasets in continuous values(because we are doing LinearRegrssion) and you want to go about training a model to the point that it achieves a preferred level of accuracy
-img-src: ../assets\images\Blog\linear-regression-simplified-png.png
+img-src: ../assets\images\Blog\linear-regression-simplified-png
 ---
 
 So now that you know a little bit about Machine Learning. It becomes natural for you to understand how you can use it to build models that are capable of making decisions at minimal level. The way we achieve this is the use of Machine Learning Algorithms that were developed several years back by experts in the field.
@@ -66,7 +66,7 @@ FEATURES
 
 The 3 features we would be giving our variable x are <strong>number of bedrooms</strong>, <strong>sqft of living area</strong> and <strong>year built</strong>. There a a lot more features but the reason i chose those 3 is because they seem like the factors that play the largest role of influence on the price a customer would like to pay for a house. Also including similar features like <strong>sqft of basement , sqft of upperlevels</strong> and so on would end up making the features redundant (repetitive or duplicating). Take a look at the full features in our dataset.
 
-<img class="img-fluid" src="../assets\images\Blog\Blog-img\lr-feature-list.png">
+<img class="img-fluid" src="../assets\images\Blog\Blog-img\lr-feature-list.webp">
 
 To set off,we would be using the list as a guide to know the order of the steps it takes to build our model.You can always refer back to this, as a reminder of what steps you should be implementing at what time.
 
@@ -130,12 +130,12 @@ To make you understand better what feature normalization does, Below are two ima
 
 <h3>RAW DATASET(UN-NORMALIZED)</h3><p style="clear: both;"></p><br>
 
-<img class="img-fluid" src="../assets\images\Blog\Blog-img\un-normalized.png">
+<img class="img-fluid" src="../assets\images\Blog\Blog-img\un-normalized.webp">
 
 
 <h3>FEATURE NORMALIZED</h3><p style="clear: both;"></p><br>
 
-<img class="img-fluid" src="../assets\images\Blog\Blog-img\normalized.png">
+<img class="img-fluid" src="../assets\images\Blog\Blog-img\normalized.webp">
 
 As you can see,, in the un-normalized plot of our data, we have some of our points directly on the y axis. This is because the range between our dataset is to wide causing some of the smaller values of X to take their places as close as possible to the line. Normalizing our data sets them all in the same range.
 

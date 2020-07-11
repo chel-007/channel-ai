@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-11T10:17:32+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks</title><link href="http://localhost:4000/achieving-80-accuracy-on-cifar-10-dataset/" rel="alternate" type="text/html" title="Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks" /><published>2020-07-11T00:00:00+01:00</published><updated>2020-07-11T00:00:00+01:00</updated><id>http://localhost:4000/achieving%2080%20accuracy%20on%20cifar%2010%20dataset</id><content type="html" xml:base="http://localhost:4000/achieving-80-accuracy-on-cifar-10-dataset/">&lt;p&gt;In this tutorial you would learn some methods that can be used to improve a model’s accuracy. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven’t already, you can build a Tensorflow Image Classification model following the guide in the last post &lt;a href=&quot;&quot;&gt;How to Build an Image Classification API in Tensorflow&lt;/a&gt;. This is an overview of what we would be touching on in this tutorial:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-11T17:29:07+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks</title><link href="http://localhost:4000/achieving-80-accuracy-on-cifar-10-dataset/" rel="alternate" type="text/html" title="Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks" /><published>2020-07-11T00:00:00+01:00</published><updated>2020-07-11T00:00:00+01:00</updated><id>http://localhost:4000/achieving%2080%20accuracy%20on%20cifar%2010%20dataset</id><content type="html" xml:base="http://localhost:4000/achieving-80-accuracy-on-cifar-10-dataset/">&lt;p&gt;In this tutorial you would learn some methods that can be used to improve a model’s accuracy. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven’t already, you can build a Tensorflow Image Classification model following the guide in the last post &lt;a href=&quot;&quot;&gt;How to Build an Image Classification API in Tensorflow&lt;/a&gt;. This is an overview of what we would be touching on in this tutorial:&lt;/p&gt;
 
 &lt;h3&gt;Overview&lt;/h3&gt;
 &lt;ul&gt;
@@ -204,7 +204,7 @@ print(x_train[0])
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The output looks like the image below:
-&lt;img src=&quot;/assets/images/Blog/Blog-img/Computer_visualization_of_image_in_numbers.png&quot; class=&quot;img-fluid&quot; alt=&quot;Computer visualization of Image in Numbers&quot; width=&quot;100%&quot; height=&quot;60vh&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/Blog/Blog-img/Computer_visualization_of_image_in_numbers.webp&quot; class=&quot;img-fluid&quot; alt=&quot;Computer visualization of Image in Numbers&quot; width=&quot;100%&quot; height=&quot;60vh&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Trying to visualize the image this way doesn’t help us a lot, although that’s how it is interpreted for the computer. The Red, green, and blue values in our 3 byte image are just a bunch of numbers that the computer can use to calculate the intensity of r,g,b at a pixel point. We can use the matplotlib package for a finer, data plot. Let’s import the package in the next lines of code&lt;/p&gt;
 
@@ -221,7 +221,7 @@ The label is: [9]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The label showing as nine means that the second image in our training set (following index: 0 is first_img, 1 is second_img ) has a label/class of 9(truck) i.e the very last of the classes. With this we still do not know the class in words representing this image. The below image shows the conversion of numbers to the word class. Change the value of the printed x’s and labels in your colab environment, and visualize the different classes that gets printed out.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/number_to_word_class_cifar10.png&quot; class=&quot;img-fluid&quot; alt=&quot;Numbers_to_words_class_representation_ImageClassification_in tensorflow&quot; width=&quot;100%&quot; height=&quot;30vh&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/number_to_word_class_cifar10.webp&quot; class=&quot;img-fluid&quot; alt=&quot;Numbers_to_words_class_representation_ImageClassification_in tensorflow&quot; width=&quot;100%&quot; height=&quot;30vh&quot; /&gt;&lt;/p&gt;
 
 &lt;h3&gt;Data Pre-processing&lt;/h3&gt;
 
@@ -232,7 +232,7 @@ For example, building a model that predicts if a student is given admission(1) o
 
 &lt;p&gt;This processing step is called one-hot encoding. It involves converting the labels into a set of 10 numbers where each number represents if the image belongs to that class or not. So if an image belongs to the first class, the first number of this set will be a 1 and all other numbers in this set will be a 0. The conversion table would look like:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/one-hot-encoding-imageclassification.png&quot; class=&quot;img-fluid&quot; alt=&quot;one-hot-encoding-imageclassification&quot; width=&quot;100%&quot; height=&quot;30vh&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/one-hot-encoding-imageclassification.webp&quot; class=&quot;img-fluid&quot; alt=&quot;one-hot-encoding-imageclassification&quot; width=&quot;100%&quot; height=&quot;30vh&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now here we have been talking about one-hot encoding for a while, let’s write code for it in a few lines:&lt;/p&gt;
 
@@ -268,7 +268,7 @@ x_train[0]
 
 &lt;p&gt;When we print our output,, like previously we get a bunch of numbers except that this time around they all fall in the range of 0 and 1. The process of reducing our image pixels in this way is called &lt;b&gt;&lt;em&gt;&lt;a href=&quot;https://channelai.netlify.app/introduction-to-machine-learning.md&quot;&gt;Normalization&lt;/a&gt;&lt;/em&gt;&lt;/b&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/normalized_form_of_cifar10_xtrain_after_image_processing.png&quot; class=&quot;img-fluid&quot; alt=&quot;normalized_form_of_cifar10_xtrain_after_image-processing &quot; width=&quot;100%&quot; height=&quot;30vh&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/normalized_form_of_cifar10_xtrain_after_image_processing.webp&quot; class=&quot;img-fluid&quot; alt=&quot;normalized_form_of_cifar10_xtrain_after_image-processing &quot; width=&quot;100%&quot; height=&quot;30vh&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This processing step makes our neural network to train faster and achieve better accuracy. Note: This processing is also carried out on the test set since when evaluating we want the same range of values as those used when training.&lt;/p&gt;
 
@@ -330,11 +330,11 @@ hist = model.fit(x_train, y_train_one_hot,
 &lt;p&gt;Before using this model to make some predictions, let’s plot some learning curves that would help us understand how well our model trained. this step should help us understand overfitting, underfitting, unsteady training and so on. This can help us to decide steps to take that can help improve the model.&lt;/p&gt;
 
 &lt;h4&gt;Plot showing Model Loss during Training&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/model_loss_plot_learning_curve.png&quot; class=&quot;img-fluid&quot; alt=&quot;model_loss_plot_learning_curve&quot; width=&quot;100%&quot; height=&quot;30vh&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/model_loss_plot_learning_curve.webp&quot; class=&quot;img-fluid&quot; alt=&quot;model_loss_plot_learning_curve&quot; width=&quot;100%&quot; height=&quot;30vh&quot; /&gt;
 …..&lt;/p&gt;
 &lt;p style=&quot;padding-top: 5%&quot;&gt;&lt;/p&gt;
 &lt;h4&gt;Plot showing Model Accuracy during Training&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/model_accuracy_plot_learning_curve.png&quot; class=&quot;img-fluid&quot; alt=&quot;model_accuracy_plot_learning_curve&quot; width=&quot;100%&quot; height=&quot;30vh&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/model_accuracy_plot_learning_curve.webp&quot; class=&quot;img-fluid&quot; alt=&quot;model_accuracy_plot_learning_curve&quot; width=&quot;100%&quot; height=&quot;30vh&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;From the above plots we see that, we had a steady training without overfitting our model.
 Now for the last step, we want to evaluate our model using the test set and also make predictions using entirely new images. You can do this by getting images that fall into any one of the classes as we have in our dataset. The code below would enable you to choose multiple files from your storage for prediction.&lt;/p&gt;
@@ -389,11 +389,11 @@ print(&quot;Fifth most likely class:&quot;, number_to_class[index[5]], &quot;-- 
 
 &lt;p&gt;Can you guess where the below collection of images came from:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;../assets\images\Blog\Blog-img\Gans2.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;../assets\images\Blog\Blog-img\Gans2.webp&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;How about these ones:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;../assets\images\Blog\Blog-img\Gans3.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;../assets\images\Blog\Blog-img\Gans3.webp&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Well, all of the object and faces you see in these images have been generated single-handedly by a computer-vision model called Generative Adversarial Networks (GANs)!. Awesome right? There’s so much more to see.&lt;/p&gt;
 
@@ -427,7 +427,7 @@ print(&quot;Fifth most likely class:&quot;, number_to_class[index[5]], &quot;-- 
 
 &lt;p&gt;The fake samples are generated by some randon noise from looking at the real data, they are passed on to the discriminator whose input is both fake samples as well as samples from our real data set. The discriminator than makes a binary decision about whether the image supplied, z, is a real image D(z)= 1, or a fake image, D(z)=0.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;../assets\images\Blog\Blog-img\D&amp;amp;G_Gans.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;../assets\images\Blog\Blog-img\D&amp;amp;G_Gans.webp&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For example, a GAN trained on photographs can create a new photograph that appears to human observers at least superficially authentic and has many realistic characteristics. A popular real-world application of GAN; GANs have been used to produce new celebrities who are not real people. Using a training kit, the technique learns to create images of real-life celebrities, real-face celebrities and non-real face celebrities.&lt;/p&gt;
 
@@ -506,7 +506,7 @@ mat_4 = [1,2;3,4;5,6] % A 3x2 matrix (3 rows and 2 columns)
 &lt;/pre&gt;
 &lt;p&gt;Check out the visualiztion of the Matrices above in the image below. This would give you a better sense of how they are formed or their structure.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/matrix_formation.png&quot; class=&quot;img-fluid&quot; alt=&quot;ChannelAI Homepage: Artificial Intelligence&quot; width=&quot;100%&quot; height=&quot;60vh&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/matrix_formation.webp&quot; class=&quot;img-fluid&quot; alt=&quot;ChannelAI Homepage: Artificial Intelligence&quot; width=&quot;100%&quot; height=&quot;60vh&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Vectorization in Machine Learning is done or carried out when we want to perform calculations on Matrix-Matrix or Matrix-Vectors. Most of our data in ML is stored and read in rows and colums. In the code box below are some examples showing operations between matrix and Vectors, but before you learn about them I would like to list a few rules guiding how we carry out operations in matlab on matrices.&lt;/p&gt;
 
@@ -679,7 +679,7 @@ It contains 19 house features plus the price and the id columns, along with 2161
 
 &lt;p&gt;The 3 features we would be giving our variable x are &lt;strong&gt;number of bedrooms&lt;/strong&gt;, &lt;strong&gt;sqft of living area&lt;/strong&gt; and &lt;strong&gt;year built&lt;/strong&gt;. There a a lot more features but the reason i chose those 3 is because they seem like the factors that play the largest role of influence on the price a customer would like to pay for a house. Also including similar features like &lt;strong&gt;sqft of basement , sqft of upperlevels&lt;/strong&gt; and so on would end up making the features redundant (repetitive or duplicating). Take a look at the full features in our dataset.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;../assets\images\Blog\Blog-img\lr-feature-list.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;../assets\images\Blog\Blog-img\lr-feature-list.webp&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;To set off,we would be using the list as a guide to know the order of the steps it takes to build our model.You can always refer back to this, as a reminder of what steps you should be implementing at what time.&lt;/p&gt;
 
@@ -747,13 +747,13 @@ end
 &lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;../assets\images\Blog\Blog-img\un-normalized.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;../assets\images\Blog\Blog-img\un-normalized.webp&quot; /&gt;&lt;/p&gt;
 
 &lt;h3&gt;FEATURE NORMALIZED&lt;/h3&gt;
 &lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;../assets\images\Blog\Blog-img\normalized.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;../assets\images\Blog\Blog-img\normalized.webp&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As you can see,, in the un-normalized plot of our data, we have some of our points directly on the y axis. This is because the range between our dataset is to wide causing some of the smaller values of X to take their places as close as possible to the line. Normalizing our data sets them all in the same range.&lt;/p&gt;
 

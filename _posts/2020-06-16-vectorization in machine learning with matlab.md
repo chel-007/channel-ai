@@ -4,7 +4,7 @@ author: Chel
 title: Vectorization - How to Vectorize ML Algorithms with MATLAB
 seo: Vectorization Matlab for Machine Learning Vectorizing code how to not loop over my code
 description: Vectorization is the process of converting an algorithm from operating on a single value at a time to operating on a set of values (vector) at once.. In a vectorized calculation, all elements of the vector (array) can be added in one calculation step.
-img-src: ../assets\images\Blog\vectorization-with-matlab.png
+img-src: ../assets\images\Blog\vectorization-with-matlab
 ---
 
 In my previous post, I gave a simplified introduction to Machine Learning for beginners. It therefore brings the need for me to write a post on "Vectorization". You might be hearing it for the first time or you have possibly come across it sometime. Either one of those, I can tell you that it isn't a difficult subject, in fact in the field of Machine Learning I found it much easier than a normal iterative code (for & while loop). Now lets begin, by the end of this post I want you to understand what vectorization is, it's application and how to use it in your ML Implementation.
@@ -58,7 +58,7 @@ mat_4 = [1,2;3,4;5,6] % A 3x2 matrix (3 rows and 2 columns)
 </pre>
 Check out the visualiztion of the Matrices above in the image below. This would give you a better sense of how they are formed or their structure.
 
-<img src="/assets/images/Blog/Blog-img/matrix_formation.png" class="img-fluid" alt="ChannelAI Homepage: Artificial Intelligence" width="100%" height="60vh"><br><br>
+<img src="/assets/images/Blog/Blog-img/matrix_formation.webp" class="img-fluid" alt="ChannelAI Homepage: Artificial Intelligence" width="100%" height="60vh"><br><br>
 
 
 Vectorization in Machine Learning is done or carried out when we want to perform calculations on Matrix-Matrix or Matrix-Vectors. Most of our data in ML is stored and read in rows and colums. In the code box below are some examples showing operations between matrix and Vectors, but before you learn about them I would like to list a few rules guiding how we carry out operations in matlab on matrices.
