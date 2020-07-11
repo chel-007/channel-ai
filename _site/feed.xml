@@ -1,4 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-30T01:40:47+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">How to Build an Image Classification API in Tensorflow</title><link href="http://localhost:4000/image-classification-api-in-tensorflow/" rel="alternate" type="text/html" title="How to Build an Image Classification API in Tensorflow" /><published>2020-06-28T00:00:00+01:00</published><updated>2020-06-28T00:00:00+01:00</updated><id>http://localhost:4000/image%20classification%20api%20in%20tensorflow</id><content type="html" xml:base="http://localhost:4000/image-classification-api-in-tensorflow/">&lt;p&gt;In this tutorial, you would learn how to build an Image Classification Model using Tensorflow on Google Colab. Not just that, you would also be given an introduction to Image Classification and how it differs from other Computer Vision tasks, and lastly you would implement your trained model into a basic web application through the use of an API call. To start off, here is the overview of all what we would be touching on.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-11T10:17:32+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks</title><link href="http://localhost:4000/achieving-80-accuracy-on-cifar-10-dataset/" rel="alternate" type="text/html" title="Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks" /><published>2020-07-11T00:00:00+01:00</published><updated>2020-07-11T00:00:00+01:00</updated><id>http://localhost:4000/achieving%2080%20accuracy%20on%20cifar%2010%20dataset</id><content type="html" xml:base="http://localhost:4000/achieving-80-accuracy-on-cifar-10-dataset/">&lt;p&gt;In this tutorial you would learn some methods that can be used to improve a model’s accuracy. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven’t already, you can build a Tensorflow Image Classification model following the guide in the last post &lt;a href=&quot;&quot;&gt;How to Build an Image Classification API in Tensorflow&lt;/a&gt;. This is an overview of what we would be touching on in this tutorial:&lt;/p&gt;
+
+&lt;h3&gt;Overview&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Improving Model’s Accuracy&lt;/li&gt;
+  &lt;li&gt;Dropouts: Understanding how it reduces Overfitting&lt;/li&gt;
+  &lt;li&gt;Batch Normalization&lt;/li&gt;
+  &lt;li&gt;Buiding a Cifar10 Model with 85% Accuracy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Previous: &lt;a href=&quot;&quot;&gt;How to Build an Image Classification API in Tensorflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Next: &lt;a href=&quot;&quot;&gt;Building an Image Classification API with TFX and GCP &lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Improving Model's Accuracy&lt;/h3&gt;
+
+&lt;p&gt;In the last article we built a simple classifier model in Tensorflow. I achieved 75% accuracy after evaluating the test set which consists of 10000 Images which was not used in training. This gives us a view of how our model would perform in a real world scenario. Of-course, we aren’t going to use this model for any big projects anytime soon, but by practising on it gives us understanding that can be applied to bigger projects.&lt;/p&gt;
+
+&lt;p&gt;Not all model’s after training can be significantly improved by applying this methods. It could be that the achitecture used at first didn’t train the model in the right way. In this case, you would need to change the layers used before getting any significant improvements. A very good way of knowing if a model can be improved is by plotting learning curves. This can be done in tensorflow in just a few lines of code.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/learning-curves-cifar10-dataset.webp&quot; class=&quot;img-fluid&quot; alt=&quot;Learning Curves Of Cifar10&quot; width=&quot;100%&quot; height=&quot;60vh&quot; /&gt;
+As seen in the image above, around epochs 14, the validation set curve (orange) can be seen to have a strong dip. This tells us that if we increase the number of epochs or add regularization techniques like Dropouts and BatchNormalization, we can achieve better accuracy&lt;/p&gt;
+
+&lt;p&gt;In this tutorial, we would look at some established methods of reducing overfitting and slowing-down convergence in our model which in turn gives us better accuracy. Let’s look at them now.&lt;/p&gt;
+
+&lt;h3&gt;Dropouts&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;Dropout&lt;/b&gt; is a technique for addressing overfitting. The main idea here is for our neural network to randomly drop units during training. The reduction inparameters in each step of training has effect of regularization. Dropout has shown improvements in the performance of neural networks on supervised learning tasks in vision, speech recognition, document classification and computational biology, obtaining state-of-the-art results on many benchmark data sets.&lt;/p&gt;
+
+&lt;h3&gt;BatchNormalization&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;BatchNormalization&lt;/b&gt; normalizes the activation of the previous layer at each batch, i.e. applies a transformation that maintains the mean activation close to 0 and the activation standard deviation close to 1. It addresses the problem of internal covariate shift. It also acts as a regularizer, in some cases eliminating the need for Dropout. Batch Normalization achieves the same accuracy with fewer training steps thus speeding up the training process. This definition is cited from &lt;a href=&quot;https://appliedmachinelearning.blog/2018/03/24/achieving-90-accuracy-in-object-recognition-task-on-cifar-10-dataset-with-keras-convolutional-neural-networks/&quot;&gt;appliedmachinelearning.blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that we understand the technique that would be applied during training to improve accuracy, let’s see how to implement it in code.&lt;/p&gt;
+
+&lt;h3&gt;Buiding a Cifar10 Model with 85% Accuracy&lt;/h3&gt;
+
+&lt;p&gt;Below is the code that introduces batch normalization and dropouts to our model’s ConvNet. For the full code including loading the dataset and normalizing it, refer to my github repo here &lt;a href=&quot;&quot;&gt;Image Classification with Cifar10 (Full) &lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+from keras.models import Sequential
+from keras.optimizers import SGD
+from keras.preprocessing.image import ImageDataGenerator
+from keras.layers import BatchNormalization
+from keras import regularizers
+from keras.callbacks import LearningRateScheduler
+from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D
+
+model = Sequential()
+model.add(Conv2D(32, (3, 3), activation='relu', padding='same', input_shape=(32, 32, 3))),
+model.add(Conv2D(32, (3, 3), activation='relu', padding='same'))
+model.add(MaxPooling2D(2, 2)),
+model.add(Dropout(0.2))
+model.add(Conv2D(64, (3, 3), activation='relu', padding='same')),
+model.add(Conv2D(64, (3, 3), activation='relu', padding='same')),
+model.add(MaxPooling2D(2, 2)),
+model.add(Dropout(0.2))
+model.add(Conv2D(128, (3, 3), activation='relu', padding='same')),
+model.add(Conv2D(128, (3, 3), activation='relu', padding='same')),
+model.add(MaxPooling2D(2, 2)),
+model.add(Dropout(0.2))
+model.add(Flatten()),
+model.add(Dense(512, activation='relu')),
+model.add(Dropout(0.5))
+model.add(Dense(10, activation='softmax'))
+
+model.summary()
+
+model.compile(loss='categorical_crossentropy',
+              optimizer='adam',
+              metrics=['accuracy'])
+
+hist = model.fit(x_train, y_train_one_hot, 
+          batch_size=64, epochs=25, 
+           validation_split=0.2, verbose=1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The output of the above code implementation for Image classification task is shown below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here, we trained our model for just 25% accuracy and achieved approx 85% accuracy. This is a significant development from when we only convolution and maxpooling layers to build our model. Training it for more epochs can as well give you more accuracy which you should try out by simply following the guide.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">In this tutorial you would learn some methods that can be used to improve a model’s accuracy. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven’t already, you can build a Tensorflow Image Classification model following the guide in the last post How to Build an Image Classification API in Tensorflow. This is an overview of what we would be touching on in this tutorial:</summary></entry><entry><title type="html">How to Build an Image Classification API in Tensorflow</title><link href="http://localhost:4000/image-classification-api-in-tensorflow/" rel="alternate" type="text/html" title="How to Build an Image Classification API in Tensorflow" /><published>2020-06-28T00:00:00+01:00</published><updated>2020-06-28T00:00:00+01:00</updated><id>http://localhost:4000/image%20classification%20api%20in%20tensorflow</id><content type="html" xml:base="http://localhost:4000/image-classification-api-in-tensorflow/">&lt;p&gt;In this tutorial, you would learn how to build an Image Classification Model using Tensorflow on Google Colab. This tutorial is the first among three set. They go from buiding an Image Classifier to Improving accuracy in your model and finally Serving it for production through an API url Endpoint. To start off, here is the overview of all what we would be touching on.&lt;/p&gt;
 
 &lt;h3&gt;Overview&lt;/h3&gt;
 &lt;ul&gt;
@@ -6,14 +85,17 @@
   &lt;li&gt;Applications of Image Classification in World Industry&lt;/li&gt;
   &lt;li&gt;Steps to Build an Image Classification Model&lt;/li&gt;
   &lt;li&gt;Building the Model with Tensorflow (Keras)&lt;/li&gt;
-  &lt;li&gt;Implementing your Model in a Web-application&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;Next: &lt;a href=&quot;&quot;&gt;Improving your Tensorflow Model with Dropouts and Batch Normalization&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally: &lt;a href=&quot;&quot;&gt;Building an Image Classification API with TFX and GCP &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Now that you have an idea of the steps taking us through this tutorial, Let’s begin with it.&lt;/p&gt;
 
 &lt;h3&gt;Introduction&lt;/h3&gt;
 
-&lt;p&gt;Starting off in Machine Learning can be Overwhelming, I say this because I’m currently in the process of experiencing the start off altogether. There are so many fields, opinions, doubts that can go through your mind on the process of choosing a path to follow. Sometimes, actually Most times, It’s really cool to look at the big guys in the field that exude so much confidence showing that they know what they want. Also, there are lots of resources and articles around promising ways that would become a revelation to newcomers and map out the correct path for them. I just read some of those, and I’m more affected than when I was using my mind at a space to think for myself. My mood becomes let’s say negative. But I can’t be like that for long. I simply told myself I’m gonna learn them all by “doing”. It’s a big deal, perhaps the hardest part but with time it becomes a natural thing for you. That’s the way of life. Long story short, I decided to start implementing projects that I could add to my github, LinkedIn and blog.&lt;/p&gt;
+&lt;p&gt;Starting off in Machine Learning can be Overwhelming, I say this because I’m currently in the process of experiencing the start off altogether. There are so many fields, opinions, doubts that can go through your mind on the process of choosing a path to follow. Sometimes, actually most times, It’s really cool to look at the big guys in the field that exude so much confidence showing that they know what they want. Also, there are lots of resources and articles around promising ways that would become a revelation to newcomers and map out the correct path for them. I just read some of those, and I’m more affected than when I was using my mind at a space to think for myself. My mood becomes let’s say negative. But I can’t be like that for long. I simply told myself I’m gonna learn them all by “doing”. It’s a big deal, perhaps the hardest part but with time it becomes a natural thing for you. That’s the way of life. Long story short, I decided to start implementing projects that I could add to my github, LinkedIn and blog.&lt;/p&gt;
 
 &lt;p&gt;This tutorial is mainly for people starting off in “Computer Vision”, those that want to “know” and “do” Computer Vision. What I want you to understand is this: &lt;b&gt;“It’s all in the process. Those little steps sums into the big advancement”&lt;/b&gt;.. Well, at least I told myself that. OpenCV can wait, I’m gonna learn all the small steps involved but I’m gonna learn them very fast. I have the ability to, and I hope with the series of upcoming posts, you too can follow along and master the baby steps in Computer Vision(CV). Let’s get into more concrete writings.&lt;/p&gt;
 
@@ -21,12 +103,12 @@
 
 &lt;p&gt;The term Image Classification refers to a task in CV that involves the process of assigning classes to an entire image or picture. It is sometimes referred to as Image recognition, which is a broader term that refers to various tasks that involves classifying the content of images.&lt;/p&gt;
 
-&lt;p&gt;The task of helping computers to see, and make a sense or add meaning to what they see is a very hard one. Mainly because it does not just involve one but a series of steps are involved owning to the fact that real-world data or scenerio is unpredictable. Therefore, this is no longer a common task of pre-programmed rules giving accurate results. For computers to see, at basic level, they have to understand single still images befor processing advanced high fps videos of which is our general goal as ML engineers and researchers.&lt;/p&gt;
+&lt;p&gt;The task of helping computers to see, and make a sense or add meaning to what they see is a very hard task. Mainly because it does not just involve one but a series of steps are involved owning to the fact that real-world data or scenerio is unpredictable. Therefore, this is no longer a common task of pre-programmed rules giving accurate results. For computers to see, at basic level, they have to understand single still images before processing advanced high fps videos of which is our general goal as ML engineers and researchers.&lt;/p&gt;
 
 &lt;p&gt;We come now to the problem of helping computers see. In accord, I decided to start of with the simplest problem and I think that should be Image Classification. In this problem&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;We take a dataset that consists of a set of items in images and their corresponding labels&lt;/li&gt;
-  &lt;li&gt;We train a model using the dataset so it can make predictions on new images correctly assigning them to the right class&lt;/li&gt;
+  &lt;li&gt;We train a model using the dataset so it can make predictions on new images by correctly assigning them to the right class&lt;/li&gt;
   &lt;li&gt;If it sees an image not among the class it was trained on, it would give it the label of the output with the highest probability&lt;/li&gt;
   &lt;li&gt;This tells us that if we want a model to recognize a thousand different items accurately, we would train it with a dataset outlining those items and their respective label. But ofcourse, this is not an effecient way of tackling the problem. We have millions of items in the world, not to talk of species of animals..xD&lt;/li&gt;
 &lt;/ul&gt;
@@ -37,13 +119,13 @@
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;In Manufacturing: A system built with a classifcation model can help speed up production process by efficiently reporting bad/damaged items before they are packaged for distribution. By classifying items as bad or good after being trained with a lot of data in the respect of it’s use-case. The main benefit of this is that, it does this considerably faster than human workers and workforce is also reduced resulting in the decrease in “cost of production”, which in a way can lead to cheaper products.&lt;/p&gt;
+    &lt;p&gt;In Manufacturing: A system built with a classification model can help speed up production process by efficiently reporting bad/damaged items before they are packaged for distribution. By classifying items as bad or good after being trained with a lot of data in the respect of it’s use-case. The main benefit of this is that, it does this considerably faster than human workers and workforce is also reduced resulting in the decrease in “cost of production”, which in a way can lead to cheaper products.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;In Medical: An image classifiction model trained with a lot of medical X-ray records depicting a patient eith a disease vs one without can be used to accurately diagnose the health condition of new patients. This can significantly reduce the time spent by medical practitioners conducting several tests before giving results, therby giving them more time to focus on other matters.&lt;/p&gt;
+    &lt;p&gt;In Medical: An image classifiction system trained with a lot of medical X-ray records depicting a patient eith a disease vs one without can be used to accurately diagnose the health condition of new patients. This can significantly reduce the time spent by medical practitioners conducting several tests before giving results, therby giving them more time to focus on other matters.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;In Computer Vision: Image classification is a very important application in CV fields. At a basic level, it makes up the structure of an Object detection system which involves “localizing objects in an imapge by drawing a bounding box around them while also assigning objects to their correct class”. Image classification is used as the basis of many advanced CV applications, a good example is an autonomous vehicle. Image classification and Object detection is the main components making up the system though at advanced level. A self-driving car has to recognize objects it should not hit like pedestrains and road signs, it also has to localize them to undestand their path. This is a clear example of video/moving object detection.&lt;/p&gt;
+    &lt;p&gt;In Computer Vision: Image classification is a very important application in CV fields. At a basic level, it makes up the structure of an Object detection system which involves “localizing objects in an image by drawing a bounding box around them while also assigning objects to their correct class”. Image classification is used as the basis of many advanced CV applications, a good example is an autonomous vehicle. Image classification and Object detection is the main components making up the system though at advanced level. A self-driving car has to recognize objects it should not hit like pedestrains and road signs, it also has to localize them to undestand their path. This is a clear example of video/moving object detection.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;In Agriculture: Models built on Image classification has a tremendous impact in the agricultural sector. They can be applied to numerous problems and can give very accurate results that significantly improves the conditions ans returns of farming. A popular example is an app built in Tensorflow that is used to identify early on, cassave crops with high probability of disease infection. This can help farmers increse yield / decrese loss by being aware of the health of their crops in advance.&lt;/p&gt;
@@ -194,14 +276,15 @@ x_train[0]
 
 &lt;p&gt;We finally arrive at the most productive step, to train our model. This step just involves setting up a structure or architecture we want our model to have. We would add layers to our model in these sequence:&lt;/p&gt;
 &lt;ol&gt;
-	&lt;li&gt;Add Conv2D layer with zero-padding: This is a layer that would isolate the features in our images so that we can gather more information in less pixels. It actually ends up reducing the size of the pixels. The zero-padding works to produce the same output width and height as that of the input, what this means literally is that; we aren't losing any information by using zero-padding also called same-padding. The kind of padding used would either try to highlight the horizontal or vertical aspect(lines) of the image. Padding is also called a filter or kernel&lt;/li&gt;&lt;br /&gt;
-	&lt;li&gt;Add MaxPolling layer with stride: This layer basically works to shrink the pixel height and weight while still retaining relevant information. The stride enables the information retention by passing to the output the largest number in a box.In simpler terms, what stride does is it looks at the image in bits according to it's height and width specified and outputs the largest number among all numbers in that particular box. It is passed across the whole image, the size of the stride determines the quantity or perhaps quality of features that is passed to the output after MaxPooling is carried out.&lt;/li&gt;&lt;br /&gt;
+	&lt;li&gt;Add Convolution layer with zero-padding: A convolution is the simple application of a filter to an input that results in an activation. Repeated application of the same filter to an input results in a map of actitvation called a feature map, indicating the locations and strength of a detected feature in an input, such as an image.
+	A concolution layer can be created by specifying both the number of filters to learn and the fixed size of each filetr,often called the kernel shape. This layer isolates the features in our images so that we can gather more information in less pixels. It actually ends up reducing the size of the pixels. The zero-padding works to produce the same output width and height as that of the input, what this means literally is that; we aren't losing any information by using zero-padding also called same-padding. The kind of padding used would either try to highlight the horizontal or vertical aspect(lines) of the image.&lt;/li&gt;&lt;br /&gt;
+	&lt;li&gt;Add MaxPolling layer: Pooling layer provides an approach to downsampling feature maps by summarizing the presence of features in patches of the feature map. Maximum pooling or max pooling, is a pooling operation that calculates the maximum or largest value in each part of each feature map. It works by shrinking the pixel height and weight while still retaining relevant information. It is passed across the whole image, the size of the stride determines the quantity or perhaps quality of features that is passed to the output after MaxPooling is carried out.&lt;/li&gt;&lt;br /&gt;
 	&lt;li&gt;Relu activation function: We use the relu activation in all layers except for the last layer which is a softmax. Relu (Rectified Linear Unit) is an activation that outputs the value of input X if x &amp;gt; 0 and outputs 0 if x &amp;lt; 0.&lt;/li&gt;&lt;br /&gt;
 	&lt;li&gt;Softmax: Our last layer Softmax simply transforms the output of the previous layer into probability distributions. So we are able to match image classification based on the probability given by the model of each classes. And therefore, our model picks the class with the highest probability as the correct item detected in an image.&lt;/li&gt;&lt;br /&gt;
 	&lt;li&gt;Sequential: Keras imports Sequential which is a library that holds all the types of layers we can use to build our model:
 	&lt;ul style=&quot;list-style-type: disc;&quot;&gt;
 		&lt;li&gt;Dense is the layer that combines all our parameters into a single dense package&lt;/li&gt;
-		&lt;li&gt;Flatten outputs our image shape into one long vector&lt;/li&gt;
+		&lt;li&gt;Flatten is the layer that transforms our two-dimensional feature ma our image shape into one long vector&lt;/li&gt;
 		&lt;li&gt;Dropout prevents overfitting in the layers&lt;/li&gt;
 	&lt;/ul&gt;
 &lt;/li&gt;
@@ -287,11 +370,13 @@ print(&quot;Fourth most likely class:&quot;, number_to_class[index[6]], &quot;--
 print(&quot;Fifth most likely class:&quot;, number_to_class[index[5]], &quot;-- Probability:&quot;, probabilities[0,index[5]])
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The above code evaluates our model using test set, saves the trained model in a .h5 format and also we are able to upload files for prediction by the files library from google colab. Then we finally converted the output numbers into words_class as it’s easier to understand that way. Tha last bit of code enables us to do that.&lt;/p&gt;
+&lt;p&gt;The above code evaluates our model using test set, saves the trained model in a .h5 format and also we are able to upload files for prediction by the files library from keras. Then we converted the output numbers into words_class as it’s easier to understand that way. The last bit of code enables us to do that.&lt;/p&gt;
 
-&lt;p&gt;Test out different images to see how well the model you built classifies them. Now that we have saved our trained model, we can go ahead to build this inside a Simple web application.&lt;/p&gt;
+&lt;p&gt;After training the model and evaluating on the test set (x_test), I got an accuracy of 75%. This means that, our classifier would classify correctly only 75% of new unseen images we feed it.&lt;/p&gt;
 
-&lt;p&gt;In the part 2 of this article, let’s look at how to create an API from our model and implement that into a web-app. &lt;a href=&quot;&quot;&gt;Next Article: Building APIs from Machine Learning Models&lt;/a&gt;&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">In this tutorial, you would learn how to build an Image Classification Model using Tensorflow on Google Colab. Not just that, you would also be given an introduction to Image Classification and how it differs from other Computer Vision tasks, and lastly you would implement your trained model into a basic web application through the use of an API call. To start off, here is the overview of all what we would be touching on.</summary></entry><entry><title type="html">Introduction to Generative Models and GANs - What are GANs?</title><link href="http://localhost:4000/introduction-to-generative-adversarial-netowrks/" rel="alternate" type="text/html" title="Introduction to Generative Models and GANs - What are GANs?" /><published>2020-06-22T00:00:00+01:00</published><updated>2020-06-22T00:00:00+01:00</updated><id>http://localhost:4000/introduction%20to%20generative%20adversarial%20netowrks</id><content type="html" xml:base="http://localhost:4000/introduction-to-generative-adversarial-netowrks/">&lt;h3&gt;Overview&lt;/h3&gt;
+&lt;p&gt;Test out different images to see how well the model you built classifies them.&lt;/p&gt;
+
+&lt;p&gt;In the part 2 of this article, let’s look at how to Improve significantly our built model’s accuracy by Introducing some new concepts that would prevent over-fitting and slow down convergence. &lt;a href=&quot;&quot;&gt;Next Article: Improving your Tensorflow Model with Dropouts and Batch Normalization&lt;/a&gt;&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">In this tutorial, you would learn how to build an Image Classification Model using Tensorflow on Google Colab. This tutorial is the first among three set. They go from buiding an Image Classifier to Improving accuracy in your model and finally Serving it for production through an API url Endpoint. To start off, here is the overview of all what we would be touching on.</summary></entry><entry><title type="html">Introduction to Generative Models and GANs - What are GANs?</title><link href="http://localhost:4000/introduction-to-generative-adversarial-netowrks/" rel="alternate" type="text/html" title="Introduction to Generative Models and GANs - What are GANs?" /><published>2020-06-22T00:00:00+01:00</published><updated>2020-06-22T00:00:00+01:00</updated><id>http://localhost:4000/introduction%20to%20generative%20adversarial%20netowrks</id><content type="html" xml:base="http://localhost:4000/introduction-to-generative-adversarial-netowrks/">&lt;h3&gt;Overview&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Generative Models and GANs - This article will give a simplified intoduction to GANs that you can fully grasp without prior knowledge of the basics&lt;/li&gt;
   &lt;li&gt;This article will explain briefly the structure of GANs, what they achieve and how they are trained&lt;/li&gt;

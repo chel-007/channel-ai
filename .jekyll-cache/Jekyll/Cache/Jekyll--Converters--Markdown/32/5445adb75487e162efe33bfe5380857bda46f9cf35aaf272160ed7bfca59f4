@@ -1,0 +1,28 @@
+I"=
+<p>In this tutorial you would learn some methods that can be used to improve a model’s accuracy. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven’t already, you can build a Tensorflow Image Classification model following the guide in the last post <a href="">How to Build an Image Classification API in Tensorflow</a>. This is an overview of what we would be touching on in this tutorial:</p>
+
+<h3>Overview</h3>
+<ul>
+  <li>Improving Model’s Accuracy</li>
+  <li>Dropouts: Understanding how it reduces Overfitting</li>
+  <li>Batch Normalization</li>
+  <li>Buiding a Cifar10 Model with 85% Accuracy</li>
+</ul>
+
+<p>Previous: <a href="">How to Build an Image Classification API in Tensorflow</a></p>
+
+<p>Next: <a href="">Building an Image Classification API with TFX and GCP </a></p>
+
+<h3>Improving Model's Accuracy</h3>
+
+<p>In the last article we built a simple classifier model in Tensorflow. I achieved 75% accuracy after evaluating the test set which consists of 10000 Images which was not used in training. This gives us a view of how our model would perform in a real world scenario. Of-course, we aren’t going to use this model for any big projects anytime soon, but by practising on it gives us understanding that can be applied to bigger projects.</p>
+
+<p>Not all model’s after training can be significantly improved by applying this methods. It could be that the achitecture used at first didn’t train the model in the right way. In this case, you would need to change the layers used before getting any significant improvements. A very good way of knowing if a model can be improved is by plotting learning curves. This can be done in tensorflow in just a few lines of code.</p>
+
+<p><img src="/assets/images/Blog/Blog-img/learning-curves-cifar10-dataset.png" class="img-fluid" alt="Learning Curves Of Cifar10" width="100%" height="60vh" /></p>
+
+<p>In this tutorial, we would look at some established methods of reducing overfitting ans slowing -down convergence in our model which in turn gives us better accuracy. let’s look at them now.</p>
+
+<h3>Dropouts</h3>
+<p><b>Dropout</b> is a technique for addressing overfitting. The main idea here is for our neural network to randomly drop units during training. The reduction inparameters in each step of training has effect of regularization. Dropout has shown improvements in the performance of neural networks on supervised learning tasks in vision, speech recognition, document classification and computational biology, obtaining state-of-the-art results on many benchmark data sets.</p>
+:ET

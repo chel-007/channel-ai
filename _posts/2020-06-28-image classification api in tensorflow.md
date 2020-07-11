@@ -4,7 +4,7 @@ author: Chel
 title: How to Build an Image Classification API in Tensorflow
 seo: Tensorflow Serving APIs Image Classification 
 description: Learn how to build an Image Classification Model, Export as an API that can be deployed as back-end to a Web Application for Classification problems. In this tutuorial we go over all the steps required to build an Image Classify using the popular Cifar 10 and Cifar 100 datasets.
-img-src: ../assets\images\Blog\vectorization-with-matlab.png
+img-src: ../assets\images\Blog\vectorization-with-matlab
 ---
 
 In this tutorial, you would learn how to build an Image Classification Model using Tensorflow on Google Colab. This tutorial is the first among three set. They go from buiding an Image Classifier to Improving accuracy in your model and finally Serving it for production through an API url Endpoint. To start off, here is the overview of all what we would be touching on.
@@ -14,7 +14,6 @@ In this tutorial, you would learn how to build an Image Classification Model usi
 * Applications of Image Classification in World Industry
 * Steps to Build an Image Classification Model
 * Building the Model with Tensorflow (Keras)
-* Implementing your Model in a Web-application
 
 Next: <a href="">Improving your Tensorflow Model with Dropouts and Batch Normalization</a>
 
@@ -114,7 +113,7 @@ print(x_train[0])
 </code></pre>
 
 The output looks like the image below:
-<img src="/assets/images/Blog/Blog-img/Computer_visualization_of_image_in_numbers.png" class="img-fluid" alt="Computer visualization of Image in Numbers" width="100%" height="60vh">
+<img src="/assets/images/Blog/Blog-img/Computer_visualization_of_image_in_numbers.webp" class="img-fluid" alt="Computer visualization of Image in Numbers" width="100%" height="60vh">
 
 Trying to visualize the image this way doesn't help us a lot, although that's how it is interpreted for the computer. The Red, green, and blue values in our 3 byte image are just a bunch of numbers that the computer can use to calculate the intensity of r,g,b at a pixel point. We can use the matplotlib package for a finer, data plot. Let's import the package in the next lines of code 
 
@@ -131,7 +130,7 @@ The label is: [9]
 </code></pre>
 The label showing as nine means that the second image in our training set (following index: 0 is first_img, 1 is second_img ) has a label/class of 9(truck) i.e the very last of the classes. With this we still do not know the class in words representing this image. The below image shows the conversion of numbers to the word class. Change the value of the printed x's and labels in your colab environment, and visualize the different classes that gets printed out.
 
-<img src="/assets/images/Blog/Blog-img/number_to_word_class_cifar10.png" class="img-fluid" alt="Numbers_to_words_class_representation_ImageClassification_in tensorflow" width="100%" height="30vh">
+<img src="/assets/images/Blog/Blog-img/number_to_word_class_cifar10.webp" class="img-fluid" alt="Numbers_to_words_class_representation_ImageClassification_in tensorflow" width="100%" height="30vh">
 
 <h3>Data Pre-processing</h3>
 
@@ -142,7 +141,7 @@ We can call our current problem a multi-variant/multi-label logistic problem. Us
 
 This processing step is called one-hot encoding. It involves converting the labels into a set of 10 numbers where each number represents if the image belongs to that class or not. So if an image belongs to the first class, the first number of this set will be a 1 and all other numbers in this set will be a 0. The conversion table would look like:
 
-<img src="/assets/images/Blog/Blog-img/one-hot-encoding-imageclassification.png" class="img-fluid" alt="one-hot-encoding-imageclassification" width="100%" height="30vh">
+<img src="/assets/images/Blog/Blog-img/one-hot-encoding-imageclassification.webp" class="img-fluid" alt="one-hot-encoding-imageclassification" width="100%" height="30vh">
 
 Now here we have been talking about one-hot encoding for a while, let's write code for it in a few lines:
 
@@ -178,7 +177,7 @@ x_train[0]
 
 When we print our output,, like previously we get a bunch of numbers except that this time around they all fall in the range of 0 and 1. The process of reducing our image pixels in this way is called <b><em><a href="https://channelai.netlify.app/introduction-to-machine-learning.md">Normalization</a></em></b>
 
-<img src="/assets/images/Blog/Blog-img/normalized_form_of_cifar10_xtrain_after_image_processing.png" class="img-fluid" alt="normalized_form_of_cifar10_xtrain_after_image-processing
+<img src="/assets/images/Blog/Blog-img/normalized_form_of_cifar10_xtrain_after_image_processing.webp" class="img-fluid" alt="normalized_form_of_cifar10_xtrain_after_image-processing
 " width="100%" height="30vh">
 
 This processing step makes our neural network to train faster and achieve better accuracy. Note: This processing is also carried out on the test set since when evaluating we want the same range of values as those used when training.
@@ -243,11 +242,11 @@ Before using this model to make some predictions, let's plot some learning curve
 
 
 <h4>Plot showing Model Loss during Training</h4>
-<img src="/assets/images/Blog/Blog-img/model_loss_plot_learning_curve.png" class="img-fluid" alt="model_loss_plot_learning_curve" width="100%" height="30vh">
+<img src="/assets/images/Blog/Blog-img/model_loss_plot_learning_curve.webp" class="img-fluid" alt="model_loss_plot_learning_curve" width="100%" height="30vh">
 .....
 <p style="padding-top: 5%"></p>
 <h4>Plot showing Model Accuracy during Training</h4>
-<img src="/assets/images/Blog/Blog-img/model_accuracy_plot_learning_curve.png" class="img-fluid" alt="model_accuracy_plot_learning_curve" width="100%" height="30vh">
+<img src="/assets/images/Blog/Blog-img/model_accuracy_plot_learning_curve.webp" class="img-fluid" alt="model_accuracy_plot_learning_curve" width="100%" height="30vh">
 
 From the above plots we see that, we had a steady training without overfitting our model.
 Now for the last step, we want to evaluate our model using the test set and also make predictions using entirely new images. You can do this by getting images that fall into any one of the classes as we have in our dataset. The code below would enable you to choose multiple files from your storage for prediction. 
