@@ -4,7 +4,7 @@ author: Chel
 title: Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks
 seo: Tensorflow Serving APIs Image Classification 
 description: Learn how to build an Image Classification Model, Export as an API that can be deployed as back-end to a Web Application for Classification problems. In this tutuorial we go over all the steps required to build an Image Classify using the popular Cifar 10 and Cifar 100 datasets.
-img-src: ../assets\images\Blog\vectorization-with-matlab
+img-src: ../assets\images\Blog\generative-nets
 ---
 
 In this tutorial you would learn some methods that can be used to improve a model's accuracy. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven't already, you can build a Tensorflow Image Classification model following the guide in the last post <a href="">How to Build an Image Classification API in Tensorflow</a>. This is an overview of what we would be touching on in this tutorial:

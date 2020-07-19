@@ -4,7 +4,7 @@ author: Chel
 title: Introduction to Generative Models and GANs - What are GANs?
 seo: Generative models GANs Generative Adversarial Networks deep learning branches computer vision with GANs
 description: Using generative models, we first learn the distribution of the training set and then generate some new observations or data points using the learned distribution with some differences.
-img-src: ../assets\images\Blog\coming-soon
+img-src: ../assets\images\Blog\generative-nets
 ---
 <h3>Overview</h3>
 * Generative Models and GANs - This article will give a simplified intoduction to GANs that you can fully grasp without prior knowledge of the basics
