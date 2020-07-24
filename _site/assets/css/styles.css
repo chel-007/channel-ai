@@ -1,7 +1,7 @@
 /*! Bootstrap v4.0.0 (https://getbootstrap.com) Copyright 2011-2018 The Bootstrap Authors Copyright 2011-2018 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */
 .navbar-custom { background-color: #24BCF9; width: 100%; min-height: 8vh; margin: 0 auto; box-shadow: inset 0px 0px 40px 0px rgba(0, 0, 0, 0.4), -5px 3px 20px 3px rgba(0, 0, 0, 0.7); }
 
-.navbar-custom div ul a { color: black; font-weight: 600; font-size: 15px; font-family: Montserrat, sans-serif; }
+.navbar-custom div ul a { color: black; font-weight: 600; font-size: 17px; font-family: Montserrat, sans-serif; }
 
 @media (max-width: 990px) { .navbar-custom { min-height: 46px; box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.4), -5px 0px 10px 3px rgba(0, 0, 0, 0.6); } }
 
@@ -19,7 +19,7 @@
 
 @media (max-width: 950px) { .navbar-custom ul li div:hover > a { border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
 
-body { font-family: Rubik; font-size: 18px; }
+body { font-family: Rubik; font-size: 21px; }
 
 .footer-style { background-color: #222F34; padding: 17px; }
 
@@ -2140,7 +2140,7 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 .navbar-custom { background-color: #24BCF9; width: 100%; min-height: 8vh; margin: 0 auto; box-shadow: inset 0px 0px 40px 0px rgba(0, 0, 0, 0.4), -5px 3px 20px 3px rgba(0, 0, 0, 0.7); }
 
-.navbar-custom div ul a { color: black; font-weight: 600; font-size: 15px; font-family: Montserrat, sans-serif; }
+.navbar-custom div ul a { color: black; font-weight: 600; font-size: 17px; font-family: Montserrat, sans-serif; }
 
 @media (max-width: 990px) { .navbar-custom { min-height: 46px; box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.4), -5px 0px 10px 3px rgba(0, 0, 0, 0.6); } }
 
@@ -2158,7 +2158,7 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 @media (max-width: 950px) { .navbar-custom ul li div:hover > a { border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
 
-body { font-family: Rubik; font-size: 18px; }
+body { font-family: Rubik; font-size: 21px; }
 
 .footer-style { background-color: #222F34; padding: 17px; }
 
