@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-custom">
   
   <!-- Navbar Brand -->
-  <a class="navbar-brand" href="channelai.netlify.com"><img src="/assets/images/CHANNEL AI_free-file (1).webp" width="80" height="80" alt="ChannelAI"></a>
+  <a class="navbar-brand" href="{{ '/' | relative_url }}"><img src="/assets/images/CHANNEL AI_free-file (1).webp" width="80" height="80" alt="ChannelAI"></a>
   
-  <!-- Collapse button -->
+  <!-- Collapse button --> 
   <button class="navbar-toggler dropdown-toggle-align" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"><i style="font-size: 24px; margin-left: -5px;" class="fas fa-align-left"></i></span>
   </button>
   
   <!-- Collapsible content -->
   <div class="collapse navbar-collapse" id="basicExampleNav" style="color:black;">
-
+ 
   	<!-- Links -->
     <ul class="navbar-nav mr-auto waves-effect waves-light">
       {% for item in site.data.navigation %}
