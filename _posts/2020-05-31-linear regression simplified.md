@@ -2,7 +2,7 @@
 layout: post
 author: Chel
 title: Introduction to Linear Regression - Creating a Simple Learning Predictor
-seo: Simplified Linear Regression Machine Learning Algorithms Linear regression models predictor
+seo: Simplified Linear Regression Machine Learning Algorithms Linear regression models predictor Machinelearningmastery
 description: Linear Regression is a Machine Learning algorithm that is used for predictions of "continuous /non-classified data".You have some datasets in continuous values(because we are doing LinearRegrssion) and you want to go about training a model to the point that it achieves a preferred level of accuracy
 img-src: ../assets\images\Blog\linear-regression-simplified-png
 ---
@@ -192,4 +192,4 @@ price = [X].* theta; % Enter your price formula here
 </code></pre>
 That brings us to the end of this tutorial, we implemented Linear Regression, perhaps the simplest Machine Leraning Algorithm there is, and i would recommend going through it a few times to you know,  improve your intuition on how the code works and also familarize yourself with the code involved. For the code, it's always possible to copy it down somewhere, refer to it a few times because at first, it wouldn't stick straightaway but after using it a few times it becomes natural to your senses, I know that because I've been in the same sitution. During my first few weeks learning Machine Learning by Andrew, it was overwhelming for me, i got a good understanding of the concepts, intuition but the code was quite strange and hard for me to grasp, but honestly now my eyes passes through the details whenever I'm working with Linear Regression Algo, and I know that would be the same for you. 
 
-In the next article i release , I would give an Introduction to Logistic Regression and you would see how to build a classification model using the Algorithm. Thanks for reading , I hope i've been able to uncover and actually simplify Linear Regression Algorithm for you, and with these steps you can go ahead learning the other types we have and you know implementing the ideas and code we looked at. As always, there are nimble steps to take towards finding the right platform, tools, or communities. I would love to read any comments you have about this article or other areas of ML, please feel free to leave a comment below.
+In the next article , I would give an Introduction to Logistic Regression and you would see how to build a classification model using the Algorithm. Thanks for reading , I hope i've been able to uncover and actually simplify Linear Regression Algorithm for you, and with these steps you can go ahead learning the other types we have and you know implementing the ideas and code we looked at. As always, there are nimble steps to take towards finding the right platform, tools, or communities. I would love to read any comments you have about this article or other areas of ML, please feel free to leave a comment below.

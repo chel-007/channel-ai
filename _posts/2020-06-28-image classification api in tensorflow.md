@@ -1,9 +1,9 @@
 ---
 layout: post
 author: Chel
-title: How to Build an Image Classification API in Tensorflow
-seo: Tensorflow Serving APIs Image Classification 
-description: Learn how to build an Image Classification Model, Export as an API that can be deployed as back-end to a Web Application for Classification problems. In this tutuorial we go over all the steps required to build an Image Classify using the popular Cifar 10 and Cifar 100 datasets.
+title: How to Build an Image Classification Model and Web App with Tensorflow 
+seo: Tensorflow Serving APIs Image Classification MachineLearning mastery Google Colab Computer Vision Object Detection
+description: The task of helping computers to see, and make a sense or add meaning to what they see is a very hard task. Mainly because it does not just involve one but a series of steps are involved owning to the fact that real-world data or scenerio is unpredictable. Therefore, this is no longer a common task of pre-programmed rules giving accurate results. For computers to see, at basic level, they have to understand single still images before processing advanced high fps videos of which is our general goal as ML engineers and researchers problems. In this tutuorial we go over all the steps required to build an Image Classify using the popular Cifar 10 and Cifar 100 datasets.
 img-src: ../assets\images\Blog\image_classification
 ---
 

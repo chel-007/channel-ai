@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About
+title: What this website is all About - ChannelAI.com
 ---
 # About page
 
