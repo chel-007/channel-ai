@@ -1,12 +1,12 @@
-- name: HOME
+- name: Home
   link: /
-- name: BLOG
+- name: Blog
   link: /blog/
-- name: RESOURCES
-  link: /resources/
-- name: PORTFOLIO
+- name: Games
+  link: /games/
+- name: How-To
+  link: /how-to/
+- name: Newsletter
+  link: /newsletter_manage/
+- name: Portfolio
   link: /portfolio/
-- name: STAFF
-  link: /staff/
-- name: ABOUT
-  link: /about/

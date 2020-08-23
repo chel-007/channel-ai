@@ -1,0 +1,29 @@
+---
+layout: default
+title: Games (VR games), Top 10, Free-to-Play, Monthly Release | ChannelAI
+description: Follow our Games Updates to get news on the latest games releases, reviews. We cover mainly PC and VR games. 
+---
+
+  <div class="container-fluid games-page">
+  <h1 style="font-family: Montserrat, sans-serif; text-align: center; font-weight: 700;">Games</h1>
+  <br>
+  <h5 style="font-family: Montserrat, sans-serif; font-weight: 600;">LATEST ON GAMES</h5>
+{% for post in site.posts %}
+  {% if post.path contains 'games' %}
+  <hr>
+  <div class="row">
+  <div class="col-lg-8 col-sm-8">
+    <h4><a href="{{ post.url }}" class="game-title">{{ post.title }}</a></h4>
+    <p>{{ post.description | strip_html | strip_newlines | truncate: 208 }}</p>
+    <p style="clear: both">{{ post.date | date: "%b %-d, %Y" }}</p>
+  </div>
+
+  <div class="col-lg-4 col-sm-4">
+    <a href="{{ post.url }}">
+    <img defer class="responsive p-2 bd-highlight borderaround" src="{{ post.img-src }}.webp" alt="{{ post.img-alt }}" width="330" height="200"></a>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+  </div>
+  <p style="clear: both;"></p>

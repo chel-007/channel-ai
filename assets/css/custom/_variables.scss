@@ -9,7 +9,7 @@
 .navbar-custom div ul a {
     color: black;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 19px;
     font-family: Montserrat, sans-serif;
 }
 @media (max-width: 990px) {
@@ -20,7 +20,7 @@
   } 
 }
 .navbar-custom div ul a {
-  margin-left: 40px;
+  margin-left: 55px;
 }
 .navbar-custom ul:hover > a{
   opacity: 1;
@@ -49,7 +49,7 @@
   border-bottom: 1px solid rgba(0,0,0,0.1)
 }}
 body {
-font-family: Rubik;
+font-family: sans-serif;
 font-size: 21px;
 }
 
@@ -115,7 +115,25 @@ div:hover > .site-n-privacy {
   font-family: Rubik;
 }
 
+/* Games Page */
+.games-page{
+  padding-top: 25px;
+}
+h4 .game-title{
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+h4:hover > .game-title{
+  color: #24BCF9;
+}
+.card-for-games{
+  box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.3),
+    -3px 10px 20px 2px rgba(0, 0, 0, 0.3);
+}
 /* Resources Page's CSS */
+/*
 .resources-page {
   padding-top: 10%;
 }
@@ -134,7 +152,7 @@ div:hover > .site-n-privacy {
 .resources-list {
   font-size: 27px;
   font-weight:600;
-}
+}*/
 /* End Of Resources Page's CSS */
 
 

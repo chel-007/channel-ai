@@ -6,6 +6,7 @@ description: My ChannelAi Blog. All Ai news as we can cover
 
 <ul style="list-style-type: none; padding-left: 0;">
   {% for post in site.posts %}
+    {% unless post.path contains 'games' %}
     <li>
       <!--  Main Container    -->
     <div class="container blog-container">
@@ -13,7 +14,7 @@ description: My ChannelAi Blog. All Ai news as we can cover
 <!--   Beginning of Row   -->
      <div class="row">
 <!--      Column   -->
-       <div class="col-lg-8 col-sm-12">
+       <div class="col-lg-9 col-sm-12">
        <a href="{{ post.url }}">
        <img src="{{ post.img-src }}.webp" class="img-fluid" alt="{{ post.img-alt }}"></a>
       <h3><a href="{{ post.url }}"  class="blog-post-header">{{ post.title }}</a></h3>{{ post.date | date: "%b %-d, %Y" }}<p style="clear: both"></p>
@@ -28,5 +29,6 @@ description: My ChannelAi Blog. All Ai news as we can cover
     </div>
     <!-- End of Main container -->
     </li>
+    {% endunless %}
   {% endfor %}
 </ul>

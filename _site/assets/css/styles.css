@@ -1,11 +1,11 @@
 /*! Bootstrap v4.0.0 (https://getbootstrap.com) Copyright 2011-2018 The Bootstrap Authors Copyright 2011-2018 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */
 .navbar-custom { background-color: #24BCF9; width: 100%; min-height: 8vh; margin: 0 auto; box-shadow: inset 0px 0px 40px 0px rgba(0, 0, 0, 0.4), -5px 3px 20px 3px rgba(0, 0, 0, 0.7); }
 
-.navbar-custom div ul a { color: black; font-weight: 600; font-size: 17px; font-family: Montserrat, sans-serif; }
+.navbar-custom div ul a { color: black; font-weight: 600; font-size: 19px; font-family: Montserrat, sans-serif; }
 
 @media (max-width: 990px) { .navbar-custom { min-height: 46px; box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.4), -5px 0px 10px 3px rgba(0, 0, 0, 0.6); } }
 
-.navbar-custom div ul a { margin-left: 40px; }
+.navbar-custom div ul a { margin-left: 55px; }
 
 .navbar-custom ul:hover > a { opacity: 1; }
 
@@ -19,7 +19,7 @@
 
 @media (max-width: 950px) { .navbar-custom ul li div:hover > a { border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
 
-body { font-family: Rubik; font-size: 21px; }
+body { font-family: sans-serif; font-size: 21px; }
 
 .footer-style { background-color: #222F34; padding: 17px; }
 
@@ -46,17 +46,17 @@ div:hover > .site-n-privacy { color: white; text-decoration: none; }
 
 .cards-foot a { color: black; font-size: 17px; font-family: Rubik; }
 
+/* Games Page */
+.games-page { padding-top: 25px; }
+
+h4 .game-title { color: black; text-decoration: none; font-weight: 600; font-family: sans-serif; }
+
+h4:hover > .game-title { color: #24BCF9; }
+
+.card-for-games { box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.3), -3px 10px 20px 2px rgba(0, 0, 0, 0.3); }
+
 /* Resources Page's CSS */
-.resources-page { padding-top: 10%; }
-
-.resources-header { font-size: 30px; font-weight: 650; }
-
-.resources-body { font-size: 19px; line-height: 35px; }
-
-.resources-body li { color: #2d8ef9; font-weight: 500; }
-
-.resources-list { font-size: 27px; font-weight: 600; }
-
+/* .resources-page { padding-top: 10%; } .resources-header { font-size: 30px; font-weight: 650; } .resources-body { font-size: 19px; line-height: 35px; } .resources-body li { color: rgba(45,142,249,1); font-weight: 500; } .resources-list { font-size: 27px; font-weight:600; }*/
 /* End Of Resources Page's CSS */
 /* Blog's Page CSS */
 .blog-container { padding-top: 10%; }
@@ -2140,11 +2140,11 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 .navbar-custom { background-color: #24BCF9; width: 100%; min-height: 8vh; margin: 0 auto; box-shadow: inset 0px 0px 40px 0px rgba(0, 0, 0, 0.4), -5px 3px 20px 3px rgba(0, 0, 0, 0.7); }
 
-.navbar-custom div ul a { color: black; font-weight: 600; font-size: 17px; font-family: Montserrat, sans-serif; }
+.navbar-custom div ul a { color: black; font-weight: 600; font-size: 19px; font-family: Montserrat, sans-serif; }
 
 @media (max-width: 990px) { .navbar-custom { min-height: 46px; box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.4), -5px 0px 10px 3px rgba(0, 0, 0, 0.6); } }
 
-.navbar-custom div ul a { margin-left: 40px; }
+.navbar-custom div ul a { margin-left: 55px; }
 
 .navbar-custom ul:hover > a { opacity: 1; }
 
@@ -2158,7 +2158,7 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 @media (max-width: 950px) { .navbar-custom ul li div:hover > a { border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
 
-body { font-family: Rubik; font-size: 21px; }
+body { font-family: sans-serif; font-size: 21px; }
 
 .footer-style { background-color: #222F34; padding: 17px; }
 
@@ -2185,17 +2185,17 @@ div:hover > .site-n-privacy { color: white; text-decoration: none; }
 
 .cards-foot a { color: black; font-size: 17px; font-family: Rubik; }
 
+/* Games Page */
+.games-page { padding-top: 25px; }
+
+h4 .game-title { color: black; text-decoration: none; font-weight: 600; font-family: sans-serif; }
+
+h4:hover > .game-title { color: #24BCF9; }
+
+.card-for-games { box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.3), -3px 10px 20px 2px rgba(0, 0, 0, 0.3); }
+
 /* Resources Page's CSS */
-.resources-page { padding-top: 10%; }
-
-.resources-header { font-size: 30px; font-weight: 650; }
-
-.resources-body { font-size: 19px; line-height: 35px; }
-
-.resources-body li { color: #2d8ef9; font-weight: 500; }
-
-.resources-list { font-size: 27px; font-weight: 600; }
-
+/* .resources-page { padding-top: 10%; } .resources-header { font-size: 30px; font-weight: 650; } .resources-body { font-size: 19px; line-height: 35px; } .resources-body li { color: rgba(45,142,249,1); font-weight: 500; } .resources-list { font-size: 27px; font-weight:600; }*/
 /* End Of Resources Page's CSS */
 /* Blog's Page CSS */
 .blog-container { padding-top: 10%; }
