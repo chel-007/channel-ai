@@ -2,11 +2,9 @@
   link: /
 - name: Blog
   link: /blog/
-- name: Games
-  link: /games/
-- name: How-To
-  link: /how-to/
 - name: Newsletter
   link: /newsletter_manage/
 - name: Portfolio
   link: /portfolio/
+- name: Projects
+  link: /projects/

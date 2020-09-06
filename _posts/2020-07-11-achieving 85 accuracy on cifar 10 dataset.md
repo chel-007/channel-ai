@@ -1,13 +1,13 @@
 ---
 layout: post
 author: Chel
-title: Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks
-seo: Tensorflow Serving APIs Image Classification 
+title: Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks in Deep Learning
+seo: Deep Learner deep learning deeping learning tensorflow image classification computer vision embeddings convolutional neural networks
 description: Learn how to build an Image Classification Model, Export as an API that can be deployed as back-end to a Web Application for Classification problems. In this tutuorial we go over all the steps required to build an Image Classify using the popular Cifar 10 and Cifar 100 datasets.
 img-src: ../assets\images\Blog\generative-nets
 ---
 
-In this tutorial you would learn some methods that can be used to improve a model's accuracy. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven't already, you can build a Tensorflow Image Classification model following the guide in the last post <a href="">How to Build an Image Classification API in Tensorflow</a>. This is an overview of what we would be touching on in this tutorial:
+In this tutorial you would learn some methods that can be used to improve a model's accuracy using deep learning neural networks. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven't already, you can build a Tensorflow Image Classification model following the guide in the last post <a href="">How to Build an Image Classification API in Tensorflow</a>. This is an overview of what we would be touching on in this tutorial:
 
 <h3>Overview</h3>
 * Improving Model's Accuracy
@@ -20,7 +20,7 @@ Previous: <a href="">How to Build an Image Classification API in Tensorflow</a>
 Next: <a href="">Building an Image Classification API with TFX and GCP </a>
 
 
-<h3>Improving Model's Accuracy</h3>
+<h3>Improving Model's Accuracy with Convolutional Neural Networks</h3>
 
 In the last article we built a simple classifier model in Tensorflow. I achieved 75% accuracy after evaluating the test set which consists of 10000 Images which was not used in training. This gives us a view of how our model would perform in a real world scenario. Of-course, we aren't going to use this model for any big projects anytime soon, but by practising on it gives us understanding that can be applied to bigger projects. 
 
