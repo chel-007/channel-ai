@@ -8,9 +8,9 @@
  <meta itemprop="description" name="description" content="Learn how to build an Image Classification Model, Export as an API that can be deployed as back-end to a Web Application for Classification problems. In this..." />
  <meta content="width=device-width, initial-scale=1" name="viewport">
  <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks</title>
+<title>Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks in Deep Learning</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks" />
+<meta property="og:title" content="Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks in Deep Learning" />
 <meta name="author" content="Chel" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Learn how to build an Image Classification Model, Export as an API that can be deployed as back-end to a Web Application for Classification problems. In this tutuorial we go over all the steps required to build an Image Classify using the popular Cifar 10 and Cifar 100 datasets." />
@@ -20,11 +20,11 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-07-11T00:00:00+01:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"http://localhost:4000/achieving-85-accuracy-on-cifar-10-dataset/","headline":"Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks","dateModified":"2020-07-11T00:00:00+01:00","datePublished":"2020-07-11T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/achieving-85-accuracy-on-cifar-10-dataset/"},"author":{"@type":"Person","name":"Chel"},"description":"Learn how to build an Image Classification Model, Export as an API that can be deployed as back-end to a Web Application for Classification problems. In this tutuorial we go over all the steps required to build an Image Classify using the popular Cifar 10 and Cifar 100 datasets.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks in Deep Learning","dateModified":"2020-07-11T00:00:00+01:00","datePublished":"2020-07-11T00:00:00+01:00","url":"http://localhost:4000/achieving-85-accuracy-on-cifar-10-dataset/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/achieving-85-accuracy-on-cifar-10-dataset/"},"author":{"@type":"Person","name":"Chel"},"description":"Learn how to build an Image Classification Model, Export as an API that can be deployed as back-end to a Web Application for Classification problems. In this tutuorial we go over all the steps required to build an Image Classify using the popular Cifar 10 and Cifar 100 datasets.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
  <meta charset="utf-8">
- <title>Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks</title>
+ <title>Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks in Deep Learning</title>
  <style type="text/css">body{color:#202020}</style>
  <link rel="stylesheet" href="/assets/css/packages/styles/default.css">
  <script src="/assets/css/packages/highlight.pack.js"></script>
@@ -57,13 +57,11 @@
       
       <a class="nav-item nav-link" href="/blog/">Blog</a>
       
-      <a class="nav-item nav-link" href="/games/">Games</a>
-      
-      <a class="nav-item nav-link" href="/how-to/">How-To</a>
-      
       <a class="nav-item nav-link" href="/newsletter_manage/">Newsletter</a>
       
       <a class="nav-item nav-link" href="/portfolio/">Portfolio</a>
+      
+      <a class="nav-item nav-link" href="/projects/">Projects</a>
       
     </ul>
     </div>
@@ -75,7 +73,7 @@
      <div class="row">
 <!--      Column   -->
       <div class="col-md-12 col-sm-12">
-       <h1 class="post-header">Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks</h1>
+       <h1 class="post-header">Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks in Deep Learning</h1>
 
 		<p>
 			Jul 11, 2020
@@ -85,7 +83,7 @@
 			</p>
 			<br>
 
-            <p>In this tutorial you would learn some methods that can be used to improve a model’s accuracy. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven’t already, you can build a Tensorflow Image Classification model following the guide in the last post <a href="">How to Build an Image Classification API in Tensorflow</a>. This is an overview of what we would be touching on in this tutorial:</p>
+            <p>In this tutorial you would learn some methods that can be used to improve a model’s accuracy using deep learning neural networks. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven’t already, you can build a Tensorflow Image Classification model following the guide in the last post <a href="">How to Build an Image Classification API in Tensorflow</a>. This is an overview of what we would be touching on in this tutorial:</p>
 
 <h3>Overview</h3>
 <ul>
@@ -99,7 +97,7 @@
 
 <p>Next: <a href="">Building an Image Classification API with TFX and GCP </a></p>
 
-<h3>Improving Model's Accuracy</h3>
+<h3>Improving Model's Accuracy with Convolutional Neural Networks</h3>
 
 <p>In the last article we built a simple classifier model in Tensorflow. I achieved 75% accuracy after evaluating the test set which consists of 10000 Images which was not used in training. This gives us a view of how our model would perform in a real world scenario. Of-course, we aren’t going to use this model for any big projects anytime soon, but by practising on it gives us understanding that can be applied to bigger projects.</p>
 
@@ -237,6 +235,6 @@ hist = model.fit(x_train, y_train_one_hot,
 <!-- <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks - </title>
+    <title>Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks in Deep Learning - </title>
     <link rel="stylesheet" href="/assets/css/styles.css">
   </head> -->

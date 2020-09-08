@@ -1,457 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-01T00:24:55+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Best Free VR Games for 2020</title><link href="http://localhost:4000/free-vr-games-2020/" rel="alternate" type="text/html" title="Best Free VR Games for 2020" /><published>2020-08-29T00:00:00+01:00</published><updated>2020-08-29T00:00:00+01:00</updated><id>http://localhost:4000/-free%20vr%20games%202020</id><content type="html" xml:base="http://localhost:4000/free-vr-games-2020/">&lt;p&gt;Virtual Reality Gaming is the Latest trend that most gamers are involved in today, and this does not come as a suprise considering the flair and immersion it brings which can not be found in non-vr games. As such, this also results in a high price at which Vr games are sold, and in some cases unaffordable to gamers with conservative pockets.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-08T17:52:30+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Top 5 Books on Deep Learning for Beginners in 2020</title><link href="http://localhost:4000/books-deep-learning-2020/" rel="alternate" type="text/html" title="Top 5 Books on Deep Learning for Beginners in 2020" /><published>2020-09-08T00:00:00+01:00</published><updated>2020-09-08T00:00:00+01:00</updated><id>http://localhost:4000/books%20deep%20learning%202020</id><content type="html" xml:base="http://localhost:4000/books-deep-learning-2020/">&lt;p&gt;No doubt, AI is one of the most crucial future technologies which is being harnessed today and transforming our daily lives. A very important branch of Artificial Intelligence “Deep Learning” has arguably the biggest impact in AI progress.  If you’re a beginner looking for the right free resources to learn deep learning and discover applications in fields like Computer Vision, NLP, this plog post is you. This article will introduce the best books to learn deep learning in 2020 and how to practice deep learning&lt;/p&gt;
 
-&lt;p&gt;In the Gaming world, there is always a place for everyone, there always exist that one game that would suit your unique situation perfectly. Most Vr games released today have minimal to hugh purchase price, read my &lt;a href=&quot;https://channelai.netlify.app/top-10-vr-games-august/&quot;&gt;previous article&lt;/a&gt; if you are up for spending a few dollars on a game. If not, then this post is for you were you will get the best free to play Vr games available on steam.&lt;/p&gt;
-
-&lt;p&gt;For those that can not afford the high budget of Vr headsets and controllers, know that some VR games can be played without a headset. I will state the requirements for all the games in the list below.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h2 style=&quot;text-align: center;&quot;&gt;10+ Free VR Games for 2020&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;One Dreamer: Prologue&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-img\dreamer.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256781249/movie480_vp9.webm?t=1586533463&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Valve Index; Windows Mixed Reality&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;One Dreamer: Prologue is the story of a failed VR game developer who inadvertently inspired two young kids to follow in his footsteps. Program objects, solve coding puzzles and discover the reason why Frank became a game dev in this emotional, English voiced prologue of One Dreamer.
-      &lt;ul&gt;
-        &lt;li&gt;A narrative-driven story about indie game developers.&lt;/li&gt;
-        &lt;li&gt;Meet 15 English voiced characters from quirky NPCs to a sentient arcade machine.&lt;/li&gt;
-        &lt;li&gt;Explore beautifully crafted pixel art environments using 2.5D movement and a unique 360° section system.&lt;/li&gt;
-        &lt;li&gt;Realistic, but easy to understand pseudocode puzzles based on C#.&lt;/li&gt;
-        &lt;li&gt;Beautiful original soundtrack.&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/1274140/One_Dreamer_Prologue/&quot; class=&quot;btn btn-info&quot;&gt;Free&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;Eye of the Temple: First Steps&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-img\temple_eye.webp&quot;&gt;
-  &lt;source src=&quot;https://cdn.cloudflare.steamstatic.com/steam/apps/256795270/movie480_vp9.webm?t=1596567486&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Valve Index; Windows Mixed Reality&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;Eye of the Temple: First Steps is the beginning of a daring adventure in VR. Explore a vast and treacherous temple using your own feet. Keep your balance as you step from one moving block to another, dodging traps and solving puzzles with your torch and whip in hand.
-    	&lt;br /&gt;Eye of the Temple: First Steps makes unique use of room-scale VR and delivers the experience of exploring a vast environment. Lose yourself in the depths of the temple without teleportation, artificial locomotion, or other distractions taking you out of the immersion.
-    	&lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/1365940/Eye_of_the_Temple_First_Steps/&quot; class=&quot;btn btn-info&quot;&gt;Free&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;Graffiti Bombing&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-img\graffiti.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256774211/movie480.webm?t=1580838987&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Valve Index; Windows Mixed Reality&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;Enter the virtual world of Graffiti Bombing and become a graffiti writer. Whether you’re a new artist, seasoned veteran or even all-city hero, you can now enjoy the thrill of being a graffiti writer in the crime-free (relative) safety of Virtual Reality (VR).
-    Prepare your equipment, pack your paint and supplies. Grab your piece book, select your outlines, plan color schemes, pick paint types and get ready to go all city! &lt;br /&gt;
-    Bomb different locations by tagging, creating quick throw-ups, pieces of graffiti and characters. Or take things to the next level, by creating huge graffiti burners and massive murals that cover large walls and buildings.
-      &lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/561440/Graffiti_Bombing/&quot; class=&quot;btn btn-info&quot;&gt;Free&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;Occupy Mars: Prologue&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-img\mars.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256793485/movie480_vp9.webm?t=1595347488&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Valve Index; Windows Mixed Reality&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;Occupy Mars is a highly technical, open world, sandbox, survival game about Mars colonisation, inspired by the most promising technologies and companies who work towards the goal of becoming a multi planet species. Build and upgrade your base, discover new amazing regions, conduct mining operations, retrieve water and generate oxygen, grow crops, fix broken parts, learn how to survive on Mars! &lt;br /&gt;
-    The Prologue takes place in a remote location, before the events in Occupy Mars: The Game.As a member of one of the first successful Mars colonies, you have been sent to Remote Research Station located inside the Gale Crater. &lt;br /&gt;
-    Your task is to collect data and resources. As easy as it may seem - you need to hurry as there's an incoming dust storm and your oxygen, water and food supplies are shrinking. &lt;br /&gt;
-    You need to think, act quickly and in correct order to survive... before it gets dark.
-    &lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/1310520/Occupy_Mars_Prologue/&quot; class=&quot;btn btn-info&quot;&gt;Free&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;VR Jetpack Game&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-img\jetpack.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256793997/movie480_vp9.webm?t=1595706106&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Valve Index; Windows Mixed Reality&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;Physics-based VR with full freedom of flight. VR that feels and controls like a real jetpack. A real-time multiplayer VR arena.&lt;br /&gt;
-    Players can fly and interact with each other online in VR with realistic physics-based controls. The controls are completely VR and natural, just as you would use thruster controllers for a real jetpack (look up Jetman as an example). It's truly free range of motion and natural movement, not the teleport or D-pad controls of most VR games. This includes but is not limited to being able to hover, drift, spin, flip, and burst through the sky without ever hitting any special buttons (all controller angle/position based). It's up to your own imagination what combination of moves or positions you might be able to do in the air. You can even now swing and do hookshots with the new grappling cables.
-    &lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/1217930/VR_Jetpack_Game/&quot; class=&quot;btn btn-info&quot;&gt;Free&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;Teleporter: World of Gamers (Alpha)&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-img\teleporter.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256775260/movie480.webm?t=1586296149&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Valve Index; Windows Mixed Reality&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;Teleporter is the Social VR World of Gamers that unites us in one place to play, watch, and hang out together.
-You can find like-minded geek and gamer folks, and communities here;
+&lt;h3&gt;Overview&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;Play console &amp;amp; board games together&lt;/li&gt;
-  &lt;li&gt;Share your screen to watch videos or play your own games with others&lt;/li&gt;
-  &lt;li&gt;Have your own super-duper space caravan and make it your fantastic flying home&lt;/li&gt;
-  &lt;li&gt;Hang out in wonderful social spaces such as medieval taverns and heroic forests&lt;/li&gt;
-  &lt;li&gt;Enjoy epic gaming events, geek movie nights, esports tournaments, fireside gatherings, carnivals, and much more!&lt;/li&gt;
+  &lt;li&gt;Gentle introduction to Deep Learning&lt;/li&gt;
+  &lt;li&gt;Fields of Deep Learning&lt;/li&gt;
+  &lt;li&gt;Top 5 Books on Deep Learning (2020)&lt;/li&gt;
+  &lt;li&gt;What Comes next after Reading&lt;/li&gt;
+  &lt;li&gt;Summary&lt;/li&gt;
 &lt;/ul&gt;
-    &lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/1232510/Teleporter_World_of_Gamers_Alpha/&quot; class=&quot;btn btn-info&quot;&gt;Free&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Now that you have an idea of the stepss taking us through this tutorial, Let’s begin with it.&lt;/p&gt;
 
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;Drop In - VR F2P&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-img\dropin.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256786263/movie480_vp9.webm?t=1590093936&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Valve Index; Windows Mixed Reality&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;Drop In is a VR social space with a Lobby, Mini games, Solo missions and Multiplayer Gamemodes. Battle Royale Dedicated Servers are planned for the future as the game developes from Early Access to full release. Drop In Consist of the following detailed gameplay mechanics.
-      &lt;ul&gt;
-  &lt;li&gt;Guns, Guns, and More Guns&lt;/li&gt;
-  &lt;li&gt;Zip Lines!&lt;/li&gt;
-  &lt;li&gt;Zombies!&lt;/li&gt;
-  &lt;li&gt;VR interactive mechanics, physics objects and throwing&lt;/li&gt;
-  &lt;li&gt;Drivable Vehicles&lt;/li&gt;
-  &lt;li&gt;Mini game lobby such as Quick Draw, Ping Pong, Foosball table&lt;/li&gt;
-  &lt;li&gt;Red Vs Blue 1 v 1 Duals Mini Game&lt;/li&gt;
-  &lt;li&gt;Explosives such as grenades, RPG, 6 chamber Grenade Launcher&lt;/li&gt;
-&lt;/ul&gt;
-    &lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/1144800/Drop_In__VR_F2P/&quot; class=&quot;btn btn-info&quot;&gt;Free&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;h3&gt;Gentle Introduction to Deep learning&lt;/h3&gt;
 
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Deep_learning&quot;&gt;Deep learning&lt;/a&gt; (also known as deep structured learning) is part of a broader family of machine learning methods based on artificial neural networks with representation learning. Learning can be supervised, semi-supervised or unsupervised.&lt;/p&gt;
 
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;Blastworld&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-img\blastworld.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256784983/movie480_vp9.webm?t=1589263094&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Valve Index; Windows Mixed Reality&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;Welcome to Blastworld, where you can find all kinds of PvP and PvE games to play! Jump in for a casual gaming session or fight your way up to the rank of Grandmaster with the eSports-grade ranking system. &lt;br /&gt;
-    What makes it special is that you can climb any surface in the game so explore, manouver or hide to your hearts content!Made specifically to allow both comfort and immersion-seeking players play together. You can also climb any surface in the game so explore, manouver or hide to your hearts content.
-    In Zombies Royale a group of players start but watch out - every knocked-out player turns into a blood-thirsty zombie! Things will get heated faster than you can say &quot;Braaains&quot;! Even when the last survivor emerges, they still need to defend against a zombie horde while waiting for the helicopter rescue! Not an easy feat and every survivor has earned their win!
-    Overkill game mode puts team against team in intense combat to attack or defend capture points! Balanced for all movement modes, your locomotion choice is reflected in your character class. The fast moving and precise thumb-stick or arm swinger players meet the well-armored and armed comfort players.
-    &lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/1148570/Blastworld/&quot; class=&quot;btn btn-info&quot;&gt;Free&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;Ok, so that’s more like a very official definition of deep learning. An easier one you should understand better; Deep learning refers to the various process and methods involving the use of Artificial Neural Networks to build models, functions that learn from real-world data and produce outputs closely related to what they were trained on. Now this is probably a vague definition for it, in the sense that some deep learning models use unsupervised method of mapping functions. I could go around and cite a perfect definition for it, but honestly that is usually rarely important for you and me. If you understand the above definitions, you are very well 60% ahead on what deep learning is all about because anything further than that, is already taking about a specific branch of deep learning like computer vision, natural language processing etc.&lt;/p&gt;
 
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3&gt;Fields of Deep Learning&lt;/h3&gt;
+&lt;p&gt;We come now to a place that we can spend lots of time defining concepts and their differences to each other. The fields or branches of deep learning are many and new theories keeps popping every now and then. This is so because, scientists and researchers are constantly try to improve upon state-of-the-art models and also achieve new milestones. Several years ago, I should think the world was focusing more on how to improve traditional Machine Learning models and eliminate the repetitive Rules and Data In - Answers Out for a scalable solution like Data and Answers in - Models out. Now we have Models that are scalable and more confident unseen situations. I could still remember when I took the course &lt;a href=&quot;&quot;&gt;Machine Learning&lt;/a&gt; by Andrew Ng, it was everything I was looking for, I was very happy with it, a few months later I took the course &lt;a href=&quot;&quot;&gt;Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning&lt;/a&gt; and I could immediately see the huge difference. The difference being using tarditional ML methods against Convolutional neural Networks etc.&lt;/p&gt;
 
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;Gangsta Underground : The Poker&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-img\gangsta.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256782761/movie480_vp9.webm?t=1587536494&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Valve Index; Windows Mixed Reality&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;Gangsta Underground : The Poker&quot; is a gangsters heads up poker league. Enjoy the suspenseful play with realistic and gangster-looking characters. Win the game to take all bets from the loser and shoot your oponents with a gun.
-Multiplayer will be available in the near future.
-Features:
-      &lt;ul&gt;
-        &lt;li&gt;Single-play: You can play with an AI to fill up play money chips balance and improve your poker skills..&lt;/li&gt;
-        &lt;li&gt;Shop: Buy various items and toys to decorate and play with your character with the game money you made from plays.&lt;/li&gt;
-        &lt;li&gt;Quests: Accumulate wealth by completing various quests and achievements in the game.&lt;/li&gt;
-        &lt;li&gt;Unique Characters: You can choose your avatar among various types of intense looking characters. More interesting characters will continue to be added!&lt;/li&gt;
-        &lt;li&gt;Impressive Graphics: Experience the dismal scene of back alleys built using Unreal Engine 4.&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/689720/Gangsta_Underground__The_Poker/&quot; class=&quot;btn btn-info&quot;&gt;Free&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;Not to go out of scope, the field of Deep Learning is diverese and keeps growing, here I would list out a few of the more common ones that i have at one time or other come across. I am not going to be explaining them in detail, this post is more focused on Deep learning and how to get started as a deep learner and the books on deep learning to read that would guide your progress:&lt;/p&gt;
 
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;Virus Popper&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-img\virus_popper.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256782761/movie480_vp9.webm?t=1587536494&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Valve Index; Windows Mixed Reality&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;Play the cleanest game in VR... Wash your hands &amp;amp; POP the virus! &lt;br /&gt;
-    Virus Poppers is a fast-paced educational game about personal hygiene. We wanted to make a fun and friendly way to share important messages without adding to the fear and panic in the world right now.
-      &lt;ul&gt;
-        &lt;li&gt;WASH your hands in the sink to get cleansed.&lt;/li&gt;
-        &lt;li&gt;POP the virus with powerful disinfectants and sprays.&lt;/li&gt;
-        &lt;li&gt;CRUSH filthiness with legendary weapons like the toilet scrubber.&lt;/li&gt;
-        &lt;li&gt;AVOID touching publicly used objects like door knobs.&lt;/li&gt;
-        &lt;li&gt;PROTECT and avoid touching your face at all costs&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/1269890/Virus_Popper/&quot; class=&quot;btn btn-info&quot;&gt;Free&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Virtual Reality Gaming is the Latest trend that most gamers are involved in today, and this does not come as a suprise considering the flair and immersion it brings which can not be found in non-vr games. As such, this also results in a high price at which Vr games are sold, and in some cases unaffordable to gamers with conservative pockets.</summary></entry><entry><title type="html">Top Best Virtual Reality Games for August 2020</title><link href="http://localhost:4000/top-10-vr-games-august/" rel="alternate" type="text/html" title="Top Best Virtual Reality Games for August 2020" /><published>2020-08-21T00:00:00+01:00</published><updated>2020-08-21T00:00:00+01:00</updated><id>http://localhost:4000/top%2010%20vr%20games%20august</id><content type="html" xml:base="http://localhost:4000/top-10-vr-games-august/">&lt;p&gt;With the rise of Virtual Reality Technology we have seen many Industries have looked to adopt it in their business, among these the most successful have been the gaming industry. There has been a sprawl of VR Games released every now and then. Just as it was with mobile games, it also becomes necessary for gamers to choose the absolute best of them in which they can spend money and get the best value. If you are an avid gamer like I am, you would only want to spend time on those games that derive the best satisfaction.&lt;/p&gt;
-
-&lt;h2&gt;Hardware for VR Gaming&lt;/h2&gt;
-&lt;p&gt;Our list of VR games covers the top titles for the HTC Vive, Oculus Quest, Oculus Rift S (the successor to the Oculus Rift), PlayStation VR, Valve Index, and Windows Mixed Reality headsets. Many of these devices (and the games themselves) have gotten cheaper in the past couple of years, which makes them a more easily justifiable purchase. 
-Gamers using Headsets like the HTC Vive, Oculus Quest, Oculus Rift S, Valve Index and Windows Mixed Reality has to consider the hardware requirements for them. For the best experience use top-of-the-line-GPUs mounted on powerful gaming desktops or VR-ready laptops.&lt;/p&gt;
-
-&lt;p&gt;Using a few sources, reviews, gaming know-how and having actually tested a few of these games, I decided to conjure in a top ten list the Best VR Games for August 2020. You can find links leading to where you can find them.
-Do you have any favorite VR titles that didn’t make the list or disagree with any of our choices? Send in your top picks. We’ll update this story from time to time, so your choice could appear in the next update.&lt;/p&gt;
-
-&lt;h3&gt;Top Best VR Games for August 2020&lt;/h3&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;BattleGroup VR&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-img\battle.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256794190/movie480_vp9.webm?t=1595962572&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256794190/movie480_vp9.webm?t=1595962572&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Valve Index&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;BattleGroupVR is a first-person real-time space strategy where you lead a fleet into battle from the bridge of your own flagship. As the battle group commander, you lead the charge as you are part of the action, not some armchair general who orders little units from above. You are part of the battle fighting alongside your chosen captains and warships.
-    	&lt;ul&gt;
-    		&lt;ol&gt;
-    			&lt;li&gt;Unlock and acquire a variety of different types of ships, each with their own unique special abilities, characteristics, and weapon slots. From fast striking corvettes, long-range missile destroyers, electronic warfare science vessels, dangerous carriers, and powerful battleships. All are at your command.&lt;/li&gt;
-    			&lt;li&gt;Equip your vessels with the best weapons and technology. From heavy cannons, missile launchers, point defense lasers - a large selection of weapons and components are at your disposal. Arming your fleet with a wide array of capabilities to ensure your battlegroup is prepared for whatever challenges you encounter.&lt;/li&gt;
-    			&lt;li&gt;Units and ships grow with you on your conquests, losing them is a heavy burden. Select your captains wisely, each individual captain will bring a benefit ability to your fleet, which paired with the right ship, can turn the tide of battle.&lt;/li&gt;
-    		&lt;/ol&gt;
-    	&lt;/ul&gt;&lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/1178780/BattleGroupVR/&quot; class=&quot;btn btn-info&quot;&gt;$24.99 on Steam&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;BattleGroup VR&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-img\karnage.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256794741/movie480_vp9.webm?t=1596204558&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256794741/movie480_vp9.webm?t=1596204558&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Valve Index; Windows Mixed Reality&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;Every five thousand years the planets align and create a rift in the fabric of cosmos. It’s prior to such an event that this story unfolds. Play as a Murkwraith, an undying knight barred from Death’s domain, and cursed to eternal servitude for sins committed eons ago. Experience a rich story that takes you on a perilous journey through dark dungeons filled with monsters, traps, puzzles, treasure and more
-    	&lt;ul&gt;
-    		&lt;ol&gt;
-    			&lt;li&gt;Play alone or together with friends. Karnage Chronicles supports 1-4 players, with auto-scaling of monster strength and number of spawns as people come and go. Full drop-in / drop-out support allows you to play and have fun while waiting for friends or randoms to join your game, even allowing you to change party size on the fly.&lt;/li&gt;
-    			&lt;li&gt;Karnage Chronicles is an action RPG designed from ground up to fully immerse you in the magic of VR.&lt;/li&gt;
-    			&lt;li&gt;Unparalleled anti-wiggle system for close quarter combat. In this game you cannot tickle your enemies to death as the velocity of your swing defines the damage you do to your enemies.&lt;/li&gt;
-    			&lt;li&gt;Customizable weapon presets allow for quick switching between weapons in combat, and there are quick slots for easy access to consumables like potions and food.&lt;/li&gt;
-    			&lt;li&gt;Parry incoming attacks with your weapon or block them with a shield. Take full advantage of room-scale VR to dodge and sidestep arrows or magic hurled at you from afar. There are no random hit chances, all is player skill based, same goes for avoiding enemy attacks.&lt;/li&gt;
-    		&lt;/ol&gt;
-    	&lt;/ul&gt;&lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/611160/Karnage_Chronicles/&quot; class=&quot;btn btn-info&quot;&gt;$24.99 on Steam&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;Moose Life&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-Img\moose.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256792126/movie480_vp9.webm?t=1596100169&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256792126/movie480_vp9.webm?t=1596100169&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Valve Index&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;A trippy, exhilarating voxel arcade shooter specifically engineered to take you to a happy, tranced-out pleasure zone full of deer and mushrooms.
-
-Back in 1994 we created one of the first examples of a new genre of arcade gaming: the trance shooter, with &quot;Tempest 2000&quot; on the Atari Jaguar.
-
-Since then we have been creating software - both games and visualisers - with the specific intent to create in its users a euphoric experience, something that players will return to again and again simply because the act of playing feels so good.
-
-Memorable milestones along the way include the Virtual Light Machine lightsynths, the Xbox 360 music visualiser, and games such as Space Giraffe, Gridrunner Revolution, Polybius and the Minotaur Arcade games.
-
-In recent years we have been bringing these experiences to the world of VR too. Head-mounted displays are in everyone's future, and we now make everything we create playable in or out of VR as a matter of course. Immersion via a VR headset makes the mood-enhancing, euphoric nature of our games even more effective.&lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/1342740/Moose_Life/&quot; class=&quot;btn btn-info&quot;&gt;$6.99 on Steam&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;Zooma VR&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-Img\zooma.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256788845/movie480_vp9.webm?t=1593161872&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256788845/movie480_vp9.webm?t=1593161872&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Windows Mixed Reality; Valve Index&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;Zooma is a virtual adventure in which you will have to be smart, demonstrate your ability for rapid decision-making, and exhibit significant accuracy and coordination skills.
-	Check out what happens if you mix shooting, puzzles, and classic match-three in virtual reality.
-	Zooma is not a mere blast-as-many-as-you-can first-person shooter: strategy and speed are essential in this game, so you will have to carefully think your moves through and adjust tactics from level to level.
-    	&lt;ul&gt;
-    		&lt;ol&gt;
-    			How to Play:
-    			&lt;li&gt;Choose a level and shoot the rolling balls to match all the color sequences before they reach the snapdragon; once a ball reaches the snapdragon, the rest follow and a level is lost;&lt;/li&gt;
-    			&lt;li&gt;Shoot with both hands which will help you match the colors faster&lt;/li&gt;
-    			&lt;li&gt;Plan your actions, get bonus points by making combos, and finish the chapters on time to score for more&lt;/li&gt;
-    		&lt;/ol&gt;
-    	&lt;/ul&gt;&lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/1214410/Zooma_VR/&quot; class=&quot;btn btn-info&quot;&gt;$5.99 on Steam&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;Hospitality VR&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-img\hospitality.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256785527/movie480_vp9.webm?t=1590560737&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256785527/movie480_vp9.webm?t=1590560737&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Windows Mixed Reality&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;A VR Horror Experience. After having checked into a haunted hospital, you are being confronted with its evil resident who is not too pleased about your visit.
-    You are trapped in a wheelchair, unable to move anything other than your head.
-	This might sound like a less interactive experience, yet this decision in game design makes the experience even more claustrophobic.
-	The VR experience is designed to adapt to user reactions and actions. Even though there are no active game objects to interact with, events are depended on head movements, speeds and viewing angles. Sound, noise, shadows, explosions and lights distract viewers and help guide their views in certain directions.&lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/1164750/Hospitality_VR/&quot; class=&quot;btn btn-info&quot;&gt;$2.99 on Steam&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;MOMO.EXE VR&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-img\momo.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256791668/movie480_vp9.webm?t=1596736025&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256791668/movie480_vp9.webm?t=1596736025&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Windows Mixed Reality; Valve Index&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;Momo is a nickname given to a sculpture of a young woman with long black hair, large bulging eyes, a wide smile and bird legs. Pictures of the sculpture are associated with an urban legend involving a WhatsApp phone number that messages disturbing photographs to those that attempt to contact it, linked to a game referred to as the &quot;Momo Challenge&quot; or &quot;Momo Game.&quot;
-    	&lt;ul&gt;
-    		&lt;ol&gt;
-    			&lt;li&gt;VR is fully supported!&lt;/li&gt;
-    			&lt;li&gt;Interactive story with a lot of choices tasks to complete&lt;/li&gt;
-    			&lt;li&gt;Very scary horror - MOMO will come for YOU&lt;/li&gt;
-    			&lt;li&gt;Fully intractable phone like in real life&lt;/li&gt;
-    			&lt;li&gt;Flashlight... in the phone&lt;/li&gt;
-    		&lt;/ol&gt;
-    	&lt;/ul&gt;&lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/1363600/MOMOEXE_VR/&quot; class=&quot;btn btn-info&quot;&gt;$14.99 on Steam&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;Emergence&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-img\emergence.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256790332/movie480_vp9.webm?t=1595593557&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256790332/movie480_vp9.webm?t=1595593557&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Valve Index&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;Emergence is an awe-inspiring VR open-world art experience, visualising patterns of human behaviour and exploring the individual and the collective. It immerses the player in a crowd of thousands, against a changing canvas that is at varying points wondrous and intimidating, realistic and fantastical.
-
-You control one solitary, glowing avatar amongst a mass of autonomous strangers, each of whose movements react to your own. As your pace and directions influence others as both individuals and as a whole, you essentially become the choreographer of the crowd.
-
-The crowd’s movements are programmed to simulate intelligent behaviours (including avoidance, following and mimicry), reflecting the seemingly endless ways that humans act in group settings. Viewed from above, these movements create mesmerising patterns against the landscape. A shaft of light beckons you – each time you reach the light, this landscape shifts, along with its soundtrack, gravity, atmosphere and mode of movement.&lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/1337820/Emergence/&quot; class=&quot;btn btn-info&quot;&gt;Free-to-Play on Steam&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;card card-for-games&quot;&gt;
-  &lt;h3 style=&quot;font-weight: 700;&quot; class=&quot;card-header h3&quot;&gt;Rocking Hero&lt;/h3&gt;
-  &lt;video height=&quot;500&quot; controls=&quot;&quot; poster=&quot;../assets\images\Blog\Blog-img\rockhero.webp&quot;&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256779547/movie480.webm?t=1587224954&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;source src=&quot;https://steamcdn-a.akamaihd.net/steam/apps/256779547/movie480.webm?t=1587224954&quot; type=&quot;video/ogg&quot; /&gt;
-  Your browser does not support the video tag.
-&lt;/video&gt;
-  &lt;div class=&quot;card-body&quot;&gt;
-    &lt;h5 style=&quot;font-weight: 600;&quot; class=&quot;card-title&quot;&gt;Platforms: HTC Vive; Oculus Rift; Valve Index; Windows Mixed Reality&lt;/h5&gt;
-    &lt;p class=&quot;card-text&quot;&gt;Rocking Hero is a musical game where you take the part of a virtual guitarrist immersed in beautiful and dynamic environments.
-
-Choose from a selection of guitars and original rock/metal inspired instrumental songs and compete on the global leaderboards with your preferred control scheme.
-Ways to control the guitar:
 &lt;ul&gt;
-	&lt;ol&gt;
-		&lt;li&gt;Finger tracked (only index controllers at the moment)
-fingers can interact individually with the keys on the virtual guitar handle, while strumming with the plectrum on the other hand. Both left and right handed
-players are supported&lt;/li&gt;
-		&lt;li&gt;Hand tracked (index/vive/oculus or others)
-move your hand on the virtual guitar handle interacting with keys, while strumming with the plectrum on the other hand&lt;/li&gt;
-	&lt;/ol&gt;
-&lt;/ul&gt;&lt;/p&gt;
-    &lt;a href=&quot;https://store.steampowered.com/app/1260800/Rocking_Hero/&quot; class=&quot;btn btn-info&quot;&gt;$24.99 on Steam&lt;/a&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+  &lt;li&gt;Computer Vision: Computer Vision, often abbreviated as CV, is defined as a field of study that seeks to develop techniques to help computers “see” and understand the content of digital images such as photographs and videos.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;The problem of computer vision appears simple because it is trivially solved by people, even very young children. Nevertheless, it largely remains an unsolved problem based both on the limited understanding of biological vision and because of the complexity of vision perception in a dynamic and nearly infinitely varying physical world.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Natural Language Processing: It is a discipline that focuses on the interaction between data science and human language, and is scaling to lots of industries. Today NLP is booming thanks to the huge improvements in the access to data and the increase in computational power, which are allowing practitioners to achieve meaningful results in areas like healthcare, media, finance and human resources, among others.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Generative Adversarial Networks: Generative modeling is an unsupervised learning task in machine learning that involves automatically discovering and learning the regularities or patterns in input data in such a way that the model can be used to generate or output new examples that plausibly could have been drawn from the original dataset.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are just a few of the many different fields-of-study in deep learning, at least the most common ones. The main context of this post is to introduce the best books about deep learning that can guide your progression in this field, it would simplyfy a lot of concepts and more important, the information would be generic since it is from just one source. It is not unknown truth that it can be really overwhelming when trying to learn a new skill online usually from different sources. I think that choosing and learning in sequence from an equipped book would be a very good way to start.&lt;/p&gt;
+
+&lt;h3&gt;Top 5 Deep Learning Books in 2020 to learn Deep Learning&lt;/h3&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Thanks for Reading through this filtered list of top VR Games for August 2020. I hope I was able to narrow than options for you and also giving you the direct links where you can get them. If you have any ideas or a games you would like to see in our next review, pls leave a comment in the section below.&lt;/p&gt;
-&lt;p style=&quot;clear: both; padding-top: 10px;&quot;&gt;&lt;/p&gt;
+&lt;h5 style=&quot;font-weight: 600;&quot;&gt;Deep Learning (Adaptive Computation and Machine Learning series)&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://amzn.to/3hbaaJV&quot;&gt;&lt;img src=&quot;https://images-na.ssl-images-amazon.com/images/I/61qbj4KwauL._SX378_BO1,204,203,200_.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;!-- &lt;iframe height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/uI5zPf4lqsA&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt; --&gt;</content><author><name>Chel</name></author><summary type="html">With the rise of Virtual Reality Technology we have seen many Industries have looked to adopt it in their business, among these the most successful have been the gaming industry. There has been a sprawl of VR Games released every now and then. Just as it was with mobile games, it also becomes necessary for gamers to choose the absolute best of them in which they can spend money and get the best value. If you are an avid gamer like I am, you would only want to spend time on those games that derive the best satisfaction.</summary></entry><entry><title type="html">Virtual Reality and The Future _ What would VR look like in 2030?</title><link href="http://localhost:4000/virtual-reality-and-the-future-of-humans/" rel="alternate" type="text/html" title="Virtual Reality and The Future _ What would VR look like in 2030?" /><published>2020-08-09T00:00:00+01:00</published><updated>2020-08-09T00:00:00+01:00</updated><id>http://localhost:4000/virtual%20reality%20and%20the%20future%20of%20humans</id><content type="html" xml:base="http://localhost:4000/virtual-reality-and-the-future-of-humans/">&lt;p&gt;Virtual Reality is a fascinating field among the many branches of Artificial Intelligence. It is a question if it doesn’t stand on the same level as AI and can bring us tremendously big advantages as we see AI doing now in 2020. At the moment, Virtual Reality has already been adopted in a few industries like the gaming, construction, production, housing among others. For VR to become “the next big thing” in tech it has to be able to generate a huge value for industries. This is only logical as, increasing values means big investments made by invetors which in turn brings advancement to the field by research, building ease-of-use tools and opportunities. The way I see it is this, I have so much hope on VR becoming a massive technological field for so many reasons.&lt;/p&gt;
+&lt;h6&gt;Summary:&lt;/h6&gt;
+
+&lt;p&gt;The text offers mathematical and conceptual background, covering relevant concepts in linear algebra, probability theory and information theory, numerical computation, and machine learning. It describes deep learning techniques used by practitioners in industry, including deep feedforward networks, regularization, optimization algorithms, convolutional networks, sequence modeling, and practical methodology; and it surveys such applications as natural language processing, speech recognition, computer vision, online recommendation systems, bioinformatics, and videogames. Finally, the book offers research perspectives, covering such theoretical topics as linear factor models, autoencoders, representation learning, structured probabilistic models, Monte Carlo methods, the partition function, approximate inference, and deep generative models.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Link:&lt;/strong&gt; &lt;a href=&quot;https://amzn.to/3hbaaJV&quot;&gt;Amazon&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h5 style=&quot;font-weight: 600;&quot;&gt;Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow 2&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://amzn.to/35dNiXP&quot;&gt;&lt;img src=&quot;https://images-na.ssl-images-amazon.com/images/I/4184nt3zoGL._SX404_BO1,204,203,200_.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h6&gt;Summary:&lt;/h6&gt;
+&lt;p&gt;Applied machine learning with a solid foundation in theory. Revised and expanded for TensorFlow 2, GANs, and reinforcement learning.&lt;/p&gt;
+
+&lt;p&gt;Python Machine Learning, Third Edition is a comprehensive guide to machine learning and deep learning with Python. It acts as both a step-by-step tutorial, and a reference you’ll keep coming back to as you build your machine learning systems.&lt;/p&gt;
+
+&lt;p&gt;Packed with clear explanations, visualizations, and working examples, the book covers all the essential machine learning techniques in depth. While some books teach you only to follow instructions, with this machine learning book, Raschka and Mirjalili teach the principles behind machine learning, allowing you to build models and applications for yourself.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Link:&lt;/strong&gt; &lt;a href=&quot;https://amzn.to/35dNiXP&quot;&gt;Amazon&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h5 style=&quot;font-weight: 600;&quot;&gt;Deep Learning (MIT Press Essential Knowledge series)&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://amzn.to/32a5hwr&quot;&gt;&lt;img src=&quot;https://images-na.ssl-images-amazon.com/images/I/41qRN93MrqL._SX355_BO1,204,203,200_.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h6&gt;Summary:&lt;/h6&gt;
+&lt;p&gt;An accessible introduction to the artificial intelligence technology that enables computer vision, speech recognition, machine translation, and driverless cars.&lt;/p&gt;
+
+&lt;p&gt;Kelleher explains that deep learning enables data-driven decisions by identifying and extracting patterns from large datasets; its ability to learn from complex data makes deep learning ideally suited to take advantage of the rapid growth in big data and computational power. Kelleher also explains some of the basic concepts in deep learning, presents a history of advances in the field, and discusses the current state of the art. He describes the most important deep learning architectures, including autoencoders, recurrent neural networks, and long short-term networks, as well as such recent developments as Generative Adversarial Networks and capsule networks. He also provides a comprehensive (and comprehensible) introduction to the two fundamental algorithms in deep learning: gradient descent and backpropagation. Finally, Kelleher considers the future of deep learning―major trends, possible developments, and significant challenges.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Link:&lt;/strong&gt; &lt;a href=&quot;https://amzn.to/32a5hwr&quot;&gt;Amazon&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h5 style=&quot;font-weight: 600;&quot;&gt;Deep Learning with TensorFlow 2 and Keras: Regression, ConvNets, GANs, RNNs, NLP, and more with TensorFlow 2 and the Keras API&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://amzn.to/3bDt6Q3&quot;&gt;&lt;img src=&quot;https://images-na.ssl-images-amazon.com/images/I/516ibqhWJNL._SX404_BO1,204,203,200_.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h6&gt;Summary:&lt;/h6&gt;
+&lt;p&gt;Build machine and deep learning systems with the newly released TensorFlow 2 and Keras for the lab, production, and mobile devices&lt;/p&gt;
+
+&lt;p&gt;Deep Learning with TensorFlow 2 and Keras, Second Edition teaches neural networks and deep learning techniques alongside TensorFlow (TF) and Keras. You’ll learn how to write deep learning applications in the most powerful, popular, and scalable machine learning stack available.
+This book also introduces neural networks with TensorFlow, runs through the main applications (regression, ConvNets (CNNs), GANs, RNNs, NLP), covers two working example apps, and then dives into TF in production, TF mobile, and using TensorFlow with AutoML.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Link:&lt;/strong&gt; &lt;a href=&quot;https://amzn.to/3bDt6Q3&quot;&gt;Amazon&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;That’s it, the best 5 deep learning as of 2020. This list has been compiled based on reviews, price and I have had the chance to read a few of them myself. I hope these provides some assistance in your goal to learn and apply deep learning to real-world problems. Of course, it would take time, the time is relatively comparable to how much time is spent learning, practising and building models.&lt;/p&gt;
+
+&lt;h3&gt;What Next? &lt;/h3&gt;</content><author><name>Chel</name></author><summary type="html">No doubt, AI is one of the most crucial future technologies which is being harnessed today and transforming our daily lives. A very important branch of Artificial Intelligence “Deep Learning” has arguably the biggest impact in AI progress. If you’re a beginner looking for the right free resources to learn deep learning and discover applications in fields like Computer Vision, NLP, this plog post is you. This article will introduce the best books to learn deep learning in 2020 and how to practice deep learning</summary></entry><entry><title type="html">Virtual Reality and The Future _ What would VR look like in 2030?</title><link href="http://localhost:4000/virtual-reality-and-the-future-of-humans/" rel="alternate" type="text/html" title="Virtual Reality and The Future _ What would VR look like in 2030?" /><published>2020-08-09T00:00:00+01:00</published><updated>2020-08-09T00:00:00+01:00</updated><id>http://localhost:4000/virtual%20reality%20and%20the%20future%20of%20humans</id><content type="html" xml:base="http://localhost:4000/virtual-reality-and-the-future-of-humans/">&lt;p&gt;Virtual Reality is a fascinating field among the many branches of Artificial Intelligence. It is a question if it doesn’t stand on the same level as AI and can bring us tremendously big advantages as we see AI doing now in 2020. At the moment, Virtual Reality has already been adopted in a few industries like the gaming, construction, production, housing among others. For VR to become “the next big thing” in tech it has to be able to generate a huge value for industries. This is only logical as, increasing values means big investments made by invetors which in turn brings advancement to the field by research, building ease-of-use tools and opportunities. The way I see it is this, I have so much hope on VR becoming a massive technological field for so many reasons.&lt;/p&gt;
 
 &lt;p&gt;For Virtual Reality to be embraced by majority if not all industry, it has to impact them by bringing progression and developments in lesser amount of time. I think that currently VR can find application in many sectors but not all have adopted it seeing it as a relatively new technology, in short, a lot of skeptisism surrounds VR. But it should not be that way. Looking at it from a strategic viewpoint, you can see that generally, history always repeats itself. In 1998 when the internet was just taking off, many businesses feared to integrate it in their business and transfer their presence online, and now?, Every business that desires more customers simply knows that the solution is E-bussiness with good advertising and customer targeting. Another example can be seen in Artificial Intelligence. In 1997 IBM’s Deep Blue system defeats the world champion of chess, 20 Years Later, the advancement of AI is massive alomost mind-blowing.&lt;/p&gt;
 
@@ -476,7 +115,7 @@ move your hand on the virtual guitar handle interacting with keys, while strummi
 
 &lt;p&gt;Virtual Reality is a Technology that brings us closest to a fantasical future. It holds can can bring a lot of developments,fun,innovations to the world. The ideas listed above is something that honestly I see becoming reality in just a few years time. There are other fields of technology that holds big things in time to come like Quantum Computing, Artificial General Intelligence, Computer Vision, Internet of things etc. The combination of these technology would really give us a changed world, by changed world, what I mean is: A world without pollution, untimely death, corruption, terrorism. I argue that no human should lose their lives when it isn’t at the prime of age beacuse life is wonderful and beautiful and all has the right to enjoy it. In short I believe in a world just like in the movie from 2004 “Wall-E”.&lt;/p&gt;
 
-&lt;p&gt;To developers: The world of Virtual Reality is immence, it requires great effort and harmonious coorperation for we to see big advancement in it. I am open to teaming up with individuals interested and excited about VR. If you are one, don’t hesitate to reach out to me. You can do that by leaving a comment below or visiting &lt;a href=&quot;https://channelai.netlify.app/about&quot;&gt;About’s&lt;/a&gt; page where my many contacts info are linked.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Virtual Reality is a fascinating field among the many branches of Artificial Intelligence. It is a question if it doesn’t stand on the same level as AI and can bring us tremendously big advantages as we see AI doing now in 2020. At the moment, Virtual Reality has already been adopted in a few industries like the gaming, construction, production, housing among others. For VR to become “the next big thing” in tech it has to be able to generate a huge value for industries. This is only logical as, increasing values means big investments made by invetors which in turn brings advancement to the field by research, building ease-of-use tools and opportunities. The way I see it is this, I have so much hope on VR becoming a massive technological field for so many reasons.</summary></entry><entry><title type="html">How to Build an Object Detection Model using Transfer Learning in Keras</title><link href="http://localhost:4000/object-detection-model-in-keras-with-mask-R-CNN/" rel="alternate" type="text/html" title="How to Build an Object Detection Model using Transfer Learning in Keras" /><published>2020-07-24T00:00:00+01:00</published><updated>2020-07-24T00:00:00+01:00</updated><id>http://localhost:4000/object%20detection%20model%20in%20keras%20with%20mask%20R-CNN</id><content type="html" xml:base="http://localhost:4000/object-detection-model-in-keras-with-mask-R-CNN/">&lt;p&gt;In this tutorial you would see how to apply state-of-the-art R-CNN architecture model built on the MS Coco dataset for Object Detection on a new Dataset. We use Transfer Learning for efficient and faster training epochs. You would learn how to Install the R-CNN Library, install the dataset we want to make predictions on, parse the annotation files for bounding boxes, Train Mask R-CNN Model on dataset using Transfer Learning.&lt;/p&gt;
+&lt;p&gt;To developers: The world of Virtual Reality is immence, it requires great effort and harmonious coorperation for we to see big advancement in it. I am open to teaming up with individuals interested and excited about VR. If you are one, don’t hesitate to reach out to me. You can do that by leaving a comment below or visiting &lt;a href=&quot;https://channelai.netlify.app/about&quot;&gt;About’s&lt;/a&gt; page where my many contacts info are linked.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Virtual Reality is a fascinating field among the many branches of Artificial Intelligence. It is a question if it doesn’t stand on the same level as AI and can bring us tremendously big advantages as we see AI doing now in 2020. At the moment, Virtual Reality has already been adopted in a few industries like the gaming, construction, production, housing among others. For VR to become “the next big thing” in tech it has to be able to generate a huge value for industries. This is only logical as, increasing values means big investments made by invetors which in turn brings advancement to the field by research, building ease-of-use tools and opportunities. The way I see it is this, I have so much hope on VR becoming a massive technological field for so many reasons.</summary></entry><entry><title type="html">How to Build an Object Detection Model using Convolutional Neural Networks and Transfer Learning in Keras</title><link href="http://localhost:4000/object-detection-model-in-keras-with-mask-R-CNN/" rel="alternate" type="text/html" title="How to Build an Object Detection Model using Convolutional Neural Networks and Transfer Learning in Keras" /><published>2020-07-24T00:00:00+01:00</published><updated>2020-07-24T00:00:00+01:00</updated><id>http://localhost:4000/object%20detection%20model%20in%20keras%20with%20mask%20R-CNN</id><content type="html" xml:base="http://localhost:4000/object-detection-model-in-keras-with-mask-R-CNN/">&lt;p&gt;In this tutorial you would see how to apply state-of-the-art R-CNN architecture model built on the MS Coco dataset for Object Detection on a new Dataset. We use Transfer Learning for efficient and faster training epochs. You would learn how to Install the R-CNN Library, install the dataset we want to make predictions on, parse the annotation files for bounding boxes, Train Mask R-CNN Model on dataset using Transfer Learning.&lt;/p&gt;
 
 &lt;h3&gt;Overview&lt;/h3&gt;
 &lt;ul&gt;
@@ -488,7 +127,7 @@ move your hand on the virtual guitar handle interacting with keys, while strummi
   &lt;li&gt;Detecting Kangaroo in new Images.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Now that you have an idea of the steps taking us through this tutorial, Let’s begin with it.&lt;/p&gt;
+&lt;p&gt;Now that you have an idea of the stepss taking us through this tutorial, Let’s begin with it.&lt;/p&gt;
 
 &lt;h3&gt;Introduction&lt;/h3&gt;
 
@@ -1052,7 +691,7 @@ Next, the prediction can be compared to the ground truth and metrics calculated 
 
 &lt;p&gt;This may be because the dataset is very small, and/or because the model could benefit from further training.&lt;/p&gt;
 
-&lt;p&gt;Detecting Kangaroos in new Images&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">In this tutorial you would see how to apply state-of-the-art R-CNN architecture model built on the MS Coco dataset for Object Detection on a new Dataset. We use Transfer Learning for efficient and faster training epochs. You would learn how to Install the R-CNN Library, install the dataset we want to make predictions on, parse the annotation files for bounding boxes, Train Mask R-CNN Model on dataset using Transfer Learning.</summary></entry><entry><title type="html">Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks</title><link href="http://localhost:4000/achieving-85-accuracy-on-cifar-10-dataset/" rel="alternate" type="text/html" title="Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks" /><published>2020-07-11T00:00:00+01:00</published><updated>2020-07-11T00:00:00+01:00</updated><id>http://localhost:4000/achieving%2085%20accuracy%20on%20cifar%2010%20dataset</id><content type="html" xml:base="http://localhost:4000/achieving-85-accuracy-on-cifar-10-dataset/">&lt;p&gt;In this tutorial you would learn some methods that can be used to improve a model’s accuracy. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven’t already, you can build a Tensorflow Image Classification model following the guide in the last post &lt;a href=&quot;&quot;&gt;How to Build an Image Classification API in Tensorflow&lt;/a&gt;. This is an overview of what we would be touching on in this tutorial:&lt;/p&gt;
+&lt;p&gt;Detecting Kangaroos in new Images&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">In this tutorial you would see how to apply state-of-the-art R-CNN architecture model built on the MS Coco dataset for Object Detection on a new Dataset. We use Transfer Learning for efficient and faster training epochs. You would learn how to Install the R-CNN Library, install the dataset we want to make predictions on, parse the annotation files for bounding boxes, Train Mask R-CNN Model on dataset using Transfer Learning.</summary></entry><entry><title type="html">Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks in Deep Learning</title><link href="http://localhost:4000/achieving-85-accuracy-on-cifar-10-dataset/" rel="alternate" type="text/html" title="Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks in Deep Learning" /><published>2020-07-11T00:00:00+01:00</published><updated>2020-07-11T00:00:00+01:00</updated><id>http://localhost:4000/achieving%2085%20accuracy%20on%20cifar%2010%20dataset</id><content type="html" xml:base="http://localhost:4000/achieving-85-accuracy-on-cifar-10-dataset/">&lt;p&gt;In this tutorial you would learn some methods that can be used to improve a model’s accuracy using deep learning neural networks. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven’t already, you can build a Tensorflow Image Classification model following the guide in the last post &lt;a href=&quot;&quot;&gt;How to Build an Image Classification API in Tensorflow&lt;/a&gt;. This is an overview of what we would be touching on in this tutorial:&lt;/p&gt;
 
 &lt;h3&gt;Overview&lt;/h3&gt;
 &lt;ul&gt;
@@ -1066,7 +705,7 @@ Next, the prediction can be compared to the ground truth and metrics calculated 
 
 &lt;p&gt;Next: &lt;a href=&quot;&quot;&gt;Building an Image Classification API with TFX and GCP &lt;/a&gt;&lt;/p&gt;
 
-&lt;h3&gt;Improving Model's Accuracy&lt;/h3&gt;
+&lt;h3&gt;Improving Model's Accuracy with Convolutional Neural Networks&lt;/h3&gt;
 
 &lt;p&gt;In the last article we built a simple classifier model in Tensorflow. I achieved 75% accuracy after evaluating the test set which consists of 10000 Images which was not used in training. This gives us a view of how our model would perform in a real world scenario. Of-course, we aren’t going to use this model for any big projects anytime soon, but by practising on it gives us understanding that can be applied to bigger projects.&lt;/p&gt;
 
@@ -1131,7 +770,7 @@ hist = model.fit(x_train, y_train_one_hot,
 
 &lt;p&gt;&lt;img src=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Here, we trained our model for just 25% accuracy and achieved approx 85% accuracy. This is a significant development from when we only convolution and maxpooling layers to build our model. Training it for more epochs can as well give you more accuracy which you should try out by simply following the guide.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">In this tutorial you would learn some methods that can be used to improve a model’s accuracy. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven’t already, you can build a Tensorflow Image Classification model following the guide in the last post How to Build an Image Classification API in Tensorflow. This is an overview of what we would be touching on in this tutorial:</summary></entry><entry><title type="html">How to Build an Image Classification Model and Web App with Tensorflow</title><link href="http://localhost:4000/image-classification-api-in-tensorflow/" rel="alternate" type="text/html" title="How to Build an Image Classification Model and Web App with Tensorflow" /><published>2020-06-28T00:00:00+01:00</published><updated>2020-06-28T00:00:00+01:00</updated><id>http://localhost:4000/image%20classification%20api%20in%20tensorflow</id><content type="html" xml:base="http://localhost:4000/image-classification-api-in-tensorflow/">&lt;p&gt;In this tutorial, you would learn how to build an Image Classification Model using Tensorflow on Google Colab. This tutorial is the first among three set. They go from buiding an Image Classifier to Improving accuracy in your model and finally Serving it for production through an API url Endpoint. To start off, here is the overview of all what we would be touching on.&lt;/p&gt;
+&lt;p&gt;Here, we trained our model for just 25% accuracy and achieved approx 85% accuracy. This is a significant development from when we only convolution and maxpooling layers to build our model. Training it for more epochs can as well give you more accuracy which you should try out by simply following the guide.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">In this tutorial you would learn some methods that can be used to improve a model’s accuracy using deep learning neural networks. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven’t already, you can build a Tensorflow Image Classification model following the guide in the last post How to Build an Image Classification API in Tensorflow. This is an overview of what we would be touching on in this tutorial:</summary></entry><entry><title type="html">How to Build an Image Classification Model and Web App with Tensorflow</title><link href="http://localhost:4000/image-classification-api-in-tensorflow/" rel="alternate" type="text/html" title="How to Build an Image Classification Model and Web App with Tensorflow" /><published>2020-06-28T00:00:00+01:00</published><updated>2020-06-28T00:00:00+01:00</updated><id>http://localhost:4000/image%20classification%20api%20in%20tensorflow</id><content type="html" xml:base="http://localhost:4000/image-classification-api-in-tensorflow/">&lt;p&gt;In this tutorial, you would learn how to build an Image Classification Model using Tensorflow on Google Colab. This tutorial is the first among three set. They go from buiding an Image Classifier to Improving accuracy in your model and finally Serving it for production through an API url Endpoint. To start off, here is the overview of all what we would be touching on.&lt;/p&gt;
 
 &lt;h3&gt;Overview&lt;/h3&gt;
 &lt;ul&gt;
@@ -1149,13 +788,13 @@ hist = model.fit(x_train, y_train_one_hot,
 
 &lt;h3&gt;Introduction&lt;/h3&gt;
 
-&lt;p&gt;Starting off in Machine Learning can be Overwhelming, I say this because I’m currently in the process of experiencing the start off altogether. There are so many fields, opinions, doubts that can go through your mind on the process of choosing a path to follow. Sometimes, actually most times, It’s really cool to look at the big guys in the field that exude so much confidence showing that they know what they want. Also, there are lots of resources and articles around promising ways that would become a revelation to newcomers and map out the correct path for them. I just read some of those, and I’m more affected than when I was using my mind at a space to think for myself. My mood becomes let’s say negative. But I can’t be like that for long. I simply told myself I’m gonna learn them all by “doing”. It’s a big deal, perhaps the hardest part but with time it becomes a natural thing for you. That’s the way of life. Long story short, I decided to start implementing projects that I could add to my github, LinkedIn and blog.&lt;/p&gt;
+&lt;p&gt;Starting off in Machine Learning and Deep Learning can be Overwhelming, I say this because I’m currently in the process of experiencing the start off altogether. There are so many fields, opinions, doubts that can go through your mind on the process of choosing a path to follow. Sometimes, actually most times, It’s really cool to look at the big guys in the field that exude so much confidence showing that they know what they want. Also, there are lots of resources and articles around promising ways that would become a revelation to newcomers and map out the correct path for them. I just read some of those, and I’m more affected than when I was using my mind at a space to think for myself. My mood becomes let’s say negative. But I can’t be like that for long. I simply told myself I’m gonna learn them all by “doing”. It’s a big deal, perhaps the hardest part but with time it becomes a natural thing for you. That’s the way of life. Long story short, I decided to start implementing projects that I could add to my github, LinkedIn and blog.&lt;/p&gt;
 
 &lt;p&gt;This tutorial is mainly for people starting off in “Computer Vision”, those that want to “know” and “do” Computer Vision. What I want you to understand is this: &lt;b&gt;“It’s all in the process. Those little steps sums into the big advancement”&lt;/b&gt;.. Well, at least I told myself that. OpenCV can wait, I’m gonna learn all the small steps involved but I’m gonna learn them very fast. I have the ability to, and I hope with the series of upcoming posts, you too can follow along and master the baby steps in Computer Vision(CV). Let’s get into more concrete writings.&lt;/p&gt;
 
 &lt;h3&gt;Image Classification In Computer Vision&lt;/h3&gt;
 
-&lt;p&gt;The term Image Classification refers to a task in CV that involves the process of assigning classes to an entire image or picture. It is sometimes referred to as Image recognition, which is a broader term that refers to various tasks that involves classifying the content of images.&lt;/p&gt;
+&lt;p&gt;The term Image Classification, a deep learning task refers to a task in CV that involves the process of assigning classes to an entire image or picture. It is sometimes referred to as Image recognition, which is a broader term that refers to various tasks that involves classifying the content of images.&lt;/p&gt;
 
 &lt;p&gt;The task of helping computers to see, and make a sense or add meaning to what they see is a very hard task. Mainly because it does not just involve one but a series of steps are involved owning to the fact that real-world data or scenerio is unpredictable. Therefore, this is no longer a common task of pre-programmed rules giving accurate results. For computers to see, at basic level, they have to understand single still images before processing advanced high fps videos of which is our general goal as ML engineers and researchers.&lt;/p&gt;
 

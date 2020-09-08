@@ -19,7 +19,7 @@
 
 @media (max-width: 950px) { .navbar-custom ul li div:hover > a { border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
 
-body { font-family: sans-serif; font-size: 21px; }
+body { font-family: sans-serif; font-size: 22px; }
 
 .footer-style { background-color: #222F34; padding: 17px; }
 
@@ -46,18 +46,6 @@ div:hover > .site-n-privacy { color: white; text-decoration: none; }
 
 .cards-foot a { color: black; font-size: 17px; font-family: Rubik; }
 
-/* Games Page */
-.games-page { padding-top: 25px; }
-
-h4 .game-title { color: black; text-decoration: none; font-weight: 600; font-family: sans-serif; }
-
-h4:hover > .game-title { color: #24BCF9; }
-
-.card-for-games { box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.3), -3px 10px 20px 2px rgba(0, 0, 0, 0.3); }
-
-/* Resources Page's CSS */
-/* .resources-page { padding-top: 10%; } .resources-header { font-size: 30px; font-weight: 650; } .resources-body { font-size: 19px; line-height: 35px; } .resources-body li { color: rgba(45,142,249,1); font-weight: 500; } .resources-list { font-size: 27px; font-weight:600; }*/
-/* End Of Resources Page's CSS */
 /* Blog's Page CSS */
 .blog-container { padding-top: 10%; }
 
@@ -71,6 +59,16 @@ h3:hover > .blog-post-header { color: black; text-decoration: none; }
 
 em:hover > .blog-links { text-decoration: none; color: #24BCF9; }
 
+/* Blog Refined Page */
+.games-page { padding-top: 25px; }
+
+h4 .game-title { color: black; text-decoration: none; font-weight: 600; font-family: sans-serif; }
+
+h4:hover > .game-title { color: #24BCF9; }
+
+.card-for-games { box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.3), -3px 10px 20px 2px rgba(0, 0, 0, 0.3); }
+
+/* End of Blog Page*/
 /* End of Blog's Page CSS */
 /* Post's Layout for Post.md CSS */
 .post-header { font-size: 35px; font-weight: 700; }
@@ -2158,7 +2156,7 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 @media (max-width: 950px) { .navbar-custom ul li div:hover > a { border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
 
-body { font-family: sans-serif; font-size: 21px; }
+body { font-family: sans-serif; font-size: 22px; }
 
 .footer-style { background-color: #222F34; padding: 17px; }
 
@@ -2185,18 +2183,6 @@ div:hover > .site-n-privacy { color: white; text-decoration: none; }
 
 .cards-foot a { color: black; font-size: 17px; font-family: Rubik; }
 
-/* Games Page */
-.games-page { padding-top: 25px; }
-
-h4 .game-title { color: black; text-decoration: none; font-weight: 600; font-family: sans-serif; }
-
-h4:hover > .game-title { color: #24BCF9; }
-
-.card-for-games { box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.3), -3px 10px 20px 2px rgba(0, 0, 0, 0.3); }
-
-/* Resources Page's CSS */
-/* .resources-page { padding-top: 10%; } .resources-header { font-size: 30px; font-weight: 650; } .resources-body { font-size: 19px; line-height: 35px; } .resources-body li { color: rgba(45,142,249,1); font-weight: 500; } .resources-list { font-size: 27px; font-weight:600; }*/
-/* End Of Resources Page's CSS */
 /* Blog's Page CSS */
 .blog-container { padding-top: 10%; }
 
@@ -2210,6 +2196,16 @@ h3:hover > .blog-post-header { color: black; text-decoration: none; }
 
 em:hover > .blog-links { text-decoration: none; color: #24BCF9; }
 
+/* Blog Refined Page */
+.games-page { padding-top: 25px; }
+
+h4 .game-title { color: black; text-decoration: none; font-weight: 600; font-family: sans-serif; }
+
+h4:hover > .game-title { color: #24BCF9; }
+
+.card-for-games { box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.3), -3px 10px 20px 2px rgba(0, 0, 0, 0.3); }
+
+/* End of Blog Page*/
 /* End of Blog's Page CSS */
 /* Post's Layout for Post.md CSS */
 .post-header { font-size: 35px; font-weight: 700; }
