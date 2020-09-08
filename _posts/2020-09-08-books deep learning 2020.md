@@ -3,45 +3,43 @@ layout: post
 author: Chel
 title: Top 5 Books on Deep Learning for Beginners in 2020
 seo: deep learning books about deep learning python deep learning what is deep learning books on deep learning deep learning book python for deep learning
-description: No doubt, AI is one of the most crucial future technologies which is being harnessed today and transforming our daily lives. A very important branch of Artificial Intelligence "Deep Learning" has arguably the biggest impact in AI progress.  If you're a beginner looking for the right free resources to learn deep learning and discover applications in fields like Computer Vision, NLP, this plog post is you. This article will introduce the best books to learn deep learning in 2020 and how to practice deep learning
+description: No doubt, AI is one of the most crucial future technologies which is being harnessed today and transforming our daily lives. A very important branch of Artificial Intelligence "Deep Learning" has arguably the biggest impact in AI progress.  If you're a beginner looking for the right free resources to learn deep learning and discover applications in fields like Computer Vision, NLP, this blog post is you. This article will introduce the best books to learn deep learning in 2020 and how to practice deep learning with them.
 img-src: ../assets\images\Blog\dl_books
 ---
 
-No doubt, AI is one of the most crucial future technologies which is being harnessed today and transforming our daily lives. A very important branch of Artificial Intelligence "Deep Learning" has arguably the biggest impact in AI progress.  If you're a beginner looking for the right free resources to learn deep learning and discover applications in fields like Computer Vision, NLP, this plog post is you. This article will introduce the best books to learn deep learning in 2020 and how to practice deep learning
+No doubt, AI is one of the most crucial future technologies which is being harnessed today and transforming our daily lives. A very important branch of Artificial Intelligence "Deep Learning" has arguably the biggest impact in AI progress.  If you're a beginner looking for the right free resources to learn deep learning and discover applications in fields like Computer Vision, NLP, this plog post is you. This article will introduce the best books to learn deep learning in 2020 and how to practice deep learning with them.
 
 
-<h3>Overview</h3>
+<h4>Overview</h4>
 * Gentle introduction to Deep Learning
 * Fields of Deep Learning
 * Top 5 Books on Deep Learning (2020)
-* What Comes next after Reading
+* What next after Reading
 * Summary
 
-Now that you have an idea of the stepss taking us through this tutorial, Let's begin with it.
+Now that you have an idea of the steps taking us through this article, Let's begin with it.
 
-<h3>Gentle Introduction to Deep learning</h3>
+<h4>Gentle Introduction to Deep learning</h4>
 
 <a href="https://en.wikipedia.org/wiki/Deep_learning">Deep learning</a> (also known as deep structured learning) is part of a broader family of machine learning methods based on artificial neural networks with representation learning. Learning can be supervised, semi-supervised or unsupervised.
 
-Ok, so that's more like a very official definition of deep learning. An easier one you should understand better; Deep learning refers to the various process and methods involving the use of Artificial Neural Networks to build models, functions that learn from real-world data and produce outputs closely related to what they were trained on. Now this is probably a vague definition for it, in the sense that some deep learning models use unsupervised method of mapping functions. I could go around and cite a perfect definition for it, but honestly that is usually rarely important for you and me. If you understand the above definitions, you are very well 60% ahead on what deep learning is all about because anything further than that, is already taking about a specific branch of deep learning like computer vision, natural language processing etc.
+Ok, so that's more like a very official definition of deep learning. An easier one you should understand better; Deep learning refers to the various process and methods involving the use of Artificial Neural Networks to build models, functions that learn from real-world data and produce outputs closely related to what they were trained on. Now this is probably a vague definition for it, in the sense that some deep learning models use unsupervised method of mapping functions. I could go around and cite a perfect definition for it, but honestly that is usually rarely important for you and me. If you understand the above definitions, you are very well 60% ahead on what deep learning is all about because anything further than that, is already talking about a specific branch of deep learning like computer vision, natural language processing etc.
 
 
-<h3>Fields of Deep Learning</h3>
-We come now to a place that we can spend lots of time defining concepts and their differences to each other. The fields or branches of deep learning are many and new theories keeps popping every now and then. This is so because, scientists and researchers are constantly try to improve upon state-of-the-art models and also achieve new milestones. Several years ago, I should think the world was focusing more on how to improve traditional Machine Learning models and eliminate the repetitive Rules and Data In - Answers Out for a scalable solution like Data and Answers in - Models out. Now we have Models that are scalable and more confident unseen situations. I could still remember when I took the course <a href="">Machine Learning</a> by Andrew Ng, it was everything I was looking for, I was very happy with it, a few months later I took the course <a href="">Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning</a> and I could immediately see the huge difference. The difference being using tarditional ML methods against Convolutional neural Networks etc. 
+<h4>Fields of Deep Learning</h4>
+We come now to a place that we can spend lots of time defining concepts and their differences to each other. The fields or branches of deep learning are many and new theories keeps popping every now and then. This is so because, scientists and researchers are constantly trying to improve upon state-of-the-art models and also achieve new milestones. Several years ago, I should think the world was focusing more on how to improve traditional Machine Learning models and eliminate the repetitive "<b>Rules and Data In - Answers Out</b>" for a scalable solution like "<b>Data and Answers In - Models Out</b>". Now we have Models that are scalable and more confident in unseen situations. I could still remember when I took the course <a href="https://www.coursera.org/learn/machine-learning/">Machine Learning</a> by Andrew Ng, it was everything I was looking for, I was very happy with it, a few months later I took the course <a href="https://www.coursera.org/learn/introduction-tensorflow/">Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning</a> and I could immediately see the huge difference. The difference being using traditional ML methods against Convolutional Neural Networks. Ever since then I've been building models with Tensorflow, Keras and high-end libraries for ML & DL in Skicit-learn and python. Why? Because it is so much easier being that models are scalable, eliminates code repetition and is even easier to train.
 
-Not to go out of scope, the field of Deep Learning is diverese and keeps growing, here I would list out a few of the more common ones that i have at one time or other come across. I am not going to be explaining them in detail, this post is more focused on Deep learning and how to get started as a deep learner and the books on deep learning to read that would guide your progress:
+Not to go out of scope, the field of Deep Learning is diverse and keeps growing, here I would list out a few of the more common ones that I have at one time or other come across. I am not going to be explaining them in detail, this post is more focused on Deep learning and how to get started as a deep learner and the books on deep learning to read that would guide your progress:
 
-* Computer Vision: Computer Vision, often abbreviated as CV, is defined as a field of study that seeks to develop techniques to help computers “see” and understand the content of digital images such as photographs and videos.
-
-The problem of computer vision appears simple because it is trivially solved by people, even very young children. Nevertheless, it largely remains an unsolved problem based both on the limited understanding of biological vision and because of the complexity of vision perception in a dynamic and nearly infinitely varying physical world.
+* Computer Vision: Computer Vision, often abbreviated as CV, is defined as a field of study that seeks to develop techniques to help computers “see” and understand the content of digital images such as photographs and videos.The problem of computer vision appears simple because it is trivially solved by people, even very young children. Nevertheless, it largely remains an unsolved problem based both on the limited understanding of biological vision and because of the complexity of vision perception in a dynamic and nearly infinitely varying physical world.
 
 * Natural Language Processing: It is a discipline that focuses on the interaction between data science and human language, and is scaling to lots of industries. Today NLP is booming thanks to the huge improvements in the access to data and the increase in computational power, which are allowing practitioners to achieve meaningful results in areas like healthcare, media, finance and human resources, among others.
 
-* Generative Adversarial Networks: Generative modeling is an unsupervised learning task in machine learning that involves automatically discovering and learning the regularities or patterns in input data in such a way that the model can be used to generate or output new examples that plausibly could have been drawn from the original dataset.
+* Generative Adversarial Networks: Generative modeling is an unsupervised learning task in deep learning that involves automatically discovering and learning the regularities or patterns in input data in such a way that the model can be used to generate or output new examples that plausibly could have been drawn from the original dataset.
 
-These are just a few of the many different fields-of-study in deep learning, at least the most common ones. The main context of this post is to introduce the best books about deep learning that can guide your progression in this field, it would simplyfy a lot of concepts and more important, the information would be generic since it is from just one source. It is not unknown truth that it can be really overwhelming when trying to learn a new skill online usually from different sources. I think that choosing and learning in sequence from an equipped book would be a very good way to start.
+These are just a few of the many different fields-of-study in deep learning, at least the most common ones. The main context of this post is to introduce the best books about deep learning that can guide your progression in this field, it would simplify a lot of concepts and more important, the information would be easy to digest since it is coming from just one source. It is not an unknown truth that it can be really overwhelming when trying to learn a new skill online usually from different sources. I think that choosing and learning in sequence from an equipped book would be a very good way to start.
 
-<h3>Top 5 Deep Learning Books in 2020 to learn Deep Learning</h3>
+<h4>Top 5 Deep Learning Books in 2020 to learn Deep Learning</h4>
 <br>
 
 
