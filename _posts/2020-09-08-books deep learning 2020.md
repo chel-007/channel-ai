@@ -92,9 +92,32 @@ This book also introduces neural networks with TensorFlow, runs through the main
 <hr>
 
 
-That's it, the best 5 deep learning as of 2020. This list has been compiled based on reviews, price and I have had the chance to read a few of them myself. I hope these provides some assistance in your goal to learn and apply deep learning to real-world problems. Of course, it would take time, the time is relatively comparable to how much time is spent learning, practising and building models.
+That's it, the best 5 deep learning as of 2020. This list has been compiled based on reviews, price and I have had the chance to read a few of them myself. I hope these provides some assistance in your goal to learn and apply deep learning to real-world problems. Of course, it would take time, the time is relatively comparable to how much time is spent learning, practicing and building models.
 
 
 <h3>What Next? </h3>
+
+Now you've read some books hopefully, in reality you are yet to though. The truth is quite simple , reading is never the same thing as doing or practicing. Sure you are gonna get a lot of guidelines, understanding of deep learning from reading some of the best books around, but if your goal centers around becoming an expert in a field of deep learning, then you need to work with it every other day. I am not 100% qualified to give directions that I can guarantee would be perfect for everyone, because in a way, there is always a unique situation and way of doing things everyone has. The helpful thing for me is that I've passed through every single step myself and still doing. What I can say is this, as a beginner trying to have expertise in deep learning, the easiet way to progress is to specialize in one or two fields at first. How you can go about this, is finding that one area that interests you, it doesn't have to be a huge interest at first, because interest and passion can grow as you practice deeper with it.
+
+I took me time to discover what I loved best in the many branches of AI & DL. It can be a daunting process, daunting because you more than anything want to learn Deep Learning, but have no idea how to start. It can be very overwhelming if you try to have a go at "All" your areas of interest, because In truth, deep learning is fascinating - every part of it.
+
+
+Here's the action I hope you can take to guide your progress:
+
+* Start by Reading one of the recommended books, this would get you through the basics, concepts, branches of deep learning, some theories and even some practical approaches to deep learning.
+
+* Try to choose a field you want to start working in, but as much as this is an important step, it can also be helpful to dance around a bit, to find what you love best before making a choice - At the end of the day, regardless of what you choice is, be openminded in all cases. Now I would give an example of why I said so: My Interest in Deep learning is Computer Vision and Image Synthesis e.g Gans, at least that's where my major interest lies. I avoided kaggle community because I thought most of the projects there were limited to "Data-Science and Machine learning". Yh, I was quite ignorant and was strictly into Computer Vision. Short story, I decided to have a shot at kaggle, well, I found out that there were lots of computer vision projects available. And well, as a beginner, I completed some simple Data-science projects, got to learn pandas, scikit-learn and data-visualization libraries. This was great for me because I learnt some new stuffs and actually found out that I loved Visualizing data.
+
+* Well, the path to mastering Deep learning(deep learning might be too broad to master, let's just say, your specific field) has many channels, one person can do so many stuffs along the way but get there later than someone who thoretically did less. My grammer isn't too great here, I'm also growing in it just like you. What I can do though, is refer you to a great post by Jason Brownlee, in his post he talks about the Best way to Learn & Do Deep Learning - Everything in that post alings with my views. <a href=""></a>
+
+<h4>Summary</h4>
+In this article, 
+* I shared with you some highly rated books on Deep Learning
+* We talked about Deep Leraning on the surface with some simplistic definitions
+* I listed a few popular fields in Deep learning (Computer Vision, NLP, Gans)
+* I highlighted some action steps you can take to start learning deep learning in practice
+
+
+Thanks for reading through this post, I hope most that it would of some help to you. If you would like to ask about some more steps or anything at all , feel free to leave a comment below. 
 
 
