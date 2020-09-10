@@ -43,14 +43,25 @@ These are just a few of the many different fields-of-study in deep learning, at 
 <br>
 
 
-<h5 style="font-weight: 600;">Deep Learning (Adaptive Computation and Machine Learning series)</h5>
-<a href="https://amzn.to/3hbaaJV"><img src="https://images-na.ssl-images-amazon.com/images/I/61qbj4KwauL._SX378_BO1,204,203,200_.jpg"/></a>
+<h5 style="font-weight: 600;">Deep Learning With Python</h5>
+<a href="https://amzn.to/3hbaaJV"><img src="https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/DeepLearningWithPython-400.png"/></a>
 
 <h6>Summary:</h6>
 
-The text offers mathematical and conceptual background, covering relevant concepts in linear algebra, probability theory and information theory, numerical computation, and machine learning. It describes deep learning techniques used by practitioners in industry, including deep feedforward networks, regularization, optimization algorithms, convolutional networks, sequence modeling, and practical methodology; and it surveys such applications as natural language processing, speech recognition, computer vision, online recommendation systems, bioinformatics, and videogames. Finally, the book offers research perspectives, covering such theoretical topics as linear factor models, autoencoders, representation learning, structured probabilistic models, Monte Carlo methods, the partition function, approximate inference, and deep generative models.
+Deep learning is the most interesting and powerful machine learning technique right now.
+Top deep learning libraries are available on the Python ecosystem like Theano and TensorFlow 2. Tap into their power in a few lines of code using Keras, the best-of-breed applied deep learning library.
 
-<p><strong>Link:</strong> <a href="https://amzn.to/3hbaaJV">Amazon</a></p>
+In this mega Ebook is written in the friendly Machine Learning Mastery style that you’re used to, learn exactly how to get started and apply deep learning to your own machine learning projects. After purchasing you will get:
+
+* Read on all devices: English PDF format EBook, no DRM.
+* Tons of tutorials: 20 step-by-step lessons, 266 pages.
+* Projects: 8 end-to-end projects
+* Working code: 71 Python (.py) code files included.
+* Finally, Bring Deep Learning To Your Projects
+
+
+<p><strong>Link:</strong> <a href="https://machinelearningmastery.com/deep-learning-with-python/">MachineLearningmstery</a></p>
+<div></div>
 <hr>
 
 <h5 style="font-weight: 600;">Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow 2</h5>
@@ -108,7 +119,7 @@ Here's the action I hope you can take to guide your progress:
 
 * Try to choose a field you want to start working in, but as much as this is an important step, it can also be helpful to dance around a bit, to find what you love best before making a choice - At the end of the day, regardless of what you choice is, be openminded in all cases. Now I would give an example of why I said so: My Interest in Deep learning is Computer Vision and Image Synthesis e.g Gans, at least that's where my major interest lies. I avoided kaggle community because I thought most of the projects there were limited to "Data-Science and Machine learning". Yh, I was quite ignorant and was strictly into Computer Vision. Short story, I decided to have a shot at kaggle, well, I found out that there were lots of computer vision projects available. And well, as a beginner, I completed some simple Data-science projects, got to learn pandas, scikit-learn and data-visualization libraries. This was great for me because I learnt some new stuffs and actually found out that I loved Visualizing data.
 
-* Well, the path to mastering Deep learning(deep learning might be too broad to master, let's just say, your specific field) has many channels, one person can do so many stuffs along the way but get there later than someone who thoretically did less. My grammer isn't too great here, I'm also growing in it just like you. What I can do though, is refer you to a great post by Jason Brownlee, in his post he talks about the Best way to Learn & Do Deep Learning - Everything in that post alings with my views. <a href=""></a>
+* Well, the path to mastering Deep learning(deep learning might be too broad to master, let's just say, your specific field) has many channels, one person can do so many stuffs along the way but get there later than someone who thoretically did less. My grammer isn't too great here, I'm also growing in it just like you. What I can do though, is refer you to a great post by Jason Brownlee, in his post he talks about the Best way to Learn & Do Deep Learning - Everything in that post alings with my views. <a href="https://machinelearningmastery.com/what-is-deep-learning/">Deep learning Getting Started</a>
 
 <h4>Summary</h4>
 In this article, 
@@ -118,6 +129,8 @@ In this article,
 * I highlighted some action steps you can take to start learning deep learning in practice
 
 
-Thanks for reading through this post, I hope most that it would of some help to you. If you would like to ask about some more steps or anything at all , feel free to leave a comment below. 
+Thanks for reading through this post, I hope most that it would of some help to you. If you would like to ask about some more steps or anything at all , feel free to leave a comment below.
+
+
 
 
