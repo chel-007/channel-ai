@@ -1,8 +1,8 @@
 ---
 layout: post
 author: Chel
-title: Virtual Reality and The Future _ What would VR look like in 2030?
-seo: Virtual Reality VR & Future VR Artificial Intelligence Emerging Tech what is Virtual Reality wired
+title: Virtual Reality 10 Years from now _ What would VR look like in 2030?
+seo: virtual reality future virtual reality 10 years from now vr games virtual reality
 description: Virtual Reality is a technology that is relatively new in the industry, there exists some skeptisism about it but if we really use our imagination as is required, what does the future hold for us in VR. This blog post conatins some personal opinion of mine and some ideas that could become our reality in a few years
 img-src: ../assets\images\Blog\virtual_reality_future
 ---
