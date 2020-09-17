@@ -56,3 +56,16 @@ These were questions that troubled me when I got to know what deployment is all 
 Below I am going to take you through the process of model deployment and how you can go about it. Using this guide, you should get through in a day what would naturally have taken upwards of a week.
 
 <h3>Methods to Deploy a model for Scalale Prediction</h3>
+
+<ol>
+	<li>TFX(Tensorflow Extended): A TFX pipeline is a sequence of components that implement an ML pipeline which is specifically designed for scalable, high-performance machine learning tasks. That includes modeling, training, serving inference, and managing deployments to online, native mobile, and JavaScript targets. To build this pipeline, a few libraries are tasked to take care of different steps in building the scalable ML Pipeline. <ul>
+		<li>TensorFlow Data Validation for validating, analysing and monitoring ML data at scale. It helps to maintain the health of the ML pipeline</li>
+		<li>TensorFlow Transform for preprocessing data into suitable formats. It involves tokenizing and numerical operations such as normalization.This is what i was referring to at the beginning of the post that every model must be prepared for predictions in a different format</li>
+		<li>TensorFlow Model Analysis for computing visualization and evaluation metrics for models. Before deploment it is necessary to evaluate the quality of the model to ensure it meets desired threshold.</li>
+		<li>TensorFlow Serving to support model versioning and for model updates with a rollback option and multiple models for experimentation via A/B testing, while ensuring that concurrent models achieve high throughput on hardware. What Tensorflow serving does in simple words is that it handles updates to your model, rollback options and pushing of multiple models, in a way, think of it as having similar functions to github.</li></ul>
+
+For beginners, your main area of focus should be <b>tensorflow serving</b>, all other libraries mentioned is secondary and for more professional projects. In the next few lines, I will teach you how to set up a TFX for serving models:
+
+
+</li>
+</ol>
