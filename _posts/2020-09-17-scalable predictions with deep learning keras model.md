@@ -12,14 +12,16 @@ Buiding Models is exciting, putting them to use can be very brain-tasking. For p
 These are the steps guiding us through this article:
 
 <h3>Overview</h3>
-* Introduction
-* Buidling Deep Learning Models in Keras
-* Making Predictions: Methods to Utilize a Model for Prediction
-* Summary
+<ul>
+  <li>Introduction</li>
+  <li>Buidling Deep Learning Models in Keras</li>
+  <li>Making Predictions: Methods to Utilize a Model for Predictions</li>
+  <li>Summary</li>
+</ul>  
 
 
 <h3>Introduction</h3>
-As a beginner, usually you spend most of your time building models by leveraging blog posts tutorials, <a href="">kaggle data-science</a> community or follow-up from courses you take. At least this was what most of my time has been spent doing.
+As a beginner, usually you spend most of your time building models by leveraging blog posts tutorials, <a href="http://kaggle.com/">kaggle data-science</a> community or follow-up from courses you take. At least this was what most of my time has been spent doing.
 
 The beauty about model deploment and prediction is that you  can see how your modelperforms in a real-world situation which is an important step that develops a very useful skill every Machine Learning Enginner should possess. No-one wants an enginner that cannot solve problems with their models because it remains sitting on google colab or on thier machine.
 
@@ -32,7 +34,7 @@ In this article, I refer to DL models built with Tensorflow, on top of Keras. I 
 
 Keras is a high-end library for building ML and DL models. It is built on top of Tensorflow and utilizes it's many tools, functions and libraries for data loading,visualization,pre-processing and the wholw process involved in model building.
 
-Most ML and DL task can be carried out in Keras like Computer Vision, Natural Language Processing, Style Transfer, Transfer Learning, Gans, pretty much any DL task can be carried out using keras. If you want some folllow up tutorials for Dl in keras, I suggest you visit Tensorflow oficial website <a href="">here</a>.
+Most ML and DL task can be carried out in Keras like Computer Vision, Natural Language Processing, Style Transfer, Transfer Learning, Gans, pretty much any DL task can be carried out using keras. If you want some folllow up tutorials for Dl in keras, I suggest you visit Tensorflow oficial website <a href="https://www.tensorflow.org/tutorials/quickstart/beginner">here</a>.
 
 <h3>Making Predictions: Methods to Utilize a Model for Prediction</h3>
 Making predictions with models is a successding step of model deployment. In a way, it can be used interchangably. "I want to deploy my model", for what?,"to make predictions".
