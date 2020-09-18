@@ -89,7 +89,7 @@ These are the three software you need to set up locally. Refer to this article o
 * <b>Deployment</b> to Deploy your models at scale and get predictions from them in the cloud with AI Platform Prediction that manages the infrastructure needed to run your model and makes it available for online and batch prediction requests.
 
 The diagram below describes this process in details: <br>
-<img class="img-fluid" src="https://cloud.google.com/images/ai-platform/ai_platform.svg">
+<img class="img-fluid" src="https://cloud.google.com/images/ai-platform/ai_platform.svg"> <br>
 
 From this brief introduction to AI Platform, we can see that we need to use only the deployment function of the lot. GCP provides the tools to prepare, train and validate but we can do all of these directly in keras when building a model. To get started with AI Platform for Deployment, visit <a href="https://cloud.google.com/ai-platform/docs/getting-started-keras">here</a>. The main advantage of AI Platform is that it is easier to use because most of the code is abstracted and handled b gcp under-the-hood. 
 <b>Note:</b> GCP has it's pricing for all products, if you are just looking to experiment or start of somewhere you can use the 1 year bonus on gcp platform where you can use most products for free.
@@ -103,4 +103,4 @@ From this brief introduction to AI Platform, we can see that we need to use only
 That's it, with these guidelines, the whole process of deplotyment should be less intimidating to you. As a deep learner, this is a very important part of the process, and it is helpful to get accustomed to the process earler on.
 
 Thanks for learning about deployment with me today, it is understandable if you have a few questions on your mind after taking in this huge pile of guidelines and directions, don't hesitate to leave me a comment and I'd be sure to get back to you. Chel_
-</ol>
+
