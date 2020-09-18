@@ -58,7 +58,7 @@ Below I am going to take you through the process of model deployment and how you
 <h3>Methods to Deploy a model for Scalale Prediction</h3>
 
 <ol>
-	<li>TFX(Tensorflow Extended): A TFX pipeline is a sequence of components that implement an ML pipeline which is specifically designed for scalable, high-performance machine learning tasks. That includes modeling, training, serving inference, and managing deployments to online, native mobile, and JavaScript targets. To build this pipeline, a few libraries are tasked to take care of different steps in building the scalable ML Pipeline. <ul>
+	<li>TFX(Tensorflow Extended): A TFX pipeline is a sequence of components that implement an ML pipeline which is specifically designed for scalable, high-performance machine learning tasks. That includes modeling, training, serving inference, and managing deployments to online, native mobile, and JavaScript targets. To build this pipeline, a few libraries are tasked to take care of different steps in building the scalable ML Pipeline.They are: <ul style="list-style-type:circle;">
 		<li>TensorFlow Data Validation for validating, analysing and monitoring ML data at scale. It helps to maintain the health of the ML pipeline</li>
 		<li>TensorFlow Transform for preprocessing data into suitable formats. It involves tokenizing and numerical operations such as normalization.This is what i was referring to at the beginning of the post that every model must be prepared for predictions in a different format</li>
 		<li>TensorFlow Model Analysis for computing visualization and evaluation metrics for models. Before deploment it is necessary to evaluate the quality of the model to ensure it meets desired threshold.</li>
@@ -72,6 +72,12 @@ For beginners, your main area of focus should be <b>tensorflow serving</b>, all 
 These are the three software you need to set up locally. Refer to this article on how to serve a classification model built tensorflow using Tensorflow serving, this should be a guide you can follow to apply it in your own projects <a href="https://www.tensorflow.org/tfx/tutorials/serving/rest_simple">Train and serve a Tensorflow model with Tensorflow Serving</a>
 
 <h3>Merits & Demerits of Tensorflow Serving as a Deployment method</h3>
-* 
+<ul style="list-style-type: square;">
+	<li>It has a very robust functions that allows for many custom configurations</li>
+	<li>It requires technical know-how to set it up and might look tough to first-timers</li>
+	<li>It comes with tools for visualization, normalization , preprocessing, evaluation, analysis of data. This means that developers can carry out every necessary step with just TFX</li>
+	<li>It makes it very easy to update and rollback models versions.</li>
+</ul>
+
 </li>
 </ol>
