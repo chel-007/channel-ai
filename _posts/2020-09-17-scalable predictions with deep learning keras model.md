@@ -64,8 +64,14 @@ Below I am going to take you through the process of model deployment and how you
 		<li>TensorFlow Model Analysis for computing visualization and evaluation metrics for models. Before deploment it is necessary to evaluate the quality of the model to ensure it meets desired threshold.</li>
 		<li>TensorFlow Serving to support model versioning and for model updates with a rollback option and multiple models for experimentation via A/B testing, while ensuring that concurrent models achieve high throughput on hardware. What Tensorflow serving does in simple words is that it handles updates to your model, rollback options and pushing of multiple models, in a way, think of it as having similar functions to github.</li></ul>
 
-For beginners, your main area of focus should be <b>tensorflow serving</b>, all other libraries mentioned is secondary and for more professional projects. In the next few lines, I will teach you how to set up a TFX for serving models:
+For beginners, your main area of focus should be <b>tensorflow serving</b>, all other libraries mentioned is secondary and for more professional projects. In the next few lines, I will give instructions on how to set up a TFX for serving models:
 
+* The main software you need for this is Docker, you can install it from this url <a href="">Install Docker</a>
+* You also need to install Tensorflow 2.0 and Keras from their official website
+* Finally, you must install tensorflow model server by pulling a docker image. This must be done on a 64-bit machine.
+These are the three software you need to set up locally. Refer to this article on how to serve a classification model built tensorflow using Tensorflow serving, this should be a guide you can follow to apply it in your own projects <a href="https://www.tensorflow.org/tfx/tutorials/serving/rest_simple">Train and serve a Tensorflow model with Tensorflow Serving</a>
 
+<h3>Merits & Demerits of Tensorflow Serving as a Deployment method</h3>
+* 
 </li>
 </ol>
