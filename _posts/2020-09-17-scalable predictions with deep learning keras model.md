@@ -80,7 +80,7 @@ These are the three software you need to set up locally. Refer to this article o
 </ul>
 </li>
 
-
+<br>
 <li>GCP AI Platform: AI Platform makes it easy for developers, data scientists, and data engineers to streamline their ML workflows. AI Platform helps all users take their projects from ideation to deployment seamlessly. There are four main steps involved:
 
 * <b>Preparation</b> to store your datasets with BigQuery, then use the built-in Data Labeling Service to label your training data by applying classification, object detection, and entity extraction, etc
@@ -88,10 +88,19 @@ These are the three software you need to set up locally. Refer to this article o
 * <b>Validation</b> to validate your model with AI Explanations that helps you understand your model's outputs, verify the model behavior, recognize bias in your models, and get ideas for ways to improve your model and your training data.
 * <b>Deployment</b> to Deploy your models at scale and get predictions from them in the cloud with AI Platform Prediction that manages the infrastructure needed to run your model and makes it available for online and batch prediction requests.
 
-The diagram below describes this process in details:
+The diagram below describes this process in details: <br>
 <img class="img-fluid" src="https://cloud.google.com/images/ai-platform/ai_platform.svg">
 
 From this brief introduction to AI Platform, we can see that we need to use only the deployment function of the lot. GCP provides the tools to prepare, train and validate but we can do all of these directly in keras when building a model. To get started with AI Platform for Deployment, visit <a href="https://cloud.google.com/ai-platform/docs/getting-started-keras">here</a>. The main advantage of AI Platform is that it is easier to use because most of the code is abstracted and handled b gcp under-the-hood. 
 <b>Note:</b> GCP has it's pricing for all products, if you are just looking to experiment or start of somewhere you can use the 1 year bonus on gcp platform where you can use most products for free.
 </li>
+
+<br>
+<li>Digital Ocean: The final option listed here is perhaps the easiest one to use. It is a very suitable options for beginners and small-medium sized enterprises. Yhh, you also don't have to read pages of documentation. All the work is done behind the hood, usually you just have to click a few options, write some code and that's it. Digital Ocean is by far the most popular cloud hosting service developers use, there are other options you can go for like Katerama, V etc.Digital Ocean offers a free 2 months trial period to test their services, this is a good way to learn how deployment and predictions work before been charged for it. To go about this process, you can refer to this article <a href="https://towardsdatascience.com/building-a-web-application-to-deploy-machine-learning-models-e224269c1331">Train and Deploy a Ml model built with Keras</a>.</li>
+</ol>
+
+
+That's it, with these guidelines, the whole process of deplotyment should be less intimidating to you. As a deep learner, this is a very important part of the process, and it is helpful to get accustomed to the process earler on.
+
+Thanks for learning about deployment with me today, it is understandable if you have a few questions on your mind after taking in this huge pile of guidelines and directions, don't hesitate to leave me a comment and I'd be sure to get back to you. Chel_
 </ol>
