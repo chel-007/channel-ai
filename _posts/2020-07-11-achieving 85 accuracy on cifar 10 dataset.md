@@ -1,9 +1,9 @@
 ---
 layout: post
 author: Chel
-title: Achieving 85% Accuracy in Image Classification task on Cifar10 Dataset with Keras Convolutional Neural Networks in Deep Learning
-seo: Deep Learner deep learning deeping learning tensorflow image classification computer vision embeddings convolutional neural networks
-description: Learn how to build an Image Classification Model, Export as an API that can be deployed as back-end to a Web Application for Classification problems. In this tutuorial we go over all the steps required to build an Image Classify using the popular Cifar 10 and Cifar 100 datasets.
+title: How to treat Overfitting in Convolutional Neural Networks
+seo: Deep Learner deeping learning tensorflow image classification computer vision embeddings convolutional neural networks overfitting
+description: In this tutorial we would explore a necessary topic in deep learning - overfitting. We would learn what it is ,and how to combact it using known regularization methods like dropouts, batch normalization etc. We also cover how to build an Image Classify using the popular Cifar 10 and Cifar 100 datasets that achieves high accuracy of 85%.
 img-src: ../assets\images\Blog\generative-nets
 ---
 
