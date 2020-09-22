@@ -4,7 +4,7 @@ author: Chel
 title: Starting your First Computer Vision Project? Here are 10 Things you Must Absolutely know
 seo: deep learning computer vision deep learning deep learning deployment tensorflow deep learner keras guide for computer vision beginner computer vision
 description: Can you imagine navigating through an unknown city without Google Maps?It is usually a tough and tiring ordeal, all paths seems to lead to nothing and at the end you even ask yourself why you took that path in the first place. That's often what the first Computer Vision project feels like. I can personally attest to this because I have been through it and now I know some real facts of what should and not be done.
-img-src: ../assets\images\Blog\dl_predictions
+img-src: ../assets\images\Blog\firstproject-cv
 ---
 
 Can you imagine navigating through an unknown city without Google Maps?It is usually a tough and tiring ordeal, all paths seems to lead to nothing and at the end you even ask yourself why you took that path in the first place.
