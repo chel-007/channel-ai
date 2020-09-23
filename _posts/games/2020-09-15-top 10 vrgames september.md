@@ -17,7 +17,7 @@ We are writing this post currently in nthe mid of septemer, so take note that a 
 <h4>10+ Best VR Game Releases in September 2020</h4>
 
 <h5 style="font-weight: 600;">DEEMO -Reborn-</h5>
-<iframe class="img-fluid" width="560" height="315" src="https://www.youtube.com/embed/_3NO5lwQzpQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="img-fluid" width="560" height="505" src="https://www.youtube.com/embed/_3NO5lwQzpQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p>
 <b>Background Story</b>
