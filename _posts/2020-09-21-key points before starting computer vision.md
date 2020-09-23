@@ -49,8 +49,8 @@ Here I will give you a working cheatsheet you can use to learn, build and master
 * Open up Tensorflow Google Colab <a href="https://colab.research.google.com/drive/1nm_ahlpLXgANRt-8HMrOsdNPh5GDWlVz">here</a> and bookmark an empty notebook
 * Creat an acct on kaggle or login in if you already have one <a href="https://www.kaggle.com/data-science-for-good-kiva-crowdfunding-signup">here</a>
 * Go to your acct dashboard on kaggle and download your unique kaggle id to your computer. This is a json file
-* Go to the projects section on kaggle, use the filter to narrow competitions down to "computer vision" & "beginner"
-* When you find a project you like, open it up. Read the information of the project. Go to the data section and copy the url of this project. You will use this to download the project to google colab.
+* Go to the datasets section on kaggle, use the filter to narrow competitions down to "computer vision" & "beginner"
+* When you find a project you like, open it up. Read the information of the project. Go to the data section and scroll down to data explorer to visualize the files. In the top right of the page,  click the three dot icon you see and tap "Copy API command". You will use this to download the project directly on google colab. 
 * Next copy these lines of code below. You would need to do two things - Change the url-of-the-project to the one you copied, - upload your own kaggle user id you previously downloaded when you are prompted for it.
 <h5>code to set up kaggle project on colab</h5>
 <pre><code class="css">
