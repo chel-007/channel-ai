@@ -54,7 +54,15 @@ Here I will give you a working cheatsheet you can use to learn, build and master
 * Next copy these lines of code below. You would need to do two things - Change the url-of-the-project to the one you copied, - upload your own kaggle user id you previously downloaded when you are prompted for it.
 <h5>code to set up kaggle project on colab</h5>
 <pre><code class="css">
-	
+# upload your kaggle.json file you downloaded
+from google.colab import files
+files.upload()
+# this code will move it to a new directory
+! mkdir ~/.kaggle
+! cp kaggle.json ~/.kaggle/
+! chmod 600 ~/.kaggle/kaggle.json
+# download ur dataset with this code( replace with the command you copied)
+!kaggle competitions download -c titanic
 </code></pre>
 * After completing the above steps the next step is for you to break down the problem, find resources and solve it. I recommend that before attempting a project from kaggle, you should have had experience using colab and have completed the <a href="">Image classification beginner project</a>. You can always come back to this article to begin, but do all these in the smallest possible time available to you. Don't creat time for procrastination.
 
@@ -63,7 +71,7 @@ By following these guidelines, you would no doubt develop problem-solving skills
 <h3>Model Deployment is key - Learn Software Enginnering</h3> 
 One thing i see a lot of beginners do is avoid deployments of models with the excuse that it isn't important for them. What is Computer Vision without models we can put to use, honestly very irrelevant. What is the need of bothering about CV at all if you decide to not focus on the product - Deployment and Predictions. You build a working model on a jupyter notebook or colab, but it remains there waiting to be "read" and maybe referred to later when you need some code resources in it. That is not all the use case of a model. Models are meant to solve problems. Now though, let me tell you something else I have observed - Some folks choose to ignore deployment process because they are scared of the task "thinking" it just way too much work and also for more professional individuals. 
 
-I would assure you now that - it really is not hard to deploy a CV model and make predictions with it, how do i know?, because I deployed a model on Image classification using tensorflow serving. So starting your first project in computer vision, keep model deployment in mind as an important step for success in CV. It is helpfulm to start it now, learn the ropes, so it won't be a total new experience when you need it most. This article will teach you everything you need to know about model deployment <a href=""></a>
+I would assure you now that - it really is not hard to deploy a CV model and make predictions with it, how do i know?, because I deployed a model on Image classification using tensorflow serving. So starting your first project in computer vision, keep model deployment in mind as an important step for success in CV. It is helpfulm to start it now, learn the ropes, so it won't be a total new experience when you need it most. This article will teach you everything you need to know about model deployment <a href="https://channelai.netlify.app/scalable-predictions-with-deep-learning-keras-model/">How to make Scalale Predictions with a Deep Learning Model Built with Keras</a>
 
 <h3>Appreciate softwares with a simple learning curve</h3>
 In any field of study two different softwares performing closely related tasks for users are usually cause for lots of argument comparation and reviews. In a good way, this is helpful to newcomers as it helps them make a choice of software that suits their needs closest and on ther other side of the coin, this brings about confusion and indecision. When I first statrted learning about CV, I was contemplating the ML framework to use for building models. I checked reviews, and honestly why it is always hard to make a singular choice and stand by it is because, Softwares have features they beat their competitor at and those they are lacking at. We want all the acctractive features to be present in one tools or software and usually this is never the case. As a beginner, a key guide to choosing the software you would employ in development process is to find the one with the easiet learning curve, not that with the best features - at first of course. You need a tool that you can assimilate in the shortest time possible, atool that doesn't take days to set up, in short a simple tool providing it allows for the basics of what you are searching for.
@@ -73,7 +81,7 @@ In Computer Vision and Deep Learning in general, we have a bunch of softwares. C
 * It has a large community of support in case you run into issues when developing
 * It has a dedicated tutorial library for folks at any level of expertise right from "your first dl project(usally classifying hand-written digits". You don't need to look for Tensorflow projects online, you can start right from the website. And this is filled with all the important dl projects till date
 * It has the easiest and fastest deployment methods. Tensorflow has a few tools you can use to push your complete model for real-world use. Examples are: Tensorflow Extended, Tensorflow.js, Tensorflow Lite. With these tools you can deploy to any platform you choose like - web browser, mobile, or back-end server.
-* It's methods and functions are very easy to pick up by a total beginner. For a fact, I learnt the basics of Tensorflow in just a week following along with a <a href="">Introduction to Tensorflow for AI, ML and DL</a> course on Coursera.
+* It's methods and functions are very easy to pick up by a total beginner. For a fact, I learnt the basics of Tensorflow in just a week following along with a <a href="https://www.coursera.org/learn/introduction-tensorflow/home/">Introduction to Tensorflow for AI, ML and DL</a> course on Coursera.
 * You don't necessarily need to install it to use it first. You can start building a model directly on colab, with all tools and libraries available and without any hassels.
 
 
