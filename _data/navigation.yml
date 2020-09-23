@@ -2,8 +2,8 @@
   link: /
 - name: Blog
   link: /blog/
-- name: Newsletter
-  link: /newsletter_manage/
+- name: VR Blog
+  link: /vr-blog/
 - name: Portfolio
   link: /portfolio/
 - name: Projects
