@@ -9,7 +9,7 @@ description: My ChannelAi Blog. All Ai news as we can cover
   <br>
   <h5 style="font-family: Montserrat, sans-serif; font-weight: 600;">LATEST ON BLOG</h5>
 {% for post in site.posts %}
-    {% if post.path contains 'general' %}
+    {% unless post.path contains 'games' %}
   <hr>
   <div class="row">
   <div class="col-lg-8 col-sm-8">
@@ -23,7 +23,7 @@ description: My ChannelAi Blog. All Ai news as we can cover
     <img defer class="responsive p-2 bd-highlight borderaround" src="{{ post.img-src }}.webp" alt="{{ post.img-alt }}" width="330" height="200"></a>
   </div>
 </div>
-   {% endif %} 
+   {% endunless %}
 {% endfor %}
   </div>
   <p style="clear: both;"></p>
