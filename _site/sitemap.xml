@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/authors/jill/</loc>
-<lastmod>2020-09-09T16:53:40+01:00</lastmod>
+<lastmod>2020-10-09T05:14:18+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/introduction-to-machine-learning/</loc>
@@ -41,6 +41,18 @@
 <lastmod>2020-09-08T00:00:00+01:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/scalable-predictions-with-deep-learning-keras-model/</loc>
+<lastmod>2020-09-17T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/key-points-before-starting-computer-vision/</loc>
+<lastmod>2020-09-21T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/key-deep-learning-skills-beginner/</loc>
+<lastmod>2020-10-09T00:00:00+01:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
@@ -62,7 +74,10 @@
 <loc>http://localhost:4000/staff/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/vr-blog/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/assets/images/Portfolio/Tensorflow_In_Practise_Course1_Certificate_Chelsea.pdf</loc>
-<lastmod>2020-06-28T18:39:36+01:00</lastmod>
+<lastmod>2020-10-01T21:40:59+01:00</lastmod>
 </url>
 </urlset>
