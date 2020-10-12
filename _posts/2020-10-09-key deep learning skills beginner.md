@@ -133,4 +133,15 @@ A good problem solver tackles a task by making less assumptions and instead rese
 With these four steps you can iterate through problem discovery and completion. On the process, you may discover other process that works best for you. Do ensure to practise it in your work, if it inproves effectiveness and productivity. At the core of it, every Deep Learning Practitioner requires Problem Solving ability
 
 
-<h4 style="color: blue;"></h4>
+<h4 style="color: blue;">Application of Deepl-learning</h4>
+Solving problems is good, building an application with your Deep learning model is Priceless. If you want to be a deep learning practitioner, then you must know that applying model in a real-world case is essential, not just that, this can benefit you in a number of ways:
+
+* Interest to prospective Employers: You probably want to be noticed and get a full-time job in a deep learning field. What you should know is that, it's better to show employers a web application that works thatn to show them notebooks where you built your model. Remember that, the model doesn't have to be advanced, not at all, that would come naturally if you keep up with your goals.
+
+* Learning process for you: Learning Model Deployment earlier on would give you a very important skill. Learning about model deployment is a process 80% of beginners ignore, but if you master the process you give yourself an edge among the crowd. Deployment can be done in different ways; cloud, self-hosting, third-party services etc. this post on deployment, <a href=""></a> would teach you everything you need to start.
+
+
+
+<h3>End Notes</h3>
+To conclude, in this article, we understood the skills required for a deep learning practitioner. Also, we explained in brief, the difference between a deep learner and a deep learning practitioner and why you should strive to achieve the latter.
+Have other skills in mind? What skills do you think is the best for aspiring deep learning practitioners? Let us know in the comments below.
