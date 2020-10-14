@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Chel
-title: Top 5 Books on Deep Learning for Beginners in 2020
+title: 5 Books to Start your Deep Learning Journey in 2020
 seo: deep learning books about deep learning python deep learning what is deep learning books on deep learning deep learning book python for deep learning
 description: No doubt, AI is one of the most crucial future technologies which is being harnessed today and transforming our daily lives. A very important branch of Artificial Intelligence "Deep Learning" has arguably the biggest impact in AI progress.  If you're a beginner looking for the right free resources to learn deep learning and discover applications in fields like Computer Vision, NLP, this blog post is you. This article will introduce the best books to learn deep learning in 2020 and how to practice deep learning with them.
 img-src: ../assets\images\Blog\dl_books

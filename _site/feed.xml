@@ -1,4 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-10T13:41:31+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">9 Key Skills Every Deep Learning Practitioner Should Have (How many in the List do you Have?)</title><link href="http://localhost:4000/key-deep-learning-skills-beginner/" rel="alternate" type="text/html" title="9 Key Skills Every Deep Learning Practitioner Should Have (How many in the List do you Have?)" /><published>2020-10-09T00:00:00+01:00</published><updated>2020-10-09T00:00:00+01:00</updated><id>http://localhost:4000/key%20deep%20learning%20skills%20beginner</id><content type="html" xml:base="http://localhost:4000/key-deep-learning-skills-beginner/">&lt;p&gt;Are there specific skills important in deep learning?. You shouldn’t be surprised if you ask yourself this question. At a time or another, all budding deep learner ask themselves the same question. Are you a deep learner that flows with the tides that comes along with projects or are you set on building important skills that can make you more effective. In this article, I share 9 skills backed by stactics that guarantees exponential growth in your deep learning career.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-15T00:31:33+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Convolutional Neural Networks Vs Recurrent Neural Networks(An Intuitive Guide for every Deep Learning Practitioner)</title><link href="http://localhost:4000/time-management-tips-computer-vision/" rel="alternate" type="text/html" title="Convolutional Neural Networks Vs Recurrent Neural Networks(An Intuitive Guide for every Deep Learning Practitioner)" /><published>2020-10-14T00:00:00+01:00</published><updated>2020-10-14T00:00:00+01:00</updated><id>http://localhost:4000/time%20management%20tips%20computer%20vision</id><content type="html" xml:base="http://localhost:4000/time-management-tips-computer-vision/">&lt;p&gt;Have you been feeling frustared about the complexity of deep learning terms like Convolutional Neural networks and Recurrent NNs?&lt;/p&gt;
+
+&lt;p&gt;You have read countless articles with your goal in mind being to grasp and understand it finally - but it still doesn’t click?&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Don’t worry. You’re not alone&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve had my fair share of frustration. Trust me, reading all those blog posts that focuses on the calculations and theory part of it and still feeling lost has led me to study it through more abstract and practical ways.&lt;/p&gt;
+
+&lt;p&gt;So even if you have found it difficult to assimilate, I want to clear out that situation and leave you a better deep learer with full understanding of CNNs and RNNs and excited to go forth and apply them in your projects. You can make it work, I’ll show you how.&lt;/p&gt;
+
+&lt;h3&gt;Overview&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How Deep Learning and CNNs Relate&lt;/li&gt;
+  &lt;li&gt;CNNs Vs RNNs&lt;/li&gt;
+  &lt;li&gt;How to Differentiate between their Uses&lt;/li&gt;
+  &lt;li&gt;Applying them in your Projects&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I assume that you have an understanding about Deep Learning, and maybe even CNNs. You have heard or Deep learning Countless times and Convolutional Neural networks, but how do they relate? Have you ever asked yourself!. Answering that question is the key to simplifying the mystery that surrounds CNNs. Let me answer that questions in the easiest way possible.&lt;/p&gt;
+
+&lt;h3&gt;What is Deep Learning and CNNs ( How do they relate?)&lt;/h3&gt;
+
+&lt;p&gt;&lt;i&gt;&lt;b&gt;Deep learning&lt;/b&gt; is a subset of machine learning in artificial intelligence that has networks capable of learning unsupervised from data that is unstructured or unlabeled. Also known as deep neural learning or deep neural network.&lt;/i&gt; The diagram below explains Deep learning
+&lt;img class=&quot;img-fluid&quot; alt=&quot;Deep Learning Diagram&quot; src=&quot;../assets\images\Blog\Blog-img\dl_explained.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;clear: both;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;In deep learning, a &lt;b&gt;Convolutional Neural Network&lt;/b&gt; is a class of deep neural networks, most commonly applied to analyzing visual imagery. A Convolutional Neural Network (ConvNet/CNN) is a Deep Learning algorithm which can take in an input image, assign importance (learnable weights and biases) to various aspects/objects in the image and be able to differentiate one from the other.&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Recurrent Neural Networks&lt;/b&gt; is a neural network designed for analyzing streams of data by means of hidden units where the output from previous step are fed as input to the current step.&lt;/p&gt;
+
+&lt;p&gt;With the definitions above, you certainly have an idea of what Deep Learning and Convolutional Neural Networks are, but yet, this goes:&lt;/p&gt;
+
+&lt;h4&gt;Simple and Detailed Explanation&lt;/h4&gt;
+
+&lt;p&gt;&lt;b&gt;Deep learning&lt;/b&gt; is a field of study that introduces the concept of “artificial neural networks” which works similarly to how the brain processes information and aims to recreate that in the processing of data by computers. In deep learning artificial neural networks are networks/ that are linked to eachother through out the system. they learn representations from data unsupervised i.e unlike regular traditional machine learning algorithm which requires an ,,, deep learning networks do not need the true output of the data to learn. These kind of data are unlabeled.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Convolutional Neural Network&lt;/b&gt; is a type of neural network that works specifically on image data to extract features that are unique in images, learns them through training/epochs and can carry out predictions on new unseen data using the representations learnt. This extraction of features work by passing a constant filter through the batch of images and applying a pooling layer onto the image which aims to highlight the features learnt. The convolution in CNNs means to convule/reduce the image to a smaller dimension and keep repeating this process.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Recurrent Neural Networks&lt;/b&gt; uses a sequential mode of working, in which the previous layer contains information that must be passed to the next layer in the step&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3&gt;How they Relate?&lt;/h3&gt;
+&lt;p&gt;Deep Learning is a sub-field of Machine Learning and Artificial Intelligence. It uses deep neural networks to learn from unstructured data.&lt;/p&gt;
+
+&lt;p&gt;Convolutional Neural netowrks(CNNs) are a class of Deep Neural networks(DNNs) that is used on “image data” to learn features through downsizing, kernel passing, and pooling.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, a Recurrent neural Network is a class of DNNs that is usually used on text and sequential data for prediction the sequence of next few occurence. Examples of cases a RNN would be used: Chat/Text keyboards, Language Translation, Music Generation, etc. Now that you understand the overall concept of this subject, lets look at CNNs and RNNs on a deeper but straight forward level&lt;/p&gt;
+
+&lt;h3&gt;CNN Vs RNN&lt;/h3&gt;
+
+&lt;p&gt;&lt;i&gt;CNNs are used to extract features from unlabeled image data. If you are working on an image data of any sort, use CNN. CNNs are used to build models that cn take as input an image and output its class(Image Classification), Objects-in-image(Object detection) and even as far as thier positions in the image(Object Localization)&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;The structure of a CNN is basically a collection of neural networks, but what makes it different and unique to feature extraction in images is it’s layers and thier functions. The CNN is made up of 2 important layers; Convolution and Max Pooling. It aslo has a kernel/filter which is for sliding through the image. So here is how it works:&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;Example&lt;/u&gt;
+An Image of dimension 26X26 is first read and converted to 1s and 0s. Usually most images contains 3 channels which makes it a “color” image. Grayscale Images has just 1 channel. A 3X3 kernel is slided through the image. It slides through with a stride that must be defined first. The stride determines how many columns is jumped over during the sliding. So if the &lt;b style=&quot;color: blue;&quot;&gt;STRIDE = 2&lt;/b&gt;, it moves over 2 columns and lands on the third one. The kernel contains all the numbers in the image enclosed as fits inside the filter. This extracted number is later applied to Activation RELU where all numbers less that 1 are rounded down to 0 and numbers greater than 1 are left as they are. This activation is processed on all the extracted kernels. The last stage is usually the Max pooling layer. The Max Pool layer looks at the box of number and simply picks the highest number in the group. This is done to all the other kernels and results in new sets of numbers with one from the previous kernel box. Now that the filter has been passed through, the Max Pool reveals the strongest lines in the image which can be noticed from the pattern in its numbers. The diagram below describe the Convolution process graphically:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;img-fluid&quot; alt=&quot;Deep Learning Diagram&quot; src=&quot;../assets\images\Blog\Blog-img\feature_extract.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This explanation of CNNs shou;d give you a basic understanding of it’s concept and workings, however for you to deeply “see” how it works, you must practice using it. That’s a mistake I see most beginners make; you want to understand CNNs, you’ve read articles on it but really never practically worked on it. The most basic project to start off with using CNN is &lt;b&gt;Image Classification&lt;/b&gt;. This project tutorial would guide you through &lt;a href=&quot;https://channelai.netlify.app/image-classification-api-in-tensorflow/&quot;&gt;How to Build an Image Classification Model and Web App with Tensorflow &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;RNN captures the sequential information present in the input data i.e. dependency between the words in the text while making predictions&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;img-fluid&quot; alt=&quot;Deep Learning Diagram&quot; src=&quot;https://cdn.analyticsvidhya.com/wp-content/uploads/2020/02/1d_POV7c8fzHbKuTgJzCxtA.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sequential types of data require a different typr of neural network from CNN in order to be processed. Examples of sequential data are ; audio sound waves, single characters/words making up a text, projecting the movement of stock prices, genomic sequences and many other cases.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Example&lt;/b&gt;
+This example below would explain what sequence/RNNs are, why they are used instead of CNN and in what kind of cases:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;img-fluid&quot; alt=&quot;Deep Learning Diagram&quot; src=&quot;../assets\images\Blog\Blog-img\rnn-example.png&quot; /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;You are given a sentence: This morning I took my cat for a&lt;/td&gt;
+      &lt;td&gt;walk. You want to build a deep Learning network to solve the task, but theres one underlying issue, “A feed-forward DNN can only take a fixed length input vector”, and our problem here has a varying input length. Some sentence in the dataset are five words, others six and so on. Our ideal model needs to be able to handle variable lengths of inputs. There are three ways/ideas we can decide to take to solve this problem:&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4&gt;Idea 1&lt;/h4&gt;
+&lt;p&gt;: Hard code a certain length of input when defining the model hyper-pararmeters, i.e given a word: &lt;b&gt;I know how to speak French | fluently&lt;/b&gt;. If we choose a lenght of 3 for our model then, the sentence would be trimmed to; &lt;i&gt;to speak french&lt;/i&gt;. Using this method, we have an history problem:
+&lt;b&gt;Problem 1&lt;/b&gt;Can’t Model Long-Term Dependencies: In this problem, we need information from earler in the sentence but since our model is only using the 3 previous words, it cannot solve tasks like this.An example of a sentence with long-term dependencies: &lt;b&gt;France is where I grew up, but now I live in Boston. I speak fluent &lt;em&gt;__&lt;/em&gt; (French)&lt;/b&gt;&lt;/p&gt;
+
+&lt;h4&gt;Idea 2&lt;/h4&gt;
+&lt;p&gt;: Use Entire sequence as sets of counts(also called bag of words). This means that a sentence would be represented by how much each words in it appears.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;img-fluid&quot; alt=&quot;Deep Learning Diagram&quot; src=&quot;../assets\images\Blog\Blog-img\rnn_bagofwords.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this solution, we have a fixed length of vector which is all the possible words, and then we map a particular word to its representation in the “bag of words”. As you might have guessed, there is also a problem with this method
+&lt;b&gt;Problem 2&lt;/b&gt;:Counts don’t preserve order. We lose the sequential information in the sentence. take these two sentences for example:&lt;/p&gt;
+
+&lt;p&gt;Sentence 1: The food was good, not bad at all
+Sentence 2: The food was bad, not good at all&lt;/p&gt;
+
+&lt;p&gt;Because they have the same representations, thses two sentences would mean the same thing although we both know they are opposites.&lt;/p&gt;
+
+&lt;p&gt;The above situations are not ideal for sequential data types and information, that is where RNNs come in. Unlike the other solutions, RNNs achieve the following criteria:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Handle variable-legnth sequences&lt;/li&gt;
+  &lt;li&gt;Track long-term dependencies&lt;/li&gt;
+  &lt;li&gt;Main information about the order&lt;/li&gt;
+  &lt;li&gt;Share parameters across the sequence&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;RNNs are networks that have loops in them that allows information to persist for a long period of time&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Logical example:&lt;/b&gt;An RNN receives and input x, propagates it through it’s network and outputs a result, while also updating it’s internal time-step which it passes this information to the next time-step. This is the process of sequential modeling, and RNNs approach to it. The RNN has three important cells which makes this process efficient and possible, they are called “gated cells”.The rnn consists of three gated cells that process how information flows from one time-step to another;&lt;/p&gt;
+
+&lt;p&gt;Forget: Forget gate forgets irrelevant information from the previous state&lt;/p&gt;
+
+&lt;p&gt;Store: Store gate stores the relevant part of new information into the cell state&lt;/p&gt;
+
+&lt;p&gt;Update: Update gate updates the cell using the previous and current information.&lt;/p&gt;
+
+&lt;p&gt;Output: Output gate controls what information it receives is sent to the next time-step&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;img-fluid&quot; alt=&quot;Deep Learning Diagram&quot; src=&quot;../assets\images\Blog\Blog-img\lstm_gates.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This illustration I’m sure improves your understanding about Recurrent Neural Networks. And like CNNs, it would be more profitable for you to have some practice with it to sharpen your understanding. This tensorflow article works you through in an intuitive way &lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that you know individually what CNNs and RNNs are, how they work and thier structure. Let’s look at the difference between the two. This would make it easier for you to easily indentify when to apply them&lt;/p&gt;
+
+&lt;h3&gt;Difference Between CNNs and RNNs&lt;/h3&gt;
+
+&lt;table&gt;
+	&lt;tr&gt;Convolutional Neural Networks
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;&lt;/tr&gt;
+&lt;/table&gt;</content><author><name>Chel</name></author><summary type="html">Have you been feeling frustared about the complexity of deep learning terms like Convolutional Neural networks and Recurrent NNs?</summary></entry><entry><title type="html">9 Key Skills Every Deep Learning Practitioner Should Have (How many in the List do you Have?)</title><link href="http://localhost:4000/key-deep-learning-skills-beginner/" rel="alternate" type="text/html" title="9 Key Skills Every Deep Learning Practitioner Should Have (How many in the List do you Have?)" /><published>2020-10-09T00:00:00+01:00</published><updated>2020-10-09T00:00:00+01:00</updated><id>http://localhost:4000/key%20deep%20learning%20skills%20beginner</id><content type="html" xml:base="http://localhost:4000/key-deep-learning-skills-beginner/">&lt;p&gt;Are there specific skills important in deep learning?. You shouldn’t be surprised if you ask yourself this question. At a time or another, all budding deep learner ask themselves the same question. Are you a deep learner that flows with the tides that comes along with projects or are you set on building important skills that can make you more effective. In this article, I share 9 skills backed by stactics that guarantees exponential growth in your deep learning career.&lt;/p&gt;
 
 &lt;p&gt;Skills are very important. In some cases, more important than others. They help us to go from zero to one in any new field of our interest. This being the case, why do we have learners that never really attain the peaks of their careers since the skills necessary for success is available for all to master?. Could it be that they are learning the &lt;i&gt;wrong&lt;/i&gt; skills, learning it the wrong way or more critical, having a skewed perspective to skill gathering.&lt;/p&gt;
 
@@ -144,7 +280,21 @@ As before, practicing on tutorials covering this subject would build up the skil
 
 &lt;p&gt;With these four steps you can iterate through problem discovery and completion. On the process, you may discover other process that works best for you. Do ensure to practise it in your work, if it inproves effectiveness and productivity. At the core of it, every Deep Learning Practitioner requires Problem Solving ability&lt;/p&gt;
 
-&lt;h4 style=&quot;color: blue;&quot;&gt;Problem Solving&lt;/h4&gt;</content><author><name>Chel</name></author><summary type="html">Are there specific skills important in deep learning?. You shouldn’t be surprised if you ask yourself this question. At a time or another, all budding deep learner ask themselves the same question. Are you a deep learner that flows with the tides that comes along with projects or are you set on building important skills that can make you more effective. In this article, I share 9 skills backed by stactics that guarantees exponential growth in your deep learning career.</summary></entry><entry><title type="html">Starting your First Computer Vision Project? Here are 10 Things you Must Absolutely know</title><link href="http://localhost:4000/key-points-before-starting-computer-vision/" rel="alternate" type="text/html" title="Starting your First Computer Vision Project? Here are 10 Things you Must Absolutely know" /><published>2020-09-21T00:00:00+01:00</published><updated>2020-09-21T00:00:00+01:00</updated><id>http://localhost:4000/key%20points%20before%20starting%20computer%20vision</id><content type="html" xml:base="http://localhost:4000/key-points-before-starting-computer-vision/">&lt;p&gt;Can you imagine navigating through an unknown city without Google Maps?It is usually a tough and tiring ordeal, all paths seems to lead to nothing and at the end you even ask yourself why you took that path in the first place.&lt;/p&gt;
+&lt;h4 style=&quot;color: blue;&quot;&gt;Application of Deepl-learning&lt;/h4&gt;
+&lt;p&gt;Solving problems is good, building an application with your Deep learning model is Priceless. If you want to be a deep learning practitioner, then you must know that applying model in a real-world case is essential, not just that, this can benefit you in a number of ways:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Interest to prospective Employers: You probably want to be noticed and get a full-time job in a deep learning field. What you should know is that, it’s better to show employers a web application that works thatn to show them notebooks where you built your model. Remember that, the model doesn’t have to be advanced, not at all, that would come naturally if you keep up with your goals.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Learning process for you: Learning Model Deployment earlier on would give you a very important skill. Learning about model deployment is a process 80% of beginners ignore, but if you master the process you give yourself an edge among the crowd. Deployment can be done in different ways; cloud, self-hosting, third-party services etc. this post on deployment, &lt;a href=&quot;&quot;&gt;&lt;/a&gt; would teach you everything you need to start.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;End Notes&lt;/h3&gt;
+&lt;p&gt;To conclude, in this article, we understood the skills required for a deep learning practitioner. Also, we explained in brief, the difference between a deep learner and a deep learning practitioner and why you should strive to achieve the latter.
+Have other skills in mind? What skills do you think is the best for aspiring deep learning practitioners? Let us know in the comments below.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Are there specific skills important in deep learning?. You shouldn’t be surprised if you ask yourself this question. At a time or another, all budding deep learner ask themselves the same question. Are you a deep learner that flows with the tides that comes along with projects or are you set on building important skills that can make you more effective. In this article, I share 9 skills backed by stactics that guarantees exponential growth in your deep learning career.</summary></entry><entry><title type="html">Starting your First Computer Vision Project? Here are 10 Things you Must Absolutely know</title><link href="http://localhost:4000/key-points-before-starting-computer-vision/" rel="alternate" type="text/html" title="Starting your First Computer Vision Project? Here are 10 Things you Must Absolutely know" /><published>2020-09-21T00:00:00+01:00</published><updated>2020-09-21T00:00:00+01:00</updated><id>http://localhost:4000/key%20points%20before%20starting%20computer%20vision</id><content type="html" xml:base="http://localhost:4000/key-points-before-starting-computer-vision/">&lt;p&gt;Can you imagine navigating through an unknown city without Google Maps?It is usually a tough and tiring ordeal, all paths seems to lead to nothing and at the end you even ask yourself why you took that path in the first place.&lt;/p&gt;
 
 &lt;p&gt;That’s often what the first Computer Vision project feels like. I can personally attest to this because I have been through it and now I know some real facts of what should and not be done.&lt;/p&gt;
 
@@ -323,7 +473,7 @@ From this brief introduction to AI Platform, we can see that we need to use only
 
 &lt;p&gt;That’s it, with these guidelines, the whole process of deplotyment should be less intimidating to you. As a deep learner, this is a very important part of the process, and it is helpful to get accustomed to the process earler on.&lt;/p&gt;
 
-&lt;p&gt;Thanks for learning about deployment with me today, it is understandable if you have a few questions on your mind after taking in this huge pile of guidelines and directions, don’t hesitate to leave me a comment and I’d be sure to get back to you. Chel_&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Buiding Models is exciting, putting them to use can be very brain-tasking. For people who have mastered model deployment, usually this involves just a few tweaks to the code to make it work for a new problem and situation. For beginners like you and me, the task of scaling models for prediction for use in different environment requires a lot of information gathering, software set-up and a little bit of technical know-how. In this article, my aim is to simplify this process for you and show you the methods and steps you can immediately put to use in your projects.</summary></entry><entry><title type="html">Top 5 Books on Deep Learning for Beginners in 2020</title><link href="http://localhost:4000/books-deep-learning-2020/" rel="alternate" type="text/html" title="Top 5 Books on Deep Learning for Beginners in 2020" /><published>2020-09-08T00:00:00+01:00</published><updated>2020-09-08T00:00:00+01:00</updated><id>http://localhost:4000/books%20deep%20learning%202020</id><content type="html" xml:base="http://localhost:4000/books-deep-learning-2020/">&lt;p&gt;No doubt, AI is one of the most crucial future technologies which is being harnessed today and transforming our daily lives. A very important branch of Artificial Intelligence “Deep Learning” has arguably the biggest impact in AI progress.  If you’re a beginner looking for the right free resources to learn deep learning and discover applications in fields like Computer Vision, NLP, this plog post is you. This article will introduce the best books to learn deep learning in 2020 and how to practice deep learning with them.&lt;/p&gt;
+&lt;p&gt;Thanks for learning about deployment with me today, it is understandable if you have a few questions on your mind after taking in this huge pile of guidelines and directions, don’t hesitate to leave me a comment and I’d be sure to get back to you. Chel_&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Buiding Models is exciting, putting them to use can be very brain-tasking. For people who have mastered model deployment, usually this involves just a few tweaks to the code to make it work for a new problem and situation. For beginners like you and me, the task of scaling models for prediction for use in different environment requires a lot of information gathering, software set-up and a little bit of technical know-how. In this article, my aim is to simplify this process for you and show you the methods and steps you can immediately put to use in your projects.</summary></entry><entry><title type="html">5 Books to Start your Deep Learning Journey in 2020</title><link href="http://localhost:4000/books-deep-learning-2020/" rel="alternate" type="text/html" title="5 Books to Start your Deep Learning Journey in 2020" /><published>2020-09-08T00:00:00+01:00</published><updated>2020-09-08T00:00:00+01:00</updated><id>http://localhost:4000/books%20deep%20learning%202020</id><content type="html" xml:base="http://localhost:4000/books-deep-learning-2020/">&lt;p&gt;No doubt, AI is one of the most crucial future technologies which is being harnessed today and transforming our daily lives. A very important branch of Artificial Intelligence “Deep Learning” has arguably the biggest impact in AI progress.  If you’re a beginner looking for the right free resources to learn deep learning and discover applications in fields like Computer Vision, NLP, this plog post is you. This article will introduce the best books to learn deep learning in 2020 and how to practice deep learning with them.&lt;/p&gt;
 
 &lt;h4&gt;Overview&lt;/h4&gt;
 &lt;ul&gt;
@@ -1512,159 +1662,4 @@ print(&quot;Fifth most likely class:&quot;, number_to_class[index[5]], &quot;-- 
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://bdtechtalks.com/2018/05/28/generative-adversarial-networks-artificial-intelligence-ian-goodfellow/&quot;&gt;BDtechtalks&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Chel</name></author><summary type="html">Overview Generative Models and GANs - This article will give a simplified intoduction to GANs that you can fully grasp without prior knowledge of the basics This article will explain briefly the structure of GANs, what they achieve and how they are trained Some Intruiging-real world applications of GANs awaits you– Let’s begin!</summary></entry><entry><title type="html">Vectorization - How to Vectorize ML Algorithms with MATLAB</title><link href="http://localhost:4000/vectorization-in-machine-learning-with-matlab/" rel="alternate" type="text/html" title="Vectorization - How to Vectorize ML Algorithms with MATLAB" /><published>2020-06-16T00:00:00+01:00</published><updated>2020-06-16T00:00:00+01:00</updated><id>http://localhost:4000/vectorization%20in%20machine%20learning%20with%20matlab</id><content type="html" xml:base="http://localhost:4000/vectorization-in-machine-learning-with-matlab/">&lt;p&gt;In my previous post, I gave a simplified introduction to Machine Learning for beginners. It therefore brings the need for me to write a post on “Vectorization”. You might be hearing it for the first time or you have possibly come across it sometime. Either one of those, I can tell you that it isn’t a difficult subject, in fact in the field of Machine Learning I found it much easier than a normal iterative code (for &amp;amp; while loop). Now lets begin, by the end of this post I want you to understand what vectorization is, it’s application and how to use it in your ML Implementation.&lt;/p&gt;
-
-&lt;p&gt;The title of this post actually says “Vectorization in ML with MATLAB”, so you can tell I would be teaching you how to vectorize your code with MATLAB as the programming language, but you should know that almost all language codes can be vectorized. Now let’s look at a simplified definition of vectorization.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Vectorization&lt;/em&gt;&lt;/strong&gt; is a method of writing codes that makes them run much faster. It applies operators to “multiple” operands without the use of loops, these operands are usually a matrices or vectors.&lt;/p&gt;
-
-&lt;p&gt;A more official definition, cited from &lt;a href=&quot;https://www.quantifisolutions.com&quot;&gt;Quantifisolutions website&lt;/a&gt;.&lt;br /&gt;Vectorization is the process of converting an algorithm from operating on a single value at a time to operating on a set of values (vector) at once.. In a vectorized calculation, all elements of the vector (array) can be added in one calculation step.&lt;/p&gt;
-
-&lt;p&gt;Now let’s look into a basic explanation for it. You want to perform calculations on some numbers or in our case, Data, you have to write a piece of code to do the computation for you. In Machine Learning, 80% of the code we are writing is an iterative function, looping over a fixed number of training examples or sort. For example, in &lt;a href=&quot;https://channelai.netlify.app/linear-regression-simplified/&quot;&gt;Linear Regression&lt;/a&gt;, to build a model or predictor we have to compute the cost function and gradient descent over all our training data, and to do this we more than likely need to use loops, that’s where vectorization comes in. Let’s look at what makes vectorization possible in Machine Learning. We would be touching mainly on Matrix and Vectors in this post.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Matrices&lt;/em&gt;&lt;/strong&gt; are in simple form two-dimensional arrays. That is, they are made up of numbers in a 2D shape or size.Matrices are usually denoted by uppercase names in Matlab.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Array_programming&quot;&gt;Arrays(Wikipedia)&lt;/a&gt; on the other hand is a set of numbers arranged in list format, as such, a Matrix can be called an array but not the other way round, simply because a Matrix although being in 2D shape is still a list of numbers in “rows” and “columns”. Let’s take an example so you can understand better.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Vectors&lt;/em&gt;&lt;/strong&gt; are one-dimensional arrays. They are similar to matrix with the exception that they have only 1 dimension. So basically, a Vector is a matrix with one column and many rows. So vectors are a subset of matrices.&lt;/p&gt;
-
-&lt;p&gt;Scalars on the other hand means that an object is a single value, not a vector or matrix. In other words, real numbers or integer values like 2.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;matlab&quot;&gt;
-Example 1:
-
-Array = [2,3,4,6,7,8] %list of num in square brackets
-
-Matrix =[2,3,4;6,7,8] % 2x3 Matrix with 2 rows and 3 columns
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Looking at the above example,&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;You can write matrices by separating rows with semicolon(;)&lt;/li&gt;
-  &lt;li&gt;By adding a semicolon, we define a new row and also columns&lt;/li&gt;
-  &lt;li&gt;Not adding a semicolon makes it an array&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note: We have higher dimensions of Matrices in 3D, 4D etc,, you wouldn’t need to understand it for implementing Machine learning &lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4&gt;Getting Familiar with Dimensions in Matrix&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&quot;matlab&quot;&gt;
-
-mat_1 = [4,6;7,8] % A 2x2 matrix (2 rows and 2 columns)
-
-mat_2 = [1,2,3;4,5,6] % A 2x3 matrix (2 rows and 3 columns)
-
-mat_3 = [1,2,5,6;3,4,7,8] % A 2x4 matrix (2 rows and 4 columns)
-
-mat_4 = [1,2;3,4;5,6] % A 3x2 matrix (3 rows and 2 columns)
-&lt;/code&gt;
-&lt;/pre&gt;
-&lt;p&gt;Check out the visualiztion of the Matrices above in the image below. This would give you a better sense of how they are formed or their structure.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/Blog/Blog-img/matrix_formation.webp&quot; class=&quot;img-fluid&quot; alt=&quot;ChannelAI Homepage: Artificial Intelligence&quot; width=&quot;100%&quot; height=&quot;60vh&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Vectorization in Machine Learning is done or carried out when we want to perform calculations on Matrix-Matrix or Matrix-Vectors. Most of our data in ML is stored and read in rows and colums. In the code box below are some examples showing operations between matrix and Vectors, but before you learn about them I would like to list a few rules guiding how we carry out operations in matlab on matrices.&lt;/p&gt;
-
-&lt;h4&gt;Rules Guiding how to Combine Arrays in Matlab&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;To add or subtract two matrices, their dimensions must be the same. You cannot use the Addition/Subtraction operator on Matrix of unequal dimensions. Example: Adding a 2x3 and 3x2 matrix throws an error. Addition on Matices are Element-wise, so you simply add or subtract each corresponding element.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Matrix-Vector Multiplication: The result is a vector. In a Matrix-Vector muliplication the number of “columns” of the matrix must be equal to the number of “rows” of the vector. An m x n matrix multiplied by an n x 1 vector results in an m x 1 vector.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Matrix-Matrix Multiplication: We multiply two matrices by breaking it into several vector multiplications and concatenating the result. An m x n matrix multiplied by an n x o matrix results in an m x o matrix. To multiply two matrices, the number of “columns” of the first matrix must equal the number of “rows” of the second matrix.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;In scalar multiplication, we simply multiply every element by the scalar value, same applies for scalar addition or division.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&quot;css&quot; style=&quot;padding-bottom: 0;&quot;&gt;
-	&lt;h4 style=&quot;padding-top: 0;&quot;&gt;Matrix-Vector Multiplication&lt;/h4&gt;
-% Initialize matrix A 
-A = [1, 2, 3; 4, 5, 6;7, 8, 9] 
-% Initialize vector v 
-v = [1; 1; 1] 
-% Multiply A * v
-Av = A * v
-Results:
-A =
-   1   2   3
-   4   5   6
-   7   8   9
-v =
-   1
-   1
-   1
-Av =
-   6
-   15
-   24
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;css&quot; style=&quot;padding-bottom: 0;&quot;&gt;
-	&lt;h4 style=&quot;padding-top: 0;&quot;&gt;Matrix-Matrix Multiplication&lt;/h4&gt;
-% Initialize a 3 by 2 matrix 
-A = [1, 2; 3, 4;5, 6]
-% Initialize a 2 by 1 matrix 
-B = [1; 2] 
-% We expect a resulting matrix of (3 by 2)*(2 by 1) = (3 by 1) 
-mult_AB = A*B
-Results:
-A =
-   1   2
-   3   4
-   5   6
-B =
-   1
-   2
-mult_AB =
-   5
-   11
-   17
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;matlab&quot;&gt;
-Example 2:
-
-vect_1 = [1;2;3;6;7;8] % A column vector with 6 values
-
-mat_1 = [1,3,5;8,7,6] % A 2x3 Matrix
-
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4&gt;REASONS FOR VECTORIZING CODE&lt;/h4&gt;
-&lt;ul style=&quot;padding: 5;&quot;&gt;
-	&lt;li&gt;&lt;b&gt;Appearance&lt;/b&gt;: Vectorized mathematical code appears more like the maths we are used to from high-school, making the code easier to understand.&lt;/li&gt;
-	&lt;li&gt;&lt;b&gt;Less Error Prone&lt;/b&gt;: Without loops, vectorized code is often shorter. Fewer lines of code mean fewer opportunities to introduce programming errors.&lt;/li&gt;
-	&lt;li&gt;&lt;b&gt;Performance&lt;/b&gt;: Vectorized code often runs much faster than the corresponding code conatining loops&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Now that we have gone over a few reasons for using vectorized codes, I would like to show you code that outlines the difference in using loops vs vectorization for writing codes. This alone would show you the main idea of vectorization. Although you should know that as model size increases, so does the technique for carrying out vectorization. It gets more advanced but to tell the truth, it’s nothing you can’t handle, as long as you are doing Machine Learning, the concept remains the same as the example below. Let’s write code.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;matlab&quot;&gt;
-Example 4:
-
-This code computes the sine of 1001 values ranging from 0 to 10:
-Using Loops:
-
-i = 0;
-for t = 0:.01:10
-	i = i + 1;
-	y(i) = sin(t);
-end	
-
-Using Vectorization:
-
-t = 0:.01:10;
-y = sin(t);
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So there you have it, a few example codes and reasons, more than sufficient why it is advised to vectorize code when Implementing ML. Now that you’ve learnt the basics of Matrix, vectors and code vectorization you can now ahead and use this concept in your work. For reference, all the code for my last post in Linear regression were vectorized, so you can start learning from there how this works in ML and if you want a deeper understanding, check out this course by Vanderblit University on Coursera: &lt;a href=&quot;&quot;&gt;Introduction to Programming with MATLAB&lt;/a&gt;. It covers almost all you need to use Matlab to advanced level. I suggest you enroll if you want to use Matlab as your main programming lang for Machine Learning. Thanks for reading along, I do hope you learnt a thing or two about Vectorization. Even if u feel like you didn’t get much, don’t worry about it, all you need is some practice and you should understand it fully in a short while. If you have any questions related or closely related to our topic, I would very much like to hear it, simply leave a comment below.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">In my previous post, I gave a simplified introduction to Machine Learning for beginners. It therefore brings the need for me to write a post on “Vectorization”. You might be hearing it for the first time or you have possibly come across it sometime. Either one of those, I can tell you that it isn’t a difficult subject, in fact in the field of Machine Learning I found it much easier than a normal iterative code (for &amp;amp; while loop). Now lets begin, by the end of this post I want you to understand what vectorization is, it’s application and how to use it in your ML Implementation.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Chel</name></author><summary type="html">Overview Generative Models and GANs - This article will give a simplified intoduction to GANs that you can fully grasp without prior knowledge of the basics This article will explain briefly the structure of GANs, what they achieve and how they are trained Some Intruiging-real world applications of GANs awaits you– Let’s begin!</summary></entry></feed>
