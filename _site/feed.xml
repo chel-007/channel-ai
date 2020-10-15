@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-15T00:31:33+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Convolutional Neural Networks Vs Recurrent Neural Networks(An Intuitive Guide for every Deep Learning Practitioner)</title><link href="http://localhost:4000/time-management-tips-computer-vision/" rel="alternate" type="text/html" title="Convolutional Neural Networks Vs Recurrent Neural Networks(An Intuitive Guide for every Deep Learning Practitioner)" /><published>2020-10-14T00:00:00+01:00</published><updated>2020-10-14T00:00:00+01:00</updated><id>http://localhost:4000/time%20management%20tips%20computer%20vision</id><content type="html" xml:base="http://localhost:4000/time-management-tips-computer-vision/">&lt;p&gt;Have you been feeling frustared about the complexity of deep learning terms like Convolutional Neural networks and Recurrent NNs?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-15T14:37:08+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Convolutional Neural Networks Vs Recurrent Neural Networks(An Intuitive Guide for every Deep Learning Practitioner)</title><link href="http://localhost:4000/time-management-tips-computer-vision/" rel="alternate" type="text/html" title="Convolutional Neural Networks Vs Recurrent Neural Networks(An Intuitive Guide for every Deep Learning Practitioner)" /><published>2020-10-14T00:00:00+01:00</published><updated>2020-10-14T00:00:00+01:00</updated><id>http://localhost:4000/time%20management%20tips%20computer%20vision</id><content type="html" xml:base="http://localhost:4000/time-management-tips-computer-vision/">&lt;p&gt;Have you been feeling frustared about the complexity of deep learning terms like Convolutional Neural networks and Recurrent NNs?&lt;/p&gt;
 
 &lt;p&gt;You have read countless articles with your goal in mind being to grasp and understand it finally - but it still doesn’t click?&lt;/p&gt;
 
@@ -74,26 +74,21 @@ This example below would explain what sequence/RNNs are, why they are used inste
 
 &lt;p&gt;&lt;img class=&quot;img-fluid&quot; alt=&quot;Deep Learning Diagram&quot; src=&quot;../assets\images\Blog\Blog-img\rnn-example.png&quot; /&gt;&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;You are given a sentence: This morning I took my cat for a&lt;/td&gt;
-      &lt;td&gt;walk. You want to build a deep Learning network to solve the task, but theres one underlying issue, “A feed-forward DNN can only take a fixed length input vector”, and our problem here has a varying input length. Some sentence in the dataset are five words, others six and so on. Our ideal model needs to be able to handle variable lengths of inputs. There are three ways/ideas we can decide to take to solve this problem:&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;You are given a sentence: This morning I took my cat for a walk. You want to build a deep Learning network to solve the task, but theres one underlying issue, “A feed-forward DNN can only take a fixed length input vector”, and our problem here has a varying input length. Some sentence in the dataset are five words, others six and so on. Our ideal model needs to be able to handle variable lengths of inputs. There are three ways/ideas we can decide to take to solve this problem:&lt;/p&gt;
 
 &lt;h4&gt;Idea 1&lt;/h4&gt;
-&lt;p&gt;: Hard code a certain length of input when defining the model hyper-pararmeters, i.e given a word: &lt;b&gt;I know how to speak French | fluently&lt;/b&gt;. If we choose a lenght of 3 for our model then, the sentence would be trimmed to; &lt;i&gt;to speak french&lt;/i&gt;. Using this method, we have an history problem:
-&lt;b&gt;Problem 1&lt;/b&gt;Can’t Model Long-Term Dependencies: In this problem, we need information from earler in the sentence but since our model is only using the 3 previous words, it cannot solve tasks like this.An example of a sentence with long-term dependencies: &lt;b&gt;France is where I grew up, but now I live in Boston. I speak fluent &lt;em&gt;__&lt;/em&gt; (French)&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;Hard code a certain length of input when defining the model hyper-pararmeters, i.e given a word: &lt;b&gt;I know how to speak French | fluently&lt;/b&gt;. If we choose a lenght of 3 for our model then, the sentence would be trimmed to; &lt;i&gt;to speak french&lt;/i&gt;. Using this method, we have an history problem:&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Problem 1&lt;/b&gt;Can’t Model Long-Term Dependencies: In this problem, we need information from earler in the sentence but since our model is only using the 3 previous words, it cannot solve tasks like this.An example of a sentence with long-term dependencies: &lt;b&gt;France is where I grew up, but now I live in Boston. I speak fluent &lt;em&gt;__&lt;/em&gt; (French)&lt;/b&gt;&lt;/p&gt;
 
 &lt;h4&gt;Idea 2&lt;/h4&gt;
-&lt;p&gt;: Use Entire sequence as sets of counts(also called bag of words). This means that a sentence would be represented by how much each words in it appears.&lt;/p&gt;
+&lt;p&gt;Use Entire sequence as sets of counts(also called bag of words). This means that a sentence would be represented by how much each words in it appears.&lt;/p&gt;
 
 &lt;p&gt;&lt;img class=&quot;img-fluid&quot; alt=&quot;Deep Learning Diagram&quot; src=&quot;../assets\images\Blog\Blog-img\rnn_bagofwords.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;In this solution, we have a fixed length of vector which is all the possible words, and then we map a particular word to its representation in the “bag of words”. As you might have guessed, there is also a problem with this method
-&lt;b&gt;Problem 2&lt;/b&gt;:Counts don’t preserve order. We lose the sequential information in the sentence. take these two sentences for example:&lt;/p&gt;
+&lt;p&gt;In this solution, we have a fixed length of vector which is all the possible words, and then we map a particular word to its representation in the “bag of words”. As you might have guessed, there is also a problem with this method&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Problem 2&lt;/b&gt;:Counts don’t preserve order. We lose the sequential information in the sentence. take these two sentences for example:&lt;/p&gt;
 
 &lt;p&gt;Sentence 1: The food was good, not bad at all
 Sentence 2: The food was bad, not good at all&lt;/p&gt;
@@ -130,10 +125,66 @@ Sentence 2: The food was bad, not good at all&lt;/p&gt;
 &lt;h3&gt;Difference Between CNNs and RNNs&lt;/h3&gt;
 
 &lt;table&gt;
-	&lt;tr&gt;Convolutional Neural Networks
-		&lt;td&gt;&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;&lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;CNN&lt;/th&gt;
+    &lt;th&gt;RNN&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;CNNs are ideal for images and video processing.&lt;/td&gt;
+    &lt;td&gt;RNNs are ideal for text and speech analysis.&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;This network takes fixed size inputs and generates fixed size outputs.&lt;/td&gt;
+    &lt;td&gt;RNN can handle arbitrary input/output lengths.&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;CNN is considered to be more powerful than RNN.&lt;/td&gt;
+    &lt;td&gt;RNN includes less feature compatibility when compared to CNN.&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;It is suitable for spatial data such as images&lt;/td&gt;
+    &lt;td&gt;RNN is suitable for temporal data, also called sequential data.&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;CNN is a type of feed-forward artificial neural network with variations of multilayer perceptrons designed to use minimal amounts of preprocessing.&lt;/td&gt;
+    &lt;td&gt;RNN unlike feed forward neural networks - can use their internal memory to process arbitrary sequences of inputs.&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;CNNs use connectivity pattern between the neurons. This is inspired by the organization of the animal visual cortex, whose individual neurons are arranged in such a way that they respond to overlapping regions tilting the visual field.&lt;/td&gt;
+    &lt;td&gt;Recurrent neural networks use time-series information - what a user spoke last will impact what he/she will speak next.&lt;/td&gt;
+  &lt;/tr&gt; &lt;br /&gt;br
+
+
+These diffeences makes it very easy for you to remeber the properties and features of either CNn or RNN. You now have a broad understanding of these terms but you don't still know how to apply them in your projects. I'll show you how in the next section.
+
+
+&lt;h3&gt;Practical Use of CNNs and RNNs&lt;/h3&gt;
+
+&lt;u&gt;CNNs&lt;/u&gt; are use mainly for datasets and tasks involving Image manipulation. These kind of tasks include; 
+
+* Image Classification: Classifying an image into a class or group. The ImageNet dataset can be use for Image classification
+
+* Object Detection: Classifying groups of objects in an Image. The Coco Dataset is used for object detection
+
+* Object Localization: Locating of mapping the Locations of objects in an Image. The RCNN library can be used on any dataset with Images and annotation files.
+
+* Style Transfer: The transferring of the style in one image to another without damaging the latter and while retaining its information.
+
+There are a lot more applications of CNNs mainly in the field of Computer Vision and while I have just showed you some simple projects, know that all these are built at production level with more advanced systems into the Large World changing technologies we see today like Drone Navigation, and Autonomous Vehicles.
+
+
+&lt;u&gt;RNNs&lt;/u&gt; are also used in many industries today and while that holds true, it is fair to say that CNNs are more widely used. Sone applications of RNns includes;
+
+Text Translation: Mapping English words in a sequence and translating each word into a different lanuguage like Spanish or French.
+
+Music Generation: RNNs being superior in sequential data, gives them ability to generate chords of music after being trained on a latge collection of music data. Usually, an RNn would generate music similar to the one it has been trained on
+
+
+
+&lt;h3&gt;End Notes&lt;/h3&gt;
+Now the end of this comprehensive article, I mostly hope that it has achieved it's purpose with you; To simplify the subject of RNN and CNN without much alogrithm and theory. It's a really long article and you might find after sometime, you would need to refer back to it for some details. that is infact highly recommended for you to grasp the main concepts effectively. Have a question or an area you need some clarity in? Please leave me a comment and I will be glad to answer it.
+
+
 &lt;/table&gt;</content><author><name>Chel</name></author><summary type="html">Have you been feeling frustared about the complexity of deep learning terms like Convolutional Neural networks and Recurrent NNs?</summary></entry><entry><title type="html">9 Key Skills Every Deep Learning Practitioner Should Have (How many in the List do you Have?)</title><link href="http://localhost:4000/key-deep-learning-skills-beginner/" rel="alternate" type="text/html" title="9 Key Skills Every Deep Learning Practitioner Should Have (How many in the List do you Have?)" /><published>2020-10-09T00:00:00+01:00</published><updated>2020-10-09T00:00:00+01:00</updated><id>http://localhost:4000/key%20deep%20learning%20skills%20beginner</id><content type="html" xml:base="http://localhost:4000/key-deep-learning-skills-beginner/">&lt;p&gt;Are there specific skills important in deep learning?. You shouldn’t be surprised if you ask yourself this question. At a time or another, all budding deep learner ask themselves the same question. Are you a deep learner that flows with the tides that comes along with projects or are you set on building important skills that can make you more effective. In this article, I share 9 skills backed by stactics that guarantees exponential growth in your deep learning career.&lt;/p&gt;
 
 &lt;p&gt;Skills are very important. In some cases, more important than others. They help us to go from zero to one in any new field of our interest. This being the case, why do we have learners that never really attain the peaks of their careers since the skills necessary for success is available for all to master?. Could it be that they are learning the &lt;i&gt;wrong&lt;/i&gt; skills, learning it the wrong way or more critical, having a skewed perspective to skill gathering.&lt;/p&gt;

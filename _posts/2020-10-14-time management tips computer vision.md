@@ -87,17 +87,19 @@ This example below would explain what sequence/RNNs are, why they are used inste
 <img class="img-fluid" alt="Deep Learning Diagram" src="../assets\images\Blog\Blog-img\rnn-example.png">
 
 
-You are given a sentence: This morning I took my cat for a | walk. You want to build a deep Learning network to solve the task, but theres one underlying issue, "A feed-forward DNN can only take a fixed length input vector", and our problem here has a varying input length. Some sentence in the dataset are five words, others six and so on. Our ideal model needs to be able to handle variable lengths of inputs. There are three ways/ideas we can decide to take to solve this problem:
+You are given a sentence: This morning I took my cat for a walk. You want to build a deep Learning network to solve the task, but theres one underlying issue, "A feed-forward DNN can only take a fixed length input vector", and our problem here has a varying input length. Some sentence in the dataset are five words, others six and so on. Our ideal model needs to be able to handle variable lengths of inputs. There are three ways/ideas we can decide to take to solve this problem:
 
-<h4>Idea 1</h4>: Hard code a certain length of input when defining the model hyper-pararmeters, i.e given a word: <b>I know how to speak French | fluently</b>. If we choose a lenght of 3 for our model then, the sentence would be trimmed to; <i>to speak french</i>. Using this method, we have an history problem:
+<h4>Idea 1</h4> Hard code a certain length of input when defining the model hyper-pararmeters, i.e given a word: <b>I know how to speak French | fluently</b>. If we choose a lenght of 3 for our model then, the sentence would be trimmed to; <i>to speak french</i>. Using this method, we have an history problem:
+
 <b>Problem 1</b>Can't Model Long-Term Dependencies: In this problem, we need information from earler in the sentence but since our model is only using the 3 previous words, it cannot solve tasks like this.An example of a sentence with long-term dependencies: <b>France is where I grew up, but now I live in Boston. I speak fluent ____ (French)</b>
 
 
-<h4>Idea 2</h4>: Use Entire sequence as sets of counts(also called bag of words). This means that a sentence would be represented by how much each words in it appears.
+<h4>Idea 2</h4> Use Entire sequence as sets of counts(also called bag of words). This means that a sentence would be represented by how much each words in it appears.
 
 <img class="img-fluid" alt="Deep Learning Diagram" src="../assets\images\Blog\Blog-img\rnn_bagofwords.png">
 
 In this solution, we have a fixed length of vector which is all the possible words, and then we map a particular word to its representation in the "bag of words". As you might have guessed, there is also a problem with this method
+
 <b>Problem 2</b>:Counts don't preserve order. We lose the sequential information in the sentence. take these two sentences for example:
 
 Sentence 1: The food was good, not bad at all
@@ -135,10 +137,65 @@ Now that you know individually what CNNs and RNNs are, how they work and thier s
 
 <h3>Difference Between CNNs and RNNs</h3>
 
+
 <table>
-	<tr>Convolutional Neural Networks
-		<td></td>
-	</tr>
-	<tr></tr>
-</table>
+  <tr>
+    <th>CNN</th>
+    <th>RNN</th>
+  </tr>
+  <tr>
+    <td>CNNs are ideal for images and video processing.</td>
+    <td>RNNs are ideal for text and speech analysis.</td>
+  </tr>
+  <tr>
+    <td>This network takes fixed size inputs and generates fixed size outputs.</td>
+    <td>RNN can handle arbitrary input/output lengths.</td>
+  </tr>
+  <tr>
+    <td>CNN is considered to be more powerful than RNN.</td>
+    <td>RNN includes less feature compatibility when compared to CNN.</td>
+  </tr>
+  <tr>
+    <td>It is suitable for spatial data such as images</td>
+    <td>RNN is suitable for temporal data, also called sequential data.</td>
+  </tr>
+  <tr>
+    <td>CNN is a type of feed-forward artificial neural network with variations of multilayer perceptrons designed to use minimal amounts of preprocessing.</td>
+    <td>RNN unlike feed forward neural networks - can use their internal memory to process arbitrary sequences of inputs.</td>
+  </tr>
+  <tr>
+    <td>CNNs use connectivity pattern between the neurons. This is inspired by the organization of the animal visual cortex, whose individual neurons are arranged in such a way that they respond to overlapping regions tilting the visual field.</td>
+    <td>Recurrent neural networks use time-series information - what a user spoke last will impact what he/she will speak next.</td>
+  </tr> <br><br>
+
+
+These diffeences makes it very easy for you to remeber the properties and features of either CNn or RNN. You now have a broad understanding of these terms but you don't still know how to apply them in your projects. I'll show you how in the next section.
+
+
+<h3>Practical Use of CNNs and RNNs</h3>
+
+<u>CNNs</u> are use mainly for datasets and tasks involving Image manipulation. These kind of tasks include; 
+
+* Image Classification: Classifying an image into a class or group. The ImageNet dataset can be use for Image classification
+
+* Object Detection: Classifying groups of objects in an Image. The Coco Dataset is used for object detection
+
+* Object Localization: Locating of mapping the Locations of objects in an Image. The RCNN library can be used on any dataset with Images and annotation files.
+
+* Style Transfer: The transferring of the style in one image to another without damaging the latter and while retaining its information.
+
+There are a lot more applications of CNNs mainly in the field of Computer Vision and while I have just showed you some simple projects, know that all these are built at production level with more advanced systems into the Large World changing technologies we see today like Drone Navigation, and Autonomous Vehicles.
+
+
+<u>RNNs</u> are also used in many industries today and while that holds true, it is fair to say that CNNs are more widely used. Sone applications of RNns includes;
+
+Text Translation: Mapping English words in a sequence and translating each word into a different lanuguage like Spanish or French.
+
+Music Generation: RNNs being superior in sequential data, gives them ability to generate chords of music after being trained on a latge collection of music data. Usually, an RNn would generate music similar to the one it has been trained on
+
+
+
+<h3>End Notes</h3>
+Now the end of this comprehensive article, I mostly hope that it has achieved it's purpose with you; To simplify the subject of RNN and CNN without much alogrithm and theory. It's a really long article and you might find after sometime, you would need to refer back to it for some details. that is infact highly recommended for you to grasp the main concepts effectively. Have a question or an area you need some clarity in? Please leave me a comment and I will be glad to answer it.
+
 

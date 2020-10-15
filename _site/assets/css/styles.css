@@ -19,7 +19,7 @@
 
 @media (max-width: 950px) { .navbar-custom ul li div:hover > a { border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
 
-body { font-family: sans-serif; font-size: 22px; }
+body { font-family: sans-serif; font-size: 18px; }
 
 .footer-style { background-color: #222F34; padding: 17px; }
 
@@ -71,6 +71,14 @@ h4:hover > .game-title { color: #24BCF9; }
 /* End of Blog Page*/
 /* End of Blog's Page CSS */
 /* Post's Layout for Post.md CSS */
+table tr th { background-color: grey; }
+
+th, td { padding: 7px; }
+
+th { text-align: center; }
+
+table, th, td { border: 1px solid black; border-collapse: collapse; }
+
 .post-header { font-size: 35px; font-weight: 700; }
 
 .blog-headers { text-align: center; color: #24BCF9; font-weight: 600; font-family: cursive; }
@@ -2156,7 +2164,7 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 @media (max-width: 950px) { .navbar-custom ul li div:hover > a { border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
 
-body { font-family: sans-serif; font-size: 22px; }
+body { font-family: sans-serif; font-size: 18px; }
 
 .footer-style { background-color: #222F34; padding: 17px; }
 
@@ -2208,6 +2216,14 @@ h4:hover > .game-title { color: #24BCF9; }
 /* End of Blog Page*/
 /* End of Blog's Page CSS */
 /* Post's Layout for Post.md CSS */
+table tr th { background-color: grey; }
+
+th, td { padding: 7px; }
+
+th { text-align: center; }
+
+table, th, td { border: 1px solid black; border-collapse: collapse; }
+
 .post-header { font-size: 35px; font-weight: 700; }
 
 .blog-headers { text-align: center; color: #24BCF9; font-weight: 600; font-family: cursive; }

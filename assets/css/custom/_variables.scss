@@ -50,7 +50,7 @@
 }}
 body {
 font-family: sans-serif;
-font-size: 22px;
+font-size: 18px;
 }
 
 .footer-style {
@@ -162,6 +162,19 @@ h4:hover > .game-title{
 /* End of Blog's Page CSS */
 
 /* Post's Layout for Post.md CSS */
+table tr th {
+  background-color: grey;
+}
+th, td {
+  padding: 7px;
+}
+th {
+  text-align: center;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
 .post-header {
   font-size: 35px;
   font-weight: 700;
