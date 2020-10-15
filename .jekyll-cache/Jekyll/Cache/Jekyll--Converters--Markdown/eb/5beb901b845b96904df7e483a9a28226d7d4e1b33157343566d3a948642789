@@ -1,4 +1,4 @@
-I"�=<p>Have you been feeling frustared about the complexity of deep learning terms like Convolutional Neural networks and Recurrent NNs?</p>
+I"�?<p>Have you been feeling frustared about the complexity of deep learning terms like Convolutional Neural networks and Recurrent NNs?</p>
 
 <p>You have read countless articles with your goal in mind being to grasp and understand it finally - but it still doesn’t click?</p>
 
@@ -152,14 +152,14 @@ Sentence 2: The food was bad, not good at all</p>
   <tr>
     <td>CNNs use connectivity pattern between the neurons. This is inspired by the organization of the animal visual cortex, whose individual neurons are arranged in such a way that they respond to overlapping regions tilting the visual field.</td>
     <td>Recurrent neural networks use time-series information - what a user spoke last will impact what he/she will speak next.</td>
-  </tr>
-</table>
+  </tr></table>
+<p><br /></p>
 
 <p>These diffeences makes it very easy for you to remeber the properties and features of either CNn or RNN. You now have a broad understanding of these terms but you don’t still know how to apply them in your projects. I’ll show you how in the next section.</p>
 
 <h3>Practical Use of CNNs and RNNs</h3>
 
-<p><u>CNNs</u> are use mainly for datasets and tasks involving Image manipulation. These kind of tasks include;</p>
+<p><u>CNNs</u> are use mainly for datasets and tasks involving Image manipulation. These kind of tasks include:</p>
 
 <ul>
   <li>
@@ -178,10 +178,19 @@ Sentence 2: The food was bad, not good at all</p>
 
 <p>There are a lot more applications of CNNs mainly in the field of Computer Vision and while I have just showed you some simple projects, know that all these are built at production level with more advanced systems into the Large World changing technologies we see today like Drone Navigation, and Autonomous Vehicles.</p>
 
-<p><u>RNNs</u> are also used in many industries today and while that holds true, it is fair to say that CNNs are more widely used. Sone applications of RNns includes;</p>
+<p><br />
+<u>RNNs</u> are also used in many industries today and while that holds true, it is fair to say that CNNs are more widely used. Sone applications of RNns includes:</p>
 
-<p>Text Translation: Mapping English words in a sequence and translating each word into a different lanuguage like Spanish or French.</p>
+<ul>
+  <li>
+    <p>Text Translation: Mapping English words in a sequence and translating each word into a different lanuguage like Spanish or French.</p>
+  </li>
+  <li>
+    <p>Music Generation: RNNs being superior in sequential data, gives them ability to generate chords of music after being trained on a latge collection of music data. Usually, an RNn would generate music similar to the one it has been trained on</p>
+  </li>
+</ul>
 
-<p>Music Generation: RNNs being superior in sequential data, gives them ability to generate chords of music after being trained on a latge collection of music data. Usually, an RNn would generate music similar to the one it has been trained on</p>
+<h3>End Notes</h3>
+<p>Now the end of this comprehensive article, I mostly hope that it has achieved it’s purpose with you; To simplify the subject of RNN and CNN without much alogrithm and theory. It’s a really long article and you might find after sometime, you would need to refer back to it for some details. that is infact highly recommended for you to grasp the main concepts effectively. Have a question or an area you need some clarity in? Please leave me a comment and I will be glad to answer it.</p>
 
 :ET

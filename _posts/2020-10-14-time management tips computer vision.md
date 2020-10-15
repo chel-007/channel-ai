@@ -166,15 +166,14 @@ Now that you know individually what CNNs and RNNs are, how they work and thier s
   <tr>
     <td>CNNs use connectivity pattern between the neurons. This is inspired by the organization of the animal visual cortex, whose individual neurons are arranged in such a way that they respond to overlapping regions tilting the visual field.</td>
     <td>Recurrent neural networks use time-series information - what a user spoke last will impact what he/she will speak next.</td>
-  </tr> <br><br>
-
+  </tr></table> <br>
 
 These diffeences makes it very easy for you to remeber the properties and features of either CNn or RNN. You now have a broad understanding of these terms but you don't still know how to apply them in your projects. I'll show you how in the next section.
 
 
 <h3>Practical Use of CNNs and RNNs</h3>
 
-<u>CNNs</u> are use mainly for datasets and tasks involving Image manipulation. These kind of tasks include; 
+<u>CNNs</u> are use mainly for datasets and tasks involving Image manipulation. These kind of tasks include:
 
 * Image Classification: Classifying an image into a class or group. The ImageNet dataset can be use for Image classification
 
@@ -186,12 +185,12 @@ These diffeences makes it very easy for you to remeber the properties and featur
 
 There are a lot more applications of CNNs mainly in the field of Computer Vision and while I have just showed you some simple projects, know that all these are built at production level with more advanced systems into the Large World changing technologies we see today like Drone Navigation, and Autonomous Vehicles.
 
+<br>
+<u>RNNs</u> are also used in many industries today and while that holds true, it is fair to say that CNNs are more widely used. Sone applications of RNns includes:
 
-<u>RNNs</u> are also used in many industries today and while that holds true, it is fair to say that CNNs are more widely used. Sone applications of RNns includes;
+* Text Translation: Mapping English words in a sequence and translating each word into a different lanuguage like Spanish or French.
 
-Text Translation: Mapping English words in a sequence and translating each word into a different lanuguage like Spanish or French.
-
-Music Generation: RNNs being superior in sequential data, gives them ability to generate chords of music after being trained on a latge collection of music data. Usually, an RNn would generate music similar to the one it has been trained on
+* Music Generation: RNNs being superior in sequential data, gives them ability to generate chords of music after being trained on a latge collection of music data. Usually, an RNn would generate music similar to the one it has been trained on
 
 
 
