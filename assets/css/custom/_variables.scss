@@ -1,28 +1,23 @@
 .navbar-custom {
-  background-color: #24BCF9;
+  background-color: white;
   width: 100%;
-  min-height: 8vh;
+  min-height: 6vh;
   margin: 0 auto;
-  box-shadow: inset 0px 0px 40px 0px rgba(0,0,0,0.4),
-    -5px 3px 20px 3px rgba(0, 0, 0, 0.7);
 }
 .navbar-custom div ul a {
     color: black;
-    font-weight: 600;
     font-size: 19px;
-    font-family: Montserrat, sans-serif;
+    font-family: sans-serif;
 }
 @media (max-width: 990px) {
   .navbar-custom {
     min-height: 46px;
-    box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.4),
-    -5px 0px 10px 3px rgba(0, 0, 0, 0.6);
   } 
 }
 .navbar-custom div ul a {
-  margin-left: 55px;
+  margin-left: 60px;
 }
-.navbar-custom ul:hover > a{
+.navbar-custom div ul:hover > a{
   opacity: 1;
 }
 @media (min-width: 979px) {
@@ -37,12 +32,6 @@
   padding: 0.5rem;
   font: normal normal normal 19px/0 FontAwesome;
   content: "\f107";
-}
-.dropdown-toggle-align::after {
-  display: inline-block;
-  padding: 0.5rem;
-  font: normal normal normal 23px/1 FontAwesome;
-  content: "\f036";
 }
 @media (max-width: 950px) {
   .navbar-custom ul li div:hover > a {
@@ -78,7 +67,23 @@ div:hover > .site-n-privacy {
 /* Homepage CSS */
 .intro-home {
   text-align: center;
- font-family: Rubik, sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  font-family: Rubik;
+}
+.intro-button {
+  background-color: black;
+  font-size: 19px;
+  color: white;
+  font-weight: 600;
+  padding: 15px;
+  text-align: center;
+  float: center;
+}
+a:hover > .intro-button {
+  background-color: white;
+  color: black;
+  border: 2px solid black
 }
 .social-icons {
   display: inline-block;

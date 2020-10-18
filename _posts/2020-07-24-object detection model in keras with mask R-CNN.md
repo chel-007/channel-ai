@@ -2,7 +2,7 @@
 layout: post
 author: Chel
 title: How to Build an Object Detection Model using Convolutional Neural Networks and Transfer Learning in Keras
-seo: object detection keras Mask R-CNN deep learning deepinglearning tensorflow object detection computer vision embeddings
+seo: mask rcnn kangaroo object detection keras Mask R-CNN deep learning deepinglearning tensorflow object detection computer vision embeddings kangaroo dataset rcnn object detection kaggle datasets mask rcnn
 description: In this tutorial you would see how to apply state-of-the-art R-CNN architecture model built on the MS Coco dataset for Object Detection on a new Dataset. We use Transfer Learning for efficient and faster training epochs. You would learn how to Install the R-CNN Library, install the dataset we want to make predictions on, parse the annotation files for bounding boxes, Train Mask R-CNN Model on dataset using Transfer Learning.
 img-src: ../assets\images\Blog\object_detection_rcnn
 ---

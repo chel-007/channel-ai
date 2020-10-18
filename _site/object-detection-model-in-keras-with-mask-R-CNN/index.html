@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
    <head>
- <!--  <meta property="og:locale" content="en_US"> -->
-<!-- favicons -->
-<!-- <link rel="shortcut icon" href="/assets/images/iconified/apple-touch-icon.png" type="image/x-icon" /> -->
-  <!-- Hotjar Tracking Code for https://cheloverboard.netlify.com/ -->
- <meta itemprop="description" name="description" content="In this tutorial you would see how to apply state-of-the-art R-CNN architecture model built on the MS Coco dataset for Object Detection on a new Dataset. We ..." />
- <meta content="width=device-width, initial-scale=1" name="viewport">
- <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta itemprop="description" name="description" content="In this tutorial you would see how to apply state-of-the-art R-CNN architecture model built on the MS Coco dataset for Object Detection on a new Dataset. We ..." />
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>How to Build an Object Detection Model using Convolutional Neural Networks and Transfer Learning in Keras</title>
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="How to Build an Object Detection Model using Convolutional Neural Networks and Transfer Learning in Keras" />
@@ -23,24 +19,26 @@
 {"@type":"BlogPosting","url":"http://localhost:4000/object-detection-model-in-keras-with-mask-R-CNN/","headline":"How to Build an Object Detection Model using Convolutional Neural Networks and Transfer Learning in Keras","dateModified":"2020-07-24T00:00:00+01:00","datePublished":"2020-07-24T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/object-detection-model-in-keras-with-mask-R-CNN/"},"author":{"@type":"Person","name":"Chel"},"description":"In this tutorial you would see how to apply state-of-the-art R-CNN architecture model built on the MS Coco dataset for Object Detection on a new Dataset. We use Transfer Learning for efficient and faster training epochs. You would learn how to Install the R-CNN Library, install the dataset we want to make predictions on, parse the annotation files for bounding boxes, Train Mask R-CNN Model on dataset using Transfer Learning.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
- <meta charset="utf-8">
- <title>How to Build an Object Detection Model using Convolutional Neural Networks and Transfer Learning in Keras</title>
- <style type="text/css">body{color:#202020}</style>
- <link rel="stylesheet" href="/assets/css/packages/styles/default.css">
- <script src="/assets/css/packages/highlight.pack.js"></script>
- <script>hljs.initHighlightingOnLoad();</script>
- <link rel="stylesheet" href="/assets/css/styles.css" onload="this.media='all'; this.onload=null;>
-
-
- <script data-ad-client="ca-pub-6920696800834585" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <!-- End Of Adsense Code -->
-  <meta name="google-site-verification" content="1LO3TSIxeeNWjGMHqMznkmBaXeBmBpBZDqdsuM5Np-U" />
-  </head>
+<meta charset="utf-8">
+<title>How to Build an Object Detection Model using Convolutional Neural Networks and Transfer Learning in Keras</title>
+<meta name="keywords" content="[computer vision, deep learning, object detection, deep learner, tensorflow, convolutional neural netowrks, python, r for data science, deployment, cloud ml]"/>
+<!-- Fav Icons of Different Sizes for Devices -->
+<link rel="icon" type="image/png" href="/assets/images/favicon.ico"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.webp">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.webp">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.webp">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/android-chrome-192x192.webp">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/android-chrome-512x512.webp">
+<!-- Fav Icons End -->
+<style type="text/css">body{color:#202020}</style>
+<link rel="stylesheet" href="/assets/css/styles.css" onload="this.media='all'; this.onload=null;>
+<script data-ad-client="ca-pub-6920696800834585" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-custom">
   
   <!-- Navbar Brand -->
-  <a class="navbar-brand" href="/"><img src="/assets/images/CHANNEL AI_free-file (1).webp" width="80" height="80" alt="ChannelAI"></a>
+  <a class="navbar-brand" href="/"><img class="img-fluid" src="/assets/images/CHANNEL AI_free-file (1).webp" width="80" height="80" alt="ChannelAI"></a>
   
   <!-- Collapse button --> 
   <button class="navbar-toggler dropdown-toggle-align" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
