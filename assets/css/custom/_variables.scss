@@ -32,6 +32,7 @@
   padding: 0.5rem;
   font: normal normal normal 19px/0 FontAwesome;
   content: "\f107";
+
 }
 @media (max-width: 950px) {
   .navbar-custom ul li div:hover > a {
@@ -218,7 +219,7 @@ footer:hover > div ul li a {
   color: white;
 }
 
-.container-fluid { 
+.intro-text { 
   background-color: #FFE928;
   width: 100%;
   height: 20%;
@@ -226,7 +227,20 @@ footer:hover > div ul li a {
   padding: 75px 15px;
   border-top: 2px solid white;
 }
-
+.exit-text { 
+  background-color: black;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  padding: 75px 15px;
+}
+.exit-home {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  font-family: Rubik;
+  color: white;
+}
 .intro-home {
   text-align: center;
   font-size: 60px;
@@ -240,6 +254,20 @@ footer:hover > div ul li a {
   font-weight: 700;
   padding: 25px;
   text-align: center;
+}
+.exit-button {
+  background-color: #DD2121;
+  font-size: 17px;
+  color: white;
+  font-weight: 700;
+  padding: 18px;
+  text-align: center;
+  border-radius: 9px;
+}
+a:hover > .exit-button {
+  background-color: white;
+  color: black;
+  border: 1px solid black
 }
 .intro-buttonr {
   background-color: #DD2121;
@@ -258,4 +286,17 @@ a:hover > .intro-buttonr {
   background-color: white;
   color: black;
   border: 2px solid black
+}
+.help-task {
+  font-size: 50px;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-color: #07C6D3;
+  text-align: center;
+}
+.latest-posts {
+  text-align: center;
+  color: black;
+  background-color: #FFE928;
+  width: 20%;
 }

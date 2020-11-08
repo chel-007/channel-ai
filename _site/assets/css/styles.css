@@ -100,17 +100,29 @@ footer:hover > div ul li a { text-decoration: none; }
 
 .site-n-privacy { color: white; }
 
-.container-fluid { background-color: #FFE928; width: 100%; height: 20%; text-align: center; padding: 75px 15px; border-top: 2px solid white; }
+.intro-text { background-color: #FFE928; width: 100%; height: 20%; text-align: center; padding: 75px 15px; border-top: 2px solid white; }
+
+.exit-text { background-color: black; width: 100%; height: 20%; text-align: center; padding: 75px 15px; }
+
+.exit-home { text-align: center; font-size: 35px; font-weight: 700; font-family: Rubik; color: white; }
 
 .intro-home { text-align: center; font-size: 60px; font-weight: 700; font-family: Rubik; }
 
 .intro-button { background-color: black; font-size: 19px; color: white; font-weight: 700; padding: 25px; text-align: center; }
+
+.exit-button { background-color: #DD2121; font-size: 17px; color: white; font-weight: 700; padding: 18px; text-align: center; border-radius: 9px; }
+
+a:hover > .exit-button { background-color: white; color: black; border: 1px solid black; }
 
 .intro-buttonr { background-color: #DD2121; font-size: 19px; color: white; font-weight: 700; padding: 25px; text-align: center; }
 
 a:hover > .intro-button { background-color: white; color: black; border: 2px solid black; }
 
 a:hover > .intro-buttonr { background-color: white; color: black; border: 2px solid black; }
+
+.help-task { font-size: 50px; text-decoration: underline; text-underline-position: under; text-decoration-color: #07C6D3; text-align: center; }
+
+.latest-posts { text-align: center; color: black; background-color: #FFE928; width: 20%; }
 
 :root { --blue: #007bff; --indigo: #6610f2; --purple: #6f42c1; --pink: #e83e8c; --red: #dc3545; --orange: #fd7e14; --yellow: #ffc107; --green: #28a745; --teal: #20c997; --cyan: #17a2b8; --white: #fff; --gray: #6c757d; --gray-dark: #343a40; --primary: #007bff; --secondary: #6c757d; --success: #28a745; --info: #17a2b8; --warning: #ffc107; --danger: #dc3545; --light: #f8f9fa; --dark: #343a40; --breakpoint-xs: 0; --breakpoint-sm: 576px; --breakpoint-md: 768px; --breakpoint-lg: 992px; --breakpoint-xl: 1200px; --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
@@ -2270,16 +2282,28 @@ footer:hover > div ul li a { text-decoration: none; }
 
 .site-n-privacy { color: white; }
 
-.container-fluid { background-color: #FFE928; width: 100%; height: 20%; text-align: center; padding: 75px 15px; border-top: 2px solid white; }
+.intro-text { background-color: #FFE928; width: 100%; height: 20%; text-align: center; padding: 75px 15px; border-top: 2px solid white; }
+
+.exit-text { background-color: black; width: 100%; height: 20%; text-align: center; padding: 75px 15px; }
+
+.exit-home { text-align: center; font-size: 35px; font-weight: 700; font-family: Rubik; color: white; }
 
 .intro-home { text-align: center; font-size: 60px; font-weight: 700; font-family: Rubik; }
 
 .intro-button { background-color: black; font-size: 19px; color: white; font-weight: 700; padding: 25px; text-align: center; }
+
+.exit-button { background-color: #DD2121; font-size: 17px; color: white; font-weight: 700; padding: 18px; text-align: center; border-radius: 9px; }
+
+a:hover > .exit-button { background-color: white; color: black; border: 1px solid black; }
 
 .intro-buttonr { background-color: #DD2121; font-size: 19px; color: white; font-weight: 700; padding: 25px; text-align: center; }
 
 a:hover > .intro-button { background-color: white; color: black; border: 2px solid black; }
 
 a:hover > .intro-buttonr { background-color: white; color: black; border: 2px solid black; }
+
+.help-task { font-size: 50px; text-decoration: underline; text-underline-position: under; text-decoration-color: #07C6D3; text-align: center; }
+
+.latest-posts { text-align: center; color: black; background-color: #FFE928; width: 20%; }
 
 /*# sourceMappingURL=styles.css.map */
