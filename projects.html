@@ -1,0 +1,53 @@
+---
+layout: default
+title: Computer Vision / Data Science Projects & Walkthroughs - ChannelAI.com
+---
+<h1 style="font-family: sans-serif; text-align: center; font-weight: 700; background-color: black; padding: 40px; color: white; border-top: 3px solid white;">CV & DS Project List</h1>
+<div class="container">
+  <div class="row">
+  <br>
+  <hr>
+    <div class="col-lg-12 col-sm-12">
+
+      <h4>Below are a list of Computer Vision and Data Science Problems that I have come across and solved. They are well documneted here for beginners to try out along with guidance from solutions I have provided</h4>
+<br>
+        {% for post in site.posts %}
+            {% if post.path contains 'projects' %}
+        <ul style="font-size: 21px; list-style-type: square;">
+        <li>
+          
+          <div class="card  w-100" style="background-color: {{ post.bg }}; color: {{ post.text }}">
+            <div class="card-header">{{ post.phrase-tag }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ post.header }}</h5>
+            <p class="card-text">
+              {{ post.description | strip_html | strip_newlines | truncate: 208 }}
+            </p>
+            <p>{{ post.excerpt }}</p>
+            <p><b>SOURCE: {{ post.source }}</b></p> <p style="text-decoration-line: none;"><b>Solution: <a href="{{ post.solution-link }}">{{ post.solution }}</a></b></p>
+            </div>
+            
+          </div>
+        </li>
+      </ul><br>
+      {% endif %}
+      {% endfor %}
+            <br>
+    </div>
+  </div>
+</div>
+  <p style="clear: both;"></p>
+<p style="background-color: #000000;">ydhyhyds</p>
+<!-- 
+<ul>
+        <li>
+          <div style="margin-right: 5px; margin-top: 5px;" class="shadow-lg p-4 bg-danger rounded">
+            {% for post in site.posts %}
+            {% if post.path contains 'projects' %}
+            <h5>{{ post.description | strip_html | strip_newlines | truncate: 208 }}</h5><br><br>
+
+            <p><b>SOURCE: HackerEarth</b></p> <p class="" style=""><b>Solution: <a href="https:github.com/Chel-Ash">View on Colab</a></b></p>
+            {% endif %}
+            {% endfor %}
+          </div>
+          </li></ul> -->
