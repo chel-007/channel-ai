@@ -1,4 +1,5 @@
 /*! Bootstrap v4.0.0 (https://getbootstrap.com) Copyright 2011-2018 The Bootstrap Authors Copyright 2011-2018 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */
+@import url(custom/native.css);
 .navbar-custom { background-color: black; width: 100%; min-height: 6vh; margin: 0 auto; }
 
 .navbar-custom div ul a { color: white; font-size: 19px; font-family: sans-serif; }
@@ -2305,5 +2306,17 @@ a:hover > .intro-buttonr { background-color: white; color: black; border: 2px so
 .help-task { font-size: 50px; text-decoration: underline; text-underline-position: under; text-decoration-color: #07C6D3; text-align: center; }
 
 .latest-posts { text-align: center; color: black; background-color: #FFE928; width: 20%; }
+
+.highlight pre { padding: 10; background-color: #272822; border: box; border-radius: 5px; max-height: 300px; width: auto; overflow: auto; display: block; margin: 0 0px; white-space: pre-wrap; }
+
+.highlight .table-responsive, .highlight pre, .highlight .table > tbody > tr > td { border: box; border-radius: 5px; }
+
+.highlight .table-responsive { margin-bottom: 0; }
+
+.highlight .table > tbody > tr > td { padding: 8px 8px 0 8px; }
+
+.highlight .lineno { color: white; display: inline-block; padding: 0 5px; border-right: 1px solid #ccc; }
+
+.highlight pre code { display: inline-block; white-space: pre; overflow-x: auto; }
 
 /*# sourceMappingURL=styles.css.map */

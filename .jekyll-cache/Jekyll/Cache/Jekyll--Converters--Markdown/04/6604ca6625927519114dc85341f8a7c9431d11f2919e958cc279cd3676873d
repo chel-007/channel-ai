@@ -1,0 +1,462 @@
+I"@�<p>Have you ever been faced with such a dataset so unclean and irregular, that you feel terrified? 😯. If your answer is NO, you have either been practicing deep learning for over 3 years or you rarely ever practice at all? But jokes aside, we deep learners frequently get faced with rather unclean data that needs tedious amounts of processing to be usable. Several of these problems which we are gonna tackle in this tutorial by solving a machine learning problem in a beginner-friendly way. let’s get started!</p>
+
+<p>In this Tutorial(We Cover the Foll):</p>
+<ul>
+  <li>Real World Structured Data</li>
+  <li>Example Project</li>
+  <li>Dataset Visualization with Sns and Pandas</li>
+  <li>Tackling Nan Values</li>
+  <li>Performing Categorical Embeddings</li>
+  <li>Data Imputation Methods</li>
+  <li>How to select priority features (Feature Selection)</li>
+  <li>Fitting Model</li>
+  <li>Feedback and Summary</li>
+</ul>
+
+<p><strong>NOTE: If at any point in time, you feel confused, make sure to check my Colab notebook and follow along with it so you can see the full transfer of data between data frames</strong>
+<a href="https://colab.research.google.com/drive/1ZqMuTzZpzaTnubjXlfZ49MuAisfXGPpx#scrollTo=4PMMzA96mT6A">Full Notebook Summary</a></p>
+
+<h3 id="structured-data-in-the-real-world">Structured Data in the Real World</h3>
+<p>Structured Data is Data that can be tabulated or visualized in a table format. In machine learning, this term refers to numerical Data also known as Continous Values. Structured Data is logically the opposite of unstructured data, which refers to data that can not be technically tabularized or which has an irregular format, examples are, Images, text and videos data</p>
+
+<blockquote>
+  <p>Structured data conforms to a tabular format with a relationship between the different rows and columns. Common examples of structured data are Excel files or SQL databases.
+— <cite>Big Data Framework<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup></cite></p>
+</blockquote>
+
+<p>In the real world, we gather a lot of structured data, which follows the laws of the real world. When they are collected, no consideration is given to how they can be used for machine learning and collecting insights. An Example: Imagine, a law firm kept the records on all their customers in the year 2019, with information on say, how long the company’s representatives talked on the phone with customers, how much money customers invested for insurance, etc. In a record as this, there are natural data that are not readily convertible for working with. In this case, employing machine learning cleaning methods is the only viable open. Let’s dive into the subject data for this tutorial.</p>
+
+<h3 id="example-project">Example Project</h3>
+<p>The dataset for this tutorial contains two files:</p>
+<ul>
+  <li>train.csv: 6500 X 20</li>
+  <li>test.csv: 3500 X 19</li>
+</ul>
+
+<p>In other words, we have a training data frame with 6500 rows and 20 columns and a testing/evaluating data frame with 3500 rows and 19 columns.</p>
+
+<h6 id="the-task">The task</h6>
+<p>You work for a company that sells sculptures that are acquired from various artists around the world. Your task is to predict the cost required to ship these sculptures to customers based on the information provided in the dataset.
+The data frames contain several columns which depict the features we are working with, and we need to build a model that predicts the last column in the test set(Cost of Sculptures). Let’s Visualize the dataset to see what it looks like.</p>
+
+<h4 id="dataset-visualization-with-sns-and-pandas">Dataset Visualization with Sns and Pandas</h4>
+
+<p>To visualize the dataset, we should load it up, import the necessary packages &amp; modules. I’m working on Colab for this tutorial and the dataset is stored in my drive. To follow along with this guide , download dataset <a href="https://drive.google.com/file/d/12q8kY1MYKpyTMPvk8aNDa-TindyAmsGg/view?usp=sharing">here</a>. Upload the zip file to drive</p>
+<ul>
+  <li>The first thing we need to do is to mount Drive:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="p">.</span><span class="n">mount</span><span class="p">(</span><span class="s">'/content/drive'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<ul>
+  <li>Import necessary packages which we would use throughout the project</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span> 
+<span class="c1"># Use seaborn for pairplot
+</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<ul>
+  <li>Next, let’s import the Zip module and extract the dataset. On this occasion, after having learned how using the alias name ‘zip’ when calling ZipFile class result in errors for later use, I decided to use a different name i.e grab.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">zipfile</span> <span class="kn">import</span> <span class="n">ZipFile</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s">'/path/to/dataset'</span>
+<span class="k">with</span> <span class="n">ZipFile</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">grab</span><span class="p">:</span>
+<span class="n">grab</span><span class="p">.</span><span class="n">extractall</span><span class="p">(</span><span class="s">'/path/'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Done'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<ul>
+  <li>Now with the dataset loaded, we can run some visualizations using pandas and sns. First, let’s take a look at the columns in the train.csv file using pandas to read , draw the head, then quickly check for Nan Values.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="n">raw_dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'/path/to/extracted/csv'</span><span class="p">)</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">raw_dataset</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">dataset</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+<span class="c1"># Checking for nan values
+</span><span class="k">print</span><span class="p">(</span><span class="n">datasetisnull</span><span class="p">().</span><span class="nb">sum</span><span class="p">())</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>In the image below, we can see the total of 20 columns and their features; <strong>Customer ID, Artist Name, Artist Reputation, Width, Height, Width, Material, Price of Sculpture, Base Shipping Price, International, Express Shipment, Installation Included, Transport, Fragile, Customer Information, Remote Location, Scheduled Date, Delivery Date, Customer Location</strong>. We also have a lot of Nan Values amongst our data, this would be tackled after dropping irrelevant columns with string values and over-tedious formats like a date.</p>
+
+<p><img src="" /></p>
+
+<h3 id="tackling-nan-values--irrelevant-features">Tackling Nan Values &amp; Irrelevant features</h3>
+
+<p>Some particular columns contain string values and other formats that are irrelevant in predicting the cost of the artwork.</p>
+
+<p>For this next step, we have two options to consider, should we:</p>
+<ul>
+  <li>Start Categorical Embeddings</li>
+  <li>Or do we first drop columns we wouldn’t need.</li>
+</ul>
+
+<p>Let’s approach this somewhat logically: If we start with the first option, we are likely going to meet with columns that can’t be(or rather, too tedious) to embed. But if we drop them first, we can exclude those absurdly irrelevant features before moving on embedding the relevant portion of columns.</p>
+
+<p>Before Dropping Columns in the training and test set, let’s first pop-out our target column (Cost) and save it. Later we can reference it for fitting our model.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">raw_dataset</span><span class="p">.</span><span class="n">drop</span><span class="p">(</span><span class="s">'Cost'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">raw_dataset</span><span class="p">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">y</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>In the above code block, we separated our cost from the main train data frame and stored it in a new df. On drawing the head though, we can see something strange at work!. The cost consists of both negative and positive values, this won’t do, we want <strong>Only</strong> positive values. As I said earlier real-world data never comes the way you expect. This could just be a wrong entry by a tired cashier or a more acceptable answer perhaps would be that (For all Art Sculptures that were delivered with defects, the company holds the loss?). Anyway, we can easily correct this using the absolute function in pandas. <code class="language-plaintext highlighter-rouge">The absolute of any number is = the **positive of that number**</code></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre><span class="n">train_Y</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="s">'Cost'</span><span class="p">].</span><span class="nb">abs</span><span class="p">()</span>
+<span class="n">train_Y</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>With the above code, our target variable now contains only positive values. Now that’s taken care of, we can proceed to drop special irrelevant columns from our training set</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>  
+<span class="n">X</span> <span class="o">=</span> <span class="n">raw_dataset</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">train</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="n">drop</span><span class="p">([</span><span class="s">'Cost'</span><span class="p">,</span><span class="s">'Customer Id'</span><span class="p">,</span><span class="s">'Artist Name'</span><span class="p">,</span><span class="s">'Delivery Date'</span><span class="p">,</span><span class="s">'Scheduled Date'</span><span class="p">,</span><span class="s">'Customer Location'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Earlier, I checked our columns for nana values. In total it returned about 4000 Nan Values. But in every column we see that nan values are occurring more in some especially (Material, Transport, Remote_Location, Width, Height, etc). For this step, we want to replace nan values in <em>First</em> Columns with more than two classes. Material, Remote_Location, and Transport fit the description, the reason is this, if we embed them we stand a chance of losing the relative relationship in our features. To do this, we are gonna create a simple function that fills Nan values with the highest occurring category in the column. e.g In the Material column, we have 7 classes (Brass, Stone, Aluminium, Bronze, Clay, ). Our function loops through the rows and replaces Nan Values with the highest repeating class.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="code"><pre><span class="c1">#Function to replace NAN values with mode value
+</span><span class="k">def</span> <span class="nf">replace_nan_most_freq</span><span class="p">(</span><span class="n">DataFrame</span><span class="p">,</span><span class="n">ColName</span><span class="p">):</span>
+<span class="n">most_frequent_category</span><span class="o">=</span><span class="n">DataFrame</span><span class="p">[</span><span class="n">ColName</span><span class="p">].</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">replace</span> <span class="n">nan</span> <span class="n">values</span> <span class="k">with</span> <span class="n">most</span> <span class="n">occured</span> <span class="n">category</span>
+<span class="n">DataFrame</span><span class="p">[</span><span class="n">ColName</span> <span class="o">+</span><span class="s">"-Imputed"</span><span class="p">]</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">[</span><span class="n">ColName</span><span class="p">]</span>
+<span class="n">DataFrame</span><span class="p">[</span><span class="n">ColName</span> <span class="o">+</span> <span class="s">"-Imputed"</span><span class="p">].</span><span class="n">fillna</span><span class="p">(</span><span class="n">most_frequent_category</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="c1">#Call function to impute most occured category
+</span><span class="k">for</span> <span class="n">Columns</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'Material'</span><span class="p">,</span> <span class="s">'Remote Location'</span><span class="p">,</span> <span class="s">'Transport'</span><span class="p">]:</span>
+<span class="n">replace_nan_most_freq</span><span class="p">(</span><span class="n">train</span><span class="p">,</span><span class="n">Columns</span><span class="p">)</span>
+<span class="n">replace_nan_most_freq</span><span class="p">(</span><span class="n">test</span><span class="p">,</span><span class="n">Columns</span><span class="p">)</span>
+<span class="c1"># Display imputed result
+</span><span class="n">train</span><span class="p">[[</span><span class="s">'Material'</span><span class="p">,</span><span class="s">'Material-Imputed'</span><span class="p">,</span><span class="s">'Remote Location'</span><span class="p">,</span><span class="s">'Remote Location-Imputed'</span><span class="p">,</span><span class="s">'Transport'</span><span class="p">,</span><span class="s">'Transport-Imputed'</span><span class="p">]].</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">test</span><span class="p">[[</span><span class="s">'Material'</span><span class="p">,</span><span class="s">'Material-Imputed'</span><span class="p">,</span><span class="s">'Remote Location'</span><span class="p">,</span><span class="s">'Remote Location-Imputed'</span><span class="p">,</span><span class="s">'Transport'</span><span class="p">,</span><span class="s">'Transport-Imputed]].head(10)
+#Drop actual columns
+train = train.drop(['</span><span class="n">Material</span><span class="s">', '</span><span class="n">Remote</span> <span class="n">Location</span><span class="s">','</span><span class="n">Transport</span><span class="s">'], axis = 1)
+test = test.drop(['</span><span class="n">Material</span><span class="s">', '</span><span class="n">Remote</span> <span class="n">Location</span><span class="s">','</span><span class="n">Transport</span><span class="s">'], axis = 1)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>With that, if we plot the train and test df, we get the following:
+As you can see Material has been replaced by Material_Imputed, likewise with Transport and Remote Location.;
+<img src="" /></p>
+
+<h3 id="categorical-embeddings">Categorica;l Embeddings</h3>
+
+<p>In categorical Embedding, we want to check for columns with data type of <code class="language-plaintext highlighter-rouge">object</code> and label encode thwm using scikit’s learn lable Encoder.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="c1"># Get list of categorical variables
+</span><span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="n">train</span><span class="p">.</span><span class="n">dtypes</span> <span class="o">==</span> <span class="s">'object'</span><span class="p">)</span>
+<span class="n">object_cols</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">s</span><span class="p">].</span><span class="n">index</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Categorical variables:"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">object_cols</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+
+<span class="c1"># Make copy to avoid changing original data 
+</span><span class="n">label_X_train</span> <span class="o">=</span> <span class="n">train</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">label_X_test</span> <span class="o">=</span> <span class="n">test</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Apply label encoder to each column with categorical data
+</span><span class="n">label_encoder</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">object_cols</span><span class="p">:</span>
+    <span class="n">label_X_train</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">label_encoder</span><span class="p">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="n">col</span><span class="p">])</span>
+    <span class="n">label_X_test</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">label_encoder</span><span class="p">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="n">col</span><span class="p">])</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>With that, plotting the head gives us this: 
+<img src="" /></p>
+
+<p>All category columns have been lav\bel encoded to numerical values. The last setp is to fill up the remaining columns that still contain Nan Values like Width, Height, Weight. Because , if you can remeber, we only replaced the category nan values above. The code below uses sklearn’s Simple Impueter method.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="c1"># Imputation
+</span><span class="n">my_imputer</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">()</span>
+<span class="n">imputed_X_train</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">my_imputer</span><span class="p">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">label_X_train</span><span class="p">))</span>
+<span class="n">imputed_X_test</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">my_imputer</span><span class="p">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">label_X_test</span><span class="p">))</span>
+<span class="c1"># Imputation removed column names; put them back
+</span><span class="n">imputed_X_train</span><span class="p">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">train</span><span class="p">.</span><span class="n">columns</span>
+<span class="n">imputed_X_test</span><span class="p">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">test</span><span class="p">.</span><span class="n">columns</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Now if we check for Nan values, it retrurns zero across all columns.</p>
+
+<h3 id="feature-selection">Feature Selection</h3>
+
+<p>With that taken care of, we can now start doing some feature selection and deciding which columns are of no use to us. A lot of logical thinking is important as this is a real-world problem and real-world insight is required.</p>
+
+<p><strong>NOTE: Any column we decide to drop must be reflected in the test set. Likewise any prepossesing step we take. As this data(test set) is what we would be making predictions on, and inconsistent columns would result in errors.</strong></p>
+
+<h2 id="how-to-select-proirity-features-methods-you-can-use">How to select Proirity Features (Methods you can use)</h2>
+<p>When faced with a feature selection problem in deppe learning and machine learning, there are a number of methods you can apply to arrive at better features during training, therefore, better model’s accuracy.</p>
+
+<p>We have <em>now</em> 19 columns in our training set after dropping Cost.</p>
+
+<h4 id="description-of-variables-in-the-above-file">Description of variables in the above file</h4>
+
+<ul>
+  <li>
+    <p><strong>Customer ID</strong>: A set of unique values associated with every customer (This adds absolutely nothing of value)</p>
+  </li>
+  <li><strong>Artist Name</strong>: The name of the Artist who created the artwork</li>
+  <li><strong>Artist Reputation</strong>: A float value important for understanding how expensive an art would be</li>
+  <li><strong>Weight</strong>: How heavy an Artwork is, but as humans we know that an heavier artwork dosn’t necessarily mean more expensive. But still a great judge of worth.</li>
+  <li><strong>Width</strong>: Width of Artwork</li>
+  <li><strong>Height</strong>: height of SArtwork</li>
+  <li><strong>Material</strong>: A very important feature</li>
+  <li><strong>Base Shipping Price</strong>: The original cost for shipping an artwork from one location to another. It varies (Important)</li>
+  <li><strong>International</strong>: Geographic location of a customer. Across borders means extra customs cost (Important)</li>
+  <li><strong>Express Shipment</strong>: Valuie depicting if a Customer requested for express shipment (Important)</li>
+  <li><strong>Installation Included</strong>: Should artwork be installed along with delievery? (Important)</li>
+  <li><strong>Fragile</strong>: How fragile the artwork is. Just like weight, more fragile doesn’t mean more expensive. It’s a shaky yet important feature (Stable)</li>
+  <li><strong>Transport</strong>: What means of transportation is used to deliver Art work. Airplanes generally cost more (Important)</li>
+  <li><strong>Remote Location</strong>: What kind of Environment Customer recides. The lesser accessible the more cost it takes?. This feature is a little bit unspecific because it could easily be the other way round. A poorer customer is less likely to pay more. (Stable)</li>
+  <li><strong>Customer Information</strong>: How finacially stable is the purshaser. More means more likely to give tips, request installations, quicker delievery etc. (Important)</li>
+  <li><strong>Customer Location</strong>: Where customer resides. A bunch of specific locations that would be too tedious to embed. Also Remote Location gathers a similar Information (Redundant)</li>
+  <li><strong>Delievery Date</strong>: Date purchaser ordered for ar work to be delievered. A good <strong>BUT</strong> redundant feature. features like express shipment and installations are better judges of how quickly customer wants artwork (Redundant)</li>
+  <li><strong>Scheduled Date</strong>: Same as Delievery Date (Redundant)</li>
+</ul>
+
+<p>The above can be achieved with a little logical deductions and insights, but as you can see, there  are still some uncertainities. By using methods, tests and libraries we have better ground to decide.</p>
+
+<ol>
+  <li>
+    <h3>Univariate Selection</h3>
+    <p>Statistical tests can be used to select those features that have the strongest relationship with the output variable.
+The scikit-learn library provides the SelectKBest class that can be used with a suite of different statistical tests to select a specific number of features.
+The example below uses the f_classif statistical test for positive numerical features to select 10 of the best features from the Art Exhibition Dataset. Some of the feature columns must be dropped before you can use this method: Those that are string values e.g Customer Id and Artist Name.</p>
+  </li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre><span class="c1">#apply SelectKBest class to extract top 10 best features
+</span><span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">SelectKBest</span><span class="p">,</span> <span class="n">f_classif</span>
+<span class="n">bestfeatures</span> <span class="o">=</span> <span class="n">SelectKBest</span><span class="p">(</span><span class="n">score_func</span><span class="o">=</span><span class="n">f_classif</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">fit</span> <span class="o">=</span> <span class="n">bestfeatures</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_final</span><span class="p">,</span><span class="n">train_Y</span><span class="p">)</span>
+<span class="n">dfscores</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">fit</span><span class="p">.</span><span class="n">scores_</span><span class="p">)</span>
+<span class="n">dfcolumns</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x_final</span><span class="p">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="c1">#concat two dataframes for better visualization 
+</span><span class="n">featureScores</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">concat</span><span class="p">([</span><span class="n">dfcolumns</span><span class="p">,</span><span class="n">dfscores</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">featureScores</span><span class="p">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Specs'</span><span class="p">,</span><span class="s">'Score'</span><span class="p">]</span>  <span class="c1">#naming the dataframe columns
+</span><span class="k">print</span><span class="p">(</span><span class="n">featureScores</span><span class="p">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s">'Score'</span><span class="p">))</span>  <span class="c1">#print 10 best features</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>The top ten best features is displayed below helping us get rid of uncertainities like <code class="language-plaintext highlighter-rouge">Fragile</code> column.</p>
+
+<p><img src="" /></p>
+
+<ol>
+  <li>
+    <h3>Feature Importance</h3>
+    <p>You can get the feature importance of each feature of your dataset by using the feature importance property of the model.
+Feature importance gives you a score for each feature of your data, the higher the score, the more important or relevant is the feature towards your output variable.
+Feature importance is an inbuilt class that comes with Tree Based Classifiers, we will be using Extra Tree Regressor for extracting the top 10 features for the dataset.</p>
+  </li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">ExtraTreesRegressor</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">ExtraTreesRegressor</span><span class="p">()</span>
+<span class="n">model</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_final</span><span class="p">,</span><span class="n">train_Y</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">feature_importances_</span><span class="p">)</span> <span class="c1">#use inbuilt class feature_importances of tree based classifiers
+#plot graph of feature importances for better visualization
+</span><span class="n">feat_importances</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">Series</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">feature_importances_</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">x_final</span><span class="p">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">feat_importances</span><span class="p">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">10</span><span class="p">).</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">'barh'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><img src="" /></p>
+
+<p>Again, we see that some certain feature columns are among top 10 using this selction method. We now know those very important features we shoule target when we limit the traininh fetyres to say, 10.</p>
+
+<ol>
+  <li>
+    <h3>Correlation Matrix with Heatmap</h3>
+    <p>Correlation states how the features are related to each other or the target variable.
+Correlation can be positive (increase in one value of feature increases the value of the target variable) or negative (increase in one value of feature decreases the value of the target variable)
+Heatmap makes it easy to identify which features are most related to the target variable, we will plot heatmap of correlated features using the seaborn library.</p>
+  </li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="c1">#get correlations of each features in dataset
+</span><span class="n">corrmat</span> <span class="o">=</span> <span class="n">raw_dataset</span><span class="p">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="n">top_corr_features</span> <span class="o">=</span> <span class="n">corrmat</span><span class="p">.</span><span class="n">index</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+<span class="c1">#plot heat map
+</span><span class="n">g</span><span class="o">=</span><span class="n">sns</span><span class="p">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">raw_dataset</span><span class="p">[</span><span class="n">top_corr_features</span><span class="p">].</span><span class="n">corr</span><span class="p">(),</span><span class="n">annot</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s">"RdYlGn"</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><img src="" /></p>
+
+<p>Now, we are talking. Let’s make a round up of the 11 features we want to use for training, by selecting those occuring the most after feature selection methods above.</p>
+
+<h3 id="ten-best-features-to-use">Ten Best Features to Use</h3>
+<ol>
+  <li>Price of Sculpture</li>
+  <li>weight</li>
+  <li>Artist reputation</li>
+  <li>Base Shipping Price</li>
+  <li>Width</li>
+  <li>Height</li>
+  <li>Express Shipment</li>
+  <li>International</li>
+  <li>Transport_Imputed</li>
+  <li>material_Imputed</li>
+  <li>Customer Information.</li>
+</ol>
+
+<h3 id="fitting-the-model">Fitting the Model</h3>
+
+<p>We would quickly drop the remaining columns while leaving the above, and Finally, proceed with scaling our data &amp; fitting our model with sklearn StandardScaler and Random Forest Regressor respectively.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre><span class="n">x_train</span> <span class="o">=</span> <span class="n">imputed_X_train</span><span class="p">.</span><span class="n">drop</span><span class="p">([</span><span class="s">'Fragile'</span><span class="p">,</span><span class="s">'Remote Location'</span><span class="p">,</span><span class="s">'Installation Included'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">x_test</span> <span class="o">=</span> <span class="n">imputed_X_test</span><span class="p">.</span><span class="n">drop</span><span class="p">([</span><span class="s">'Fragile'</span><span class="p">,</span><span class="s">'Remote Location'</span><span class="p">,</span><span class="s">'Installation Included'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">sklearn</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">sklearn</span><span class="p">.</span><span class="n">preprocessing</span><span class="p">.</span><span class="n">StandardScaler</span><span class="p">()</span>
+
+<span class="n">x_train</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scaler</span><span class="p">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">imputed_X_train</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="n">imputed_X_train</span><span class="p">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">x_test</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scaler</span><span class="p">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">imputed_X_test</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="n">imputed_X_test</span><span class="p">.</span><span class="n">columns</span><span class="p">)</span><span class="n">Location</span><span class="s">','</span><span class="n">Installation</span> <span class="n">Included</span><span class="s">'], axis=1)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="c1">#Import Random Forest Model
+</span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+
+<span class="c1">#Create a Gaussian Classifier
+</span><span class="n">rgf</span><span class="o">=</span><span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1">#Train the model using the training sets y_pred=clf.predict(X_test)
+</span><span class="n">rgf</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="n">train_Y</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Last But not least, we need to evaluate our model on the test set, prepare it and arrange it in a new dataframe with two columns Customer Id and Cost.</p>
+
+<p>And now this is how the final model looks like. You can download the .csv file <a href="">here</a>.</p>
+
+<h3 id="feedback-and-summary">Feedback and Summary</h3>
+<p>We have had fun with this project, cleaning, visualizing, dropping, performing feature engineering, and learning how to use the sklearn library for Machine Learning work. It’s a comprehensive guide where I decided to tackle problems to show you how you can solve similar problems. Naturally, you have questions to ask, and I’m only happy to see you ask them. The comments box below is available for your chats. Thanks for reading this article, I hoped it has achieved its purpose of guiding you through the concept of feature selection engineering in deep learning, Chel.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>The above quote is a definition extracted from Big Data Framework’s <a href="https://www.bigdataframework.org/data-types-structured-vs-unstructured-data/">article</a> written on January 9th, 2019. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

@@ -1,4 +1,464 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-14T13:54:42+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Convolutional Neural Networks Vs Recurrent Neural Networks(An Intuitive Guide for every Deep Learning Practitioner)</title><link href="http://localhost:4000/cnn-and-rnn-simplified/" rel="alternate" type="text/html" title="Convolutional Neural Networks Vs Recurrent Neural Networks(An Intuitive Guide for every Deep Learning Practitioner)" /><published>2020-10-14T00:00:00+01:00</published><updated>2020-10-14T00:00:00+01:00</updated><id>http://localhost:4000/cnn%20and%20rnn%20simplified</id><content type="html" xml:base="http://localhost:4000/cnn-and-rnn-simplified/">&lt;p&gt;Have you been feeling frustared about the complexity of deep learning terms like Convolutional Neural networks and Recurrent NNs?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-03-06T14:37:31+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Beginners Guide to Feature Selection and Categorical Embeddings with Project on Unclean Structured Data</title><link href="http://localhost:4000/feature-selection-on-categorical-structured-data/" rel="alternate" type="text/html" title="Beginners Guide to Feature Selection and Categorical Embeddings with Project on Unclean Structured Data" /><published>2021-03-04T00:00:00+01:00</published><updated>2021-03-04T00:00:00+01:00</updated><id>http://localhost:4000/feature%20selection%20on%20categorical%20structured%20data</id><content type="html" xml:base="http://localhost:4000/feature-selection-on-categorical-structured-data/">&lt;p&gt;Have you ever been faced with such a dataset so unclean and irregular, that you feel terrified? 😯. If your answer is NO, you have either been practicing deep learning for over 3 years or you rarely ever practice at all? But jokes aside, we deep learners frequently get faced with rather unclean data that needs tedious amounts of processing to be usable. Several of these problems which we are gonna tackle in this tutorial by solving a machine learning problem in a beginner-friendly way. let’s get started!&lt;/p&gt;
+
+&lt;p&gt;In this Tutorial(We Cover the Foll):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Real World Structured Data&lt;/li&gt;
+  &lt;li&gt;Example Project&lt;/li&gt;
+  &lt;li&gt;Dataset Visualization with Sns and Pandas&lt;/li&gt;
+  &lt;li&gt;Tackling Nan Values&lt;/li&gt;
+  &lt;li&gt;Performing Categorical Embeddings&lt;/li&gt;
+  &lt;li&gt;Data Imputation Methods&lt;/li&gt;
+  &lt;li&gt;How to select priority features (Feature Selection)&lt;/li&gt;
+  &lt;li&gt;Fitting Model&lt;/li&gt;
+  &lt;li&gt;Feedback and Summary&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;NOTE: If at any point in time, you feel confused, make sure to check my Colab notebook and follow along with it so you can see the full transfer of data between data frames&lt;/strong&gt;
+&lt;a href=&quot;https://colab.research.google.com/drive/1ZqMuTzZpzaTnubjXlfZ49MuAisfXGPpx#scrollTo=4PMMzA96mT6A&quot;&gt;Full Notebook Summary&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;structured-data-in-the-real-world&quot;&gt;Structured Data in the Real World&lt;/h3&gt;
+&lt;p&gt;Structured Data is Data that can be tabulated or visualized in a table format. In machine learning, this term refers to numerical Data also known as Continous Values. Structured Data is logically the opposite of unstructured data, which refers to data that can not be technically tabularized or which has an irregular format, examples are, Images, text and videos data&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Structured data conforms to a tabular format with a relationship between the different rows and columns. Common examples of structured data are Excel files or SQL databases.
+— &lt;cite&gt;Big Data Framework&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In the real world, we gather a lot of structured data, which follows the laws of the real world. When they are collected, no consideration is given to how they can be used for machine learning and collecting insights. An Example: Imagine, a law firm kept the records on all their customers in the year 2019, with information on say, how long the company’s representatives talked on the phone with customers, how much money customers invested for insurance, etc. In a record as this, there are natural data that are not readily convertible for working with. In this case, employing machine learning cleaning methods is the only viable open. Let’s dive into the subject data for this tutorial.&lt;/p&gt;
+
+&lt;h3 id=&quot;example-project&quot;&gt;Example Project&lt;/h3&gt;
+&lt;p&gt;The dataset for this tutorial contains two files:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;train.csv: 6500 X 20&lt;/li&gt;
+  &lt;li&gt;test.csv: 3500 X 19&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In other words, we have a training data frame with 6500 rows and 20 columns and a testing/evaluating data frame with 3500 rows and 19 columns.&lt;/p&gt;
+
+&lt;h6 id=&quot;the-task&quot;&gt;The task&lt;/h6&gt;
+&lt;p&gt;You work for a company that sells sculptures that are acquired from various artists around the world. Your task is to predict the cost required to ship these sculptures to customers based on the information provided in the dataset.
+The data frames contain several columns which depict the features we are working with, and we need to build a model that predicts the last column in the test set(Cost of Sculptures). Let’s Visualize the dataset to see what it looks like.&lt;/p&gt;
+
+&lt;h4 id=&quot;dataset-visualization-with-sns-and-pandas&quot;&gt;Dataset Visualization with Sns and Pandas&lt;/h4&gt;
+
+&lt;p&gt;To visualize the dataset, we should load it up, import the necessary packages &amp;amp; modules. I’m working on Colab for this tutorial and the dataset is stored in my drive. To follow along with this guide , download dataset &lt;a href=&quot;https://drive.google.com/file/d/12q8kY1MYKpyTMPvk8aNDa-TindyAmsGg/view?usp=sharing&quot;&gt;here&lt;/a&gt;. Upload the zip file to drive&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The first thing we need to do is to mount Drive:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;google.colab&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;drive&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;drive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'/content/drive'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Import necessary packages which we would use throughout the project&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;random&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tensorflow&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt; 
+&lt;span class=&quot;c1&quot;&gt;# Use seaborn for pairplot
+&lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;seaborn&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sns&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Next, let’s import the Zip module and extract the dataset. On this occasion, after having learned how using the alias name ‘zip’ when calling ZipFile class result in errors for later use, I decided to use a different name i.e grab.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;zipfile&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ZipFile&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;file_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'/path/to/dataset'&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ZipFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;grab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extractall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'/path/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Done'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Now with the dataset loaded, we can run some visualizations using pandas and sns. First, let’s take a look at the columns in the train.csv file using pandas to read , draw the head, then quickly check for Nan Values.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;raw_dataset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'/path/to/extracted/csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raw_dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Checking for nan values
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datasetisnull&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In the image below, we can see the total of 20 columns and their features; &lt;strong&gt;Customer ID, Artist Name, Artist Reputation, Width, Height, Width, Material, Price of Sculpture, Base Shipping Price, International, Express Shipment, Installation Included, Transport, Fragile, Customer Information, Remote Location, Scheduled Date, Delivery Date, Customer Location&lt;/strong&gt;. We also have a lot of Nan Values amongst our data, this would be tackled after dropping irrelevant columns with string values and over-tedious formats like a date.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tackling-nan-values--irrelevant-features&quot;&gt;Tackling Nan Values &amp;amp; Irrelevant features&lt;/h3&gt;
+
+&lt;p&gt;Some particular columns contain string values and other formats that are irrelevant in predicting the cost of the artwork.&lt;/p&gt;
+
+&lt;p&gt;For this next step, we have two options to consider, should we:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Start Categorical Embeddings&lt;/li&gt;
+  &lt;li&gt;Or do we first drop columns we wouldn’t need.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let’s approach this somewhat logically: If we start with the first option, we are likely going to meet with columns that can’t be(or rather, too tedious) to embed. But if we drop them first, we can exclude those absurdly irrelevant features before moving on embedding the relevant portion of columns.&lt;/p&gt;
+
+&lt;p&gt;Before Dropping Columns in the training and test set, let’s first pop-out our target column (Cost) and save it. Later we can reference it for fitting our model.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raw_dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Cost'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raw_dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In the above code block, we separated our cost from the main train data frame and stored it in a new df. On drawing the head though, we can see something strange at work!. The cost consists of both negative and positive values, this won’t do, we want &lt;strong&gt;Only&lt;/strong&gt; positive values. As I said earlier real-world data never comes the way you expect. This could just be a wrong entry by a tired cashier or a more acceptable answer perhaps would be that (For all Art Sculptures that were delivered with defects, the company holds the loss?). Anyway, we can easily correct this using the absolute function in pandas. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;The absolute of any number is = the **positive of that number**&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;train_Y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Cost'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;train_Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;With the above code, our target variable now contains only positive values. Now that’s taken care of, we can proceed to drop special irrelevant columns from our training set&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;  
+&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raw_dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Cost'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Customer Id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Artist Name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Delivery Date'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Scheduled Date'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Customer Location'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Earlier, I checked our columns for nana values. In total it returned about 4000 Nan Values. But in every column we see that nan values are occurring more in some especially (Material, Transport, Remote_Location, Width, Height, etc). For this step, we want to replace nan values in &lt;em&gt;First&lt;/em&gt; Columns with more than two classes. Material, Remote_Location, and Transport fit the description, the reason is this, if we embed them we stand a chance of losing the relative relationship in our features. To do this, we are gonna create a simple function that fills Nan values with the highest occurring category in the column. e.g In the Material column, we have 7 classes (Brass, Stone, Aluminium, Bronze, Clay, ). Our function loops through the rows and replaces Nan Values with the highest repeating class.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;#Function to replace NAN values with mode value
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;replace_nan_most_freq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ColName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;most_frequent_category&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ColName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nan&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;most&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;occured&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ColName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;-Imputed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ColName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ColName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;-Imputed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fillna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;most_frequent_category&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inplace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#Call function to impute most occured category
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Columns&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Material'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Remote Location'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Transport'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;replace_nan_most_freq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;replace_nan_most_freq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Display imputed result
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Material'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Material-Imputed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Remote Location'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Remote Location-Imputed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Transport'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Transport-Imputed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Material'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Material-Imputed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Remote Location'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Remote Location-Imputed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Transport'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Transport-Imputed]].head(10)
+#Drop actual columns
+train = train.drop(['&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Material&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;', '&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Remote&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Location&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Transport&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'], axis = 1)
+test = test.drop(['&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Material&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;', '&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Remote&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Location&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Transport&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'], axis = 1)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;With that, if we plot the train and test df, we get the following:
+As you can see Material has been replaced by Material_Imputed, likewise with Transport and Remote Location.;
+&lt;img src=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;categorical-embeddings&quot;&gt;Categorical Embeddings&lt;/h3&gt;
+
+&lt;p&gt;In categorical Embedding, we want to check for columns with a data type of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;object&lt;/code&gt; and label encode them using scikit’s learn Label Encoder.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;# Get list of categorical variables
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtypes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'object'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;object_cols&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Categorical variables:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;object_cols&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.preprocessing&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LabelEncoder&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Make copy to avoid changing original data 
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label_X_train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;label_X_test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Apply label encoder to each column with categorical data
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label_encoder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LabelEncoder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;object_cols&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;label_X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label_encoder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit_transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;label_X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label_encoder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit_transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;With that, plotting the head gives us this: 
+&lt;img src=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All category columns have been lav\bel encoded to numerical values. The last step is to fill up the remaining columns that still contain Nan Values like Width, Height, Weight. Because, if you can remember, we only replaced the category nan values above. The code below uses sklearn’s Simple Impueter method.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.impute&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SimpleImputer&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Imputation
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_imputer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SimpleImputer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;imputed_X_train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_imputer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit_transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label_X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;imputed_X_test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_imputer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit_transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label_X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Imputation removed column names; put them back
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imputed_X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;imputed_X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now if we check for Nan values, it returns zero across all columns.&lt;/p&gt;
+
+&lt;h3 id=&quot;feature-selection&quot;&gt;Feature Selection&lt;/h3&gt;
+
+&lt;p&gt;With that taken care of, we can now start doing some feature selection and deciding which columns are of no use to us. A lot of logical thinking is important as this is a real-world problem and real-world insight is required.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NOTE: Any column we decide to drop must be reflected in the test set. Likewise, any preprocessing step we take. As this data(test set) is what we would be making predictions on, and inconsistent columns would result in errors.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-select-priority-features-methods-you-can-use&quot;&gt;How to select Priority Features (Methods you can use)&lt;/h2&gt;
+&lt;p&gt;When faced with a feature selection problem in deep learning and machine learning, there are several methods you can apply to arrive at better features during training, therefore, better model accuracy.&lt;/p&gt;
+
+&lt;p&gt;We have &lt;em&gt;now&lt;/em&gt; 19 columns in our training set after dropping Cost.&lt;/p&gt;
+
+&lt;h4 id=&quot;description-of-variables-in-the-above-file&quot;&gt;Description of variables in the above file&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Customer ID&lt;/strong&gt;: A set of unique values associated with every customer (This adds absolutely nothing of value)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Artist Name&lt;/strong&gt;: The name of the Artist who created the artwork&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Artist Reputation&lt;/strong&gt;: A float value important for understanding how expensive an art would be&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Weight&lt;/strong&gt;: How heavy an Artwork is, but as humans, we know that heavier artwork doesn’t necessarily mean more expensive. But still a great judge of worth.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Width&lt;/strong&gt;: Width of Artwork&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Height&lt;/strong&gt;: height of the artwork&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Material&lt;/strong&gt;: A very important feature&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Base Shipping Price&lt;/strong&gt;: The original cost for shipping artwork from one location to another. It varies (Important)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;International&lt;/strong&gt;: Geographic location of a customer. Across borders means extra customs cost (Important)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Express Shipment&lt;/strong&gt;: Value depicting if a Customer requested for express shipment (Important)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Installation Included&lt;/strong&gt;: Should artwork be installed along with delivery? (Important)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Fragile&lt;/strong&gt;: How fragile the artwork is. Just like weight, more fragile doesn’t mean more expensive. It’s a shaky yet important feature (Stable)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Transport&lt;/strong&gt;: What means of transportation is used to deliver Artwork. Airplanes generally cost more (Important)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Remote Location&lt;/strong&gt;: What kind of Environment Customer resides. The lesser accessible the more cost it takes?. This feature is a little bit unspecific because it could easily be the other way round. A poorer customer is less likely to pay more. (Stable)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Customer Information&lt;/strong&gt;: How financially stable is the purchaser. More means more likely to give tips, request installations, quicker delivery, etc. (Important)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Customer Location&lt;/strong&gt;: Where a customer resides. A bunch of specific locations that would be too tedious to embed. Also, Remote Location gathers similar Information (Redundant)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Delivery Date&lt;/strong&gt;: Date purchaser ordered for ar work to be delivered. A good &lt;strong&gt;BUT&lt;/strong&gt; redundant feature. features like express shipment and installations are better judges of how quickly customer wants artwork (Redundant)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Scheduled Date&lt;/strong&gt;: Same as Delivery Date (Redundant)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The above can be achieved with little logical deductions and insights, but as you can see, there are still some uncertainties. By using methods, tests, and libraries we have a better ground to decide.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h3&gt;Univariate Selection&lt;/h3&gt;
+    &lt;p&gt;Statistical tests can be used to select those features that have the strongest relationship with the output variable.
+The scikit-learn library provides the SelectKBest class that can be used with a suite of different statistical tests to select a specific number of features.
+The example below uses the f_classif statistical test for positive numerical features to select 10 of the best features from the Art Exhibition Dataset. Some of the feature columns must be dropped before you can use this method: Those that are string values e.g Customer Id and Artist Name.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;#apply SelectKBest class to extract top 10 best features
+&lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.feature_selection&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SelectKBest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f_classif&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;bestfeatures&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SelectKBest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;score_func&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f_classif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bestfeatures&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_final&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dfscores&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scores_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dfcolumns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_final&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#concat two dataframes for better visualization 
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;featureScores&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dfcolumns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dfscores&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;featureScores&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Specs'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Score'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;#naming the dataframe columns
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;featureScores&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nlargest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Score'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;#print 10 best features&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The top ten best features are displayed below helping us get rid of uncertainties like the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Fragile&lt;/code&gt; column.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h3&gt;Feature Importance&lt;/h3&gt;
+    &lt;p&gt;You can get the feature importance of each feature of your dataset by using the feature importance property of the model.
+Feature importance gives you a score for each feature of your data, the higher the score, the more important or relevant is the feature towards your output variable.
+Feature importance is an inbuilt class that comes with Tree-Based Classifiers, we will be using Extra Tree Regressor for extracting the top 10 features for the dataset.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.ensemble&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ExtraTreesRegressor&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ExtraTreesRegressor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_final&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feature_importances_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#use inbuilt class feature_importances of tree based classifiers
+#plot graph of feature importances for better visualization
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feat_importances&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Series&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feature_importances_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_final&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;feat_importances&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nlargest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'barh'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Again, we see that some certain feature columns are among the top 10 using this selection method. We now know those very important features we should target when we limit the training features to say, 10.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h3&gt;Correlation Matrix with Heatmap&lt;/h3&gt;
+    &lt;p&gt;Correlation states how the features are related to each other or the target variable.
+Correlation can be positive (increase in one value of feature increases the value of the target variable) or negative (increase in one value of feature decreases the value of the target variable)
+Heatmap makes it easy to identify which features are most related to the target variable, we will plot a heatmap of correlated features using the seaborn library.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;#get correlations of each features in dataset
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;corrmat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raw_dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;corr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;top_corr_features&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;corrmat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;figure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;figsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#plot heat map
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;heatmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raw_dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;top_corr_features&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;corr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;annot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cmap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;RdYlGn&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, we are talking. Let’s make a round-up of the 11 features we want to use for training, by selecting those occurring the most after the feature selection methods above.&lt;/p&gt;
+
+&lt;h3 id=&quot;ten-best-features-to-use&quot;&gt;Ten Best Features to Use&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Price of Sculpture&lt;/li&gt;
+  &lt;li&gt;weight&lt;/li&gt;
+  &lt;li&gt;Artist reputation&lt;/li&gt;
+  &lt;li&gt;Base Shipping Price&lt;/li&gt;
+  &lt;li&gt;Width&lt;/li&gt;
+  &lt;li&gt;Height&lt;/li&gt;
+  &lt;li&gt;Express Shipment&lt;/li&gt;
+  &lt;li&gt;International&lt;/li&gt;
+  &lt;li&gt;Transport_Imputed&lt;/li&gt;
+  &lt;li&gt;material_Imputed&lt;/li&gt;
+  &lt;li&gt;Customer Information.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;fitting-the-model&quot;&gt;Fitting the Model&lt;/h3&gt;
+
+&lt;p&gt;We would quickly drop the remaining columns while leaving the above, and Finally, proceed with scaling our data &amp;amp; fitting our model with sklearn StandardScaler and Random Forest Regressor respectively.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imputed_X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Fragile'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Remote Location'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Installation Included'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x_test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imputed_X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Fragile'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Remote Location'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Installation Included'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;scaler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sklearn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;preprocessing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StandardScaler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scaler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit_transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imputed_X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imputed_X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x_test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scaler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit_transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imputed_X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imputed_X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Location&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Installation&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Included&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'], axis=1)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;#Import Random Forest Model
+&lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.ensemble&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RandomForestRegressor&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;#Create a Gaussian Classifier
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rgf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RandomForestRegressor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n_estimators&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;#Train the model using the training sets y_pred=clf.predict(X_test)
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rgf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Last But not least, we need to evaluate our model on the test set, prepare it and arrange it in a new data frame with two columns Customer Id and Cost.&lt;/p&gt;
+
+&lt;p&gt;And now this is how the final model looks like. You can download the .csv file &lt;a href=&quot;&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;feedback-and-summary&quot;&gt;Feedback and Summary&lt;/h3&gt;
+&lt;p&gt;We have had fun with this project, cleaning, visualizing, dropping, performing feature engineering, and learning how to use the sklearn library for Machine Learning work. It’s a comprehensive guide where I decided to tackle problems to show you how you can solve similar problems. Naturally, you have questions to ask, and I’m only happy to see you ask them. The comments box below is available for your chats. Thanks for reading this article, I hoped it has achieved its purpose of guiding you through the concept of feature selection engineering in deep learning, Chel.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;The above quote is a definition extracted from Big Data Framework’s &lt;a href=&quot;https://www.bigdataframework.org/data-types-structured-vs-unstructured-data/&quot;&gt;article&lt;/a&gt; written on January 9th, 2019. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Chel</name></author><summary type="html">Have you ever been faced with such a dataset so unclean and irregular, that you feel terrified? 😯. If your answer is NO, you have either been practicing deep learning for over 3 years or you rarely ever practice at all? But jokes aside, we deep learners frequently get faced with rather unclean data that needs tedious amounts of processing to be usable. Several of these problems which we are gonna tackle in this tutorial by solving a machine learning problem in a beginner-friendly way. let’s get started!</summary></entry><entry><title type="html">Convolutional Neural Networks Vs Recurrent Neural Networks(An Intuitive Guide for every Deep Learning Practitioner)</title><link href="http://localhost:4000/cnn-and-rnn-simplified/" rel="alternate" type="text/html" title="Convolutional Neural Networks Vs Recurrent Neural Networks(An Intuitive Guide for every Deep Learning Practitioner)" /><published>2020-10-14T00:00:00+01:00</published><updated>2020-10-14T00:00:00+01:00</updated><id>http://localhost:4000/cnn%20and%20rnn%20simplified</id><content type="html" xml:base="http://localhost:4000/cnn-and-rnn-simplified/">&lt;p&gt;Have you been feeling frustared about the complexity of deep learning terms like Convolutional Neural networks and Recurrent NNs?&lt;/p&gt;
 
 &lt;p&gt;You have read countless articles with your goal in mind being to grasp and understand it finally - but it still doesn’t click?&lt;/p&gt;
 
@@ -1639,84 +2099,4 @@ print(&quot;Fifth most likely class:&quot;, number_to_class[index[5]], &quot;-- 
 
 &lt;p&gt;Test out different images to see how well the model you built classifies them.&lt;/p&gt;
 
-&lt;p&gt;In the part 2 of this article, let’s look at how to Improve significantly our built model’s accuracy by Introducing some new concepts that would prevent over-fitting and slow down convergence. &lt;a href=&quot;&quot;&gt;Next Article: Improving your Tensorflow Model with Dropouts and Batch Normalization&lt;/a&gt;&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">In this tutorial, you would learn how to build an Image Classification Model using Tensorflow on Google Colab. This tutorial is the first among three set. They go from buiding an Image Classifier to Improving accuracy in your model and finally Serving it for production through an API url Endpoint. To start off, here is the overview of all what we would be touching on.</summary></entry><entry><title type="html">Introduction to Generative Models and GANs - What are GANs?</title><link href="http://localhost:4000/introduction-to-generative-adversarial-netowrks/" rel="alternate" type="text/html" title="Introduction to Generative Models and GANs - What are GANs?" /><published>2020-06-22T00:00:00+01:00</published><updated>2020-06-22T00:00:00+01:00</updated><id>http://localhost:4000/introduction%20to%20generative%20adversarial%20netowrks</id><content type="html" xml:base="http://localhost:4000/introduction-to-generative-adversarial-netowrks/">&lt;h3&gt;Overview&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Generative Models and GANs - This article will give a simplified intoduction to GANs that you can fully grasp without prior knowledge of the basics&lt;/li&gt;
-  &lt;li&gt;This article will explain briefly the structure of GANs, what they achieve and how they are trained&lt;/li&gt;
-  &lt;li&gt;Some Intruiging-real world applications of GANs awaits you– Let’s begin!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Introduction&lt;/h3&gt;
-
-&lt;p&gt;I first heard about GANs not quite long ago, as it is, I’m relatively a new-comer to the field. I came across it first while scrolling a filtered results for Computer Vision on Analytics Vidyha website. The title of the article was actually what made me click it “Generative Models: The Magic of Computer Vision”. I started reading this article and I was nothing short of amazed-completely, you know, I never knew something like what I read and saw was possible at this time, but well, it actually isn’t even &lt;em&gt;that&lt;/em&gt; new. If you are somewhat just hearing it for the first time, try and be amazed by this.&lt;/p&gt;
-
-&lt;p&gt;Can you guess where the below collection of images came from:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;../assets\images\Blog\Blog-img\Gans2.webp&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;How about these ones:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;../assets\images\Blog\Blog-img\Gans3.webp&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Well, all of the object and faces you see in these images have been generated single-handedly by a computer-vision model called Generative Adversarial Networks (GANs)!. Awesome right? There’s so much more to see.&lt;/p&gt;
-
-&lt;p&gt;Being someone with a growing interest in Computer Vision and Virtual Reality, I loved it so much. In short, my mind started racing through the wonderful possibilities of GANs in Virtual Reality, of course, all those would take a lot of work in reserach but who knew we would have GANs performing at this level in just 2020.&lt;/p&gt;
-
-&lt;p&gt;With this article, I hope to give you a simple Introduction to GANs with all the necessary and important aspects of it, that you can go on with to explore ideas in branches of your interest. We would also look at some of their applications and how GANs come to give such exciting results that spells creativity.&lt;/p&gt;
-
-&lt;h2&gt;Table of Contents&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;What are Generative Models&lt;/li&gt;
-  &lt;li&gt;Structure of Generative Models&lt;/li&gt;
-  &lt;li&gt;Types of Generative Models&lt;/li&gt;
-  &lt;li&gt;Applications of Generative Models&lt;/li&gt;
-  &lt;li&gt;Getting Started with GANs - Projects &amp;amp; Opensource&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;What are Generative Models&lt;/h3&gt;
-
-&lt;p&gt;“&lt;em&gt;Generative Adversarial networks is the most interesting idea in the last 10 years in Machine Learning&lt;/em&gt;”- &lt;b&gt;Yann Le Cun&lt;/b&gt;&lt;/p&gt;
-
-&lt;p&gt;Generative Adversarial Networks, or GANs for short, are a type of neural network used for machine learning, computer vision, and other forms of artificial intelligence. Generative modeling is an unsupervised learning task in machine learning in which regularities and patterns of input data are discovered and learned so that a model can be used to generate and output new examples that can plausibly be taken from the original data set.&lt;/p&gt;
-
-&lt;p&gt;Generative Adversarial nets were recently introduced (In the past 7 years or so) as a novel way to train a generative model, i.e create a model that is able to generate data. They consists of two ‘adversarial’ networks: a generative model G that captures the data distribution and a distributive model D that estimates the probability that a sample came from the training data rather than from G.&lt;/p&gt;
-
-&lt;p&gt;A generative adversarial network, GAN for short, consists of two main structure that makes up the whole basis of its operation. They are called the &lt;b&gt;Generator&lt;/b&gt; and &lt;b&gt;Discriminator&lt;/b&gt;. These two neural networks are pitted against each other in a zero-sum game, whereby the first network, the generator, is tasked with fooling the second network.&lt;/p&gt;
-
-&lt;p&gt;A simple GAN can be said to be made up of two dataset, one of them is called the true or real-world dataset, the other can be called the fake dataset. The Generator is the model that distributes fake data into the system while the discriminator gives as input X, the real data. This two inputs are passed into the model, and every iteration/epochs, the discriminator would have to discern if each image sample comes from the real or fake dataset. At the start of training, the discriminator almost always spots the fake data, whereby, the generator model has to change its weights(during training) inorder to reduce the cost/error made and once again pushes a new improved set of data to the discriminator for inspection. This is what happens at training periods, on each epochs until a desired level of accuracy is achieved. The overall system and purpose of GANs is to obatin a level of cost that the discriminator starts to guess datas from the generator as “real ones”.&lt;/p&gt;
-
-&lt;p&gt;While the discriminator tries to distinguish between the real and fake sets of data , the generator attepts to create a plausible example of the same data set by updating its weights/parameters. The Generator models are designed to deceive the discrimination model, by trying  to generate plausible examples that fits among the real dataset. Our hope is that the two networks, when they face each other, will get better and better until the end result is a generator network that produces photorealistic outputs.&lt;/p&gt;
-
-&lt;p&gt;The fake samples are generated by some randon noise from looking at the real data, they are passed on to the discriminator whose input is both fake samples as well as samples from our real data set. The discriminator than makes a binary decision about whether the image supplied, z, is a real image D(z)= 1, or a fake image, D(z)=0.&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;img-fluid&quot; src=&quot;../assets\images\Blog\Blog-img\D&amp;amp;G_Gans.webp&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;For example, a GAN trained on photographs can create a new photograph that appears to human observers at least superficially authentic and has many realistic characteristics. A popular real-world application of GAN; GANs have been used to produce new celebrities who are not real people. Using a training kit, the technique learns to create images of real-life celebrities, real-face celebrities and non-real face celebrities.&lt;/p&gt;
-
-&lt;p&gt;So a GAN (generator network) can start with a matrix of noise pixels and try to change them in what an image classifier would call a “cat.” Instead of taking raw data, the generator can trace back to the original input data (e.g. a photo of a cat) and then try to generate output from which the input of the data would be mapped. The new data is not bound to a single data set, but is created from a set of data points (i.e. an array of images or a set of data sets).&lt;/p&gt;
-
-&lt;p&gt;Back in 2014, Ian Goodfellow suggested the idea of two neural networks competing or working together. For some networks, parallel training means an improvement in skills, for others it is a question of perspective.&lt;/p&gt;
-
-&lt;p&gt;One neural network tries to generate realistic data, the other network tries to distinguish what the generator network generates. The discrimination network updates its parameters to ensure that the fake data is selected from the real data. Note: GANs can be used to model data distributions, but nowadays they are mainly used for images). The generator networks use the discriminators as a loss function and update their parameters after generating data that appears more realistic.&lt;/p&gt;
-
-&lt;p&gt;GAN is a recently developed machine learning framework that proposes creative realistic representations of the real data distribution of images and other data. As mentioned above, a sample image can be used to create images that are superficially authentic to human observers by mapping sets of feature noise from the input to an output with close relation&lt;/p&gt;
-
-&lt;p&gt;Cited works from:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://towardsdatascience.com/comprehensive-introduction-to-turing-learning-and-gans-part-2-fd8e4a70775&quot;&gt;towardsdatascience(medium)&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/&quot;&gt;MachineLearning Mastery&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://deepai.org/machine-learning-glossary-and-terms/conditional-adversarial-network&quot;&gt;Deepai.org&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Generative_adversarial_network&quot;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://bdtechtalks.com/2018/05/28/generative-adversarial-networks-artificial-intelligence-ian-goodfellow/&quot;&gt;BDtechtalks&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Chel</name></author><summary type="html">Overview Generative Models and GANs - This article will give a simplified intoduction to GANs that you can fully grasp without prior knowledge of the basics This article will explain briefly the structure of GANs, what they achieve and how they are trained Some Intruiging-real world applications of GANs awaits you– Let’s begin!</summary></entry></feed>
+&lt;p&gt;In the part 2 of this article, let’s look at how to Improve significantly our built model’s accuracy by Introducing some new concepts that would prevent over-fitting and slow down convergence. &lt;a href=&quot;&quot;&gt;Next Article: Improving your Tensorflow Model with Dropouts and Batch Normalization&lt;/a&gt;&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">In this tutorial, you would learn how to build an Image Classification Model using Tensorflow on Google Colab. This tutorial is the first among three set. They go from buiding an Image Classifier to Improving accuracy in your model and finally Serving it for production through an API url Endpoint. To start off, here is the overview of all what we would be touching on.</summary></entry></feed>

@@ -1,0 +1,45 @@
+.highlight pre {
+padding: 10;
+background-color: #272822;
+border: box;
+border-radius: 5px;
+max-height:300px;
+width: auto;
+overflow: auto;
+display: block;
+margin: 0 0px;
+white-space: pre-wrap;
+}
+
+.highlight .table-responsive,
+.highlight pre,
+.highlight .table > tbody > tr > td
+{
+border: box;
+border-radius: 5px;
+}
+
+.highlight .table-responsive {
+margin-bottom: 0;
+}
+
+.highlight .table>tbody>tr>td {
+padding: 8px 8px 0 8px;
+}
+
+
+.highlight .lineno {
+color: white;
+display:inline-block;
+padding: 0 5px;
+border-right:1px
+solid #ccc;
+}
+
+.highlight pre code {
+display: inline-block;
+white-space: pre;
+overflow-x: auto;
+}
+
+// rest of file is about syntax highlighting rules

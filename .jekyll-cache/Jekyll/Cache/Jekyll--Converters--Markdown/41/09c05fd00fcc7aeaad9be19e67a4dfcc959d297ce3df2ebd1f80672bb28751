@@ -1,0 +1,20 @@
+I"<p>In a Multi-class problem, we have a few constant features that are [present in out dataset:</p>
+<ul>
+  <li>Multiple Classes/ Labels</li>
+  <li>Categorical Data
+*</li>
+</ul>
+
+<p>With these, let’s proceed to learn an efficient approach to solving problems of this naturee, Note: In this tutorial, I would strive to extend and provide directions for other likely cases e.g (A multi-class problem but with numerical data?). Let’s get started;</p>
+
+<p>Tutorial Overview</p>
+<ul>
+  <li>MultiClass Image Classification</li>
+  <li>Data preparation with Pandas</li>
+  <li>What is the Nasnet application</li>
+  <li>Why Use Nasnet for propblem</li>
+  <li>Solutions &amp; Training</li>
+</ul>
+
+<h3 id="multiclass-image-classification-problem">MultiClass Image Classification problem</h3>
+:ET

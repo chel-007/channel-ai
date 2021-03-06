@@ -8,7 +8,7 @@ description: My ChannelAi Blog. All Ai news as we can cover
   <br>
   <h5 style="font-family: Montserrat, sans-serif; font-weight: 600;">LATEST ON BLOG</h5>
 {% for post in site.posts %}
-    {% unless post.path contains 'games' %}
+    {% unless post.path contains 'games' or post.path contains 'projects' %}
   <hr>
   <div class="row">
   <div class="col-lg-8 col-sm-8">

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+<meta itemprop="description" name="description" content="When trying to build a high-brew model in image classification, you can solve the problem using different methods, but just few are efficient ways of doing s..." />
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>How to Build a Multi-Class Classification Model using Convolutional Neural Networks and NasNet Application in Keras</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="How to Build a Multi-Class Classification Model using Convolutional Neural Networks and NasNet Application in Keras" />
+<meta name="author" content="Chel" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When trying to build a high-brew model in image classification, you can solve the problem using different methods, but just few are efficient ways of doing so. In this tutorial we look at how to build a milti class model to achieve 90% acuuracy" />
+<meta property="og:description" content="When trying to build a high-brew model in image classification, you can solve the problem using different methods, but just few are efficient ways of doing so. In this tutorial we look at how to build a milti class model to achieve 90% acuuracy" />
+<link rel="canonical" href="http://localhost:4000/image-classification-model-in-keras-with-nasnet-app/" />
+<meta property="og:url" content="http://localhost:4000/image-classification-model-in-keras-with-nasnet-app/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-15T00:00:00+01:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"How to Build a Multi-Class Classification Model using Convolutional Neural Networks and NasNet Application in Keras","dateModified":"2020-02-15T00:00:00+01:00","datePublished":"2020-02-15T00:00:00+01:00","url":"http://localhost:4000/image-classification-model-in-keras-with-nasnet-app/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/image-classification-model-in-keras-with-nasnet-app/"},"author":{"@type":"Person","name":"Chel"},"description":"When trying to build a high-brew model in image classification, you can solve the problem using different methods, but just few are efficient ways of doing so. In this tutorial we look at how to build a milti class model to achieve 90% acuuracy","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<meta charset="utf-8">
+<title>How to Build a Multi-Class Classification Model using Convolutional Neural Networks and NasNet Application in Keras</title>
+<meta name="keywords" content="[computer vision, deep learning, object detection, deep learner, tensorflow, convolutional neural netowrks, python, r for data science, deployment, cloud ml]"/>
+<!-- Fav Icons of Different Sizes for Devices -->
+<link rel="icon" type="image/png" href="/assets/images/favicon.ico"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.webp">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.webp">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.webp">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/android-chrome-192x192.webp">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/android-chrome-512x512.webp">
+<!-- Fav Icons End -->
+
+
+<style type="text/css">body{color:#202020}</style>
+<link rel="stylesheet" href="/assets/css/styles.css" onload="this.media='all'; this.onload=null;>
+<script data-ad-client="ca-pub-6920696800834585" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="google-site-verification" content="1LO3TSIxeeNWjGMHqMznkmBaXeBmBpBZDqdsuM5Np-U" />
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+  
+  <!-- Navbar Brand -->
+  <a class="navbar-brand" href="/"><img class="img-fluid" src="/assets/images/CHANNEL AI_free-file (1).webp" width="80" height="80" alt="ChannelAI"></a>
+  
+  <!-- Collapse button --> 
+  <button class="navbar-toggler dropdown-toggle-align" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><i style="font-size: 24px; margin-left: -5px; color: white;" class="fas fa-align-left"></i></span>
+  </button>
+  
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav" style="color:black;">
+ 
+  	<!-- Links -->
+    <ul class="navbar-nav mr-auto waves-effect waves-light">
+      
+      <a class="nav-item nav-link" href="/">Home</a>
+      
+      <a class="nav-item nav-link" href="/blog/">Blog</a>
+      
+      <a class="nav-item nav-link" href="/portfolio/">Portfolio</a>
+      
+      <a class="nav-item nav-link" href="/projects/">Projects</a>
+      
+    </ul>
+    </div>
+</nav>
+    <!--  Main Container    -->
+   <div class="container blog-container">
+      
+<!--   Beginning of Row   -->
+     <div class="row">
+<!--      Column   -->
+      <div class="col-md-12 col-sm-12">
+       <h1 class="post-header">How to Build a Multi-Class Classification Model using Convolutional Neural Networks and NasNet Application in Keras</h1>
+
+		<p>
+			Feb 15, 2020
+  			
+  			<p style="clear: left;">
+  			<img src="../assets\images\Blog\object_detection_rcnn.webp" class="img-fluid" alt="Responsive image" width="1000" />
+			</p>
+			<br>
+
+            <p>In a Multi-class problem, we have a few constant features that are [present in out dataset:</p>
+<ul>
+  <li>Multiple Classes/ Labels</li>
+  <li>Categorical Data
+*</li>
+</ul>
+
+<p>With these, let’s proceed to learn an efficient approach to solving problems of this naturee, Note: In this tutorial, I would strive to extend and provide directions for other likely cases e.g (A multi-class problem but with numerical data?). Let’s get started;</p>
+
+<p>Tutorial Overview</p>
+<ul>
+  <li>MultiClass Image Classification</li>
+  <li>Data preparation with Pandas</li>
+  <li>What is the Nasnet application</li>
+  <li>Why Use Nasnet for propblem</li>
+  <li>Solutions &amp; Training</li>
+</ul>
+
+<h3 id="multiclass-image-classification-problem">MultiClass Image Classification problem</h3>
+
+        </div>
+        <!-- End of Column -->
+     </div>
+     <!-- End of Row -->
+ </div>
+ <!-- End of Main Container -->
+
+ <!-- 07063585654 -->
+    <!-- Footer -->
+<footer style="background-color: #FFE928;" class="page-footer font-small stylish-color-dark pt-4">
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+        <!-- Links -->
+        <h5 class="font-weight-bold mt-3 mb-4 footer-list">Navigation</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="/blog">Blog</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+          <li>
+            <a href="/quizzes">Projects</a>
+          </li>
+          <li>
+            <a href="/newsletter">Newsletter</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold mt-3 mb-4 footer-list">Popular</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">DL Skills</a>
+          </li>
+          <li>
+            <a href="#!">CV Projects</a>
+          </li>
+          <li>
+            <a href="#!">DL Tools</a>
+          </li>
+          <li>
+            <a href="#!"></a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold mt-3 mb-4 footer-list">Categories</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Computer Vision</a>
+          </li>
+          <li>
+            <a href="#!">Machine Learning</a>
+          </li>
+          <li>
+            <a href="#!">Deep learning</a>
+          </li>
+          <li>
+            <a href="#!">AI Applications</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr style="color: white;" class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Call to action -->
+  <ul class="list-unstyled list-inline text-center py-3 footer-list">
+    <li class="list-inline-item">
+      <h5 class="font-weight-bold mb-1">Follow Us</h5>
+    </li>  <!-- Call to action -->
+
+  <!-- Social buttons -->
+  <ul style="font-size: 20px;"class="list-unstyled list-inline text-center">
+    
+      <li class="list-inline-item">
+      <a style="color: red;" class="btn-floating btn-tw mx-1" href="">
+        <i class="fab fa-youtube"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a style="color: #7289da;" class="btn-floating btn-gplus mx-1" href="">
+        <i class="fab fa-discord"> </i>
+      </a>
+    </li>
+    
+    <li class="list-inline-item">
+      <a style="color: aqua;" class="btn-floating btn-li mx-1" href="https://www.linkedin.com/in/chelsea-koby-7a4889198/">
+      <i class="fab fa-linkedin"> </i>
+      </a>
+    </li>
+  </ul>
+  </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+<div style="color: white;">
+  <hr>
+</div>
+  <!-- Copyright -->
+  <div style="font-size: 15px;padding: 15px;" class="footer-copyright font-weight-bold text-left py-5">© 2020 ChelOverboard. All Rights Reserved
+    <p class="netlify" style="display: inline;float: right;">Made with <i style="color: red;" class="fas fa-heart"></i> and Netlify</a></p>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+ <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+<!-- <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>How to Build a Multi-Class Classification Model using Convolutional Neural Networks and NasNet Application in Keras - </title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head> -->
