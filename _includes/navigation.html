@@ -1,21 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-custom">
-  
-  <!-- Navbar Brand -->
-  <a class="navbar-brand" href="{{ '/' | relative_url }}"><img class="img-fluid" src="/assets/images/CHANNEL AI_free-file (1).webp" width="80" height="80" alt="ChannelAI"></a>
-  
-  <!-- Collapse button --> 
-  <button class="navbar-toggler dropdown-toggle-align" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"><i style="font-size: 24px; margin-left: -5px; color: white;" class="fas fa-align-left"></i></span>
-  </button>
-  
-  <!-- Collapsible content -->
-  <div class="collapse navbar-collapse" id="basicExampleNav" style="color:black;">
- 
-  	<!-- Links -->
-    <ul class="navbar-nav mr-auto waves-effect waves-light">
+<header class="ca-header">
+  <nav class="ca-shell ca-nav" aria-label="Main navigation">
+    <a class="ca-brand" href="{{ '/' | relative_url }}"><span class="ca-brand-mark" aria-hidden="true">c<span>ai</span></span>Channel AI<span class="ca-brand-dot" aria-hidden="true">.</span></a>
+    <button class="ca-menu-button" type="button" aria-expanded="false" aria-controls="ca-nav-links" hidden>Menu <span aria-hidden="true">☰</span></button>
+    <ul class="ca-nav-links" id="ca-nav-links">
       {% for item in site.data.navigation %}
-      <a class="nav-item nav-link" href="{{item.link}}">{{ item.name }}</a>
+      <li><a href="{{ item.link | relative_url }}" {% if page.url == item.link %}aria-current="page"{% endif %}>{{ item.name }}</a></li>
       {% endfor %}
     </ul>
-    </div>
-</nav>
+  </nav>
+</header>

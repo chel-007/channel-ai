@@ -1,0 +1,31 @@
+# Add entries here. Set published: true only when the details are ready.
+# Fields: title, area, summary, role, tools (list), outcome, url, link_label, published.
+- title: Image classification experiments
+  area: Computer vision / archive
+  summary: Early image classification work with TensorFlow and Keras, with notebooks and a write-up about overfitting.
+  role: Model experimentation and technical writing
+  tools: [Python, TensorFlow, Keras]
+  outcome: An archived notebook and tutorial documenting the learning process.
+  url: /achieving-85-accuracy-on-cifar-10-dataset/
+  link_label: Read the archived tutorial
+  published: true
+
+- title: The Mundane Store / Mundane Motions
+  area: Animation and creative tools
+  summary: ''
+  role: ''
+  tools: []
+  outcome: ''
+  url: https://mundanemotions.netlify.app/
+  link_label: Explore the motion library
+  published: false
+
+- title: Your next GitHub project
+  area: Software and experiments
+  summary: ''
+  role: ''
+  tools: []
+  outcome: ''
+  url: ''
+  link_label: View the project
+  published: false

@@ -1,54 +1,27 @@
 ---
 layout: default
-title: Computer Vision / Data Science Projects & Walkthroughs - ChannelAI.com
+title: "Computer Vision & Data Science Projects | Channel AI"
+description: "Explore archived machine learning challenges, project briefs and linked notebooks, with a practical approach to learning by building."
 ---
-<h1 style="font-family: sans-serif; text-align: center; font-weight: 700; background-color: black; padding: 40px; color: white; border-top: 3px solid white;">CV & DS Project List</h1>
-<div class="container">
-  <div class="row">
-  <br>
-  <hr>
-    <div class="col-lg-12 col-sm-12">
+<header class="ca-page-hero"><div class="ca-shell"><p class="ca-eyebrow">LEARN BY BUILDING</p><h1>Small projects.<br>Useful discoveries.</h1><p class="ca-page-intro">An archive of machine learning challenges and practical experiments. Read the problem, study the linked notebook, and use the exercise to practise explaining your own decisions.</p></div></header>
 
-      <h4>Below are a list of Computer Vision and Data Science Problems that I have come across and solved. They are well documneted here for beginners to try out along with guidance from solutions I have provided</h4>
-<br>
-        {% for post in site.posts %}
-            {% if post.path contains 'projects' %}
-        <ul style="font-size: 21px; list-style-type: square;">
-        <li>
-          
-          <div class="card  w-100" style="background-color: {{ post.bg }}; color: {{ post.text }}">
-            <div class="card-header">{{ post.phrase-tag }}</div>
-            <div class="card-body">
-            <h5 class="card-title">{{ post.header }}</h5>
-            <p class="card-text">
-              {{ post.description | strip_html | strip_newlines | truncate: 208 }}
-            </p>
-            <p>{{ post.excerpt }}</p>
-            <p><b>SOURCE: {{ post.source }}</b></p> <p style="text-decoration-line: none;"><b>Solution: <a href="{{ post.solution-link }}">{{ post.solution }}</a></b></p>
-            <p class="font-size"></p>
-            </div>
-            
-          </div>
-        </li>
-      </ul><br>
+<div class="ca-shell ca-page-body">
+  <aside class="ca-callout"><h2>A note on the archive</h2><p>These projects come from earlier learning work. Libraries, notebook environments, and external links may have changed. Treat each notebook as a starting point to inspect and reproduce, rather than a guaranteed current setup.</p></aside>
+  <div class="ca-project-list">
+    {% assign project_count = 0 %}
+    {% for post in site.posts %}
+      {% if post.path contains 'projects' %}
+      {% assign project_count = project_count | plus: 1 %}
+      <article class="ca-project-card">
+        <p class="ca-eyebrow">ARCHIVED PROJECT{% if post.source %} · {{ post.source | escape }}{% endif %}</p>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.header | default: post.title | escape }}</a></h2>
+        {% if post.phrase-tag %}<p class="ca-project-tags">{{ post.phrase-tag | escape }}</p>{% endif %}
+        <p>{{ post.description | strip_html | escape }}</p>
+        <div class="ca-actions"><a class="ca-button ca-button-dark" href="{{ post.url | relative_url }}">Read the project brief →</a>{% if post.solution-link and post.solution-link != '' %}<a class="ca-text-link" href="{{ post.solution-link | escape }}">{{ post.solution | default: 'Open the notebook' | escape }} ↗</a>{% endif %}</div>
+      </article>
       {% endif %}
-      {% endfor %}
-            <br>
-    </div>
+    {% endfor %}
+    {% if project_count == 0 %}<p>The project archive is being organised. In the meantime, <a href="{{ '/blog/' | relative_url }}">explore the tutorials</a>.</p>{% endif %}
   </div>
+  <section class="ca-callout ca-callout-bottom"><h2>What makes a useful project write-up?</h2><p>Start with the problem and the data. Describe the baseline, the changes you tried, and how you evaluated them. Include what did not work and what you would improve next. A result is more useful when someone else can understand how you reached it.</p><a class="ca-text-link" href="{{ '/resources/' | relative_url }}">Find a resource for your next project →</a></section>
 </div>
-  <p style="clear: both;"></p>
-<p style="background-color: #000000;">ydhyhyds</p>
-<!-- 
-<ul>
-        <li>
-          <div style="margin-right: 5px; margin-top: 5px;" class="shadow-lg p-4 bg-danger rounded">
-            {% for post in site.posts %}
-            {% if post.path contains 'projects' %}
-            <h5>{{ post.description | strip_html | strip_newlines | truncate: 208 }}</h5><br><br>
-
-            <p><b>SOURCE: HackerEarth</b></p> <p class="" style=""><b>Solution: <a href="https:github.com/Chel-Ash">View on Colab</a></b></p>
-            {% endif %}
-            {% endfor %}
-          </div>
-          </li></ul> -->

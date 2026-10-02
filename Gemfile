@@ -9,6 +9,10 @@ group :jekyll_plugins do
   gem 'jekyll-seo-tag'
   gem 'jekyll-paginate-v2'
 end
+  gem 'csv'
+  gem 'base64'
+  gem 'bigdecimal'
+  gem 'webrick'
 
 # gem "rails"
-gem 'wdm', '~> 0.1.0' if Gem.win_platform?
+# gem 'wdm', '~> 0.1.0' if Gem.win_platform?

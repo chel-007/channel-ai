@@ -1,136 +1,30 @@
-<!-- Footer -->
-<footer style="background-color: #FFE928;" class="page-footer font-small stylish-color-dark pt-4">
-  <!-- Footer Links -->
-  <div class="container text-center text-md-left">
-    <!-- Grid row -->
-    <div class="row">
-      <!-- Grid column -->
-      <div class="col-md-2 mx-auto">
-        <!-- Links -->
-        <h5 class="font-weight-bold mt-3 mb-4 footer-list">Navigation</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="{{ "blog" | relative_url }}">Blog</a>
-          </li>
-          <li>
-            <a href="{{ "contact" | relative_url }}">Contact</a>
-          </li>
-          <li>
-            <a href="{{ "quizzes" | relative_url }}">Projects</a>
-          </li>
-          <li>
-            <a href="{{ "newsletter" | relative_url }}">Newsletter</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 mx-auto">
-
-        <!-- Links -->
-        <h5 class="font-weight-bold mt-3 mb-4 footer-list">Popular</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">DL Skills</a>
-          </li>
-          <li>
-            <a href="#!">CV Projects</a>
-          </li>
-          <li>
-            <a href="#!">DL Tools</a>
-          </li>
-          <li>
-            <a href="#!"></a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 mx-auto">
-
-        <!-- Links -->
-        <h5 class="font-weight-bold mt-3 mb-4 footer-list">Categories</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Computer Vision</a>
-          </li>
-          <li>
-            <a href="#!">Machine Learning</a>
-          </li>
-          <li>
-            <a href="#!">Deep learning</a>
-          </li>
-          <li>
-            <a href="#!">AI Applications</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr style="color: white;" class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 mx-auto">
-
-        <!-- Call to action -->
-  <ul class="list-unstyled list-inline text-center py-3 footer-list">
-    <li class="list-inline-item">
-      <h5 class="font-weight-bold mb-1">Follow Us</h5>
-    </li>  <!-- Call to action -->
-
-  <!-- Social buttons -->
-  <ul style="font-size: 20px;"class="list-unstyled list-inline text-center">
-    
-      <li class="list-inline-item">
-      <a style="color: red;" class="btn-floating btn-tw mx-1" href="">
-        <i class="fab fa-youtube"> </i>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a style="color: #7289da;" class="btn-floating btn-gplus mx-1" href="">
-        <i class="fab fa-discord"> </i>
-      </a>
-    </li>
-    
-    <li class="list-inline-item">
-      <a style="color: aqua;" class="btn-floating btn-li mx-1" href="https://www.linkedin.com/in/chelsea-koby-7a4889198/">
-      <i class="fab fa-linkedin"> </i>
-      </a>
-    </li>
-  </ul>
-  </ul>
-
-      </div>
-      <!-- Grid column -->
-
-    </div>
-    <!-- Grid row -->
-
+<footer class="ca-footer">
+  <div class="ca-shell ca-footer-grid">
+    <div><a class="ca-brand" href="{{ '/' | relative_url }}">Channel AI<span class="ca-brand-dot" aria-hidden="true">.</span></a><p>A curious place to learn about deep learning, computer vision, and virtual reality.</p></div>
+    <div><h2>Explore</h2><ul>{% for item in site.data.navigation %}<li><a href="{{ item.link | relative_url }}">{{ item.name }}</a></li>{% endfor %}<li><a href="{{ '/resources/' | relative_url }}">Resources</a></li></ul></div>
+    <div><h2>Start learning</h2><ul><li><a href="{{ '/key-deep-learning-skills-beginner/' | relative_url }}">Deep learning skills</a></li><li><a href="{{ '/key-points-before-starting-computer-vision/' | relative_url }}">Your first CV project</a></li><li><a href="{{ '/virtual-reality-and-the-future-of-humans/' | relative_url }}">Explore virtual reality</a></li></ul></div>
+    <div><h2>About the author</h2><ul><li><a href="{{ '/about/' | relative_url }}">Meet Chelsea</a></li><li><a href="https://www.linkedin.com/in/chelsea-koby-7a4889198/">LinkedIn ↗</a></li></ul></div>
   </div>
-  <!-- Footer Links -->
-<div style="color: white;">
-  <hr>
-</div>
-  <!-- Copyright -->
-  <div style="font-size: 15px;padding: 15px;" class="footer-copyright font-weight-bold text-left py-5">© 2020 ChelOverboard. All Rights Reserved
-    <p class="netlify" style="display: inline;float: right;">Made with <i style="color: red;" class="fas fa-heart"></i> and Netlify</a></p>
-  </div>
-  <!-- Copyright -->
-
+  <div class="ca-shell ca-footer-bottom"><span>© {{ 'now' | date: '%Y' }} ChelOverboard. All rights reserved.</span><span><a href="{{ "/privacy/" | relative_url }}">Privacy notice</a> · Hosted on Netlify.</span></div>
 </footer>
-<!-- Footer -->
- <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+<script>
+  (() => {
+    const button = document.querySelector('.ca-menu-button');
+    const menu = document.getElementById('ca-nav-links');
+    if (!button || !menu) return;
+    button.hidden = false;
+    menu.classList.add('ca-menu-ready');
+    function closeMenu() { button.setAttribute('aria-expanded', 'false'); menu.classList.remove('is-open'); }
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(open));
+      menu.classList.toggle('is-open', open);
+    });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') { closeMenu(); button.focus(); } });
+    menu.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
+  })();
+</script>
+<!-- Retained for existing pages that use Font Awesome or Bootstrap components. -->
+<script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

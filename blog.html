@@ -1,28 +1,128 @@
 ---
 layout: default
-title: Blog - Understanding CV & VR | Become an Expert Developer in Computer Vision or Virtual reality - ChannelAI
-description: My ChannelAi Blog. All Ai news as we can cover
+title: Computer Vision, Deep Learning & VR Articles | Channel AI
+description: Explore practical articles and archived tutorials on machine learning, computer vision, deep learning and virtual reality.
 ---
-<h1 style="font-family: sans-serif; text-align: center; font-weight: 700; background-color: black; padding: 40px; color: white; border-top: 3px solid white;">ChannelAI Blog</h1>
-  <div class="container-fluid games-page">
-  <br>
-  <h5 style="font-family: Montserrat, sans-serif; font-weight: 600;">LATEST ON BLOG</h5>
-{% for post in site.posts %}
+
+<header class="ca-page-hero">
+  <div class="ca-shell">
+    <p class="ca-eyebrow">THE CHANNEL AI NOTEBOOK</p>
+    <h1>A little curiosity.<br>A lot to explore.</h1>
+    <p class="ca-page-intro">Practical explanations, experiments, and lessons from building. Browse articles on deep learning, computer vision, and virtual reality, or search for a topic you want to understand.</p>
+  </div>
+</header>
+
+{% assign article_count = 0 %}
+{% capture blog_cards %}
+  {% for post in site.posts %}
     {% unless post.path contains 'games' or post.path contains 'projects' %}
-  <hr>
-  <div class="row">
-  <div class="col-lg-8 col-sm-8">
-    <h4><a href="{{ post.url }}" class="game-title">{{ post.title }}</a></h4>
-    <p>{{ post.description | strip_html | strip_newlines | truncate: 208 }}</p>
-    <p style="clear: both">{{ post.date | date: "%b %-d, %Y" }}</p>
+      {% assign article_count = article_count | plus: 1 %}
+      <article class="ca-blog-card">
+        {% assign article_image = '' %}
+        {% assign cover_file = nil %}
+        {% if post.img-src and post.img-src != '' %}
+          {% assign article_image = post.img-src %}
+          {% unless article_image contains '://' %}
+            {% capture backslash %}\{% endcapture %}
+            {% assign article_image = article_image | replace: backslash, '/' | replace: '//', '/' | replace: '../', '/' %}
+            {% assign first_character = article_image | slice: 0, 1 %}
+            {% unless first_character == '/' %}
+              {% assign article_image = article_image | prepend: '/' %}
+            {% endunless %}
+          {% endunless %}
+          {% assign image_extension = article_image | split: '?' | first | split: '.' | last | downcase %}
+          {% unless image_extension == 'webp' or image_extension == 'jpg' or image_extension == 'jpeg' or image_extension == 'png' or image_extension == 'gif' or image_extension == 'avif' or image_extension == 'svg' %}
+            {% assign article_image = article_image | append: '.webp' %}
+          {% endunless %}
+          {% assign cover_file = site.static_files | where: 'path', article_image | first %}
+        {% endif %}
+
+        <div class="ca-blog-image">
+          {% if cover_file or article_image contains '://' %}
+            <img src="{{ article_image | relative_url }}" alt="{{ post.img-alt | default: '' | escape }}" loading="lazy" decoding="async">
+          {% else %}
+            <div class="ca-blog-image-fallback" aria-hidden="true"><span>CHANNEL AI</span><span>Notes for<br>curious minds.</span></div>
+          {% endif %}
+        </div>
+
+        <div class="ca-blog-card-copy">
+          <p class="ca-eyebrow"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %-d, %Y' }}</time></p>
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+          <p class="ca-blog-description">{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 190 | escape }}</p>
+          <a class="ca-text-link" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title | escape }}">Read article →</a>
+        </div>
+      </article>
+    {% endunless %}
+  {% endfor %}
+{% endcapture %}
+
+<section class="ca-shell ca-page-body" aria-labelledby="ca-blog-heading">
+  <div class="ca-blog-toolbar">
+    <div>
+      <h2 id="ca-blog-heading">Browse the notebook</h2>
+      <p class="ca-blog-count" id="ca-blog-count" role="status">{{ article_count }} {% if article_count == 1 %}article{% else %}articles{% endif %} · newest first</p>
+    </div>
+    <div class="ca-blog-search" hidden>
+      <label for="ca-blog-query">Find an article</label>
+      <input type="search" id="ca-blog-query" placeholder="Try computer vision or TensorFlow" autocomplete="off" aria-controls="ca-blog-grid">
+    </div>
   </div>
 
-  <div class="col-lg-4 col-sm-4">
-    <a href="{{ post.url }}">
-    <img defer class="responsive p-2 bd-highlight borderaround" src="{{ post.img-src }}.webp" alt="{{ post.img-alt }}" width="330" height="200"></a>
+  <p class="ca-small-note ca-blog-archive-note">Some articles are from the earlier Channel AI archive. Check publication dates and current library documentation when following older code examples.</p>
+
+  <div class="ca-blog-grid" id="ca-blog-grid">{{ blog_cards }}</div>
+  {% if article_count == 0 %}
+  <p>There are no articles in this collection yet. You can still <a href="{{ '/resources/' | relative_url }}">explore the learning resources</a>.</p>
+  {% endif %}
+  <div class="ca-blog-empty" hidden>
+    <h3>No matching articles</h3>
+    <p>Try a shorter phrase or a different topic.</p>
+    <button type="button" class="ca-button ca-button-dark" id="ca-blog-reset">Clear search</button>
   </div>
-</div>
-   {% endunless %}
-{% endfor %}
-  </div>
-  <p style="clear: both;"></p>
+</section>
+
+<script>
+  (() => {
+    const search = document.getElementById('ca-blog-query');
+    const wrapper = document.querySelector('.ca-blog-search');
+    const grid = document.getElementById('ca-blog-grid');
+    const count = document.getElementById('ca-blog-count');
+    const empty = document.querySelector('.ca-blog-empty');
+    const reset = document.getElementById('ca-blog-reset');
+    if (!search || !wrapper || !grid || !count || !empty || !reset) return;
+
+    const cards = Array.from(grid.querySelectorAll('.ca-blog-card'));
+    const searchable = cards.map(card => ({
+      card,
+      text: `${card.querySelector('h2')?.textContent || ''} ${card.querySelector('.ca-blog-description')?.textContent || ''}`.toLocaleLowerCase()
+    }));
+    let timer;
+    wrapper.hidden = false;
+
+    function filterArticles() {
+      const words = search.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+      let visible = 0;
+      searchable.forEach(({ card, text }) => {
+        const matches = words.every(word => text.includes(word));
+        card.hidden = !matches;
+        if (matches) visible += 1;
+      });
+      count.textContent = words.length
+        ? `${visible} of ${cards.length} articles shown`
+        : `${cards.length} ${cards.length === 1 ? 'article' : 'articles'} · newest first`;
+      empty.hidden = visible > 0 || words.length === 0;
+    }
+
+    search.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = setTimeout(filterArticles, 150);
+    });
+    search.addEventListener('search', filterArticles);
+    reset.addEventListener('click', () => {
+      clearTimeout(timer);
+      search.value = '';
+      filterArticles();
+      search.focus();
+    });
+  })();
+</script>

@@ -1,0 +1,98 @@
+{% assign article_author = site.authors | where: 'short_name', page.author | first %}
+{% assign article_title = page.header | default: page.title %}
+
+<article class="ca-article">
+  <header class="ca-article-header">
+    <nav class="ca-article-breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      <span aria-hidden="true">/</span>
+      <span>Article</span>
+    </nav>
+
+    <p class="ca-eyebrow">THE CHANNEL AI NOTEBOOK</p>
+    <h1>{{ article_title | escape }}</h1>
+
+    <div class="ca-article-meta">
+      {% if page.date %}
+      <span>Published <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time></span>
+      {% endif %}
+      {% if article_author %}
+      <span>By <a href="{{ article_author.url | relative_url }}">{{ article_author.name | escape }}</a></span>
+      {% elsif page.author %}
+      <span>By {{ page.author | escape }}</span>
+      {% endif %}
+      {% if page.updated %}
+      <span>Updated <time datetime="{{ page.updated | date_to_xmlschema }}">{{ page.updated | date: '%B %-d, %Y' }}</time></span>
+      {% endif %}
+    </div>
+
+    {% if page.img-src and page.img-src != '' %}
+      {% assign article_image = page.img-src %}
+      {% unless article_image contains '://' %}
+        {% capture backslash %}\{% endcapture %}
+        {% assign article_image = article_image | replace: backslash, '/' | replace: '//', '/' | replace: '../', '/' %}
+        {% assign first_character = article_image | slice: 0, 1 %}
+        {% unless first_character == '/' %}
+          {% assign article_image = article_image | prepend: '/' %}
+        {% endunless %}
+      {% endunless %}
+      {% assign image_extension = article_image | split: '?' | first | split: '.' | last | downcase %}
+      {% unless image_extension == 'webp' or image_extension == 'jpg' or image_extension == 'jpeg' or image_extension == 'png' or image_extension == 'gif' or image_extension == 'avif' or image_extension == 'svg' %}
+        {% assign article_image = article_image | append: '.webp' %}
+      {% endunless %}
+      {% assign cover_file = site.static_files | where: 'path', article_image | first %}
+      {% if cover_file or article_image contains '://' %}
+      <figure class="ca-article-cover">
+        <img
+          src="{{ article_image | relative_url }}"
+          alt="{{ page.img-alt | default: article_title | escape }}"
+          decoding="async"
+        >
+        {% if page.img-caption %}
+        <figcaption>{{ page.img-caption | escape }}</figcaption>
+        {% endif %}
+      </figure>
+      {% endif %}
+    {% endif %}
+  </header>
+
+  <div class="ca-article-content">
+    {{ content }}
+  </div>
+
+  <footer class="ca-article-end">
+    <span>Keep learning. Keep building.</span>
+    <a class="ca-text-link" href="{{ '/blog/' | relative_url }}">Back to the blog →</a>
+  </footer>
+</article>
+
+{% assign more_articles = 0 %}
+{% capture article_cards %}
+  {% for post in site.posts %}
+    {% unless post.path contains 'games' or post.path contains 'projects' %}
+      {% if post.url != page.url and more_articles < 3 %}
+        {% assign more_articles = more_articles | plus: 1 %}
+        <article class="ca-article-card">
+          <p class="ca-eyebrow">{{ post.date | date: '%b %-d, %Y' }}</p>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+          <a class="ca-text-link" href="{{ post.url | relative_url }}">Read article →</a>
+        </article>
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+{% endcapture %}
+{% if more_articles > 0 %}
+<section class="ca-more-articles">
+  <div class="ca-shell">
+    <div class="ca-section-heading">
+      <div>
+        <p class="ca-eyebrow">ANOTHER PAGE IN THE NOTEBOOK</p>
+        <h2>Continue reading</h2>
+      </div>
+    </div>
+    <div class="ca-article-grid">{{ article_cards }}</div>
+  </div>
+</section>
+{% endif %}

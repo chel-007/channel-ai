@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-03-06T14:37:31+01:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Beginners Guide to Feature Selection and Categorical Embeddings with Project on Unclean Structured Data</title><link href="http://localhost:4000/feature-selection-on-categorical-structured-data/" rel="alternate" type="text/html" title="Beginners Guide to Feature Selection and Categorical Embeddings with Project on Unclean Structured Data" /><published>2021-03-04T00:00:00+01:00</published><updated>2021-03-04T00:00:00+01:00</updated><id>http://localhost:4000/feature%20selection%20on%20categorical%20structured%20data</id><content type="html" xml:base="http://localhost:4000/feature-selection-on-categorical-structured-data/">&lt;p&gt;Have you ever been faced with such a dataset so unclean and irregular, that you feel terrified? 😯. If your answer is NO, you have either been practicing deep learning for over 3 years or you rarely ever practice at all? But jokes aside, we deep learners frequently get faced with rather unclean data that needs tedious amounts of processing to be usable. Several of these problems which we are gonna tackle in this tutorial by solving a machine learning problem in a beginner-friendly way. let’s get started!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://channelai.netlify.app/feed.xml" rel="self" type="application/atom+xml" /><link href="https://channelai.netlify.app/" rel="alternate" type="text/html" /><updated>2026-10-02T08:04:44+01:00</updated><id>https://channelai.netlify.app/feed.xml</id><entry><title type="html">Beginners Guide to Feature Selection and Categorical Embeddings with Project on Unclean Structured Data</title><link href="https://channelai.netlify.app/feature-selection-on-categorical-structured-data/" rel="alternate" type="text/html" title="Beginners Guide to Feature Selection and Categorical Embeddings with Project on Unclean Structured Data" /><published>2021-03-04T00:00:00+01:00</published><updated>2021-03-04T00:00:00+01:00</updated><id>https://channelai.netlify.app/feature%20selection%20on%20categorical%20structured%20data</id><content type="html" xml:base="https://channelai.netlify.app/feature-selection-on-categorical-structured-data/">&lt;p&gt;Have you ever been faced with such a dataset so unclean and irregular, that you feel terrified? 😯. If your answer is NO, you have either been practicing deep learning for over 3 years or you rarely ever practice at all? But jokes aside, we deep learners frequently get faced with rather unclean data that needs tedious amounts of processing to be usable. Several of these problems which we are gonna tackle in this tutorial by solving a machine learning problem in a beginner-friendly way. let’s get started!&lt;/p&gt;
 
 &lt;p&gt;In this Tutorial(We Cover the Foll):&lt;/p&gt;
 &lt;ul&gt;
@@ -49,7 +49,7 @@ The data frames contain several columns which depict the features we are working
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;google.colab&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;drive&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;drive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'/content/drive'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;drive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;/content/drive&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;ul&gt;
@@ -84,10 +84,10 @@ The data frames contain several columns which depict the features we are working
 4
 5
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;zipfile&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ZipFile&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;file_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'/path/to/dataset'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ZipFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;grab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extractall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'/path/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Done'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;file_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;/path/to/dataset&apos;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ZipFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;r&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;grab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extractall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;/path/&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Done&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;ul&gt;
@@ -99,7 +99,7 @@ The data frames contain several columns which depict the features we are working
 3
 4
 5
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;raw_dataset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'/path/to/extracted/csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;raw_dataset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;/path/to/extracted/csv&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raw_dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# Checking for nan values
@@ -126,7 +126,7 @@ The data frames contain several columns which depict the features we are working
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raw_dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Cost'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raw_dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raw_dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Cost&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raw_dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -134,7 +134,7 @@ The data frames contain several columns which depict the features we are working
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;train_Y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Cost'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;train_Y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Cost&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;train_Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -147,7 +147,7 @@ The data frames contain several columns which depict the features we are working
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;  
 &lt;span class=&quot;n&quot;&gt;X&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raw_dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Cost'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Customer Id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Artist Name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Delivery Date'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Scheduled Date'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Customer Location'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Cost&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Customer Id&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Artist Name&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Delivery Date&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Scheduled Date&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Customer Location&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Earlier, I checked our columns for nana values. In total it returned about 4000 Nan Values. But in every column we see that nan values are occurring more in some especially (Material, Transport, Remote_Location, Width, Height, etc). For this step, we want to replace nan values in &lt;em&gt;First&lt;/em&gt; Columns with more than two classes. Material, Remote_Location, and Transport fit the description, the reason is this, if we embed them we stand a chance of losing the relative relationship in our features. To do this, we are gonna create a simple function that fills Nan values with the highest occurring category in the column. e.g In the Material column, we have 7 classes (Brass, Stone, Aluminium, Bronze, Clay, ). Our function loops through the rows and replaces Nan Values with the highest repeating class.&lt;/p&gt;
@@ -175,15 +175,15 @@ The data frames contain several columns which depict the features we are working
 &lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ColName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;-Imputed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ColName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ColName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;-Imputed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fillna&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;most_frequent_category&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inplace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#Call function to impute most occured category
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Columns&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Material'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Remote Location'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Transport'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Columns&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Material&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;Remote Location&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;Transport&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;replace_nan_most_freq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;replace_nan_most_freq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# Display imputed result
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Material'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Material-Imputed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Remote Location'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Remote Location-Imputed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Transport'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Transport-Imputed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Material'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Material-Imputed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Remote Location'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Remote Location-Imputed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Transport'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Transport-Imputed]].head(10)
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Material&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Material-Imputed&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Remote Location&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Remote Location-Imputed&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Transport&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Transport-Imputed&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Material&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Material-Imputed&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Remote Location&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Remote Location-Imputed&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Transport&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Transport-Imputed]].head(10)
 #Drop actual columns
-train = train.drop(['&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Material&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;', '&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Remote&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Location&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Transport&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'], axis = 1)
-test = test.drop(['&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Material&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;', '&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Remote&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Location&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Transport&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'], axis = 1)&lt;/span&gt;
+train = train.drop([&apos;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Material&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;, &apos;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Remote&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Location&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;,&apos;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Transport&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;], axis = 1)
+test = test.drop([&apos;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Material&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;, &apos;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Remote&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Location&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;,&apos;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Transport&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;], axis = 1)&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;With that, if we plot the train and test df, we get the following:
@@ -201,7 +201,7 @@ As you can see Material has been replaced by Material_Imputed, likewise with Tra
 5
 6
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;# Get list of categorical variables
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtypes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'object'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtypes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;object&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;object_cols&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Categorical variables:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -322,8 +322,8 @@ The example below uses the f_classif statistical test for positive numerical fea
 &lt;span class=&quot;n&quot;&gt;dfcolumns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_final&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#concat two dataframes for better visualization 
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;featureScores&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dfcolumns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dfscores&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;featureScores&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Specs'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Score'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;#naming the dataframe columns
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;featureScores&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nlargest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Score'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;#print 10 best features&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;featureScores&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Specs&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Score&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;#naming the dataframe columns
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;featureScores&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nlargest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Score&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;#print 10 best features&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;The top ten best features are displayed below helping us get rid of uncertainties like the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Fragile&lt;/code&gt; column.&lt;/p&gt;
@@ -355,7 +355,7 @@ Feature importance is an inbuilt class that comes with Tree-Based Classifiers, w
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feature_importances_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#use inbuilt class feature_importances of tree based classifiers
 #plot graph of feature importances for better visualization
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feat_importances&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Series&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feature_importances_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_final&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;feat_importances&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nlargest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'barh'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;feat_importances&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nlargest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;barh&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -411,8 +411,8 @@ Heatmap makes it easy to identify which features are most related to the target 
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imputed_X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Fragile'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Remote Location'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Installation Included'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;x_test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imputed_X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Fragile'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Remote Location'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Installation Included'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imputed_X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Fragile&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Remote Location&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Installation Included&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x_test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imputed_X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Fragile&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Remote Location&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Installation Included&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
@@ -424,7 +424,7 @@ Heatmap makes it easy to identify which features are most related to the target 
 &lt;span class=&quot;n&quot;&gt;scaler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sklearn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;preprocessing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StandardScaler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scaler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit_transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imputed_X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imputed_X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;x_test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scaler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit_transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imputed_X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imputed_X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Location&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Installation&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Included&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'], axis=1)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x_test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scaler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit_transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imputed_X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imputed_X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Location&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;,&apos;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Installation&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Included&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;], axis=1)&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
@@ -458,7 +458,7 @@ Heatmap makes it easy to identify which features are most related to the target 
       &lt;p&gt;The above quote is a definition extracted from Big Data Framework’s &lt;a href=&quot;https://www.bigdataframework.org/data-types-structured-vs-unstructured-data/&quot;&gt;article&lt;/a&gt; written on January 9th, 2019. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Chel</name></author><summary type="html">Have you ever been faced with such a dataset so unclean and irregular, that you feel terrified? 😯. If your answer is NO, you have either been practicing deep learning for over 3 years or you rarely ever practice at all? But jokes aside, we deep learners frequently get faced with rather unclean data that needs tedious amounts of processing to be usable. Several of these problems which we are gonna tackle in this tutorial by solving a machine learning problem in a beginner-friendly way. let’s get started!</summary></entry><entry><title type="html">Convolutional Neural Networks Vs Recurrent Neural Networks(An Intuitive Guide for every Deep Learning Practitioner)</title><link href="http://localhost:4000/cnn-and-rnn-simplified/" rel="alternate" type="text/html" title="Convolutional Neural Networks Vs Recurrent Neural Networks(An Intuitive Guide for every Deep Learning Practitioner)" /><published>2020-10-14T00:00:00+01:00</published><updated>2020-10-14T00:00:00+01:00</updated><id>http://localhost:4000/cnn%20and%20rnn%20simplified</id><content type="html" xml:base="http://localhost:4000/cnn-and-rnn-simplified/">&lt;p&gt;Have you been feeling frustared about the complexity of deep learning terms like Convolutional Neural networks and Recurrent NNs?&lt;/p&gt;
+&lt;/div&gt;</content><author><name>Chel</name></author><summary type="html">Have you ever been faced with such a dataset so unclean and irregular, that you feel terrified? 😯. If your answer is NO, you have either been practicing deep learning for over 3 years or you rarely ever practice at all? But jokes aside, we deep learners frequently get faced with rather unclean data that needs tedious amounts of processing to be usable. Several of these problems which we are gonna tackle in this tutorial by solving a machine learning problem in a beginner-friendly way. let’s get started!</summary></entry><entry><title type="html">Convolutional Neural Networks Vs Recurrent Neural Networks(An Intuitive Guide for every Deep Learning Practitioner)</title><link href="https://channelai.netlify.app/cnn-and-rnn-simplified/" rel="alternate" type="text/html" title="Convolutional Neural Networks Vs Recurrent Neural Networks(An Intuitive Guide for every Deep Learning Practitioner)" /><published>2020-10-14T00:00:00+01:00</published><updated>2020-10-14T00:00:00+01:00</updated><id>https://channelai.netlify.app/cnn%20and%20rnn%20simplified</id><content type="html" xml:base="https://channelai.netlify.app/cnn-and-rnn-simplified/">&lt;p&gt;Have you been feeling frustared about the complexity of deep learning terms like Convolutional Neural networks and Recurrent NNs?&lt;/p&gt;
 
 &lt;p&gt;You have read countless articles with your goal in mind being to grasp and understand it finally - but it still doesn’t click?&lt;/p&gt;
 
@@ -651,7 +651,7 @@ Sentence 2: The food was bad, not good at all&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;h3&gt;End Notes&lt;/h3&gt;
-&lt;p&gt;Now the end of this comprehensive article, I mostly hope that it has achieved it’s purpose with you; To simplify the subject of RNN and CNN without much alogrithm and theory. It’s a really long article and you might find after sometime, you would need to refer back to it for some details. that is infact highly recommended for you to grasp the main concepts effectively. Have a question or an area you need some clarity in? Please leave me a comment and I will be glad to answer it.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Have you been feeling frustared about the complexity of deep learning terms like Convolutional Neural networks and Recurrent NNs?</summary></entry><entry><title type="html">9 Key Skills Every Deep Learning Practitioner Should Have (How many in the List do you Have?)</title><link href="http://localhost:4000/key-deep-learning-skills-beginner/" rel="alternate" type="text/html" title="9 Key Skills Every Deep Learning Practitioner Should Have (How many in the List do you Have?)" /><published>2020-10-09T00:00:00+01:00</published><updated>2020-10-09T00:00:00+01:00</updated><id>http://localhost:4000/key%20deep%20learning%20skills%20beginner</id><content type="html" xml:base="http://localhost:4000/key-deep-learning-skills-beginner/">&lt;p&gt;Are there specific skills important in deep learning?. You shouldn’t be surprised if you ask yourself this question. At a time or another, all budding deep learner ask themselves the same question. Are you a deep learner that flows with the tides that comes along with projects or are you set on building important skills that can make you more effective. In this article, I share 9 skills backed by stactics that guarantees exponential growth in your deep learning career.&lt;/p&gt;
+&lt;p&gt;Now the end of this comprehensive article, I mostly hope that it has achieved it’s purpose with you; To simplify the subject of RNN and CNN without much alogrithm and theory. It’s a really long article and you might find after sometime, you would need to refer back to it for some details. that is infact highly recommended for you to grasp the main concepts effectively. Have a question or an area you need some clarity in? Please leave me a comment and I will be glad to answer it.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Have you been feeling frustared about the complexity of deep learning terms like Convolutional Neural networks and Recurrent NNs?</summary></entry><entry><title type="html">9 Key Skills Every Deep Learning Practitioner Should Have (How many in the List do you Have?)</title><link href="https://channelai.netlify.app/key-deep-learning-skills-beginner/" rel="alternate" type="text/html" title="9 Key Skills Every Deep Learning Practitioner Should Have (How many in the List do you Have?)" /><published>2020-10-09T00:00:00+01:00</published><updated>2020-10-09T00:00:00+01:00</updated><id>https://channelai.netlify.app/key%20deep%20learning%20skills%20beginner</id><content type="html" xml:base="https://channelai.netlify.app/key-deep-learning-skills-beginner/">&lt;p&gt;Are there specific skills important in deep learning?. You shouldn’t be surprised if you ask yourself this question. At a time or another, all budding deep learner ask themselves the same question. Are you a deep learner that flows with the tides that comes along with projects or are you set on building important skills that can make you more effective. In this article, I share 9 skills backed by stactics that guarantees exponential growth in your deep learning career.&lt;/p&gt;
 
 &lt;p&gt;Skills are very important. In some cases, more important than others. They help us to go from zero to one in any new field of our interest. This being the case, why do we have learners that never really attain the peaks of their careers since the skills necessary for success is available for all to master?. Could it be that they are learning the &lt;i&gt;wrong&lt;/i&gt; skills, learning it the wrong way or more critical, having a skewed perspective to skill gathering.&lt;/p&gt;
 
@@ -811,7 +811,7 @@ As before, practicing on tutorials covering this subject would build up the skil
 
 &lt;h3&gt;End Notes&lt;/h3&gt;
 &lt;p&gt;To conclude, in this article, we understood the skills required for a deep learning practitioner. Also, we explained in brief, the difference between a deep learner and a deep learning practitioner and why you should strive to achieve the latter.
-Have other skills in mind? What skills do you think is the best for aspiring deep learning practitioners? Let us know in the comments below.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Are there specific skills important in deep learning?. You shouldn’t be surprised if you ask yourself this question. At a time or another, all budding deep learner ask themselves the same question. Are you a deep learner that flows with the tides that comes along with projects or are you set on building important skills that can make you more effective. In this article, I share 9 skills backed by stactics that guarantees exponential growth in your deep learning career.</summary></entry><entry><title type="html">Starting your First Computer Vision Project? Here are 10 Things you Must Absolutely know</title><link href="http://localhost:4000/key-points-before-starting-computer-vision/" rel="alternate" type="text/html" title="Starting your First Computer Vision Project? Here are 10 Things you Must Absolutely know" /><published>2020-09-21T00:00:00+01:00</published><updated>2020-09-21T00:00:00+01:00</updated><id>http://localhost:4000/key%20points%20before%20starting%20computer%20vision</id><content type="html" xml:base="http://localhost:4000/key-points-before-starting-computer-vision/">&lt;p&gt;Can you imagine navigating through an unknown city without Google Maps?It is usually a tough and tiring ordeal, all paths seems to lead to nothing and at the end you even ask yourself why you took that path in the first place.&lt;/p&gt;
+Have other skills in mind? What skills do you think is the best for aspiring deep learning practitioners? Let us know in the comments below.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Are there specific skills important in deep learning?. You shouldn’t be surprised if you ask yourself this question. At a time or another, all budding deep learner ask themselves the same question. Are you a deep learner that flows with the tides that comes along with projects or are you set on building important skills that can make you more effective. In this article, I share 9 skills backed by stactics that guarantees exponential growth in your deep learning career.</summary></entry><entry><title type="html">Starting your First Computer Vision Project? Here are 10 Things you Must Absolutely know</title><link href="https://channelai.netlify.app/key-points-before-starting-computer-vision/" rel="alternate" type="text/html" title="Starting your First Computer Vision Project? Here are 10 Things you Must Absolutely know" /><published>2020-09-21T00:00:00+01:00</published><updated>2020-09-21T00:00:00+01:00</updated><id>https://channelai.netlify.app/key%20points%20before%20starting%20computer%20vision</id><content type="html" xml:base="https://channelai.netlify.app/key-points-before-starting-computer-vision/">&lt;p&gt;Can you imagine navigating through an unknown city without Google Maps?It is usually a tough and tiring ordeal, all paths seems to lead to nothing and at the end you even ask yourself why you took that path in the first place.&lt;/p&gt;
 
 &lt;p&gt;That’s often what the first Computer Vision project feels like. I can personally attest to this because I have been through it and now I know some real facts of what should and not be done.&lt;/p&gt;
 
@@ -897,7 +897,7 @@ files.upload()
 
 &lt;p&gt;First and fore most, you should love to work in Computer Vision field. Without this love, we can’t even start talking consistency. If this is the case, then I cannot stress this enough. I you want to take just ONE guideline from all the key points, let it be this one. This just tells you how important it is. You can’t trade consistency for anything - even money. You want to know why I picked this? Because by applying consistency to your work in CV, you would sooner or later figure out the other helpful tips I have given you. All these tips are written to make you reading it right now understand them “early on” not that you can’t figure them out for yourself. In other words, I’m trying to save you all the time you will spend by choosing the wrong paths which is a common thing for beginners. Back to consistency, what I mean is this: If you work and practice Computer Vision tutorials and projects every other day, you can achieve in months what others strived years to achieve because of their lack of consistency. I can’t really do much to help you get to that level of consistency that is desirable, it’s more of a personal endeavor. What I can make you undertsand is this: If you make becoming an expert in Computer Vision you Definite Chief Aim(what you want to achieve everyday more than anything), you would attain the greatest heights possible no matter how low you might start. Understand that statement, believe in it, and that’s the best assistance I can render in this case.&lt;/p&gt;
 
-&lt;p&gt;That brings us to the end of this article on guidelines to help you take a start in the field of CV, I hope most that you find this helpful on the long run. Naturally questions would popped in your mind as you have read this comprehensive guidelines, know that your comments are very welcomed and if you please let me know if you found this helpful and what your next step would be in your quest to master Computer Vision. Thanks, Chel_&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Can you imagine navigating through an unknown city without Google Maps?It is usually a tough and tiring ordeal, all paths seems to lead to nothing and at the end you even ask yourself why you took that path in the first place.</summary></entry><entry><title type="html">How to make Scalale Predictions with a Deep Learning Model Built with Keras</title><link href="http://localhost:4000/scalable-predictions-with-deep-learning-keras-model/" rel="alternate" type="text/html" title="How to make Scalale Predictions with a Deep Learning Model Built with Keras" /><published>2020-09-17T00:00:00+01:00</published><updated>2020-09-17T00:00:00+01:00</updated><id>http://localhost:4000/scalable%20predictions%20with%20deep%20learning%20keras%20model</id><content type="html" xml:base="http://localhost:4000/scalable-predictions-with-deep-learning-keras-model/">&lt;p&gt;Buiding Models is exciting, putting them to use can be very brain-tasking. For people who have mastered model deployment, usually this involves just a few tweaks to the code to make it work for a new problem and situation. For beginners like you and me, the task of scaling models for prediction for use in different environment requires a lot of information gathering, software set-up and a little bit of technical know-how. In this article, my aim is to simplify this process for you and show you the methods and steps you can immediately put to use in your projects.&lt;/p&gt;
+&lt;p&gt;That brings us to the end of this article on guidelines to help you take a start in the field of CV, I hope most that you find this helpful on the long run. Naturally questions would popped in your mind as you have read this comprehensive guidelines, know that your comments are very welcomed and if you please let me know if you found this helpful and what your next step would be in your quest to master Computer Vision. Thanks, Chel_&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Can you imagine navigating through an unknown city without Google Maps?It is usually a tough and tiring ordeal, all paths seems to lead to nothing and at the end you even ask yourself why you took that path in the first place.</summary></entry><entry><title type="html">How to make Scalale Predictions with a Deep Learning Model Built with Keras</title><link href="https://channelai.netlify.app/scalable-predictions-with-deep-learning-keras-model/" rel="alternate" type="text/html" title="How to make Scalale Predictions with a Deep Learning Model Built with Keras" /><published>2020-09-17T00:00:00+01:00</published><updated>2020-09-17T00:00:00+01:00</updated><id>https://channelai.netlify.app/scalable%20predictions%20with%20deep%20learning%20keras%20model</id><content type="html" xml:base="https://channelai.netlify.app/scalable-predictions-with-deep-learning-keras-model/">&lt;p&gt;Buiding Models is exciting, putting them to use can be very brain-tasking. For people who have mastered model deployment, usually this involves just a few tweaks to the code to make it work for a new problem and situation. For beginners like you and me, the task of scaling models for prediction for use in different environment requires a lot of information gathering, software set-up and a little bit of technical know-how. In this article, my aim is to simplify this process for you and show you the methods and steps you can immediately put to use in your projects.&lt;/p&gt;
 
 &lt;p&gt;These are the steps guiding us through this article:&lt;/p&gt;
 
@@ -974,23 +974,23 @@ These are the three software you need to set up locally. Refer to this article o
 
 * &lt;b&gt;Preparation&lt;/b&gt; to store your datasets with BigQuery, then use the built-in Data Labeling Service to label your training data by applying classification, object detection, and entity extraction, etc
 * &lt;b&gt;Build&lt;/b&gt; for building your model with GCP Auto ML, a managed Jupyter Notebook service that provides fully configured environments for model development or in our case importing your complete tensorflow model.
-* &lt;b&gt;Validation&lt;/b&gt; to validate your model with AI Explanations that helps you understand your model's outputs, verify the model behavior, recognize bias in your models, and get ideas for ways to improve your model and your training data.
+* &lt;b&gt;Validation&lt;/b&gt; to validate your model with AI Explanations that helps you understand your model&apos;s outputs, verify the model behavior, recognize bias in your models, and get ideas for ways to improve your model and your training data.
 * &lt;b&gt;Deployment&lt;/b&gt; to Deploy your models at scale and get predictions from them in the cloud with AI Platform Prediction that manages the infrastructure needed to run your model and makes it available for online and batch prediction requests.
 
 The diagram below describes this process in details: &lt;br /&gt;
 &lt;img class=&quot;img-fluid&quot; src=&quot;https://cloud.google.com/images/ai-platform/ai_platform.svg&quot; /&gt; &lt;br /&gt;
 
 From this brief introduction to AI Platform, we can see that we need to use only the deployment function of the lot. GCP provides the tools to prepare, train and validate but we can do all of these directly in keras when building a model. To get started with AI Platform for Deployment, visit &lt;a href=&quot;https://cloud.google.com/ai-platform/docs/getting-started-keras&quot;&gt;here&lt;/a&gt;. The main advantage of AI Platform is that it is easier to use because most of the code is abstracted and handled b gcp under-the-hood. 
-&lt;b&gt;Note:&lt;/b&gt; GCP has it's pricing for all products, if you are just looking to experiment or start of somewhere you can use the 1 year bonus on gcp platform where you can use most products for free.
+&lt;b&gt;Note:&lt;/b&gt; GCP has it&apos;s pricing for all products, if you are just looking to experiment or start of somewhere you can use the 1 year bonus on gcp platform where you can use most products for free.
 &lt;/li&gt;
 
 &lt;br /&gt;
-&lt;li&gt;Digital Ocean: The final option listed here is perhaps the easiest one to use. It is a very suitable options for beginners and small-medium sized enterprises. Yhh, you also don't have to read pages of documentation. All the work is done behind the hood, usually you just have to click a few options, write some code and that's it. Digital Ocean is by far the most popular cloud hosting service developers use, there are other options you can go for like Katerama, V etc.Digital Ocean offers a free 2 months trial period to test their services, this is a good way to learn how deployment and predictions work before been charged for it. To go about this process, you can refer to this article &lt;a href=&quot;https://towardsdatascience.com/building-a-web-application-to-deploy-machine-learning-models-e224269c1331&quot;&gt;Train and Deploy a Ml model built with Keras&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Digital Ocean: The final option listed here is perhaps the easiest one to use. It is a very suitable options for beginners and small-medium sized enterprises. Yhh, you also don&apos;t have to read pages of documentation. All the work is done behind the hood, usually you just have to click a few options, write some code and that&apos;s it. Digital Ocean is by far the most popular cloud hosting service developers use, there are other options you can go for like Katerama, V etc.Digital Ocean offers a free 2 months trial period to test their services, this is a good way to learn how deployment and predictions work before been charged for it. To go about this process, you can refer to this article &lt;a href=&quot;https://towardsdatascience.com/building-a-web-application-to-deploy-machine-learning-models-e224269c1331&quot;&gt;Train and Deploy a Ml model built with Keras&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;That’s it, with these guidelines, the whole process of deplotyment should be less intimidating to you. As a deep learner, this is a very important part of the process, and it is helpful to get accustomed to the process earler on.&lt;/p&gt;
 
-&lt;p&gt;Thanks for learning about deployment with me today, it is understandable if you have a few questions on your mind after taking in this huge pile of guidelines and directions, don’t hesitate to leave me a comment and I’d be sure to get back to you. Chel_&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Buiding Models is exciting, putting them to use can be very brain-tasking. For people who have mastered model deployment, usually this involves just a few tweaks to the code to make it work for a new problem and situation. For beginners like you and me, the task of scaling models for prediction for use in different environment requires a lot of information gathering, software set-up and a little bit of technical know-how. In this article, my aim is to simplify this process for you and show you the methods and steps you can immediately put to use in your projects.</summary></entry><entry><title type="html">5 Books to Start your Deep Learning Journey in 2020</title><link href="http://localhost:4000/books-deep-learning-2020/" rel="alternate" type="text/html" title="5 Books to Start your Deep Learning Journey in 2020" /><published>2020-09-08T00:00:00+01:00</published><updated>2020-09-08T00:00:00+01:00</updated><id>http://localhost:4000/books%20deep%20learning%202020</id><content type="html" xml:base="http://localhost:4000/books-deep-learning-2020/">&lt;p&gt;No doubt, AI is one of the most crucial future technologies which is being harnessed today and transforming our daily lives. A very important branch of Artificial Intelligence “Deep Learning” has arguably the biggest impact in AI progress.  If you’re a beginner looking for the right free resources to learn deep learning and discover applications in fields like Computer Vision, NLP, this plog post is you. This article will introduce the best books to learn deep learning in 2020 and how to practice deep learning with them.&lt;/p&gt;
+&lt;p&gt;Thanks for learning about deployment with me today, it is understandable if you have a few questions on your mind after taking in this huge pile of guidelines and directions, don’t hesitate to leave me a comment and I’d be sure to get back to you. Chel_&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Buiding Models is exciting, putting them to use can be very brain-tasking. For people who have mastered model deployment, usually this involves just a few tweaks to the code to make it work for a new problem and situation. For beginners like you and me, the task of scaling models for prediction for use in different environment requires a lot of information gathering, software set-up and a little bit of technical know-how. In this article, my aim is to simplify this process for you and show you the methods and steps you can immediately put to use in your projects.</summary></entry><entry><title type="html">5 Books to Start your Deep Learning Journey in 2020</title><link href="https://channelai.netlify.app/books-deep-learning-2020/" rel="alternate" type="text/html" title="5 Books to Start your Deep Learning Journey in 2020" /><published>2020-09-08T00:00:00+01:00</published><updated>2020-09-08T00:00:00+01:00</updated><id>https://channelai.netlify.app/books%20deep%20learning%202020</id><content type="html" xml:base="https://channelai.netlify.app/books-deep-learning-2020/">&lt;p&gt;No doubt, AI is one of the most crucial future technologies which is being harnessed today and transforming our daily lives. A very important branch of Artificial Intelligence “Deep Learning” has arguably the biggest impact in AI progress.  If you’re a beginner looking for the right free resources to learn deep learning and discover applications in fields like Computer Vision, NLP, this plog post is you. This article will introduce the best books to learn deep learning in 2020 and how to practice deep learning with them.&lt;/p&gt;
 
 &lt;h4&gt;Overview&lt;/h4&gt;
 &lt;ul&gt;
@@ -1120,7 +1120,7 @@ This book also introduces neural networks with TensorFlow, runs through the main
   &lt;li&gt;I highlighted some action steps you can take to start learning deep learning in practice&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Thanks for reading through this post, I hope most that it would of some help to you. If you would like to ask about some more steps or anything at all , feel free to leave a comment below.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">No doubt, AI is one of the most crucial future technologies which is being harnessed today and transforming our daily lives. A very important branch of Artificial Intelligence “Deep Learning” has arguably the biggest impact in AI progress. If you’re a beginner looking for the right free resources to learn deep learning and discover applications in fields like Computer Vision, NLP, this plog post is you. This article will introduce the best books to learn deep learning in 2020 and how to practice deep learning with them.</summary></entry><entry><title type="html">Virtual Reality 10 Years from now _ What would VR look like in 2030?</title><link href="http://localhost:4000/virtual-reality-and-the-future-of-humans/" rel="alternate" type="text/html" title="Virtual Reality 10 Years from now _ What would VR look like in 2030?" /><published>2020-08-09T00:00:00+01:00</published><updated>2020-08-09T00:00:00+01:00</updated><id>http://localhost:4000/virtual%20reality%20and%20the%20future%20of%20humans</id><content type="html" xml:base="http://localhost:4000/virtual-reality-and-the-future-of-humans/">&lt;p&gt;Virtual Reality is a fascinating field among the many branches of Artificial Intelligence. It is a question if it doesn’t stand on the same level as AI and can bring us tremendously big advantages as we see AI doing now in 2020. At the moment, Virtual Reality has already been adopted in a few industries like the gaming, construction, production, housing among others. For VR to become “the next big thing” in tech it has to be able to generate a huge value for industries. This is only logical as, increasing values means big investments made by invetors which in turn brings advancement to the field by research, building ease-of-use tools and opportunities. The way I see it is this, I have so much hope on VR becoming a massive technological field for so many reasons.&lt;/p&gt;
+&lt;p&gt;Thanks for reading through this post, I hope most that it would of some help to you. If you would like to ask about some more steps or anything at all , feel free to leave a comment below.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">No doubt, AI is one of the most crucial future technologies which is being harnessed today and transforming our daily lives. A very important branch of Artificial Intelligence “Deep Learning” has arguably the biggest impact in AI progress. If you’re a beginner looking for the right free resources to learn deep learning and discover applications in fields like Computer Vision, NLP, this plog post is you. This article will introduce the best books to learn deep learning in 2020 and how to practice deep learning with them.</summary></entry><entry><title type="html">Virtual Reality 10 Years from now _ What would VR look like in 2030?</title><link href="https://channelai.netlify.app/virtual-reality-and-the-future-of-humans/" rel="alternate" type="text/html" title="Virtual Reality 10 Years from now _ What would VR look like in 2030?" /><published>2020-08-09T00:00:00+01:00</published><updated>2020-08-09T00:00:00+01:00</updated><id>https://channelai.netlify.app/virtual%20reality%20and%20the%20future%20of%20humans</id><content type="html" xml:base="https://channelai.netlify.app/virtual-reality-and-the-future-of-humans/">&lt;p&gt;Virtual Reality is a fascinating field among the many branches of Artificial Intelligence. It is a question if it doesn’t stand on the same level as AI and can bring us tremendously big advantages as we see AI doing now in 2020. At the moment, Virtual Reality has already been adopted in a few industries like the gaming, construction, production, housing among others. For VR to become “the next big thing” in tech it has to be able to generate a huge value for industries. This is only logical as, increasing values means big investments made by invetors which in turn brings advancement to the field by research, building ease-of-use tools and opportunities. The way I see it is this, I have so much hope on VR becoming a massive technological field for so many reasons.&lt;/p&gt;
 
 &lt;p&gt;For Virtual Reality to be embraced by majority if not all industry, it has to impact them by bringing progression and developments in lesser amount of time. I think that currently VR can find application in many sectors but not all have adopted it seeing it as a relatively new technology, in short, a lot of skeptisism surrounds VR. But it should not be that way. Looking at it from a strategic viewpoint, you can see that generally, history always repeats itself. In 1998 when the internet was just taking off, many businesses feared to integrate it in their business and transfer their presence online, and now?, Every business that desires more customers simply knows that the solution is E-bussiness with good advertising and customer targeting. Another example can be seen in Artificial Intelligence. In 1997 IBM’s Deep Blue system defeats the world champion of chess, 20 Years Later, the advancement of AI is massive alomost mind-blowing.&lt;/p&gt;
 
@@ -1145,7 +1145,7 @@ This book also introduces neural networks with TensorFlow, runs through the main
 
 &lt;p&gt;Virtual Reality is a Technology that brings us closest to a fantasical future. It holds can can bring a lot of developments,fun,innovations to the world. The ideas listed above is something that honestly I see becoming reality in just a few years time. There are other fields of technology that holds big things in time to come like Quantum Computing, Artificial General Intelligence, Computer Vision, Internet of things etc. The combination of these technology would really give us a changed world, by changed world, what I mean is: A world without pollution, untimely death, corruption, terrorism. I argue that no human should lose their lives when it isn’t at the prime of age beacuse life is wonderful and beautiful and all has the right to enjoy it. In short I believe in a world just like in the movie from 2004 “Wall-E”.&lt;/p&gt;
 
-&lt;p&gt;To developers: The world of Virtual Reality is immence, it requires great effort and harmonious coorperation for we to see big advancement in it. I am open to teaming up with individuals interested and excited about VR. If you are one, don’t hesitate to reach out to me. You can do that by leaving a comment below or visiting &lt;a href=&quot;https://channelai.netlify.app/about&quot;&gt;About’s&lt;/a&gt; page where my many contacts info are linked.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Virtual Reality is a fascinating field among the many branches of Artificial Intelligence. It is a question if it doesn’t stand on the same level as AI and can bring us tremendously big advantages as we see AI doing now in 2020. At the moment, Virtual Reality has already been adopted in a few industries like the gaming, construction, production, housing among others. For VR to become “the next big thing” in tech it has to be able to generate a huge value for industries. This is only logical as, increasing values means big investments made by invetors which in turn brings advancement to the field by research, building ease-of-use tools and opportunities. The way I see it is this, I have so much hope on VR becoming a massive technological field for so many reasons.</summary></entry><entry><title type="html">How to Build an Object Detection Model using Convolutional Neural Networks and Transfer Learning in Keras with Mask RCNN Library.</title><link href="http://localhost:4000/object-detection-model-in-keras-with-mask-R-CNN/" rel="alternate" type="text/html" title="How to Build an Object Detection Model using Convolutional Neural Networks and Transfer Learning in Keras with Mask RCNN Library." /><published>2020-07-24T00:00:00+01:00</published><updated>2020-07-24T00:00:00+01:00</updated><id>http://localhost:4000/object%20detection%20model%20in%20keras%20with%20mask%20R-CNN</id><content type="html" xml:base="http://localhost:4000/object-detection-model-in-keras-with-mask-R-CNN/">&lt;p&gt;In this tutorial you would see how to apply state-of-the-art R-CNN architecture model built on the MS Coco dataset for Object Detection on a new Dataset. We use Transfer Learning for efficient and faster training epochs. You would learn how to Install the R-CNN Library, install the dataset we want to make predictions on, parse the annotation files for bounding boxes, Train Mask R-CNN Model on dataset using Transfer Learning.&lt;/p&gt;
+&lt;p&gt;To developers: The world of Virtual Reality is immence, it requires great effort and harmonious coorperation for we to see big advancement in it. I am open to teaming up with individuals interested and excited about VR. If you are one, don’t hesitate to reach out to me. You can do that by leaving a comment below or visiting &lt;a href=&quot;https://channelai.netlify.app/about&quot;&gt;About’s&lt;/a&gt; page where my many contacts info are linked.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">Virtual Reality is a fascinating field among the many branches of Artificial Intelligence. It is a question if it doesn’t stand on the same level as AI and can bring us tremendously big advantages as we see AI doing now in 2020. At the moment, Virtual Reality has already been adopted in a few industries like the gaming, construction, production, housing among others. For VR to become “the next big thing” in tech it has to be able to generate a huge value for industries. This is only logical as, increasing values means big investments made by invetors which in turn brings advancement to the field by research, building ease-of-use tools and opportunities. The way I see it is this, I have so much hope on VR becoming a massive technological field for so many reasons.</summary></entry><entry><title type="html">How to Build an Object Detection Model using Convolutional Neural Networks and Transfer Learning in Keras with Mask RCNN Library.</title><link href="https://channelai.netlify.app/object-detection-model-in-keras-with-mask-R-CNN/" rel="alternate" type="text/html" title="How to Build an Object Detection Model using Convolutional Neural Networks and Transfer Learning in Keras with Mask RCNN Library." /><published>2020-07-24T00:00:00+01:00</published><updated>2020-07-24T00:00:00+01:00</updated><id>https://channelai.netlify.app/object%20detection%20model%20in%20keras%20with%20mask%20R-CNN</id><content type="html" xml:base="https://channelai.netlify.app/object-detection-model-in-keras-with-mask-R-CNN/">&lt;p&gt;In this tutorial you would see how to apply state-of-the-art R-CNN architecture model built on the MS Coco dataset for Object Detection on a new Dataset. We use Transfer Learning for efficient and faster training epochs. You would learn how to Install the R-CNN Library, install the dataset we want to make predictions on, parse the annotation files for bounding boxes, Train Mask R-CNN Model on dataset using Transfer Learning.&lt;/p&gt;
 
 &lt;h3&gt;Overview&lt;/h3&gt;
 &lt;ul&gt;
@@ -1252,9 +1252,9 @@ First, the annotation file must be loaded and parsed as an ElementTree object. U
 from xml.etree import ElementTree
 import os
 # load and parse the file
-path = '/content/Mask_RCNN/kangaroo/annots'
+path = &apos;/content/Mask_RCNN/kangaroo/annots&apos;
 for filename in os.listdir(path):
-    if not filename.endswith('.xml'): continue
+    if not filename.endswith(&apos;.xml&apos;): continue
 fullname = os.path.join(path, filename)
 tree = ElementTree.parse(fullname)
 &lt;/code&gt;&lt;/pre&gt;
@@ -1274,11 +1274,11 @@ root = tree.getroot()
 
 &lt;pre&gt;&lt;code&gt;
 	# extract each bounding box
-	for box in root.findall('.//bndbox'):
-	xmin = int(box.find('xmin').text)
-	ymin = int(box.find('ymin').text)
-	xmax = int(box.find('xmax').text)
-	ymax = int(box.find('ymax').text)
+	for box in root.findall(&apos;.//bndbox&apos;):
+	xmin = int(box.find(&apos;xmin&apos;).text)
+	ymin = int(box.find(&apos;ymin&apos;).text)
+	xmax = int(box.find(&apos;xmax&apos;).text)
+	ymax = int(box.find(&apos;ymax&apos;).text)
 	coors = [xmin, ymin, xmax, ymax]
 	print(coors
 &lt;/code&gt;&lt;/pre&gt;
@@ -1286,8 +1286,8 @@ root = tree.getroot()
 
 &lt;pre&gt;&lt;code&gt;
 # extract image dimensions
-width = int(root.find('.//size/width').text)
-height = int(root.find('.//size/height').text)
+width = int(root.find(&apos;.//size/width&apos;).text)
+height = int(root.find(&apos;.//size/height&apos;).text)
 print(width,height)
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -1307,16 +1307,16 @@ The function extract_all() in the code cell below implements this behaviour.&lt;
 	root = tree.getroot()
 	# extract each bounding box
 	boxes = list()
-	for box in root.findall('.//bndbox'):
-	xmin = int(box.find('xmin').text)
-	ymin = int(box.find('ymin').text)
+	for box in root.findall(&apos;.//bndbox&apos;):
+	xmin = int(box.find(&apos;xmin&apos;).text)
+	ymin = int(box.find(&apos;ymin&apos;).text)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;We can test out this function on our annotation files. Let’s pick the first file for this test.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;
 # extract details form annotation file
-boxes, w, h = extract_all('kangaroo/annots/00001.xml')
+boxes, w, h = extract_all(&apos;kangaroo/annots/00001.xml&apos;)
 # summarize extracted details
 print(boxes, w, h)
 &lt;/code&gt;&lt;/pre&gt;
@@ -1351,7 +1351,7 @@ The mask-rcnn library requires that train, validation, and test datasets be call
 &lt;pre&gt;&lt;code&gt;
 # define one image
 # add to dataset
-#self.add_image('dataset', image_id='00001', path='kangaroo/images/00001.jpg', annotation='kangaroo/annots/00001.xml')
+#self.add_image(&apos;dataset&apos;, image_id=&apos;00001&apos;, path=&apos;kangaroo/images/00001.jpg&apos;, annotation=&apos;kangaroo/annots/00001.xml&apos;)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Next, we can implement a load_dataset() function that takes the path to dataset directory and loads all image in it. Image with number ‘00090‘ has an issue, so it would be excluded when we write code to load all images. We can also devide the dataset when loading into training and validation sets. The full photos are about 160. In a 80/20 ratio, we are left with about 131 photos in the training set and 20 in validation.&lt;/p&gt;
@@ -1362,8 +1362,8 @@ The mask-rcnn library requires that train, validation, and test datasets be call
 	# define one class
 	self.add_class(&quot;dataset&quot;, 1, &quot;kangaroo&quot;)
 	# define data locations
-	images_dir = dataset_dir + '/images/'
-	annotations_dir = dataset_dir + '/annots/'
+	images_dir = dataset_dir + &apos;/images/&apos;
+	annotations_dir = dataset_dir + &apos;/annots/&apos;
 	# find all images
 	for filename in listdir(images_dir):
 		# extract image id
@@ -1377,7 +1377,7 @@ The mask-rcnn library requires that train, validation, and test datasets be call
 # get details of image
 #info = self.image_info[image_id]
 # define box file location
-#path = info['annotation']
+#path = info[&apos;annotation&apos;]
 # load XML
 #boxes, w, h = self.extract_boxes(path)
 &lt;/code&gt;&lt;/pre&gt;
@@ -1389,7 +1389,7 @@ The mask-rcnn library requires that train, validation, and test datasets be call
 &lt;pre&gt;&lt;code&gt;
 import numpy as np
 # create one array for all masks, each on a different channel
-masks = zeros([h, w, len(boxes)], dtype='uint8')
+masks = zeros([h, w, len(boxes)], dtype=&apos;uint8&apos;)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Each bounding box is defined as min and max, x and y coordinates of the box.&lt;/p&gt;
@@ -1416,11 +1416,11 @@ Putting all this together,, we have a load_dataset() function that looks like be
 	# get details of image
 	info = self.image_info[image_id]
 	# define box file location
-	path = info['annotation']
+	path = info[&apos;annotation&apos;]
 	# load XML
 	boxes, w, h = self.extract_boxes(path)
 	# create one array for all masks, each on a different channel
-	masks = zeros([h, w, len(boxes)], dtype='uint8')
+	masks = zeros([h, w, len(boxes)], dtype=&apos;uint8&apos;)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Finally, we must implement the image_reference() function.&lt;/p&gt;
@@ -1431,7 +1431,7 @@ Putting all this together,, we have a load_dataset() function that looks like be
 	# load an image reference
 	def image_reference(self, image_id):
 	info = self.image_info[image_id]
-	return info['path']
+	return info[&apos;path&apos;]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And that’s it. We have successfully defined a Dataset object for the mask-rcnn library for our Kangaroo dataset.&lt;/p&gt;
 
@@ -1470,7 +1470,7 @@ from matplotlib import pyplot
 #plot the image
 pyplot.imshow(image)
 # plot mask
-pyplot.imshow(mask[:, :, 0], cmap='gray', alpha=0.5)
+pyplot.imshow(mask[:, :, 0], cmap=&apos;gray&apos;, alpha=0.5)
 pyplot.show()
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -1587,14 +1587,14 @@ Before we proceed to loading the model weights, we can define a new variable tha
 &lt;pre&gt;&lt;code&gt;
 # prepare train set
 train_set = KangarooDataset()
-train_set.load_dataset('kangaroo', is_train=True)
+train_set.load_dataset(&apos;kangaroo&apos;, is_train=True)
 train_set.prepare()
-print('Train: %d' % len(train_set.image_ids))
+print(&apos;Train: %d&apos; % len(train_set.image_ids))
 # prepare test/val set
 test_set = KangarooDataset()
-test_set.load_dataset('kangaroo', is_train=False)
+test_set.load_dataset(&apos;kangaroo&apos;, is_train=False)
 test_set.prepare()
-print('Test: %d' % len(test_set.image_ids))
+print(&apos;Test: %d&apos; % len(test_set.image_ids))
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Next, the pre-define model weights can be loaded, we specify a path to the saved weights “mask_rcnn_coco.h5”, we call the load_weights function on model defined above.&lt;/p&gt;
 
@@ -1602,7 +1602,7 @@ print('Test: %d' % len(test_set.image_ids))
 
 &lt;pre&gt;&lt;code&gt;
 # load weights (mscoco)
-model.load_weights('mask_rcnn_coco.h5', by_name=True, exclude=[&quot;mrcnn_class_logits&quot;, &quot;mrcnn_bbox_fc&quot;,  &quot;mrcnn_bbox&quot;, &quot;mrcnn_mask&quot;])
+model.load_weights(&apos;mask_rcnn_coco.h5&apos;, by_name=True, exclude=[&quot;mrcnn_class_logits&quot;, &quot;mrcnn_bbox_fc&quot;,  &quot;mrcnn_bbox&quot;, &quot;mrcnn_mask&quot;])
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Next, the model can be fit on the training dataset by calling the train() function and passing in both the training dataset and the validation dataset. We can also specify the learning rate as the default learning rate in the configuration (0.001).&lt;/p&gt;
 
@@ -1721,7 +1721,7 @@ Next, the prediction can be compared to the ground truth and metrics calculated 
 
 &lt;p&gt;This may be because the dataset is very small, and/or because the model could benefit from further training.&lt;/p&gt;
 
-&lt;p&gt;Detecting Kangaroos in new Images&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">In this tutorial you would see how to apply state-of-the-art R-CNN architecture model built on the MS Coco dataset for Object Detection on a new Dataset. We use Transfer Learning for efficient and faster training epochs. You would learn how to Install the R-CNN Library, install the dataset we want to make predictions on, parse the annotation files for bounding boxes, Train Mask R-CNN Model on dataset using Transfer Learning.</summary></entry><entry><title type="html">How to treat Overfitting in Convolutional Neural Networks</title><link href="http://localhost:4000/achieving-85-accuracy-on-cifar-10-dataset/" rel="alternate" type="text/html" title="How to treat Overfitting in Convolutional Neural Networks" /><published>2020-07-11T00:00:00+01:00</published><updated>2020-07-11T00:00:00+01:00</updated><id>http://localhost:4000/achieving%2085%20accuracy%20on%20cifar%2010%20dataset</id><content type="html" xml:base="http://localhost:4000/achieving-85-accuracy-on-cifar-10-dataset/">&lt;p&gt;In this tutorial you would learn some methods that can be used to improve a model’s accuracy using deep learning neural networks. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven’t already, you can build a Tensorflow Image Classification model following the guide in the last post &lt;a href=&quot;&quot;&gt;How to Build an Image Classification API in Tensorflow&lt;/a&gt;. This is an overview of what we would be touching on in this tutorial:&lt;/p&gt;
+&lt;p&gt;Detecting Kangaroos in new Images&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">In this tutorial you would see how to apply state-of-the-art R-CNN architecture model built on the MS Coco dataset for Object Detection on a new Dataset. We use Transfer Learning for efficient and faster training epochs. You would learn how to Install the R-CNN Library, install the dataset we want to make predictions on, parse the annotation files for bounding boxes, Train Mask R-CNN Model on dataset using Transfer Learning.</summary></entry><entry><title type="html">How to treat Overfitting in Convolutional Neural Networks</title><link href="https://channelai.netlify.app/achieving-85-accuracy-on-cifar-10-dataset/" rel="alternate" type="text/html" title="How to treat Overfitting in Convolutional Neural Networks" /><published>2020-07-11T00:00:00+01:00</published><updated>2020-07-11T00:00:00+01:00</updated><id>https://channelai.netlify.app/achieving%2085%20accuracy%20on%20cifar%2010%20dataset</id><content type="html" xml:base="https://channelai.netlify.app/achieving-85-accuracy-on-cifar-10-dataset/">&lt;p&gt;In this tutorial you would learn some methods that can be used to improve a model’s accuracy using deep learning neural networks. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven’t already, you can build a Tensorflow Image Classification model following the guide in the last post &lt;a href=&quot;&quot;&gt;How to Build an Image Classification API in Tensorflow&lt;/a&gt;. This is an overview of what we would be touching on in this tutorial:&lt;/p&gt;
 
 &lt;h3&gt;Overview&lt;/h3&gt;
 &lt;ul&gt;
@@ -1735,7 +1735,7 @@ Next, the prediction can be compared to the ground truth and metrics calculated 
 
 &lt;p&gt;Next: &lt;a href=&quot;&quot;&gt;Building an Image Classification API with TFX and GCP &lt;/a&gt;&lt;/p&gt;
 
-&lt;h3&gt;Improving Model's Accuracy with Convolutional Neural Networks&lt;/h3&gt;
+&lt;h3&gt;Improving Model&apos;s Accuracy with Convolutional Neural Networks&lt;/h3&gt;
 
 &lt;p&gt;In the last article we built a simple classifier model in Tensorflow. I achieved 75% accuracy after evaluating the test set which consists of 10000 Images which was not used in training. This gives us a view of how our model would perform in a real world scenario. Of-course, we aren’t going to use this model for any big projects anytime soon, but by practising on it gives us understanding that can be applied to bigger projects.&lt;/p&gt;
 
@@ -1768,28 +1768,28 @@ from keras.callbacks import LearningRateScheduler
 from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D
 
 model = Sequential()
-model.add(Conv2D(32, (3, 3), activation='relu', padding='same', input_shape=(32, 32, 3))),
-model.add(Conv2D(32, (3, 3), activation='relu', padding='same'))
+model.add(Conv2D(32, (3, 3), activation=&apos;relu&apos;, padding=&apos;same&apos;, input_shape=(32, 32, 3))),
+model.add(Conv2D(32, (3, 3), activation=&apos;relu&apos;, padding=&apos;same&apos;))
 model.add(MaxPooling2D(2, 2)),
 model.add(Dropout(0.2))
-model.add(Conv2D(64, (3, 3), activation='relu', padding='same')),
-model.add(Conv2D(64, (3, 3), activation='relu', padding='same')),
+model.add(Conv2D(64, (3, 3), activation=&apos;relu&apos;, padding=&apos;same&apos;)),
+model.add(Conv2D(64, (3, 3), activation=&apos;relu&apos;, padding=&apos;same&apos;)),
 model.add(MaxPooling2D(2, 2)),
 model.add(Dropout(0.2))
-model.add(Conv2D(128, (3, 3), activation='relu', padding='same')),
-model.add(Conv2D(128, (3, 3), activation='relu', padding='same')),
+model.add(Conv2D(128, (3, 3), activation=&apos;relu&apos;, padding=&apos;same&apos;)),
+model.add(Conv2D(128, (3, 3), activation=&apos;relu&apos;, padding=&apos;same&apos;)),
 model.add(MaxPooling2D(2, 2)),
 model.add(Dropout(0.2))
 model.add(Flatten()),
-model.add(Dense(512, activation='relu')),
+model.add(Dense(512, activation=&apos;relu&apos;)),
 model.add(Dropout(0.5))
-model.add(Dense(10, activation='softmax'))
+model.add(Dense(10, activation=&apos;softmax&apos;))
 
 model.summary()
 
-model.compile(loss='categorical_crossentropy',
-              optimizer='adam',
-              metrics=['accuracy'])
+model.compile(loss=&apos;categorical_crossentropy&apos;,
+              optimizer=&apos;adam&apos;,
+              metrics=[&apos;accuracy&apos;])
 
 hist = model.fit(x_train, y_train_one_hot, 
           batch_size=64, epochs=25, 
@@ -1800,7 +1800,7 @@ hist = model.fit(x_train, y_train_one_hot,
 
 &lt;p&gt;&lt;img src=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Here, we trained our model for just 25% accuracy and achieved approx 85% accuracy. This is a significant development from when we only convolution and maxpooling layers to build our model. Training it for more epochs can as well give you more accuracy which you should try out by simply following the guide.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">In this tutorial you would learn some methods that can be used to improve a model’s accuracy using deep learning neural networks. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven’t already, you can build a Tensorflow Image Classification model following the guide in the last post How to Build an Image Classification API in Tensorflow. This is an overview of what we would be touching on in this tutorial:</summary></entry><entry><title type="html">How to Build an Image Classification Model and Web App with Tensorflow</title><link href="http://localhost:4000/image-classification-api-in-tensorflow/" rel="alternate" type="text/html" title="How to Build an Image Classification Model and Web App with Tensorflow" /><published>2020-06-28T00:00:00+01:00</published><updated>2020-06-28T00:00:00+01:00</updated><id>http://localhost:4000/image%20classification%20api%20in%20tensorflow</id><content type="html" xml:base="http://localhost:4000/image-classification-api-in-tensorflow/">&lt;p&gt;In this tutorial, you would learn how to build an Image Classification Model using Tensorflow on Google Colab. This tutorial is the first among three set. They go from buiding an Image Classifier to Improving accuracy in your model and finally Serving it for production through an API url Endpoint. To start off, here is the overview of all what we would be touching on.&lt;/p&gt;
+&lt;p&gt;Here, we trained our model for just 25% accuracy and achieved approx 85% accuracy. This is a significant development from when we only convolution and maxpooling layers to build our model. Training it for more epochs can as well give you more accuracy which you should try out by simply following the guide.&lt;/p&gt;</content><author><name>Chel</name></author><summary type="html">In this tutorial you would learn some methods that can be used to improve a model’s accuracy using deep learning neural networks. This can be achieved in a few lines of code using Tensorflow by just importing required libraries. If you haven’t already, you can build a Tensorflow Image Classification model following the guide in the last post How to Build an Image Classification API in Tensorflow. This is an overview of what we would be touching on in this tutorial:</summary></entry><entry><title type="html">How to Build an Image Classification Model and Web App with Tensorflow</title><link href="https://channelai.netlify.app/image-classification-api-in-tensorflow/" rel="alternate" type="text/html" title="How to Build an Image Classification Model and Web App with Tensorflow" /><published>2020-06-28T00:00:00+01:00</published><updated>2020-06-28T00:00:00+01:00</updated><id>https://channelai.netlify.app/image%20classification%20api%20in%20tensorflow</id><content type="html" xml:base="https://channelai.netlify.app/image-classification-api-in-tensorflow/">&lt;p&gt;In this tutorial, you would learn how to build an Image Classification Model using Tensorflow on Google Colab. This tutorial is the first among three set. They go from buiding an Image Classifier to Improving accuracy in your model and finally Serving it for production through an API url Endpoint. To start off, here is the overview of all what we would be touching on.&lt;/p&gt;
 
 &lt;h3&gt;Overview&lt;/h3&gt;
 &lt;ul&gt;
@@ -1900,9 +1900,9 @@ hist = model.fit(x_train, y_train_one_hot,
 
 from keras.datasets import cifar10
 (x_train, y_train), (x_test, y_test) = cifar10.load_data()
-print('x_train shape:', x_train.shape)
-print('y_train shape:', y_train.shape)
-print('no_of_x_train:', len(x_train))
+print(&apos;x_train shape:&apos;, x_train.shape)
+print(&apos;y_train shape:&apos;, y_train.shape)
+print(&apos;no_of_x_train:&apos;, len(x_train))
 
 Output: 
 x_train shape: (50000, 32, 32, 3)
@@ -1937,7 +1937,7 @@ print(x_train[0])
 import matplotlib.pyplot as plt
 img = plt.imshow(x_train[1])
 
-print('The label is:', y_train[1])
+print(&apos;The label is:&apos;, y_train[1])
 
 Output:
 The label is: [9]
@@ -1964,7 +1964,7 @@ import keras
 y_train_one_hot = keras.utils.to_categorical(y_train, 10)
 y_test_one_hot = keras.utils.to_categorical(y_test, 10)
 
-print('The one hot label is:', y_train_one_hot[1])
+print(&apos;The one hot label is:&apos;, y_train_one_hot[1])
 
 Output: 
 The one hot label is: [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
@@ -1980,8 +1980,8 @@ The one hot label is: [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
 &lt;p&gt;We process our images before training mainly for our convolutions to easily find features to use for training therby reducing training period&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;css&quot;&gt;
-x_train = x_train.astype('float32')
-x_test = x_test.astype('float32')
+x_train = x_train.astype(&apos;float32&apos;)
+x_test = x_test.astype(&apos;float32&apos;)
 
 x_train = x_train / 255
 x_test = x_test / 255
@@ -2000,7 +2000,7 @@ x_train[0]
 &lt;p&gt;We finally arrive at the most productive step, to train our model. This step just involves setting up a structure or architecture we want our model to have. We would add layers to our model in these sequence:&lt;/p&gt;
 &lt;ol&gt;
 	&lt;li&gt;Add Convolution layer with zero-padding: A convolution is the simple application of a filter to an input that results in an activation. Repeated application of the same filter to an input results in a map of actitvation called a feature map, indicating the locations and strength of a detected feature in an input, such as an image.
-	A concolution layer can be created by specifying both the number of filters to learn and the fixed size of each filetr,often called the kernel shape. This layer isolates the features in our images so that we can gather more information in less pixels. It actually ends up reducing the size of the pixels. The zero-padding works to produce the same output width and height as that of the input, what this means literally is that; we aren't losing any information by using zero-padding also called same-padding. The kind of padding used would either try to highlight the horizontal or vertical aspect(lines) of the image.&lt;/li&gt;&lt;br /&gt;
+	A concolution layer can be created by specifying both the number of filters to learn and the fixed size of each filetr,often called the kernel shape. This layer isolates the features in our images so that we can gather more information in less pixels. It actually ends up reducing the size of the pixels. The zero-padding works to produce the same output width and height as that of the input, what this means literally is that; we aren&apos;t losing any information by using zero-padding also called same-padding. The kind of padding used would either try to highlight the horizontal or vertical aspect(lines) of the image.&lt;/li&gt;&lt;br /&gt;
 	&lt;li&gt;Add MaxPolling layer: Pooling layer provides an approach to downsampling feature maps by summarizing the presence of features in patches of the feature map. Maximum pooling or max pooling, is a pooling operation that calculates the maximum or largest value in each part of each feature map. It works by shrinking the pixel height and weight while still retaining relevant information. It is passed across the whole image, the size of the stride determines the quantity or perhaps quality of features that is passed to the output after MaxPooling is carried out.&lt;/li&gt;&lt;br /&gt;
 	&lt;li&gt;Relu activation function: We use the relu activation in all layers except for the last layer which is a softmax. Relu (Rectified Linear Unit) is an activation that outputs the value of input X if x &amp;gt; 0 and outputs 0 if x &amp;lt; 0.&lt;/li&gt;&lt;br /&gt;
 	&lt;li&gt;Softmax: Our last layer Softmax simply transforms the output of the previous layer into probability distributions. So we are able to match image classification based on the probability given by the model of each classes. And therefore, our model picks the class with the highest probability as the correct item detected in an image.&lt;/li&gt;&lt;br /&gt;
@@ -2020,29 +2020,29 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D
 
 model = Sequential()
-model.add(Conv2D(64, (3, 3), activation='relu', input_shape=(32, 32, 3))),
-model.add(Conv2D(32, (3, 3), activation='relu'))
+model.add(Conv2D(64, (3, 3), activation=&apos;relu&apos;, input_shape=(32, 32, 3))),
+model.add(Conv2D(32, (3, 3), activation=&apos;relu&apos;))
 model.add(MaxPooling2D(2, 2)),
 model.add(Dropout(0.25))
 
-model.add(Conv2D(64, (3, 3), activation='relu')),
-model.add(Conv2D(64, (3, 3), activation='relu')),
-      #model.add(Conv2D(64, (3, 3), activation='relu', padding='same'))
+model.add(Conv2D(64, (3, 3), activation=&apos;relu&apos;)),
+model.add(Conv2D(64, (3, 3), activation=&apos;relu&apos;)),
+      #model.add(Conv2D(64, (3, 3), activation=&apos;relu&apos;, padding=&apos;same&apos;))
 model.add(MaxPooling2D(2, 2)),
 model.add(Dropout(0.25))
 
 model.add(Flatten()),
-model.add(Dense(1024, activation='relu')),
+model.add(Dense(1024, activation=&apos;relu&apos;)),
 model.add(Dropout(0.5))
-model.add(Dense(10, activation='softmax'))
+model.add(Dense(10, activation=&apos;softmax&apos;))
 
 
 
 model.summary()
 
-model.compile(loss='categorical_crossentropy',
-              optimizer='adam',
-              metrics=['accuracy'])
+model.compile(loss=&apos;categorical_crossentropy&apos;,
+              optimizer=&apos;adam&apos;,
+              metrics=[&apos;accuracy&apos;])
 hist = model.fit(x_train, y_train_one_hot, 
            batch_size=32, epochs=15, 
            validation_split=0.2)
@@ -2064,7 +2064,7 @@ Now for the last step, we want to evaluate our model using the test set and also
 
 &lt;pre&gt;&lt;code class=&quot;css&quot;&gt;
 model.evaluate(x_test, y_test_one_hot)[1]
-model.save('chel_cifar10_model_OR.h5')
+model.save(&apos;chel_cifar10_model_OR.h5&apos;)
 
 import numpy as np
 from skimage import data, color, feature, transform
@@ -2075,7 +2075,7 @@ from keras.preprocessing import image
 uploaded = files.upload()
 for fn in uploaded.keys():
 
-path = '/content/' + fn
+path = &apos;/content/&apos; + fn
 img = image.load_img(path, target_size=(32, 32))
 x = image.img_to_array(img)
 x = np.expand_dims(x, axis=0)
@@ -2084,7 +2084,7 @@ x = np.expand_dims(x, axis=0)
 probabilities = model.predict(images, batch_size=10)
 print(probabilities[0])
 
-number_to_class = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
+number_to_class = [&apos;airplane&apos;, &apos;automobile&apos;, &apos;bird&apos;, &apos;cat&apos;, &apos;deer&apos;, &apos;dog&apos;, &apos;frog&apos;, &apos;horse&apos;, &apos;ship&apos;, &apos;truck&apos;]
 index = np.argsort(probabilities[0,:])
 print(&quot;Most likely class:&quot;, number_to_class[index[9]], &quot;-- Probability:&quot;, probabilities[0,index[9]])
 print(&quot;Second most likely class:&quot;, number_to_class[index[8]], &quot;-- Probability:&quot;, probabilities[0,index[8]])
